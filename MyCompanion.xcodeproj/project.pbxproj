@@ -15,6 +15,7 @@
 		DA8581071E4134570055134E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA8581051E4134570055134E /* LaunchScreen.storyboard */; };
 		DA8581121E4134570055134E /* MyCompanionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8581111E4134570055134E /* MyCompanionTests.swift */; };
 		DA85811D1E4134570055134E /* MyCompanionUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA85811C1E4134570055134E /* MyCompanionUITests.swift */; };
+		DA85812B1E41357B0055134E /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA85812A1E41357B0055134E /* TodayViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		DA8581181E4134570055134E /* MyCompanionUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyCompanionUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA85811C1E4134570055134E /* MyCompanionUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCompanionUITests.swift; sourceTree = "<group>"; };
 		DA85811E1E4134570055134E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DA85812A1E41357B0055134E /* TodayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 			children = (
 				DA8580F91E4134570055134E /* AppDelegate.swift */,
 				DA8580FB1E4134570055134E /* ViewController.swift */,
+				DA85812A1E41357B0055134E /* TodayViewController.swift */,
 				DA8580FD1E4134570055134E /* Main.storyboard */,
 				DA8581031E4134570055134E /* Assets.xcassets */,
 				DA8581051E4134570055134E /* LaunchScreen.storyboard */,
@@ -267,6 +270,7 @@
 			files = (
 				DA8580FC1E4134570055134E /* ViewController.swift in Sources */,
 				DA8581021E4134570055134E /* MyCompanion.xcdatamodeld in Sources */,
+				DA85812B1E41357B0055134E /* TodayViewController.swift in Sources */,
 				DA8580FA1E4134570055134E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

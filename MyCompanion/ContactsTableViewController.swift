@@ -11,4 +11,26 @@ import UIKit
 
 class ContactsTableViewController: UITableViewController {
     
+    var contacts = [Contact]()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        loadSampleContacts()
+    }
+    
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return contacts.count
+    }
+    
+    
+    
+    private func loadSampleContacts() {
+        contacts.append(Contact("Julia", "Friend", "550-019-1289", "blah@blah"))
+        contacts.append(Contact("Shyam", "Buddy", "128-129-3046", "aldk@aldk"))
+    }
+    
 }

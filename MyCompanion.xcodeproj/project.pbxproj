@@ -17,6 +17,8 @@
 		DA85811D1E4134570055134E /* MyCompanionUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA85811C1E4134570055134E /* MyCompanionUITests.swift */; };
 		DA85812B1E41357B0055134E /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA85812A1E41357B0055134E /* TodayViewController.swift */; };
 		DAE225931E523C0F00A3D1C8 /* ContactsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE225921E523C0F00A3D1C8 /* ContactsTableViewController.swift */; };
+		DAE225951E523E3900A3D1C8 /* ContactsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE225941E523E3900A3D1C8 /* ContactsTableViewCell.swift */; };
+		DAE225971E5240B600A3D1C8 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE225961E5240B600A3D1C8 /* Contact.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,8 @@
 		DA85811E1E4134570055134E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DA85812A1E41357B0055134E /* TodayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
 		DAE225921E523C0F00A3D1C8 /* ContactsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsTableViewController.swift; sourceTree = "<group>"; };
+		DAE225941E523E3900A3D1C8 /* ContactsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsTableViewCell.swift; sourceTree = "<group>"; };
+		DAE225961E5240B600A3D1C8 /* Contact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +116,8 @@
 				DA8581081E4134570055134E /* Info.plist */,
 				DA8581001E4134570055134E /* MyCompanion.xcdatamodeld */,
 				DAE225921E523C0F00A3D1C8 /* ContactsTableViewController.swift */,
+				DAE225941E523E3900A3D1C8 /* ContactsTableViewCell.swift */,
+				DAE225961E5240B600A3D1C8 /* Contact.swift */,
 			);
 			path = MyCompanion;
 			sourceTree = "<group>";
@@ -273,9 +279,11 @@
 			files = (
 				DA8580FC1E4134570055134E /* ViewController.swift in Sources */,
 				DA8581021E4134570055134E /* MyCompanion.xcdatamodeld in Sources */,
+				DAE225951E523E3900A3D1C8 /* ContactsTableViewCell.swift in Sources */,
 				DAE225931E523C0F00A3D1C8 /* ContactsTableViewController.swift in Sources */,
 				DA85812B1E41357B0055134E /* TodayViewController.swift in Sources */,
 				DA8580FA1E4134570055134E /* AppDelegate.swift in Sources */,
+				DAE225971E5240B600A3D1C8 /* Contact.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -16,6 +16,7 @@
 		DA8581121E4134570055134E /* MyCompanionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8581111E4134570055134E /* MyCompanionTests.swift */; };
 		DA85811D1E4134570055134E /* MyCompanionUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA85811C1E4134570055134E /* MyCompanionUITests.swift */; };
 		DA85812B1E41357B0055134E /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA85812A1E41357B0055134E /* TodayViewController.swift */; };
+		DAE225931E523C0F00A3D1C8 /* ContactsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE225921E523C0F00A3D1C8 /* ContactsTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		DA85811C1E4134570055134E /* MyCompanionUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCompanionUITests.swift; sourceTree = "<group>"; };
 		DA85811E1E4134570055134E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DA85812A1E41357B0055134E /* TodayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		DAE225921E523C0F00A3D1C8 /* ContactsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 				DA8581051E4134570055134E /* LaunchScreen.storyboard */,
 				DA8581081E4134570055134E /* Info.plist */,
 				DA8581001E4134570055134E /* MyCompanion.xcdatamodeld */,
+				DAE225921E523C0F00A3D1C8 /* ContactsTableViewController.swift */,
 			);
 			path = MyCompanion;
 			sourceTree = "<group>";
@@ -270,6 +273,7 @@
 			files = (
 				DA8580FC1E4134570055134E /* ViewController.swift in Sources */,
 				DA8581021E4134570055134E /* MyCompanion.xcdatamodeld in Sources */,
+				DAE225931E523C0F00A3D1C8 /* ContactsTableViewController.swift in Sources */,
 				DA85812B1E41357B0055134E /* TodayViewController.swift in Sources */,
 				DA8580FA1E4134570055134E /* AppDelegate.swift in Sources */,
 			);
@@ -522,6 +526,7 @@
 				DA8581231E4134570055134E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DA8581241E4134570055134E /* Build configuration list for PBXNativeTarget "MyCompanionTests" */ = {
 			isa = XCConfigurationList;
@@ -530,6 +535,7 @@
 				DA8581261E4134570055134E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DA8581271E4134570055134E /* Build configuration list for PBXNativeTarget "MyCompanionUITests" */ = {
 			isa = XCConfigurationList;
@@ -538,6 +544,7 @@
 				DA8581291E4134570055134E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

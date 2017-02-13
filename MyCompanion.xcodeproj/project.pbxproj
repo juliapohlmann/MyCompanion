@@ -19,6 +19,7 @@
 		DAE225931E523C0F00A3D1C8 /* ContactsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE225921E523C0F00A3D1C8 /* ContactsTableViewController.swift */; };
 		DAE225951E523E3900A3D1C8 /* ContactsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE225941E523E3900A3D1C8 /* ContactsTableViewCell.swift */; };
 		DAE225971E5240B600A3D1C8 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE225961E5240B600A3D1C8 /* Contact.swift */; };
+		DAFA46B41E524AB000285267 /* ContactTileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFA46B31E524AB000285267 /* ContactTileViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		DAE225921E523C0F00A3D1C8 /* ContactsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsTableViewController.swift; sourceTree = "<group>"; };
 		DAE225941E523E3900A3D1C8 /* ContactsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsTableViewCell.swift; sourceTree = "<group>"; };
 		DAE225961E5240B600A3D1C8 /* Contact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
+		DAFA46B31E524AB000285267 /* ContactTileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactTileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +120,7 @@
 				DAE225921E523C0F00A3D1C8 /* ContactsTableViewController.swift */,
 				DAE225941E523E3900A3D1C8 /* ContactsTableViewCell.swift */,
 				DAE225961E5240B600A3D1C8 /* Contact.swift */,
+				DAFA46B31E524AB000285267 /* ContactTileViewController.swift */,
 			);
 			path = MyCompanion;
 			sourceTree = "<group>";
@@ -280,6 +283,7 @@
 				DA8580FC1E4134570055134E /* ViewController.swift in Sources */,
 				DA8581021E4134570055134E /* MyCompanion.xcdatamodeld in Sources */,
 				DAE225951E523E3900A3D1C8 /* ContactsTableViewCell.swift in Sources */,
+				DAFA46B41E524AB000285267 /* ContactTileViewController.swift in Sources */,
 				DAE225931E523C0F00A3D1C8 /* ContactsTableViewController.swift in Sources */,
 				DA85812B1E41357B0055134E /* TodayViewController.swift in Sources */,
 				DA8580FA1E4134570055134E /* AppDelegate.swift in Sources */,

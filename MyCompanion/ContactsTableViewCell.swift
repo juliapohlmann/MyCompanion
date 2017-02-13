@@ -19,5 +19,10 @@ class ContactsTableViewCell: UITableViewCell {
     @IBOutlet var phoneLabel: UILabel!
     @IBOutlet var emailLabel: UILabel!
     
-    
+    func setContact(contact: Contact) {
+        nameLabel.text = contact.name
+        relationLabel.text = contact.relationship
+        phoneLabel.text = contact.phone
+        emailLabel.text = contact.email
+    }
 }

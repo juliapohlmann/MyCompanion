@@ -26,11 +26,27 @@ class ContactsTableViewController: UITableViewController {
         return contacts.count
     }
     
+
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cellIdentifier = "ContactsTableViewCell"
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! ContactsTableViewCell
+        
+        cell.selectionStyle = UITableViewCellSelectionStyle.none
+        cell.setContact(contact: contacts[indexPath.row])
+        
+//        cell.setFieldTexts(stockTickers[indexPath.row], percentageText: String(stockPercentages[indexPath.row]))
+//        cell.StockAllocationInstance = self
+        
+        return cell
+    }
     
     
     private func loadSampleContacts() {
-        contacts.append(Contact("Julia", "Friend", "550-019-1289", "blah@blah"))
-        contacts.append(Contact("Shyam", "Buddy", "128-129-3046", "aldk@aldk"))
+        contacts.append(Contact(name: "Julia", relationship: "Friend", phone: "550-019-1289", email: "blah@blah"))
+        contacts.append(Contact(name: "Shyam", relationship: "Buddy", phone: "128-129-3046", email: "aldk@aldk"))
+        contacts.append(Contact(name: "Nisha", relationship: "Friend", phone: "550-019-1289", email: "blah@blah"))
+        contacts.append(Contact(name: "Heidi", relationship: "Buddy", phone: "128-129-3046", email: "aldk@aldk"))
+
     }
     
 }

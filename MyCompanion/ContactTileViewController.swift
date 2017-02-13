@@ -14,7 +14,7 @@ class ContactTileViewController : UIViewController {
     @IBOutlet var contactsButton: UIButton!
     
     @IBAction func contactClick(_ sender: Any) {
-        performSegue(withIdentifier: "contactSegue", sender: sender)
+        performSegue(withIdentifier: "contactTileToContactPageSegue", sender: sender)
     }
     
 }

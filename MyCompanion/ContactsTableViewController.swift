@@ -11,6 +11,9 @@ import UIKit
 
 class ContactsTableViewController: UITableViewController {
     
+    @IBAction func homeClicked(_ sender: Any) {
+        performSegue(withIdentifier: "contactsToHomeSegue", sender: sender)
+    }
     var contacts = [Contact]()
     
     override func viewDidLoad() {
@@ -33,9 +36,6 @@ class ContactsTableViewController: UITableViewController {
         
         cell.selectionStyle = UITableViewCellSelectionStyle.none
         cell.setContact(contact: contacts[indexPath.row])
-        
-//        cell.setFieldTexts(stockTickers[indexPath.row], percentageText: String(stockPercentages[indexPath.row]))
-//        cell.StockAllocationInstance = self
         
         return cell
     }

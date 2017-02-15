@@ -11,6 +11,26 @@
     </dependencies>
     <scenes>
         <!--View Controller-->
+        <scene sceneID="ZAE-sb-tPG">
+            <objects>
+                <viewController storyboardIdentifier="pinkComp" id="vnl-UD-hsT" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="A1K-oB-HfQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="id6-XN-87p"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="lZm-B5-wzL">
+                        <rect key="frame" x="0.0" y="0.0" width="653" height="482"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="0.4846319878" blue="0.79660942509999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="653" height="482"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dNp-Fl-6Pr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-552" y="-180"/>
+        </scene>
+        <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MyCompanion" customModuleProvider="target" sceneMemberID="viewController">
@@ -24,9 +44,6 @@
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sfG-63-gac">
                                 <rect key="frame" x="20" y="20" width="653" height="482"/>
-                                <connections>
-                                    <segue destination="pbV-aq-C5j" kind="embed" id="Hgi-rv-tgr"/>
-                                </connections>
                             </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AVv-Gs-Fol">
                                 <rect key="frame" x="693" y="20" width="653" height="482"/>
@@ -82,6 +99,9 @@
                             <constraint firstAttribute="leadingMargin" secondItem="sfG-63-gac" secondAttribute="leading" id="zVw-Rd-TP5"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="switchingContainer" destination="sfG-63-gac" id="NH3-pU-YAz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -96,7 +116,7 @@
                         <viewControllerLayoutGuide type="bottom" id="lwB-rX-f5C"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="xfo-MU-94T">
-                        <rect key="frame" x="0.0" y="0.0" width="653" height="482"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1366" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="DATE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rn4-ut-6Cd">
@@ -137,7 +157,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2HC-ap-qra" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-493" y="87"/>
+            <point key="canvasLocation" x="-1230" y="-494"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="7jg-9y-x1Z">
@@ -156,6 +176,26 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W7q-nb-2AS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="517" y="-104"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="5V0-l9-88h">
+            <objects>
+                <viewController storyboardIdentifier="blueComp" id="ZeQ-a8-zdI" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Csq-zC-x9W"/>
+                        <viewControllerLayoutGuide type="bottom" id="hcj-1j-aNA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" restorationIdentifier="blueComp" id="rKV-5Y-10n">
+                        <rect key="frame" x="0.0" y="0.0" width="653" height="482"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="653" height="482"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qId-cz-jPb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-552" y="140"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="hpP-jB-rBc">
@@ -244,7 +284,7 @@
                                 <rect key="frame" x="0.0" y="120" width="1366" height="279"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="NZn-nw-td7" id="2S3-SI-R4D">
-                                    <rect key="frame" x="0.0" y="0.0" width="1366" height="278"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="1366" height="279"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0of-PY-R6E">

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DA2C16861E54CF42001B3D14 /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2C16851E54CF42001B3D14 /* IntroViewController.swift */; };
 		DA8580FA1E4134570055134E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8580F91E4134570055134E /* AppDelegate.swift */; };
 		DA8580FC1E4134570055134E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8580FB1E4134570055134E /* ViewController.swift */; };
 		DA8580FF1E4134570055134E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA8580FD1E4134570055134E /* Main.storyboard */; };
@@ -40,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DA2C16851E54CF42001B3D14 /* IntroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
 		DA8580F61E4134570055134E /* MyCompanion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyCompanion.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA8580F91E4134570055134E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DA8580FB1E4134570055134E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 				DA8580F91E4134570055134E /* AppDelegate.swift */,
 				DA8580FB1E4134570055134E /* ViewController.swift */,
 				DA85812A1E41357B0055134E /* TodayViewController.swift */,
+				DA2C16851E54CF42001B3D14 /* IntroViewController.swift */,
 				DA8580FD1E4134570055134E /* Main.storyboard */,
 				DA8581031E4134570055134E /* Assets.xcassets */,
 				DA8581051E4134570055134E /* LaunchScreen.storyboard */,
@@ -280,6 +283,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA2C16861E54CF42001B3D14 /* IntroViewController.swift in Sources */,
 				DA8580FC1E4134570055134E /* ViewController.swift in Sources */,
 				DA8581021E4134570055134E /* MyCompanion.xcdatamodeld in Sources */,
 				DAE225951E523E3900A3D1C8 /* ContactsTableViewCell.swift in Sources */,

@@ -28,8 +28,7 @@ class ViewController: UIViewController {
     }
     
     func startRotation() {
-        var timer = Timer.scheduledTimer(timeInterval: 10.0, target: self, selector: #selector(ViewController.switchView), userInfo: nil, repeats: true)
-        
+        var _ = Timer.scheduledTimer(timeInterval: 10.0, target: self, selector: #selector(ViewController.switchView), userInfo: nil, repeats: true)
     }
     
     func switchView() {
@@ -38,7 +37,7 @@ class ViewController: UIViewController {
         newViewController!.view.translatesAutoresizingMaskIntoConstraints = false
         self.cycleFromViewController(oldViewController: self.currentViewController!, toViewController: newViewController!)
         self.currentViewController = newViewController
-        var temp = self.controllerIdToSwitchTo
+        let temp = self.controllerIdToSwitchTo
         self.controllerIdToSwitchTo = otherControllerId
         self.otherControllerId = temp
     }

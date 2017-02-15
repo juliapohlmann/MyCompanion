@@ -11,8 +11,12 @@ import Foundation
 
 class TodayViewController: UIViewController {
     
-    @IBOutlet var dateLabel: UILabel!
+//    @IBOutlet var dateLabel: UILabel!
+//    @IBOutlet var timeLabel: UILabel!
+    
     @IBOutlet var timeLabel: UILabel!
+    @IBOutlet var dateLabel: UILabel!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -18,8 +18,9 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         self.currentViewController = self.storyboard?.instantiateViewController(withIdentifier: "pinkComp")
-        self.currentViewController!.view.translatesAutoresizingMaskIntoConstraints = false
-        self.addChildViewController(self.currentViewController!)
+        // need to update this code
+        // self.currentViewController!.view.translatesAutoresizingMaskIntoConstraints = false
+        // self.addChildViewController(self.currentViewController!)
         self.addSubview(subView: self.currentViewController!.view, toView: self.switchingContainer)
         super.viewDidLoad()
         

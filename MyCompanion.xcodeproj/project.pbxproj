@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1C1615981E5A6E14009A3137 /* PasscodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C1615971E5A6E14009A3137 /* PasscodeViewController.swift */; };
+		1C16159A1E5A7E0B009A3137 /* CheckPasscodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C1615991E5A7E0B009A3137 /* CheckPasscodeViewController.swift */; };
 		DA2C16861E54CF42001B3D14 /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2C16851E54CF42001B3D14 /* IntroViewController.swift */; };
 		DA8580FA1E4134570055134E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8580F91E4134570055134E /* AppDelegate.swift */; };
 		DA8580FC1E4134570055134E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8580FB1E4134570055134E /* ViewController.swift */; };
@@ -41,6 +43,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1C1615971E5A6E14009A3137 /* PasscodeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasscodeViewController.swift; sourceTree = "<group>"; };
+		1C1615991E5A7E0B009A3137 /* CheckPasscodeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckPasscodeViewController.swift; sourceTree = "<group>"; };
 		DA2C16851E54CF42001B3D14 /* IntroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
 		DA8580F61E4134570055134E /* MyCompanion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyCompanion.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA8580F91E4134570055134E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -116,6 +120,8 @@
 				DA85812A1E41357B0055134E /* TodayViewController.swift */,
 				DA2C16851E54CF42001B3D14 /* IntroViewController.swift */,
 				DA8580FD1E4134570055134E /* Main.storyboard */,
+				1C1615991E5A7E0B009A3137 /* CheckPasscodeViewController.swift */,
+				1C1615971E5A6E14009A3137 /* PasscodeViewController.swift */,
 				DA8581031E4134570055134E /* Assets.xcassets */,
 				DA8581051E4134570055134E /* LaunchScreen.storyboard */,
 				DA8581081E4134570055134E /* Info.plist */,
@@ -285,9 +291,11 @@
 			files = (
 				DA2C16861E54CF42001B3D14 /* IntroViewController.swift in Sources */,
 				DA8580FC1E4134570055134E /* ViewController.swift in Sources */,
+				1C1615981E5A6E14009A3137 /* PasscodeViewController.swift in Sources */,
 				DA8581021E4134570055134E /* MyCompanion.xcdatamodeld in Sources */,
 				DAE225951E523E3900A3D1C8 /* ContactsTableViewCell.swift in Sources */,
 				DAFA46B41E524AB000285267 /* ContactTileViewController.swift in Sources */,
+				1C16159A1E5A7E0B009A3137 /* CheckPasscodeViewController.swift in Sources */,
 				DAE225931E523C0F00A3D1C8 /* ContactsTableViewController.swift in Sources */,
 				DA85812B1E41357B0055134E /* TodayViewController.swift in Sources */,
 				DA8580FA1E4134570055134E /* AppDelegate.swift in Sources */,

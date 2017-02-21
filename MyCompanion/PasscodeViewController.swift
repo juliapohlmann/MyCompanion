@@ -12,6 +12,7 @@ class PasscodeViewController: UIViewController,UITextFieldDelegate {
 
     @IBOutlet var passwordField: UITextField!
     var password = ""
+    var confirmed = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,21 +20,17 @@ class PasscodeViewController: UIViewController,UITextFieldDelegate {
         passwordField.delegate = self
     }
     
-    @IBAction func confirmClick(_ sender: Any) {
-        performSegue(withIdentifier: "confirmPasswordToHomeSegue", sender: sender)
+    override func shouldPerformSegue(withIdentifier identifier: String?, sender: Any?) -> Bool {
 
-    }
-    func transition() {
+        if(confirmed) {
+            return true
+        }
         
-        let viewController:ViewController = ViewController()
-        //let viewController:CheckPasscodeViewController = CheckPasscodeViewController()
-        
-        self.present(viewController, animated: true, completion: nil)
+        return false
         
     }
     
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {   //delegate method
-        textField.resignFirstResponder()
+    @IBAction func confirmClick(_ sender: Any) {
         
         // first attempt
         if (password == "") {
@@ -50,7 +47,7 @@ class PasscodeViewController: UIViewController,UITextFieldDelegate {
                 UserDefaults.standard.set(password, forKey: "userPassword")
                 UserDefaults.standard.synchronize()
                 
-                transition()
+                confirmed = true
                 
             } else {
                 
@@ -61,7 +58,8 @@ class PasscodeViewController: UIViewController,UITextFieldDelegate {
                 
             }
         }
-        return true
+        
+        
     }
 
     /*

@@ -11,11 +11,13 @@ import UIKit
 class CheckPasscodeViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet var passwordTextField: UITextField!
+    var confirmed = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         passwordTextField.delegate = self
+        passwordTextField.becomeFirstResponder()
         // Do any additional setup after loading the view.
     }
 
@@ -24,15 +26,32 @@ class CheckPasscodeViewController: UIViewController, UITextFieldDelegate {
         // Dispose of any resources that can be recreated.
     }
     
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {   //delegate method
-        textField.resignFirstResponder()
+    override func shouldPerformSegue(withIdentifier identifier: String?, sender: Any?) -> Bool {
+        
+        print("here2")
+        
+        if(confirmed) {
+            return true
+        }
+        
+        return false
+        
+    }
+    
+    @IBAction func confirmClick(_ sender: Any) {
+        
+        print("here")
         
         let password = passwordTextField.text!
         let originalPassword = UserDefaults.standard.object(forKey: "userPassword") as! String
         
+        print(password)
+        print(originalPassword)
+        
         if (password == originalPassword) {
             
-            //segue here
+            print("here")
+            confirmed = true
             
         }
         else{
@@ -44,9 +63,8 @@ class CheckPasscodeViewController: UIViewController, UITextFieldDelegate {
             passwordTextField.becomeFirstResponder()
             
         }
-        return true
+        
     }
-    
 
     /*
     // MARK: - Navigation

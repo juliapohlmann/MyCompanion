@@ -18,6 +18,7 @@ class PasscodeViewController: UIViewController,UITextFieldDelegate {
         super.viewDidLoad()
 
         passwordField.delegate = self
+        passwordField.becomeFirstResponder()
     }
     
     override func shouldPerformSegue(withIdentifier identifier: String?, sender: Any?) -> Bool {

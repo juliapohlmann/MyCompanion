@@ -19,10 +19,14 @@ class PasscodeViewController: UIViewController,UITextFieldDelegate {
         passwordField.delegate = self
     }
     
+    @IBAction func confirmClick(_ sender: Any) {
+        performSegue(withIdentifier: "confirmPasswordToHomeSegue", sender: sender)
+
+    }
     func transition() {
         
-        //let viewController:ViewController = ViewController()
-        let viewController:CheckPasscodeViewController = CheckPasscodeViewController()
+        let viewController:ViewController = ViewController()
+        //let viewController:CheckPasscodeViewController = CheckPasscodeViewController()
         
         self.present(viewController, animated: true, completion: nil)
         

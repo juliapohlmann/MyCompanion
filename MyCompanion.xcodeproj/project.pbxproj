@@ -10,6 +10,7 @@
 		1C1615981E5A6E14009A3137 /* PasscodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C1615971E5A6E14009A3137 /* PasscodeViewController.swift */; };
 		1C16159A1E5A7E0B009A3137 /* CheckPasscodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C1615991E5A7E0B009A3137 /* CheckPasscodeViewController.swift */; };
 		DA2C16861E54CF42001B3D14 /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2C16851E54CF42001B3D14 /* IntroViewController.swift */; };
+		DA761C8A1E5CA42300B3679A /* CaregiverTileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA761C891E5CA42300B3679A /* CaregiverTileViewController.swift */; };
 		DA8580FA1E4134570055134E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8580F91E4134570055134E /* AppDelegate.swift */; };
 		DA8580FC1E4134570055134E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8580FB1E4134570055134E /* ViewController.swift */; };
 		DA8580FF1E4134570055134E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA8580FD1E4134570055134E /* Main.storyboard */; };
@@ -46,6 +47,7 @@
 		1C1615971E5A6E14009A3137 /* PasscodeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasscodeViewController.swift; sourceTree = "<group>"; };
 		1C1615991E5A7E0B009A3137 /* CheckPasscodeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckPasscodeViewController.swift; sourceTree = "<group>"; };
 		DA2C16851E54CF42001B3D14 /* IntroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
+		DA761C891E5CA42300B3679A /* CaregiverTileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CaregiverTileViewController.swift; sourceTree = "<group>"; };
 		DA8580F61E4134570055134E /* MyCompanion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyCompanion.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA8580F91E4134570055134E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DA8580FB1E4134570055134E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -130,6 +132,7 @@
 				DAE225941E523E3900A3D1C8 /* ContactsTableViewCell.swift */,
 				DAE225961E5240B600A3D1C8 /* Contact.swift */,
 				DAFA46B31E524AB000285267 /* ContactTileViewController.swift */,
+				DA761C891E5CA42300B3679A /* CaregiverTileViewController.swift */,
 			);
 			path = MyCompanion;
 			sourceTree = "<group>";
@@ -300,6 +303,7 @@
 				DA85812B1E41357B0055134E /* TodayViewController.swift in Sources */,
 				DA8580FA1E4134570055134E /* AppDelegate.swift in Sources */,
 				DAE225971E5240B600A3D1C8 /* Contact.swift in Sources */,
+				DA761C8A1E5CA42300B3679A /* CaregiverTileViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

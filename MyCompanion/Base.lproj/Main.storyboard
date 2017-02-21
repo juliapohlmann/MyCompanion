@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="pB0-OH-HVA">
     <device id="ipad9_7" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
@@ -61,6 +61,15 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="continue" secureTextEntry="YES"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tFv-8y-mZd">
+                                <rect key="frame" x="760" y="174" width="55" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Confirm"/>
+                                <connections>
+                                    <action selector="confirmClick:" destination="pB0-OH-HVA" eventType="touchUpInside" id="Oyf-9m-2dy"/>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" identifier="confirmPasswordToHomeSegue" id="GaV-Bb-vbs"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -205,7 +214,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qId-cz-jPb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-552.34260614934112" y="139.453125"/>
+            <point key="canvasLocation" x="-760" y="38"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="hpP-jB-rBc">
@@ -299,7 +308,7 @@
                                 <rect key="frame" x="0.0" y="120" width="1024" height="279"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="NZn-nw-td7" id="2S3-SI-R4D">
-                                    <rect key="frame" x="0.0" y="0.0" width="1024" height="278"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="1024" height="279"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0of-PY-R6E">
@@ -412,10 +421,10 @@
             </objects>
             <point key="canvasLocation" x="2.6354319180087846" y="1255.6640625"/>
         </scene>
-        <!--View Controller-->
+        <!--Caregiver Tile View Controller-->
         <scene sceneID="7b1-6x-CAK">
             <objects>
-                <viewController id="ptB-jL-s6y" sceneMemberID="viewController">
+                <viewController id="ptB-jL-s6y" customClass="CaregiverTileViewController" customModule="MyCompanion" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="UaQ-9O-HFf"/>
                         <viewControllerLayoutGuide type="bottom" id="j9d-Wb-l1F"/>
@@ -423,6 +432,17 @@
                     <view key="view" contentMode="scaleToFill" id="VQC-eK-RDY">
                         <rect key="frame" x="0.0" y="0.0" width="315" height="354"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sld-LR-o4y">
+                                <rect key="frame" x="102" y="162" width="111" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Caregiver Portal"/>
+                                <connections>
+                                    <action selector="caregiverPortalClick:" destination="ptB-jL-s6y" eventType="touchUpInside" id="fIX-RQ-YG6"/>
+                                    <segue destination="qD0-On-rhm" kind="presentation" identifier="caregiverTileToCaregiverPageSegue" id="dIk-GE-aqR"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                 </viewController>
@@ -458,7 +478,10 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bN5-cn-QuL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="888" y="-612"/>
+            <point key="canvasLocation" x="868" y="727"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="GaV-Bb-vbs"/>
+    </inferredMetricsTieBreakers>
 </document>

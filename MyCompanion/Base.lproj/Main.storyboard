@@ -489,10 +489,10 @@
             </objects>
             <point key="canvasLocation" x="868" y="727"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Settings Table View Controller-->
         <scene sceneID="yVI-jh-V77">
             <objects>
-                <tableViewController id="yH5-Cu-6Mg" sceneMemberID="viewController">
+                <tableViewController id="yH5-Cu-6Mg" customClass="SettingsTableViewController" customModule="MyCompanion" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Sde-8Q-sFh">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -504,7 +504,7 @@
                                         <rect key="frame" x="0.0" y="28" width="1024" height="150"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Dqs-Rh-S4P" id="zGP-Rb-68n">
-                                            <rect key="frame" x="0.0" y="0.0" width="1024" height="149"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="1024" height="149.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jiR-kN-Ixn">
@@ -525,7 +525,7 @@
                                         <rect key="frame" x="0.0" y="178" width="1024" height="150"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="O0f-zY-Zsk" id="0m4-1P-BcN">
-                                            <rect key="frame" x="0.0" y="0.0" width="1024" height="149"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="1024" height="149.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UqE-Ba-UFp">
@@ -546,7 +546,7 @@
                                         <rect key="frame" x="0.0" y="328" width="1024" height="150"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rs0-5x-AkC" id="TUR-Ho-LIk">
-                                            <rect key="frame" x="0.0" y="0.0" width="1024" height="149"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="1024" height="149.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7tx-Za-56B">
@@ -567,7 +567,7 @@
                                         <rect key="frame" x="0.0" y="478" width="1024" height="150"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1vp-YZ-af5" id="Dan-hI-AJ8">
-                                            <rect key="frame" x="0.0" y="0.0" width="1024" height="149"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="1024" height="149.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vc9-6Q-RiM">
@@ -588,7 +588,7 @@
                                         <rect key="frame" x="0.0" y="628" width="1024" height="150"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="CBs-59-FYE" id="K7d-nj-KHh">
-                                            <rect key="frame" x="0.0" y="0.0" width="1024" height="149"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="1024" height="149.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hz1-ot-PrI">

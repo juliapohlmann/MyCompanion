@@ -9,7 +9,7 @@
 import UIKit
 
 
-class ViewController: UIViewController {
+class DashboardViewController: UIViewController {
     
     @IBOutlet var switchingContainer: UIView!
     var currentViewController: UIViewController?

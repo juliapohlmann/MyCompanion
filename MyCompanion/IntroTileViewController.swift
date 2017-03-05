@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class IntroViewController: UIViewController {
+class IntroTileViewController: UIViewController {
     var name : String = "Julia"
     
     

@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Intro View Controller-->
+        <!--Intro Tile View Controller-->
         <scene sceneID="ZAE-sb-tPG">
             <objects>
-                <viewController storyboardIdentifier="pinkComp" id="vnl-UD-hsT" customClass="IntroViewController" customModule="MyCompanion" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="pinkComp" id="vnl-UD-hsT" customClass="IntroTileViewController" customModule="MyCompanion" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="A1K-oB-HfQ"/>
                         <viewControllerLayoutGuide type="bottom" id="id6-XN-87p"/>
@@ -81,10 +81,10 @@
             </objects>
             <point key="canvasLocation" x="32.8125" y="-636.71875"/>
         </scene>
-        <!--View Controller-->
+        <!--Dashboard View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MyCompanion" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="DashboardViewController" customModule="MyCompanion" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -204,10 +204,10 @@
             </objects>
             <point key="canvasLocation" x="559.5703125" y="-24.21875"/>
         </scene>
-        <!--Today View Controller-->
+        <!--Today Tile View Controller-->
         <scene sceneID="5V0-l9-88h">
             <objects>
-                <viewController storyboardIdentifier="blueComp" id="ZeQ-a8-zdI" customClass="TodayViewController" customModule="MyCompanion" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="blueComp" id="ZeQ-a8-zdI" customClass="TodayTileViewController" customModule="MyCompanion" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Csq-zC-x9W"/>
                         <viewControllerLayoutGuide type="bottom" id="hcj-1j-aNA"/>

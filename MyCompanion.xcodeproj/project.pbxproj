@@ -13,22 +13,25 @@
 		6908902E721E1B70ACB83D9D /* Pods_MyCompanionTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FB1E8DD63FDE025EFF94606 /* Pods_MyCompanionTests.framework */; };
 		85E610E145E74BEC93F2440A /* Pods_MyCompanionUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56C39383E4FF86AFA081F0EA /* Pods_MyCompanionUITests.framework */; };
 		93DCC6AA7C143FDF12A68B44 /* Pods_MyCompanion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD700589041BBF8E6FEA6A60 /* Pods_MyCompanion.framework */; };
-		DA2C16861E54CF42001B3D14 /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2C16851E54CF42001B3D14 /* IntroViewController.swift */; };
+		DA2C16861E54CF42001B3D14 /* IntroTileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2C16851E54CF42001B3D14 /* IntroTileViewController.swift */; };
 		DA761C8A1E5CA42300B3679A /* CaregiverTileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA761C891E5CA42300B3679A /* CaregiverTileViewController.swift */; };
 		DA8580FA1E4134570055134E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8580F91E4134570055134E /* AppDelegate.swift */; };
-		DA8580FC1E4134570055134E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8580FB1E4134570055134E /* ViewController.swift */; };
+		DA8580FC1E4134570055134E /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8580FB1E4134570055134E /* DashboardViewController.swift */; };
 		DA8580FF1E4134570055134E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA8580FD1E4134570055134E /* Main.storyboard */; };
 		DA8581021E4134570055134E /* MyCompanion.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DA8581001E4134570055134E /* MyCompanion.xcdatamodeld */; };
 		DA8581041E4134570055134E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA8581031E4134570055134E /* Assets.xcassets */; };
 		DA8581071E4134570055134E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA8581051E4134570055134E /* LaunchScreen.storyboard */; };
 		DA8581121E4134570055134E /* MyCompanionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8581111E4134570055134E /* MyCompanionTests.swift */; };
 		DA85811D1E4134570055134E /* MyCompanionUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA85811C1E4134570055134E /* MyCompanionUITests.swift */; };
-		DA85812B1E41357B0055134E /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA85812A1E41357B0055134E /* TodayViewController.swift */; };
+		DA85812B1E41357B0055134E /* TodayTileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA85812A1E41357B0055134E /* TodayTileViewController.swift */; };
 		DAE225931E523C0F00A3D1C8 /* ContactsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE225921E523C0F00A3D1C8 /* ContactsTableViewController.swift */; };
 		DAE225951E523E3900A3D1C8 /* ContactsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE225941E523E3900A3D1C8 /* ContactsTableViewCell.swift */; };
 		DAE225971E5240B600A3D1C8 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE225961E5240B600A3D1C8 /* Contact.swift */; };
 		DAE3BB7C1E6C93D7009BB9E6 /* ReminderTileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE3BB7B1E6C93D7009BB9E6 /* ReminderTileViewController.swift */; };
 		DAE3BB7E1E6C9636009BB9E6 /* MemoryBookTileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE3BB7D1E6C9636009BB9E6 /* MemoryBookTileViewController.swift */; };
+		DAE3BB811E6CA3B5009BB9E6 /* RemindersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE3BB801E6CA3B5009BB9E6 /* RemindersTableViewController.swift */; };
+		DAE3BB831E6CA42E009BB9E6 /* Reminder.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE3BB821E6CA42E009BB9E6 /* Reminder.swift */; };
+		DAE3BB851E6CA57F009BB9E6 /* RemindersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE3BB841E6CA57F009BB9E6 /* RemindersTableViewCell.swift */; };
 		DAFA46B41E524AB000285267 /* ContactTileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFA46B31E524AB000285267 /* ContactTileViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -61,11 +64,11 @@
 		BBE46EBB316E3847D61C703C /* Pods-MyCompanionTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyCompanionTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyCompanionTests/Pods-MyCompanionTests.debug.xcconfig"; sourceTree = "<group>"; };
 		BD700589041BBF8E6FEA6A60 /* Pods_MyCompanion.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyCompanion.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D59AD62633D366BD4EBD02DE /* Pods-MyCompanionTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyCompanionTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyCompanionTests/Pods-MyCompanionTests.release.xcconfig"; sourceTree = "<group>"; };
-		DA2C16851E54CF42001B3D14 /* IntroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
+		DA2C16851E54CF42001B3D14 /* IntroTileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroTileViewController.swift; sourceTree = "<group>"; };
 		DA761C891E5CA42300B3679A /* CaregiverTileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CaregiverTileViewController.swift; sourceTree = "<group>"; };
 		DA8580F61E4134570055134E /* MyCompanion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyCompanion.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA8580F91E4134570055134E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DA8580FB1E4134570055134E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DA8580FB1E4134570055134E /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		DA8580FE1E4134570055134E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DA8581011E4134570055134E /* MyCompanion.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MyCompanion.xcdatamodel; sourceTree = "<group>"; };
 		DA8581031E4134570055134E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -77,12 +80,15 @@
 		DA8581181E4134570055134E /* MyCompanionUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyCompanionUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA85811C1E4134570055134E /* MyCompanionUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCompanionUITests.swift; sourceTree = "<group>"; };
 		DA85811E1E4134570055134E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DA85812A1E41357B0055134E /* TodayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		DA85812A1E41357B0055134E /* TodayTileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodayTileViewController.swift; sourceTree = "<group>"; };
 		DAE225921E523C0F00A3D1C8 /* ContactsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsTableViewController.swift; sourceTree = "<group>"; };
 		DAE225941E523E3900A3D1C8 /* ContactsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsTableViewCell.swift; sourceTree = "<group>"; };
 		DAE225961E5240B600A3D1C8 /* Contact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 		DAE3BB7B1E6C93D7009BB9E6 /* ReminderTileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReminderTileViewController.swift; sourceTree = "<group>"; };
 		DAE3BB7D1E6C9636009BB9E6 /* MemoryBookTileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemoryBookTileViewController.swift; sourceTree = "<group>"; };
+		DAE3BB801E6CA3B5009BB9E6 /* RemindersTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemindersTableViewController.swift; sourceTree = "<group>"; };
+		DAE3BB821E6CA42E009BB9E6 /* Reminder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reminder.swift; sourceTree = "<group>"; };
+		DAE3BB841E6CA57F009BB9E6 /* RemindersTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemindersTableViewCell.swift; sourceTree = "<group>"; };
 		DAFA46B31E524AB000285267 /* ContactTileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactTileViewController.swift; sourceTree = "<group>"; };
 		E2BED68DEEFE8761AF8FD18E /* Pods-MyCompanion.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyCompanion.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyCompanion/Pods-MyCompanion.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -164,20 +170,16 @@
 			isa = PBXGroup;
 			children = (
 				DA8580F91E4134570055134E /* AppDelegate.swift */,
-				DA8580FB1E4134570055134E /* ViewController.swift */,
-				DA85812A1E41357B0055134E /* TodayViewController.swift */,
-				DA2C16851E54CF42001B3D14 /* IntroViewController.swift */,
+				DA8580FB1E4134570055134E /* DashboardViewController.swift */,
 				DAE3BB7A1E6C93BA009BB9E6 /* TileViewControllers */,
 				DA8580FD1E4134570055134E /* Main.storyboard */,
-				1C1615971E5A6E14009A3137 /* PasscodeViewController.swift */,
-				1C1615991E5A7E0B009A3137 /* CheckPasscodeViewController.swift */,
+				DAE3BB7F1E6CA382009BB9E6 /* SecurityViewControllers */,
 				DA8581031E4134570055134E /* Assets.xcassets */,
 				DA8581051E4134570055134E /* LaunchScreen.storyboard */,
 				DA8581081E4134570055134E /* Info.plist */,
 				DA8581001E4134570055134E /* MyCompanion.xcdatamodeld */,
-				DAE225921E523C0F00A3D1C8 /* ContactsTableViewController.swift */,
-				DAE225941E523E3900A3D1C8 /* ContactsTableViewCell.swift */,
-				DAE225961E5240B600A3D1C8 /* Contact.swift */,
+				DAE3BB871E6CA58F009BB9E6 /* Contact */,
+				DAE3BB861E6CA585009BB9E6 /* Reminder */,
 				1CA3BE651E5D1C520016B247 /* SettingsTableViewController.swift */,
 			);
 			path = MyCompanion;
@@ -204,12 +206,43 @@
 		DAE3BB7A1E6C93BA009BB9E6 /* TileViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				DA85812A1E41357B0055134E /* TodayTileViewController.swift */,
+				DA2C16851E54CF42001B3D14 /* IntroTileViewController.swift */,
 				DA761C891E5CA42300B3679A /* CaregiverTileViewController.swift */,
 				DAFA46B31E524AB000285267 /* ContactTileViewController.swift */,
 				DAE3BB7B1E6C93D7009BB9E6 /* ReminderTileViewController.swift */,
 				DAE3BB7D1E6C9636009BB9E6 /* MemoryBookTileViewController.swift */,
 			);
 			name = TileViewControllers;
+			sourceTree = "<group>";
+		};
+		DAE3BB7F1E6CA382009BB9E6 /* SecurityViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				1C1615971E5A6E14009A3137 /* PasscodeViewController.swift */,
+				1C1615991E5A7E0B009A3137 /* CheckPasscodeViewController.swift */,
+			);
+			name = SecurityViewControllers;
+			sourceTree = "<group>";
+		};
+		DAE3BB861E6CA585009BB9E6 /* Reminder */ = {
+			isa = PBXGroup;
+			children = (
+				DAE3BB801E6CA3B5009BB9E6 /* RemindersTableViewController.swift */,
+				DAE3BB841E6CA57F009BB9E6 /* RemindersTableViewCell.swift */,
+				DAE3BB821E6CA42E009BB9E6 /* Reminder.swift */,
+			);
+			name = Reminder;
+			sourceTree = "<group>";
+		};
+		DAE3BB871E6CA58F009BB9E6 /* Contact */ = {
+			isa = PBXGroup;
+			children = (
+				DAE225921E523C0F00A3D1C8 /* ContactsTableViewController.swift */,
+				DAE225941E523E3900A3D1C8 /* ContactsTableViewCell.swift */,
+				DAE225961E5240B600A3D1C8 /* Contact.swift */,
+			);
+			name = Contact;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -496,18 +529,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DA2C16861E54CF42001B3D14 /* IntroViewController.swift in Sources */,
+				DAE3BB831E6CA42E009BB9E6 /* Reminder.swift in Sources */,
+				DAE3BB811E6CA3B5009BB9E6 /* RemindersTableViewController.swift in Sources */,
+				DA2C16861E54CF42001B3D14 /* IntroTileViewController.swift in Sources */,
 				1CA3BE661E5D1C520016B247 /* SettingsTableViewController.swift in Sources */,
 				DAE3BB7E1E6C9636009BB9E6 /* MemoryBookTileViewController.swift in Sources */,
 				DAE3BB7C1E6C93D7009BB9E6 /* ReminderTileViewController.swift in Sources */,
-				DA8580FC1E4134570055134E /* ViewController.swift in Sources */,
+				DA8580FC1E4134570055134E /* DashboardViewController.swift in Sources */,
 				1C1615981E5A6E14009A3137 /* PasscodeViewController.swift in Sources */,
 				DA8581021E4134570055134E /* MyCompanion.xcdatamodeld in Sources */,
+				DAE3BB851E6CA57F009BB9E6 /* RemindersTableViewCell.swift in Sources */,
 				DAE225951E523E3900A3D1C8 /* ContactsTableViewCell.swift in Sources */,
 				DAFA46B41E524AB000285267 /* ContactTileViewController.swift in Sources */,
 				1C16159A1E5A7E0B009A3137 /* CheckPasscodeViewController.swift in Sources */,
 				DAE225931E523C0F00A3D1C8 /* ContactsTableViewController.swift in Sources */,
-				DA85812B1E41357B0055134E /* TodayViewController.swift in Sources */,
+				DA85812B1E41357B0055134E /* TodayTileViewController.swift in Sources */,
 				DA8580FA1E4134570055134E /* AppDelegate.swift in Sources */,
 				DAE225971E5240B600A3D1C8 /* Contact.swift in Sources */,
 				DA761C8A1E5CA42300B3679A /* CaregiverTileViewController.swift in Sources */,

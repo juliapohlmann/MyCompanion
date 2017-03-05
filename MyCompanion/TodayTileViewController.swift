@@ -9,7 +9,7 @@
 import UIKit
 import Foundation
 
-class TodayViewController: UIViewController {
+class TodayTileViewController: UIViewController {
     
 //    @IBOutlet var dateLabel: UILabel!
 //    @IBOutlet var timeLabel: UILabel!

@@ -21,7 +21,6 @@ class CaregiverTileViewController: UIViewController {
     
     @IBAction func caregiverPortalClick(_ sender: Any) {
         performSegue(withIdentifier: "caregiverTileToCaregiverPageSegue", sender: sender)
-
     }
     
 }

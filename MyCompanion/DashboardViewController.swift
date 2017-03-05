@@ -29,7 +29,7 @@ class DashboardViewController: UIViewController {
     }
     
     func startRotation() {
-        var _ = Timer.scheduledTimer(timeInterval: 10.0, target: self, selector: #selector(ViewController.switchView), userInfo: nil, repeats: true)
+        var _ = Timer.scheduledTimer(timeInterval: 10.0, target: self, selector: #selector(DashboardViewController.switchView), userInfo: nil, repeats: true)
     }
     
     func switchView() {

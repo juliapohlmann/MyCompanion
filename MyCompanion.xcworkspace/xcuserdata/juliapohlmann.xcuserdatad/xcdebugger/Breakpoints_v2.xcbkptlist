@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MyCompanion/RemindersTableViewController.swift"
-            timestampString = "510436704.613879"
+            timestampString = "510437831.573401"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "51"
-            endingLineNumber = "51"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
             landmarkName = "loadSampleReminders()"
             landmarkType = "7">
          </BreakpointContent>

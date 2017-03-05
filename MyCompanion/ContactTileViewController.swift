@@ -11,18 +11,15 @@ import UIKit
 
 class ContactTileViewController : UIViewController {
     
-    @IBOutlet var contactsButton: UIButton!
     @IBOutlet var contactsImage: UIImageView!
     
-    
+    @IBAction func contactClick(_ sender: Any) {
+        performSegue(withIdentifier: "contactTileToContactPageSegue", sender: sender)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         contactsImage.image = UIImage.fontAwesomeIcon(name: .user, textColor: UIColor.black, size: CGSize(width: 128, height: 128))
     }
-    @IBAction func contactClick(_ sender: Any) {
-        performSegue(withIdentifier: "contactTileToContactPageSegue", sender: sender)
-    }
-    
 }

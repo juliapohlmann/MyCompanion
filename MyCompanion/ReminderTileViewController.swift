@@ -14,6 +14,9 @@ class ReminderTileViewController : UIViewController {
     @IBOutlet var remindersLabel: UIButton!
     @IBOutlet var remindersImage: UIImageView!
     
+    @IBAction func reminderClick(_ sender: Any) {
+        performSegue(withIdentifier: "reminderTileToReminderPageSegue", sender: sender)
+    }
     
     
     override func viewDidLoad() {
@@ -22,8 +25,5 @@ class ReminderTileViewController : UIViewController {
         remindersImage.image = UIImage.fontAwesomeIcon(name: .list, textColor: UIColor.black, size: CGSize(width: 128, height: 128))
     }
     
-//    @IBAction func contactClick(_ sender: Any) {
-//        performSegue(withIdentifier: "contactTileToContactPageSegue", sender: sender)
-//    }
     
 }

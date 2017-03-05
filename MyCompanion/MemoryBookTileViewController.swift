@@ -18,4 +18,9 @@ class MemoryBookTileViewController: UIViewController {
         
         memoryBookImage.image = UIImage.fontAwesomeIcon(name: .book, textColor: UIColor.black, size: CGSize(width: 128, height: 128))
     }
+    
+    @IBAction func memoryBookClick(_ sender: Any) {
+        performSegue(withIdentifier: "memoryBookTileToMemoryBookSegue", sender: sender)
+
+    }
 }

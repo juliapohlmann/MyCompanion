@@ -27,6 +27,8 @@
 		DAE225931E523C0F00A3D1C8 /* ContactsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE225921E523C0F00A3D1C8 /* ContactsTableViewController.swift */; };
 		DAE225951E523E3900A3D1C8 /* ContactsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE225941E523E3900A3D1C8 /* ContactsTableViewCell.swift */; };
 		DAE225971E5240B600A3D1C8 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE225961E5240B600A3D1C8 /* Contact.swift */; };
+		DAE3BB7C1E6C93D7009BB9E6 /* ReminderTileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE3BB7B1E6C93D7009BB9E6 /* ReminderTileViewController.swift */; };
+		DAE3BB7E1E6C9636009BB9E6 /* MemoryBookTileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE3BB7D1E6C9636009BB9E6 /* MemoryBookTileViewController.swift */; };
 		DAFA46B41E524AB000285267 /* ContactTileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFA46B31E524AB000285267 /* ContactTileViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -79,6 +81,8 @@
 		DAE225921E523C0F00A3D1C8 /* ContactsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsTableViewController.swift; sourceTree = "<group>"; };
 		DAE225941E523E3900A3D1C8 /* ContactsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsTableViewCell.swift; sourceTree = "<group>"; };
 		DAE225961E5240B600A3D1C8 /* Contact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
+		DAE3BB7B1E6C93D7009BB9E6 /* ReminderTileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReminderTileViewController.swift; sourceTree = "<group>"; };
+		DAE3BB7D1E6C9636009BB9E6 /* MemoryBookTileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemoryBookTileViewController.swift; sourceTree = "<group>"; };
 		DAFA46B31E524AB000285267 /* ContactTileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactTileViewController.swift; sourceTree = "<group>"; };
 		E2BED68DEEFE8761AF8FD18E /* Pods-MyCompanion.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyCompanion.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyCompanion/Pods-MyCompanion.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -163,6 +167,7 @@
 				DA8580FB1E4134570055134E /* ViewController.swift */,
 				DA85812A1E41357B0055134E /* TodayViewController.swift */,
 				DA2C16851E54CF42001B3D14 /* IntroViewController.swift */,
+				DAE3BB7A1E6C93BA009BB9E6 /* TileViewControllers */,
 				DA8580FD1E4134570055134E /* Main.storyboard */,
 				1C1615971E5A6E14009A3137 /* PasscodeViewController.swift */,
 				1C1615991E5A7E0B009A3137 /* CheckPasscodeViewController.swift */,
@@ -173,8 +178,6 @@
 				DAE225921E523C0F00A3D1C8 /* ContactsTableViewController.swift */,
 				DAE225941E523E3900A3D1C8 /* ContactsTableViewCell.swift */,
 				DAE225961E5240B600A3D1C8 /* Contact.swift */,
-				DAFA46B31E524AB000285267 /* ContactTileViewController.swift */,
-				DA761C891E5CA42300B3679A /* CaregiverTileViewController.swift */,
 				1CA3BE651E5D1C520016B247 /* SettingsTableViewController.swift */,
 			);
 			path = MyCompanion;
@@ -196,6 +199,17 @@
 				DA85811E1E4134570055134E /* Info.plist */,
 			);
 			path = MyCompanionUITests;
+			sourceTree = "<group>";
+		};
+		DAE3BB7A1E6C93BA009BB9E6 /* TileViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				DA761C891E5CA42300B3679A /* CaregiverTileViewController.swift */,
+				DAFA46B31E524AB000285267 /* ContactTileViewController.swift */,
+				DAE3BB7B1E6C93D7009BB9E6 /* ReminderTileViewController.swift */,
+				DAE3BB7D1E6C9636009BB9E6 /* MemoryBookTileViewController.swift */,
+			);
+			name = TileViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -484,6 +498,8 @@
 			files = (
 				DA2C16861E54CF42001B3D14 /* IntroViewController.swift in Sources */,
 				1CA3BE661E5D1C520016B247 /* SettingsTableViewController.swift in Sources */,
+				DAE3BB7E1E6C9636009BB9E6 /* MemoryBookTileViewController.swift in Sources */,
+				DAE3BB7C1E6C93D7009BB9E6 /* ReminderTileViewController.swift in Sources */,
 				DA8580FC1E4134570055134E /* ViewController.swift in Sources */,
 				1C1615981E5A6E14009A3137 /* PasscodeViewController.swift in Sources */,
 				DA8581021E4134570055134E /* MyCompanion.xcdatamodeld in Sources */,

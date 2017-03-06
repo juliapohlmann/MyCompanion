@@ -11,8 +11,6 @@ import Foundation
 
 class TodayTileViewController: UIViewController {
     
-//    @IBOutlet var dateLabel: UILabel!
-//    @IBOutlet var timeLabel: UILabel!
     
     @IBOutlet var timeLabel: UILabel!
     @IBOutlet var dateLabel: UILabel!
@@ -20,26 +18,24 @@ class TodayTileViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let dateText = getDateText()
-        let timeText = getTimeText()
-        dateLabel.text = dateText
-        timeLabel.text = timeText
+        timeLabel.text = getTimeText()
+        dateLabel.text = dateLabel.text! + " " + getDateText()
     }
     
     func getDateText() -> String {
-        let date = Date()
-        let calendar = Calendar.current
-        
-        let year = calendar.component(.year, from: date)
-        let month = calendar.component(.month, from: date)
-        let day = calendar.component(.day, from: date)
-        
-        let fullText : String = String(month) + " " + String(day) + ", " + String(year)
-        return fullText
-        
+        let date = NSDate()
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "MMMM dd, yyyy"
+
+        return dateFormatter.string(from: date as Date)
     }
     
-    func getTimeText() -> String {
-        return "5:30"
+    func getTimeText() -> String{
+        let date = NSDate()
+        let calendar = Calendar.current
+        let hour = calendar.component(.hour, from: date as Date)
+        let minutes = calendar.component(.minute, from: date as Date)
+        
+        return "\(hour):\(minutes)"
     }
 }

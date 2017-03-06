@@ -12,6 +12,10 @@ import UIKit
 
 class RemindersTableViewCell: UITableViewCell {
     
+    @IBOutlet var reminderLabel: UILabel!
+    
+    
     func setReminder(reminder: Reminder) {
+        self.reminderLabel.text = reminder.text
     }
 }

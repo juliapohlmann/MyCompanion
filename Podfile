@@ -11,6 +11,8 @@ target 'MyCompanion' do
   platform :ios, '8.0'
   use_frameworks!
   pod 'FontAwesome.swift'
+  pod "TextFieldEffects"
+  pod 'UICheckbox'
 
   target 'MyCompanionTests' do
     inherit! :search_paths

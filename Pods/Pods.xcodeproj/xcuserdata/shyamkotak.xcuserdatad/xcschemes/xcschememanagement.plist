@@ -29,34 +29,18 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>TextFieldEffects.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>UICheckbox.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
-	<dict>
-		<key>16C58535AE340D61A13D51CBC5A4D1CA</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>77979430716929ED71E6E262A9F9A184</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>8FBA8A1F7FB8C229DA38567A5C5B042A</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>C74D47B051BF84CA30E0723F127F42AD</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>EFFD01943D54F45A71CDCD26F3AEAAFE</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-	</dict>
+	<dict/>
 </dict>
 </plist>

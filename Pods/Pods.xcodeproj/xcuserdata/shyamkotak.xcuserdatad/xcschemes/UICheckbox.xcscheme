@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '8FBA8A1F7FB8C229DA38567A5C5B042A'
-               BlueprintName = 'Pods-MyCompanionTests'
+               BlueprintIdentifier = 'BE360DD5AD0FD96601C4CE8CC6C71C1F'
+               BlueprintName = 'UICheckbox'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'Pods-MyCompanionTests.framework'>
+               BuildableName = 'UICheckbox.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

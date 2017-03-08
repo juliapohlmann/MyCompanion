@@ -7,12 +7,22 @@
 //
 
 import UIKit
+import CoreData
+import TextFieldEffects
+import ImageIO
 
 class AddContactViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     @IBOutlet var imageView: UIImageView!
-    
     let imagePicker = UIImagePickerController()
+    
+    var contacts: [NSManagedObject] = []
+    
+    @IBOutlet var nameTextField: JiroTextField!
+    @IBOutlet var relationshipTextField: JiroTextField!
+    @IBOutlet var numberTextField: JiroTextField!
+    @IBOutlet var emailTextField: JiroTextField!
+    var imageData: NSData? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,6 +49,7 @@ class AddContactViewController: UIViewController, UIImagePickerControllerDelegat
         if let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
             imageView.contentMode = .scaleAspectFit
             imageView.image = pickedImage
+            imageData = UIImageJPEGRepresentation(pickedImage, 1) as NSData?
         }
         
         dismiss(animated: true, completion: nil)
@@ -48,4 +59,32 @@ class AddContactViewController: UIViewController, UIImagePickerControllerDelegat
         dismiss(animated: true, completion: nil)
     }
 
+    // MARK: Core Data
+
+    func getContext() -> NSManagedObjectContext {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        return appDelegate.persistentContainer.viewContext
+    }
+    
+    @IBAction func storeContact(_ sender: Any) {
+        let context = getContext()
+        let entity = NSEntityDescription.entity(forEntityName: "Contact", in: context)
+        let contact = NSManagedObject(entity: entity!, insertInto: context)
+        
+        contact.setValue(nameTextField.text, forKey: "name")
+        contact.setValue(relationshipTextField.text, forKey: "relationship")
+        contact.setValue(numberTextField.text, forKey: "number")
+        contact.setValue(emailTextField.text, forKey: "email")
+        contact.setValue(imageData, forKey: "image")
+        
+        do {
+            try context.save()
+            contacts.append(contact)
+        } catch let error as NSError {
+            let errorDialog = UIAlertController(title: "Error!", message: "Failed to save! \(error): \(error.userInfo)", preferredStyle: .alert)
+            errorDialog.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+            present(errorDialog, animated: true)
+        }
+    }
+    
 }

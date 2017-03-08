@@ -179,7 +179,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gXr-1u-RUx">
-                                <rect key="frame" x="106.5" y="266" width="269" height="65"/>
+                                <rect key="frame" x="107" y="266" width="269" height="65"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="44"/>
                                 <state key="normal" title="Memory Book">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -294,7 +294,7 @@
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Daily Reminders" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="br2-Xr-4iM">
-                                    <rect key="frame" x="331" y="18.5" width="362" height="43"/>
+                                    <rect key="frame" x="331" y="19" width="362" height="43"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="362" id="Hxe-BO-HfY"/>
                                     </constraints>
@@ -303,7 +303,7 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vqh-1y-LSj">
-                                    <rect key="frame" x="33" y="18.5" width="96" height="55"/>
+                                    <rect key="frame" x="33" y="19" width="96" height="55"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                     <state key="normal" title="Home"/>
                                     <connections>
@@ -365,7 +365,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cZr-X3-aGP">
-                                <rect key="frame" x="72.5" y="271" width="170" height="55"/>
+                                <rect key="frame" x="73" y="271" width="170" height="55"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                 <state key="normal" title="Reminders">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -378,7 +378,7 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ApA-Kk-tgT">
-                                <rect key="frame" x="-0.5" y="0.0" width="315" height="354"/>
+                                <rect key="frame" x="0.5" y="0.0" width="315" height="354"/>
                                 <connections>
                                     <action selector="reminderClick:" destination="D77-TD-m1a" eventType="touchUpInside" id="CSL-fK-BDz"/>
                                     <segue destination="zVN-dJ-7iN" kind="presentation" identifier="reminderTileToReminderPageSegue" id="JYI-gR-lRr"/>
@@ -420,7 +420,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tp0-WB-4uI">
-                                <rect key="frame" x="85.5" y="271" width="144" height="55"/>
+                                <rect key="frame" x="86" y="271" width="144" height="55"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                 <state key="normal" title="Contacts">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -475,7 +475,7 @@
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your friends and family" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ph9-sp-399">
-                                    <rect key="frame" x="331.5" y="22" width="361.5" height="43"/>
+                                    <rect key="frame" x="331" y="22" width="362" height="43"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
@@ -955,11 +955,24 @@
                                 <rect key="frame" x="304" y="390" width="168" height="168"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kSf-8q-Rt0">
+                                <rect key="frame" x="411" y="622" width="92" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Save Contact"/>
+                                <connections>
+                                    <action selector="storeContact:" destination="KAm-bB-keR" eventType="touchUpInside" id="ydi-Jq-spc"/>
+                                    <segue destination="G1Q-UI-hZQ" kind="show" id="E48-WH-KFA"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="emailTextField" destination="r1t-Xz-cN7" id="g0p-Wk-s8D"/>
                         <outlet property="imageView" destination="0x7-TV-UCH" id="mKA-aQ-4vz"/>
+                        <outlet property="nameTextField" destination="D2g-gs-Q2E" id="yhM-aD-iDj"/>
+                        <outlet property="numberTextField" destination="9GB-78-yxS" id="9B7-wZ-ZjZ"/>
+                        <outlet property="relationshipTextField" destination="BuT-pb-lHB" id="qtF-fk-qXS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FTK-K0-zOT" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -969,5 +982,6 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="yKK-ZY-dqg"/>
+        <segue reference="E48-WH-KFA"/>
     </inferredMetricsTieBreakers>
 </document>

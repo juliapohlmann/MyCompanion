@@ -33,7 +33,7 @@ class DashboardViewController: UIViewController {
     }
     
     func switchView() {
-        print("CALLED SWITCH VIEW")
+        //print("CALLED SWITCH VIEW")
         let newViewController = self.storyboard?.instantiateViewController(withIdentifier: self.controllerIdToSwitchTo)
         newViewController!.view.translatesAutoresizingMaskIntoConstraints = false
         self.cycleFromViewController(oldViewController: self.currentViewController!, toViewController: newViewController!)

@@ -9,14 +9,11 @@
 import UIKit
 import CoreData
 import TextFieldEffects
-import ImageIO
 
 class AddContactViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     @IBOutlet var imageView: UIImageView!
     let imagePicker = UIImagePickerController()
-    
-    var contacts: [NSManagedObject] = []
     
     @IBOutlet var nameTextField: JiroTextField!
     @IBOutlet var relationshipTextField: JiroTextField!
@@ -50,6 +47,8 @@ class AddContactViewController: UIViewController, UIImagePickerControllerDelegat
             imageView.contentMode = .scaleAspectFit
             imageView.image = pickedImage
             imageData = UIImageJPEGRepresentation(pickedImage, 1) as NSData?
+        } else{
+            print("Something went wrong")
         }
         
         dismiss(animated: true, completion: nil)
@@ -65,7 +64,7 @@ class AddContactViewController: UIViewController, UIImagePickerControllerDelegat
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         return appDelegate.persistentContainer.viewContext
     }
-    
+
     @IBAction func storeContact(_ sender: Any) {
         let context = getContext()
         let entity = NSEntityDescription.entity(forEntityName: "Contact", in: context)
@@ -77,14 +76,44 @@ class AddContactViewController: UIViewController, UIImagePickerControllerDelegat
         contact.setValue(emailTextField.text, forKey: "email")
         contact.setValue(imageData, forKey: "image")
         
-        do {
-            try context.save()
-            contacts.append(contact)
-        } catch let error as NSError {
-            let errorDialog = UIAlertController(title: "Error!", message: "Failed to save! \(error): \(error.userInfo)", preferredStyle: .alert)
-            errorDialog.addAction(UIAlertAction(title: "Cancel", style: .cancel))
-            present(errorDialog, animated: true)
+        // popup errors!
+        if(!isValidEmail(testStr: emailTextField.text!)) {
+            print("not valid email")
         }
+        else if(!isValidNumber(value: numberTextField.text!)) {
+            print("not valid number")
+        }
+        else if(imageData == nil) {
+            print("no picture")
+        }
+        else {
+            
+            do {
+                try context.save()
+            } catch let error as NSError {
+                let errorDialog = UIAlertController(title: "Error!", message: "Failed to save! \(error): \(error.userInfo)", preferredStyle: .alert)
+                errorDialog.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+                present(errorDialog, animated: true)
+            }
+            
+            self.dismiss(animated: true)
+            
+        }
+        
+    }
+    
+    func isValidEmail(testStr:String) -> Bool {
+        let emailRegEx = "^(?:(?:(?:(?: )*(?:(?:(?:\\t| )*\\r\\n)?(?:\\t| )+))+(?: )*)|(?: )+)?(?:(?:(?:[-A-Za-z0-9!#$%&’*+/=?^_'{|}~]+(?:\\.[-A-Za-z0-9!#$%&’*+/=?^_'{|}~]+)*)|(?:\"(?:(?:(?:(?: )*(?:(?:[!#-Z^-~]|\\[|\\])|(?:\\\\(?:\\t|[ -~]))))+(?: )*)|(?: )+)\"))(?:@)(?:(?:(?:[A-Za-z0-9](?:[-A-Za-z0-9]{0,61}[A-Za-z0-9])?)(?:\\.[A-Za-z0-9](?:[-A-Za-z0-9]{0,61}[A-Za-z0-9])?)*)|(?:\\[(?:(?:(?:(?:(?:[0-9]|(?:[1-9][0-9])|(?:1[0-9][0-9])|(?:2[0-4][0-9])|(?:25[0-5]))\\.){3}(?:[0-9]|(?:[1-9][0-9])|(?:1[0-9][0-9])|(?:2[0-4][0-9])|(?:25[0-5]))))|(?:(?:(?: )*[!-Z^-~])*(?: )*)|(?:[Vv][0-9A-Fa-f]+\\.[-A-Za-z0-9._~!$&'()*+,;=:]+))\\])))(?:(?:(?:(?: )*(?:(?:(?:\\t| )*\\r\\n)?(?:\\t| )+))+(?: )*)|(?: )+)?$"
+        let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
+        let result = emailTest.evaluate(with: testStr)
+        return result
+    }
+    
+    func isValidNumber(value: String) -> Bool {
+        let PHONE_REGEX = "^\\d{3}-\\d{3}-\\d{4}$"
+        let phoneTest = NSPredicate(format: "SELF MATCHES %@", PHONE_REGEX)
+        let result =  phoneTest.evaluate(with: value)
+        return result
     }
     
 }

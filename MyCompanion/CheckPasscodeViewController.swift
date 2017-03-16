@@ -28,8 +28,6 @@ class CheckPasscodeViewController: UIViewController, UITextFieldDelegate {
     
     override func shouldPerformSegue(withIdentifier identifier: String?, sender: Any?) -> Bool {
         
-        print("here2")
-        
         if(confirmed) {
             return true
         }
@@ -39,25 +37,18 @@ class CheckPasscodeViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func confirmClick(_ sender: Any) {
-        
-        print("here")
-        
+
         let password = passwordTextField.text!
         let originalPassword = UserDefaults.standard.object(forKey: "userPassword") as! String
-        
-        print(password)
-        print(originalPassword)
-        
+
         if (password == originalPassword) {
             
-            print("here")
             confirmed = true
             
         }
         else{
             
             // we need something for forgot password
-            
             passwordTextField.text = ""
             passwordTextField.placeholder = "Your passwords did not match. Please reenter your password"
             passwordTextField.becomeFirstResponder()

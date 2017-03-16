@@ -22,7 +22,7 @@ class IntroTileViewController: UIViewController {
         helloLabel.text = "Hello, \(self.name)!"
 //        helloLabel.adjustsFontSizeToFitWidth = true
 
-        print(helloLabel.font)
+        //print(helloLabel.font)
     }
     
     func resizeFrame() {
@@ -37,8 +37,8 @@ class IntroTileViewController: UIViewController {
         
         self.view.frame = newFrame
         helloLabel.frame = newFrame
-        print("new width: \(self.view.frame.width)")
-        print("new height \(self.view.frame.height)")
+        //print("new width: \(self.view.frame.width)")
+        //print("new height \(self.view.frame.height)")
     }
     
     

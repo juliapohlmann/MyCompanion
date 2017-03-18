@@ -12,6 +12,9 @@
 		1C4E11FE1E79E8AE0001DD3F /* StoryboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C4E11FD1E79E8AE0001DD3F /* StoryboardViewController.swift */; };
 		1C4E12001E79F29C0001DD3F /* NewContactsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C4E11FF1E79F29C0001DD3F /* NewContactsTableViewController.swift */; };
 		1C4E12021E79FBF30001DD3F /* ContactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C4E12011E79FBF30001DD3F /* ContactTableViewCell.swift */; };
+		1C4E12041E7CAF350001DD3F /* MemoryBookTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C4E12031E7CAF350001DD3F /* MemoryBookTableViewController.swift */; };
+		1C4E12061E7CAF4F0001DD3F /* AddMemoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C4E12051E7CAF4F0001DD3F /* AddMemoryTableViewController.swift */; };
+		1C4E120C1E7CCE030001DD3F /* AddLabelPhotoPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C4E120B1E7CCE030001DD3F /* AddLabelPhotoPageViewController.swift */; };
 		1CA3BE661E5D1C520016B247 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CA3BE651E5D1C520016B247 /* SettingsTableViewController.swift */; };
 		1CC61A3E1E6FC2E800C92584 /* AddContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC61A3D1E6FC2E800C92584 /* AddContactViewController.swift */; };
 		6908902E721E1B70ACB83D9D /* Pods_MyCompanionTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FB1E8DD63FDE025EFF94606 /* Pods_MyCompanionTests.framework */; };
@@ -59,6 +62,9 @@
 		1C4E11FD1E79E8AE0001DD3F /* StoryboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardViewController.swift; sourceTree = "<group>"; };
 		1C4E11FF1E79F29C0001DD3F /* NewContactsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewContactsTableViewController.swift; sourceTree = "<group>"; };
 		1C4E12011E79FBF30001DD3F /* ContactTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactTableViewCell.swift; sourceTree = "<group>"; };
+		1C4E12031E7CAF350001DD3F /* MemoryBookTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemoryBookTableViewController.swift; sourceTree = "<group>"; };
+		1C4E12051E7CAF4F0001DD3F /* AddMemoryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddMemoryTableViewController.swift; sourceTree = "<group>"; };
+		1C4E120B1E7CCE030001DD3F /* AddLabelPhotoPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddLabelPhotoPageViewController.swift; sourceTree = "<group>"; };
 		1CA3BE651E5D1C520016B247 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		1CC61A3D1E6FC2E800C92584 /* AddContactViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddContactViewController.swift; sourceTree = "<group>"; };
 		2B7A28B926C4AC51AF438EA7 /* Pods-MyCompanionUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyCompanionUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyCompanionUITests/Pods-MyCompanionUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -174,6 +180,9 @@
 				DA8580F91E4134570055134E /* AppDelegate.swift */,
 				DA8580FB1E4134570055134E /* DashboardViewController.swift */,
 				DA8580FD1E4134570055134E /* Main.storyboard */,
+				1C4E12031E7CAF350001DD3F /* MemoryBookTableViewController.swift */,
+				1C4E12051E7CAF4F0001DD3F /* AddMemoryTableViewController.swift */,
+				1C4E120B1E7CCE030001DD3F /* AddLabelPhotoPageViewController.swift */,
 				1C4E11FD1E79E8AE0001DD3F /* StoryboardViewController.swift */,
 				DA8581031E4134570055134E /* Assets.xcassets */,
 				DA8581051E4134570055134E /* LaunchScreen.storyboard */,
@@ -534,6 +543,8 @@
 			files = (
 				DAE3BB831E6CA42E009BB9E6 /* Reminder.swift in Sources */,
 				DAE3BB811E6CA3B5009BB9E6 /* RemindersTableViewController.swift in Sources */,
+				1C4E12061E7CAF4F0001DD3F /* AddMemoryTableViewController.swift in Sources */,
+				1C4E120C1E7CCE030001DD3F /* AddLabelPhotoPageViewController.swift in Sources */,
 				DA2C16861E54CF42001B3D14 /* IntroTileViewController.swift in Sources */,
 				1CA3BE661E5D1C520016B247 /* SettingsTableViewController.swift in Sources */,
 				DAE3BB7E1E6C9636009BB9E6 /* MemoryBookTileViewController.swift in Sources */,
@@ -545,6 +556,7 @@
 				1C1615981E5A6E14009A3137 /* PasscodeViewController.swift in Sources */,
 				DA8581021E4134570055134E /* MyCompanion.xcdatamodeld in Sources */,
 				DAE3BB851E6CA57F009BB9E6 /* RemindersTableViewCell.swift in Sources */,
+				1C4E12041E7CAF350001DD3F /* MemoryBookTableViewController.swift in Sources */,
 				DAFA46B41E524AB000285267 /* ContactTileViewController.swift in Sources */,
 				1C16159A1E5A7E0B009A3137 /* CheckPasscodeViewController.swift in Sources */,
 				1CC61A3E1E6FC2E800C92584 /* AddContactViewController.swift in Sources */,

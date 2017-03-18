@@ -7,7 +7,15 @@
         <attribute name="number" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="relationship" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
+    <entity name="MemoryBook" representedClassName="MemoryBook" syncable="YES" codeGenerationType="class">
+        <attribute name="image1" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="image2" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="text1" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="text2" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
     <elements>
         <element name="Contact" positionX="-63" positionY="-18" width="128" height="120"/>
+        <element name="MemoryBook" positionX="-54" positionY="27" width="128" height="120"/>
     </elements>
 </model>

@@ -76,6 +76,7 @@ class AddContactViewController: UIViewController, UIImagePickerControllerDelegat
         contact.setValue(emailTextField.text, forKey: "email")
         contact.setValue(imageData, forKey: "image")
         
+        
         // popup errors!
         if(!isValidEmail(testStr: emailTextField.text!)) {
             print("not valid email")

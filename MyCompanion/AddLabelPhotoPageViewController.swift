@@ -17,10 +17,12 @@ class AddLabelPhotoPageViewController: UIViewController, UIImagePickerController
     @IBOutlet var textTextField: JiroTextField!
     let imagePicker = UIImagePickerController()
     var imageData: NSData? = nil
+    var templateType: String? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        print(templateType ?? "mistake")
         // Do any additional setup after loading the view.
     }
 
@@ -40,7 +42,6 @@ class AddLabelPhotoPageViewController: UIViewController, UIImagePickerController
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         if let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
-            print("hereeeee")
             imageView.contentMode = .scaleAspectFit
             imageView.image = pickedImage
             imageData = UIImageJPEGRepresentation(pickedImage, 1) as NSData?

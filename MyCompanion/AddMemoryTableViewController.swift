@@ -32,12 +32,10 @@ class AddMemoryTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        print("here!")
         return 5
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print("here!!")
         if(section == 0 || section == 1) {
             return 4
         } else {
@@ -79,6 +77,27 @@ class AddMemoryTableViewController: UITableViewController {
         }
         
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        var cellClicked:Int = -1
+        
+        if(indexPath.section == 0) {
+            
+            cellClicked = indexPath.row
+            
+        }
+        else if(indexPath.section == 1) {
+            
+            cellClicked = indexPath.row + 4
+            
+        }
+        
+        let myVC = storyboard?.instantiateViewController(withIdentifier: "AddLabelPhotoPageViewController") as! AddLabelPhotoPageViewController
+        myVC.templateType = types[cellClicked]
+        navigationController?.pushViewController(myVC, animated: true)
+        
     }
     
     /*

@@ -9,8 +9,10 @@
 import UIKit
 import TextFieldEffects
 import CoreData
+import MobileCoreServices
+import AVFoundation
 
-class AddLabelPhotoPageViewController: UIViewController, UIImagePickerControllerDelegate {
+class AddLabelPhotoPageViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     @IBOutlet var imageView: UIImageView!
     @IBOutlet var titleTextField: JiroTextField!
@@ -22,6 +24,8 @@ class AddLabelPhotoPageViewController: UIViewController, UIImagePickerController
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        imagePicker.delegate = self
+        
         print(templateType ?? "mistake")
         // Do any additional setup after loading the view.
     }
@@ -34,19 +38,55 @@ class AddLabelPhotoPageViewController: UIViewController, UIImagePickerController
     @IBAction func loadImageButtonTapped(sender: UIButton) {
         imagePicker.allowsEditing = false
         imagePicker.sourceType = .photoLibrary
-        
+        if(templateType?.characters.last == "P") {
+            print("pic")
+            imagePicker.mediaTypes = [kUTTypeImage as String]
+        } else {
+            print("video")
+            imagePicker.mediaTypes = [kUTTypeMovie as String]
+        }
         present(imagePicker, animated: true, completion: nil)
     }
     
     // MARK: - UIImagePickerControllerDelegate Methods
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-        if let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
+        
+        print("hereeee")
+        
+        let mediaType = info[UIImagePickerControllerMediaType] as! NSString
+        
+        if mediaType.isEqual(to: kUTTypeImage as String) {
+            
+            print("here")
+            // Media is an image
+            let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage
             imageView.contentMode = .scaleAspectFit
             imageView.image = pickedImage
-            imageData = UIImageJPEGRepresentation(pickedImage, 1) as NSData?
-        } else{
-            print("Something went wrong")
+            imageData = UIImageJPEGRepresentation(pickedImage!, 1) as NSData?
+            
+        } else if mediaType.isEqual(to: kUTTypeMovie as String) {
+            
+            print("here2")
+            // Media is a video
+            let videoUrl = info[UIImagePickerControllerMediaURL] as! NSURL
+            
+            let asset = AVURLAsset(url: videoUrl as URL, options: nil)
+            let imgGenerator = AVAssetImageGenerator(asset: asset)
+            
+            do {
+                let cgImage = try imgGenerator.copyCGImage(at: CMTimeMake(0, 1), actualTime: nil)
+                imageView.image = UIImage(cgImage: cgImage)
+            } catch {
+                print(error)
+            }
+            
+            do {
+                imageData = try NSData(contentsOf: videoUrl as URL, options: NSData.ReadingOptions())
+            } catch {
+                print(error)
+            }
+            
         }
         
         dismiss(animated: true, completion: nil)
@@ -69,8 +109,9 @@ class AddLabelPhotoPageViewController: UIViewController, UIImagePickerController
         let mb = NSManagedObject(entity: entity!, insertInto: context)
         
         mb.setValue(titleTextField.text, forKey: "title")
-        mb.setValue(textTextField.text, forKey: "text1")
-        mb.setValue(imageData, forKey: "image1")
+        mb.setValue(textTextField.text, forKey: "text")
+        mb.setValue(templateType, forKey: "templateType")
+        mb.setValue(imageData, forKey: "image")
         
         // popup errors!
 //        if(!isValidEmail(testStr: emailTextField.text!)) {

@@ -10,10 +10,10 @@ import UIKit
 
 class AddMemoryTableViewController: UITableViewController {
 
+    var types = ["11LP", "11RP", "11TP", "11DP", "11LV", "11RV", "11TV", "11DV", "1T", "1P", "1V"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        print("hi")
         
         tableView.tableFooterView = UIView(frame: .zero)
         
@@ -32,25 +32,55 @@ class AddMemoryTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 1
+        print("here!")
+        return 5
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 1
+        print("here!!")
+        if(section == 0 || section == 1) {
+            return 4
+        } else {
+            return 1
+        }
     }
+    
+    override func tableView(_ tableView: UITableView,
+                            titleForHeaderInSection section: Int) -> String? {
 
-    /*
+        switch(section){
+            
+            case 0: return "1 text, 1 pic"
+            case 1: return "1 text, 1 vid"
+            case 2: return "1 text"
+            case 3: return "1 pic"
+            case 4: return "1 vid"
+            default: return "mistake"
+            
+        }
+        
+    }
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "templateType", for: indexPath)
 
-        // Configure the cell...
-
+        if(indexPath.section == 0) {
+            
+            cell.textLabel?.text = types[indexPath.row]
+            
+        } else if(indexPath.section == 1) {
+            
+            cell.textLabel?.text = types[indexPath.row + 4]
+            
+        } else  {
+            
+            cell.textLabel?.text = types[indexPath.section + 6]
+            
+        }
+        
         return cell
     }
-    */
-
+    
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {

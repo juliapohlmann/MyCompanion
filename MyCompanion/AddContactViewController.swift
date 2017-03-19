@@ -9,6 +9,7 @@
 import UIKit
 import CoreData
 import TextFieldEffects
+import MobileCoreServices
 
 class AddContactViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
@@ -36,6 +37,7 @@ class AddContactViewController: UIViewController, UIImagePickerControllerDelegat
     @IBAction func loadImageButtonTapped(sender: UIButton) {
         imagePicker.allowsEditing = false
         imagePicker.sourceType = .photoLibrary
+        imagePicker.mediaTypes = [kUTTypeImage as String]
         
         present(imagePicker, animated: true, completion: nil)
     }

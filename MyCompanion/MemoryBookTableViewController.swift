@@ -60,11 +60,13 @@ class MemoryBookTableViewController: UITableViewController {
     }
     
     func fetchPages() {
+        print("fetching pages")
         let context = getContext()
         let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "MemoryBook")
         
         do {
             pages = try context.fetch(fetchRequest)
+            pages = pages.sorted(by: { $0.value(forKeyPath: "orderPosition") as! Int > $1.value(forKeyPath: "orderPosition") as! Int})
         } catch let error as NSError {
             let errorDialog = UIAlertController(title: "Error!", message: "Failed to save! \(error): \(error.userInfo)", preferredStyle: .alert)
             errorDialog.addAction(UIAlertAction(title: "Cancel", style: .cancel))
@@ -90,6 +92,20 @@ class MemoryBookTableViewController: UITableViewController {
         }
     }
     
+    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
+        
+        let context = getContext()
+        
+        do {
+            try context.save()
+        } catch let error as NSError {
+            let errorDialog = UIAlertController(title: "Error!", message: "Failed to save! \(error): \(error.userInfo)", preferredStyle: .alert)
+            errorDialog.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+            present(errorDialog, animated: true)
+        }
+        
+    }
+    
     /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
@@ -105,25 +121,6 @@ class MemoryBookTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         // Return false if you do not want the specified item to be editable.
         return true
-    }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
     }
     */
 

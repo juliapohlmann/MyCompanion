@@ -1050,7 +1050,125 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zhw-5X-1qB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5351" y="-962"/>
+            <point key="canvasLocation" x="5449" y="-1147"/>
+        </scene>
+        <!--Add Photo Page View Controller-->
+        <scene sceneID="m8H-HZ-J2e">
+            <objects>
+                <viewController storyboardIdentifier="AddPhotoPageViewController" id="TfM-Ik-16O" customClass="AddPhotoPageViewController" customModule="MyCompanion" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cBc-fR-85l"/>
+                        <viewControllerLayoutGuide type="bottom" id="kAp-a5-xC8"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Tbj-ya-FTa">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6da-mI-4aW" customClass="JiroTextField" customModule="TextFieldEffects">
+                                <rect key="frame" x="304" y="179" width="416" height="66"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="textColor" red="0.3411764706" green="0.39607843139999999" blue="0.46274509800000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                        <color key="value" red="0.3411764706" green="0.39607843139999999" blue="0.46274509800000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fzM-b4-PdD">
+                                <rect key="frame" x="480" y="327" width="240" height="168"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Upload Photo"/>
+                                <connections>
+                                    <action selector="loadImageButtonTappedWithSender:" destination="TfM-Ik-16O" eventType="touchUpInside" id="Ua6-H3-9za"/>
+                                    <action selector="loadImageButtonTappedWithSender:" destination="OCr-tQ-26s" eventType="touchUpInside" id="kvH-Lu-HRR"/>
+                                    <action selector="loadImageButtonTappedWithSender:" destination="KAm-bB-keR" eventType="touchUpInside" id="nHM-Sw-Ubi"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dSg-AT-U5G">
+                                <rect key="frame" x="304" y="327" width="168" height="168"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aVA-vz-Vvq">
+                                <rect key="frame" x="411" y="559" width="92" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Save Page"/>
+                                <connections>
+                                    <action selector="storeContact:" destination="KAm-bB-keR" eventType="touchUpInside" id="bEj-RN-fdF"/>
+                                    <action selector="storePage" destination="OCr-tQ-26s" eventType="touchUpInside" id="CZ0-0a-Tx1"/>
+                                    <action selector="storePage" destination="TfM-Ik-16O" eventType="touchUpInside" id="JTU-dL-weq"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="dSg-AT-U5G" id="Quq-Zx-ogm"/>
+                        <outlet property="titleTextField" destination="6da-mI-4aW" id="516-7p-Imt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XkR-Hd-srG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5449" y="-430"/>
+        </scene>
+        <!--Add Label Page View Controller-->
+        <scene sceneID="5OK-UE-VeL">
+            <objects>
+                <viewController storyboardIdentifier="AddLabelPageViewController" id="AW1-vn-3Q5" customClass="AddLabelPageViewController" customModule="MyCompanion" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="VzK-uE-Dp6"/>
+                        <viewControllerLayoutGuide type="bottom" id="VSd-Tq-Bzo"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="LWE-s5-eSY">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5VY-hM-N9d" customClass="JiroTextField" customModule="TextFieldEffects">
+                                <rect key="frame" x="304" y="179" width="416" height="66"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="textColor" red="0.3411764706" green="0.39607843139999999" blue="0.46274509800000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                        <color key="value" red="0.3411764706" green="0.39607843139999999" blue="0.46274509800000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter Text" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fvR-Di-wod" customClass="JiroTextField" customModule="TextFieldEffects">
+                                <rect key="frame" x="304" y="253" width="416" height="66"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="textColor" red="0.3411764706" green="0.39607843139999999" blue="0.46274509800000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                        <color key="value" red="0.3411764706" green="0.39607843139999999" blue="0.46274509800000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oFE-2u-fYe">
+                                <rect key="frame" x="466" y="369" width="92" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Save Page"/>
+                                <connections>
+                                    <action selector="storeContact:" destination="KAm-bB-keR" eventType="touchUpInside" id="w6T-n1-CUI"/>
+                                    <action selector="storePage" destination="AW1-vn-3Q5" eventType="touchUpInside" id="DEU-KU-iZX"/>
+                                    <action selector="storePage" destination="OCr-tQ-26s" eventType="touchUpInside" id="upS-EC-f35"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="textTextField" destination="fvR-Di-wod" id="EJ8-Bw-gMz"/>
+                        <outlet property="titleTextField" destination="5VY-hM-N9d" id="c8I-ZD-yCx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="O1G-Ev-1kZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5449" y="284"/>
         </scene>
         <!--Add Contact View Controller-->
         <scene sceneID="9pA-lv-8EW">
@@ -1152,7 +1270,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Z6v-Sy-wTA" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="txq-Ui-DkP">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="txq-Ui-DkP">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -1171,7 +1289,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3f7-0k-wsA" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="2at-zR-Jf3" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ICj-Lj-1am">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="ICj-Lj-1am">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -1188,7 +1306,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="BKC-A8-poJ" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Zs9-0v-7cu">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Zs9-0v-7cu">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

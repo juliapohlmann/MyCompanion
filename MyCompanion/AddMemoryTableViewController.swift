@@ -62,41 +62,52 @@ class AddMemoryTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "templateType", for: indexPath)
 
-        if(indexPath.section == 0) {
-            
-            cell.textLabel?.text = types[indexPath.row]
-            
-        } else if(indexPath.section == 1) {
-            
-            cell.textLabel?.text = types[indexPath.row + 4]
-            
-        } else  {
-            
-            cell.textLabel?.text = types[indexPath.section + 6]
-            
-        }
+        cell.textLabel?.text = types[convertIndexPathToRow(indexPath: indexPath)]
         
         return cell
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        var cellClicked:Int = -1
+        let cellClicked:Int = convertIndexPathToRow(indexPath: indexPath)
+        
+        if(indexPath.section == 0 || indexPath.section == 1) {
+            
+            let myVC = storyboard?.instantiateViewController(withIdentifier: "AddLabelPhotoPageViewController") as! AddLabelPhotoPageViewController
+            myVC.templateType = types[cellClicked]
+            navigationController?.pushViewController(myVC, animated: true)
+            
+        } else if (indexPath.section == 2) {
+            
+            let myVC = storyboard?.instantiateViewController(withIdentifier: "AddLabelPageViewController") as! AddLabelPageViewController
+            myVC.templateType = types[cellClicked]
+            navigationController?.pushViewController(myVC, animated: true)
+
+        } else {
+            
+            let myVC = storyboard?.instantiateViewController(withIdentifier: "AddPhotoPageViewController") as! AddPhotoPageViewController
+            myVC.templateType = types[cellClicked]
+            navigationController?.pushViewController(myVC, animated: true)
+            
+        }
+        
+    }
+    
+    func convertIndexPathToRow(indexPath: IndexPath) -> Int {
         
         if(indexPath.section == 0) {
             
-            cellClicked = indexPath.row
+            return indexPath.row
+            
+        } else if(indexPath.section == 1) {
+            
+            return indexPath.row + 4
+            
+        } else  {
+            
+            return indexPath.section + 6
             
         }
-        else if(indexPath.section == 1) {
-            
-            cellClicked = indexPath.row + 4
-            
-        }
-        
-        let myVC = storyboard?.instantiateViewController(withIdentifier: "AddLabelPhotoPageViewController") as! AddLabelPhotoPageViewController
-        myVC.templateType = types[cellClicked]
-        navigationController?.pushViewController(myVC, animated: true)
         
     }
     

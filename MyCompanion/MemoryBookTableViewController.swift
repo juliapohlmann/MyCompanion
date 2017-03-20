@@ -16,16 +16,18 @@ class MemoryBookTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        let back : UIBarButtonItem = UIBarButtonItem(title: "Back", style: .plain, target: self, action: #selector(dismiss(sender:)))
+        
+        self.navigationItem.setLeftBarButtonItems([back, self.editButtonItem], animated: false)
+        
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    // MARK: - Table view data source
+    
+    func dismiss(sender: AnyObject) {
+        
+        self.dismiss(animated: true)
+        
     }
 
     // MARK: - Table view data source
@@ -67,6 +69,24 @@ class MemoryBookTableViewController: UITableViewController {
             let errorDialog = UIAlertController(title: "Error!", message: "Failed to save! \(error): \(error.userInfo)", preferredStyle: .alert)
             errorDialog.addAction(UIAlertAction(title: "Cancel", style: .cancel))
             present(errorDialog, animated: true)
+        }
+    }
+    
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        
+        if editingStyle == .delete {
+            let context = getContext()
+            context.delete(pages[indexPath.row])
+            
+            do {
+                try context.save()
+            } catch let error as NSError {
+                let errorDialog = UIAlertController(title: "Error!", message: "Failed to save! \(error): \(error.userInfo)", preferredStyle: .alert)
+                errorDialog.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+                present(errorDialog, animated: true)
+            }
+            
+            tableView.deleteRows(at: [indexPath], with: .fade)
         }
     }
     

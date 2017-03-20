@@ -11,6 +11,7 @@ import TextFieldEffects
 import CoreData
 import MobileCoreServices
 import AVFoundation
+import FontAwesome_swift
 
 class AddPhotoPageViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
@@ -26,6 +27,8 @@ class AddPhotoPageViewController: UIViewController, UIImagePickerControllerDeleg
         imagePicker.delegate = self
         
         print(templateType ?? "mistake")
+        
+        imageView.image = UIImage.fontAwesomeIcon(name: .camera, textColor: UIColor.black, size: CGSize(width: 128, height: 128))
         // Do any additional setup after loading the view.
     }
 
@@ -38,10 +41,8 @@ class AddPhotoPageViewController: UIViewController, UIImagePickerControllerDeleg
         imagePicker.allowsEditing = false
         imagePicker.sourceType = .photoLibrary
         if(templateType?.characters.last == "P") {
-            print("pic")
             imagePicker.mediaTypes = [kUTTypeImage as String]
         } else {
-            print("video")
             imagePicker.mediaTypes = [kUTTypeMovie as String]
         }
         present(imagePicker, animated: true, completion: nil)
@@ -51,13 +52,10 @@ class AddPhotoPageViewController: UIViewController, UIImagePickerControllerDeleg
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         
-        print("hereeee")
-        
         let mediaType = info[UIImagePickerControllerMediaType] as! NSString
         
         if mediaType.isEqual(to: kUTTypeImage as String) {
             
-            print("here")
             // Media is an image
             let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage
             imageView.contentMode = .scaleAspectFit
@@ -66,7 +64,6 @@ class AddPhotoPageViewController: UIViewController, UIImagePickerControllerDeleg
             
         } else if mediaType.isEqual(to: kUTTypeMovie as String) {
             
-            print("here2")
             // Media is a video
             let videoUrl = info[UIImagePickerControllerMediaURL] as! NSURL
             

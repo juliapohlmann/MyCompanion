@@ -143,6 +143,18 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		1C4E12141E7F56430001DD3F /* MemoryBook */ = {
+			isa = PBXGroup;
+			children = (
+				1C4E12031E7CAF350001DD3F /* MemoryBookTableViewController.swift */,
+				1C4E12051E7CAF4F0001DD3F /* AddMemoryTableViewController.swift */,
+				1C4E120B1E7CCE030001DD3F /* AddLabelPhotoPageViewController.swift */,
+				1C4E12121E7F50D10001DD3F /* AddPhotoPageViewController.swift */,
+				1C4E12101E7F50A00001DD3F /* AddLabelPageViewController.swift */,
+			);
+			name = MemoryBook;
+			sourceTree = "<group>";
+		};
 		20C332A64E5E9C90DC1180CE /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -184,17 +196,13 @@
 				DA8580F91E4134570055134E /* AppDelegate.swift */,
 				DA8580FB1E4134570055134E /* DashboardViewController.swift */,
 				DA8580FD1E4134570055134E /* Main.storyboard */,
-				1C4E12031E7CAF350001DD3F /* MemoryBookTableViewController.swift */,
-				1C4E12051E7CAF4F0001DD3F /* AddMemoryTableViewController.swift */,
-				1C4E120B1E7CCE030001DD3F /* AddLabelPhotoPageViewController.swift */,
-				1C4E12121E7F50D10001DD3F /* AddPhotoPageViewController.swift */,
-				1C4E12101E7F50A00001DD3F /* AddLabelPageViewController.swift */,
 				1C4E11FD1E79E8AE0001DD3F /* StoryboardViewController.swift */,
 				DA8581031E4134570055134E /* Assets.xcassets */,
 				DA8581051E4134570055134E /* LaunchScreen.storyboard */,
 				DA8581081E4134570055134E /* Info.plist */,
 				DA8581001E4134570055134E /* MyCompanion.xcdatamodeld */,
 				1CA3BE651E5D1C520016B247 /* SettingsTableViewController.swift */,
+				1C4E12141E7F56430001DD3F /* MemoryBook */,
 				DAE3BB7F1E6CA382009BB9E6 /* SecurityViewControllers */,
 				DAE3BB7A1E6C93BA009BB9E6 /* TileViewControllers */,
 				DAE3BB871E6CA58F009BB9E6 /* Contact */,

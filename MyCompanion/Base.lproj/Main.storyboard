@@ -1020,7 +1020,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZTQ-y6-C8B">
                                 <rect key="frame" x="480" y="327" width="240" height="168"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Upload Photo"/>
+                                <state key="normal" title="Upload"/>
                                 <connections>
                                     <action selector="loadImageButtonTappedWithSender:" destination="OCr-tQ-26s" eventType="touchUpInside" id="CRv-bC-4g8"/>
                                     <action selector="loadImageButtonTappedWithSender:" destination="KAm-bB-keR" eventType="touchUpInside" id="hkU-qj-Yjf"/>
@@ -1079,7 +1079,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fzM-b4-PdD">
                                 <rect key="frame" x="480" y="327" width="240" height="168"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Upload Photo"/>
+                                <state key="normal" title="Upload"/>
                                 <connections>
                                     <action selector="loadImageButtonTappedWithSender:" destination="TfM-Ik-16O" eventType="touchUpInside" id="Ua6-H3-9za"/>
                                     <action selector="loadImageButtonTappedWithSender:" destination="OCr-tQ-26s" eventType="touchUpInside" id="kvH-Lu-HRR"/>
@@ -1270,7 +1270,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Z6v-Sy-wTA" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="txq-Ui-DkP">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="txq-Ui-DkP">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -1289,7 +1289,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3f7-0k-wsA" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="2at-zR-Jf3" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="ICj-Lj-1am">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ICj-Lj-1am">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -1306,7 +1306,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="BKC-A8-poJ" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Zs9-0v-7cu">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Zs9-0v-7cu">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

@@ -11,6 +11,7 @@ import TextFieldEffects
 import CoreData
 import MobileCoreServices
 import AVFoundation
+import FontAwesome_swift
 
 class AddLabelPhotoPageViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
@@ -27,6 +28,8 @@ class AddLabelPhotoPageViewController: UIViewController, UIImagePickerController
         imagePicker.delegate = self
         
         print(templateType ?? "mistake")
+        
+        imageView.image = UIImage.fontAwesomeIcon(name: .camera, textColor: UIColor.black, size: CGSize(width: 128, height: 128))
         // Do any additional setup after loading the view.
     }
 

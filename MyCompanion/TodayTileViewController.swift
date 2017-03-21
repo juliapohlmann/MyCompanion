@@ -18,8 +18,8 @@ class TodayTileViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        timeLabel.text = getTimeText()
-        dateLabel.text = dateLabel.text! + " " + getDateText()
+//        timeLabel.text = getTimeText()
+//        dateLabel.text = dateLabel.text! + " " + getDateText()
     }
     
     func getDateText() -> String {

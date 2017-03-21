@@ -14,7 +14,6 @@ class RemindersTableViewController: UITableViewController {
     @IBAction func homeClicked(_ sender: Any) {
         performSegue(withIdentifier: "remindersToHomeSegue", sender: sender)
     }
-
     
     var reminders = [Reminder]()
     

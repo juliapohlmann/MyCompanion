@@ -27,7 +27,11 @@ class CaregiverPortalTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         // Segue to the second view controller
-        self.performSegue(withIdentifier: "editContact", sender: self)
+        if(indexPath[1] == 2) {
+            self.performSegue(withIdentifier: "editContact", sender: self)
+        } else if (indexPath[1] == 1) {
+            self.performSegue(withIdentifier: "editMemoryBook", sender: self)
+        }
     }
     
 }

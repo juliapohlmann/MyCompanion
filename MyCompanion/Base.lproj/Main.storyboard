@@ -99,28 +99,28 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sfG-63-gac">
-                                <rect key="frame" x="20" y="40" width="482" height="344"/>
+                                <rect key="frame" x="20" y="20" width="482" height="354"/>
                             </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AVv-Gs-Fol">
-                                <rect key="frame" x="522" y="40" width="482" height="344"/>
+                                <rect key="frame" x="522" y="20" width="482" height="354"/>
                                 <connections>
                                     <segue destination="Hzs-jB-lcY" kind="embed" id="2sq-ac-Ysd"/>
                                 </connections>
                             </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uDF-vx-2Lw">
-                                <rect key="frame" x="20" y="404" width="315" height="344"/>
+                                <rect key="frame" x="20" y="394" width="315" height="354"/>
                                 <connections>
                                     <segue destination="D77-TD-m1a" kind="embed" id="HwB-SJ-4yL"/>
                                 </connections>
                             </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XCR-30-YbH">
-                                <rect key="frame" x="355" y="404" width="315" height="344"/>
+                                <rect key="frame" x="355" y="394" width="315" height="354"/>
                                 <connections>
                                     <segue destination="oJA-Pt-ytX" kind="embed" id="NXJ-vo-Bal"/>
                                 </connections>
                             </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EJx-V5-8Bw">
-                                <rect key="frame" x="689" y="404" width="315" height="344"/>
+                                <rect key="frame" x="689" y="394" width="315" height="354"/>
                                 <connections>
                                     <segue destination="ptB-jL-s6y" kind="embed" id="S74-79-F90"/>
                                 </connections>
@@ -172,7 +172,7 @@
                         <viewControllerLayoutGuide type="bottom" id="wDT-y5-HJc"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Rzj-Og-jIQ">
-                        <rect key="frame" x="0.0" y="0.0" width="482" height="344"/>
+                        <rect key="frame" x="0.0" y="0.0" width="482" height="354"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gXr-1u-RUx">
@@ -192,7 +192,7 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rPB-NB-Hf6">
-                                <rect key="frame" x="0.0" y="0.0" width="482" height="344"/>
+                                <rect key="frame" x="0.0" y="0.0" width="482" height="354"/>
                                 <connections>
                                     <action selector="memoryBookClick:" destination="Hzs-jB-lcY" eventType="touchUpInside" id="EEj-Hs-U2P"/>
                                     <segue destination="KnS-0o-LI9" kind="presentation" identifier="memoryBookTileToMemoryBookSegue" id="H2L-Hj-1tP"/>
@@ -358,7 +358,7 @@
                         <viewControllerLayoutGuide type="bottom" id="IMh-5x-48q"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="SEt-an-5FI">
-                        <rect key="frame" x="0.0" y="0.0" width="315" height="344"/>
+                        <rect key="frame" x="0.0" y="0.0" width="315" height="354"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cZr-X3-aGP">
@@ -375,7 +375,7 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ApA-Kk-tgT">
-                                <rect key="frame" x="1" y="0.0" width="315" height="344"/>
+                                <rect key="frame" x="1" y="0.0" width="315" height="354"/>
                                 <connections>
                                     <action selector="reminderClick:" destination="D77-TD-m1a" eventType="touchUpInside" id="CSL-fK-BDz"/>
                                     <segue destination="zVN-dJ-7iN" kind="presentation" identifier="reminderTileToReminderPageSegue" id="JYI-gR-lRr"/>
@@ -413,7 +413,7 @@
                         <viewControllerLayoutGuide type="bottom" id="tyB-7W-nyd"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="ykZ-3Q-A8h">
-                        <rect key="frame" x="0.0" y="0.0" width="315" height="344"/>
+                        <rect key="frame" x="0.0" y="0.0" width="315" height="354"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tp0-WB-4uI">
@@ -430,7 +430,7 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bs3-ax-fuf">
-                                <rect key="frame" x="0.0" y="0.0" width="315" height="344"/>
+                                <rect key="frame" x="0.0" y="0.0" width="315" height="354"/>
                                 <connections>
                                     <action selector="contactClick:" destination="oJA-Pt-ytX" eventType="touchUpInside" id="IEB-Cf-MAh"/>
                                 </connections>
@@ -587,7 +587,7 @@
                         <viewControllerLayoutGuide type="bottom" id="j9d-Wb-l1F"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="VQC-eK-RDY">
-                        <rect key="frame" x="0.0" y="0.0" width="315" height="344"/>
+                        <rect key="frame" x="0.0" y="0.0" width="315" height="354"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sld-LR-o4y">
@@ -604,7 +604,7 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TBc-EY-0Ib">
-                                <rect key="frame" x="0.0" y="0.0" width="315" height="344"/>
+                                <rect key="frame" x="0.0" y="0.0" width="315" height="354"/>
                                 <connections>
                                     <action selector="caregiverPortalClick:" destination="ptB-jL-s6y" eventType="touchUpInside" id="4q0-bw-MRS"/>
                                     <segue destination="qD0-On-rhm" kind="presentation" identifier="caregiverTileToCaregiverPageSegue" id="40Z-W4-Ezp"/>
@@ -707,9 +707,6 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="BKC-A8-poJ" kind="show" id="mwB-PZ-f6G"/>
-                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="150" id="O0f-zY-Zsk">
                                         <rect key="frame" x="0.0" y="150" width="1024" height="150"/>
@@ -864,7 +861,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a5d-Pz-kzm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3851.9531249999995" y="-141.40625"/>
+            <point key="canvasLocation" x="4846" y="3759"/>
         </scene>
         <!--Contacts-->
         <scene sceneID="3Jh-Dr-Jjm">
@@ -942,20 +939,20 @@
             </objects>
             <point key="canvasLocation" x="4846" y="2208"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Contacts-->
         <scene sceneID="0FD-dP-ImB">
             <objects>
-                <tableViewController id="Ola-8e-YDR" sceneMemberID="viewController">
+                <tableViewController id="Ola-8e-YDR" customClass="EditContactTableViewController" customModule="MyCompanion" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Iz0-aP-3fT">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <rect key="frame" x="0.0" y="0.0" width="703" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="EditContactCell" id="evv-IB-ATc" customClass="EditContactTableViewCell" customModule="MyCompanion" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="1024" height="44"/>
+                                <rect key="frame" x="0.0" y="28" width="703" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="evv-IB-ATc" id="ISs-Gg-y80">
-                                    <rect key="frame" x="0.0" y="0.0" width="1024" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="703" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FXb-WD-CFD">
@@ -977,7 +974,13 @@
                             <outlet property="delegate" destination="Ola-8e-YDR" id="cH2-hm-8Tj"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="iBR-tN-4dh"/>
+                    <navigationItem key="navigationItem" title="Contacts" id="3mS-EK-W7R">
+                        <barButtonItem key="rightBarButtonItem" title="+" id="LUh-9S-Vep">
+                            <connections>
+                                <segue destination="KAm-bB-keR" kind="showDetail" id="xOr-P6-iNA"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iGX-9z-hch" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1020,7 +1023,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="APQ-3m-VQE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4718" y="-141"/>
+            <point key="canvasLocation" x="5489" y="3759"/>
         </scene>
         <!--Add Label Photo Page View Controller-->
         <scene sceneID="Dlc-t2-uql">
@@ -1091,7 +1094,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zhw-5X-1qB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5449" y="-1147"/>
+            <point key="canvasLocation" x="6353" y="3043"/>
         </scene>
         <!--Add Photo Page View Controller-->
         <scene sceneID="m8H-HZ-J2e">
@@ -1151,7 +1154,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XkR-Hd-srG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5449" y="-430"/>
+            <point key="canvasLocation" x="6353" y="3760"/>
         </scene>
         <!--Add Label Page View Controller-->
         <scene sceneID="5OK-UE-VeL">
@@ -1209,7 +1212,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O1G-Ev-1kZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5449" y="284"/>
+            <point key="canvasLocation" x="6353" y="4474"/>
         </scene>
         <!--Add Contact View Controller-->
         <scene sceneID="9pA-lv-8EW">
@@ -1446,7 +1449,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p0l-35-2Ij" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3127.734375" y="-141.40625"/>
+            <point key="canvasLocation" x="4174" y="3759"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="QrK-aO-ZTR">
@@ -1617,7 +1620,8 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Caregiver Portal" id="h2t-ph-kng"/>
                     <connections>
-                        <segue destination="2at-zR-Jf3" kind="showDetail" identifier="editContact" id="ZOM-Ky-H52"/>
+                        <segue destination="IIu-GC-wdr" kind="showDetail" identifier="editContact" id="612-Tm-Bub"/>
+                        <segue destination="BKC-A8-poJ" kind="showDetail" identifier="editMemoryBook" id="bbF-CD-tJV"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IVJ-02-w8P" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1674,5 +1678,6 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="QNv-iP-D82"/>
+        <segue reference="xOr-P6-iNA"/>
     </inferredMetricsTieBreakers>
 </document>

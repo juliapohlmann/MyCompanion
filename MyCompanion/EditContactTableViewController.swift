@@ -15,6 +15,8 @@ class EditContactTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.setLeftBarButtonItems([self.editButtonItem], animated: false)
+
     }
     
     // MARK: - Table view data source
@@ -28,16 +30,16 @@ class EditContactTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         fetchContacts()
-        
         return contacts.count
     }
-    
+
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "EditContactCell", for: indexPath) as! EditContactTableViewCell
         let contact = contacts[indexPath.row]
         
         cell.name.text = contact.value(forKeyPath: "name") as? String
+        print("NAME: \(contact.value(forKeyPath: "name") as? String)")
 //        cell.email.text = contact.value(forKeyPath: "email") as? String
 //        cell.number.text = contact.value(forKeyPath: "number") as? String
 //        cell.relationship.text = contact.value(forKeyPath: "relationship") as? String
@@ -58,6 +60,7 @@ class EditContactTableViewController: UITableViewController {
         
         do {
             contacts = try context.fetch(fetchRequest)
+            print("SUCCESS")
         } catch let error as NSError {
             let errorDialog = UIAlertController(title: "Error!", message: "Failed to save! \(error): \(error.userInfo)", preferredStyle: .alert)
             errorDialog.addAction(UIAlertAction(title: "Cancel", style: .cancel))
@@ -84,23 +87,23 @@ class EditContactTableViewController: UITableViewController {
      */
     
     
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            let context = getContext()
-            context.delete(contacts[indexPath.row])
-            
-            do {
-                try context.save()
-            } catch let error as NSError {
-                let errorDialog = UIAlertController(title: "Error!", message: "Failed to save! \(error): \(error.userInfo)", preferredStyle: .alert)
-                errorDialog.addAction(UIAlertAction(title: "Cancel", style: .cancel))
-                present(errorDialog, animated: true)
-            }
-            
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        }
-    }
-    
+//    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+//        if editingStyle == .delete {
+//            let context = getContext()
+//            context.delete(contacts[indexPath.row])
+//            
+//            do {
+//                try context.save()
+//            } catch let error as NSError {
+//                let errorDialog = UIAlertController(title: "Error!", message: "Failed to save! \(error): \(error.userInfo)", preferredStyle: .alert)
+//                errorDialog.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+//                present(errorDialog, animated: true)
+//            }
+//            
+//            tableView.deleteRows(at: [indexPath], with: .fade)
+//        }
+//    }
+//    
     
     /*
      // Override to support rearranging the table view.

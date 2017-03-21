@@ -16,9 +16,9 @@ class MemoryBookTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let back : UIBarButtonItem = UIBarButtonItem(title: "Back", style: .plain, target: self, action: #selector(dismiss(sender:)))
+//        let back : UIBarButtonItem = UIBarButtonItem(title: "Back", style: .plain, target: self, action: #selector(dismiss(sender:)))
         
-        self.navigationItem.setLeftBarButtonItems([back, self.editButtonItem], animated: false)
+        self.navigationItem.setLeftBarButtonItems([self.editButtonItem], animated: false)
         
     }
     

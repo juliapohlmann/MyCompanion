@@ -11,6 +11,7 @@ import UIKit
 import CoreData
 
 class ContactTableViewController: UITableViewController {
+    @IBOutlet var homeButton: UIButton!
     var contacts: [NSManagedObject] = []
     
     func dismiss(sender: AnyObject) {
@@ -18,6 +19,14 @@ class ContactTableViewController: UITableViewController {
         self.dismiss(animated: true)
         
     }
+    
+//    @IBAction func homeButtonClicked(_ sender: Any) {
+//        performSegue(withIdentifier: "ContactsToHomeSegue", sender: sender)
+//    }
+//    @IBAction func homeButtonClicked(_ sender: Any) {
+//        performSegue(withIdentifier: "ContactsToHomeSegue", sender: sender)
+//
+//    }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1

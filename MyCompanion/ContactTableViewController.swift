@@ -47,7 +47,7 @@ class ContactTableViewController: UITableViewController {
         cell.email.text = contact.value(forKeyPath: "email") as? String
         cell.number.text = contact.value(forKeyPath: "number") as? String
         cell.relationship.text = contact.value(forKeyPath: "relationship") as? String
-//        cell.contactImage.image = UIImage(data: contact.value(forKeyPath: "image") as! Data)
+        cell.contactImage.image = UIImage(data: contact.value(forKeyPath: "image") as! Data)
         
         return cell
         

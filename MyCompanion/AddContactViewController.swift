@@ -71,15 +71,6 @@ class AddContactViewController: UIViewController, UIImagePickerControllerDelegat
     }
 
     @IBAction func storeContact(_ sender: Any) {
-        let context = getContext()
-        let entity = NSEntityDescription.entity(forEntityName: "Contact", in: context)
-        let contact = NSManagedObject(entity: entity!, insertInto: context)
-        
-        contact.setValue(nameTextField.text, forKey: "name")
-        contact.setValue(relationshipTextField.text, forKey: "relationship")
-        contact.setValue(numberTextField.text, forKey: "number")
-        contact.setValue(emailTextField.text, forKey: "email")
-        contact.setValue(imageData, forKey: "image")
         
         // popup errors!
         if(!isValidEmail(testStr: emailTextField.text!)) {
@@ -93,6 +84,16 @@ class AddContactViewController: UIViewController, UIImagePickerControllerDelegat
             print("no picture")
         }
         else {
+            
+            let context = getContext()
+            let entity = NSEntityDescription.entity(forEntityName: "Contact", in: context)
+            let contact = NSManagedObject(entity: entity!, insertInto: context)
+            
+            contact.setValue(nameTextField.text, forKey: "name")
+            contact.setValue(relationshipTextField.text, forKey: "relationship")
+            contact.setValue(numberTextField.text, forKey: "number")
+            contact.setValue(emailTextField.text, forKey: "email")
+            contact.setValue(imageData, forKey: "image")
             
             do {
                 try context.save()

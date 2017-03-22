@@ -74,11 +74,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MyCompanion/ContactTableViewController.swift"
-            timestampString = "511900667.174098"
+            timestampString = "511904749.373881"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "79"
-            endingLineNumber = "79"
+            startingLineNumber = "84"
+            endingLineNumber = "84"
             landmarkName = "ContactTableViewController"
             landmarkType = "3">
          </BreakpointContent>

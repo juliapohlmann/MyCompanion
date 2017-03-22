@@ -25,7 +25,7 @@ import UIKit
         do {
             contacts = try context.fetch(fetchRequest)
             return contacts
-        } catch let error as NSError {
+        } catch _ as NSError {
             return []
 //            let errorDialog = UIAlertController(title: "Error!", message: "Failed to save! \(error): \(error.userInfo)", preferredStyle: .alert)
 //            errorDialog.addAction(UIAlertAction(title: "Cancel", style: .cancel))
@@ -49,7 +49,7 @@ import UIKit
             try context.save()
             return true
             
-        } catch let error as NSError {
+        } catch _ as NSError {
             return false
 //            let errorDialog = UIAlertController(title: "Error!", message: "Failed to save! \(error): \(error.userInfo)", preferredStyle: .alert)
 //            errorDialog.addAction(UIAlertAction(title: "Cancel", style: .cancel))
@@ -66,11 +66,8 @@ import UIKit
         do {
             try context.save()
             return true
-        } catch let error as NSError {
+        } catch _ as NSError {
             return false
-//            let errorDialog = UIAlertController(title: "Error!", message: "Failed to save! \(error): \(error.userInfo)", preferredStyle: .alert)
-//            errorDialog.addAction(UIAlertAction(title: "Cancel", style: .cancel))
-//            present(errorDialog, animated: true)
         }
 
     }

@@ -532,7 +532,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="315" height="354"/>
                                 <connections>
                                     <action selector="caregiverPortalClick:" destination="ptB-jL-s6y" eventType="touchUpInside" id="4q0-bw-MRS"/>
-                                    <segue destination="qD0-On-rhm" kind="presentation" identifier="caregiverTileToCaregiverPageSegue" id="40Z-W4-Ezp"/>
+                                    <segue destination="eZD-GN-D0P" kind="show" identifier="caregiverTileToCaregiverPageSegue" id="GIl-Gm-D5P"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -556,71 +556,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GD8-de-Z3b" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="275" y="578"/>
-        </scene>
-        <!--Check Passcode View Controller-->
-        <scene sceneID="Hrq-Kp-vYW">
-            <objects>
-                <viewController id="qD0-On-rhm" customClass="CheckPasscodeViewController" customModule="MyCompanion" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="NAv-Mh-SdK"/>
-                        <viewControllerLayoutGuide type="bottom" id="kB6-lm-rcX"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="3vK-aL-71n">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter your password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CWO-30-dyX" customClass="JiroTextField" customModule="TextFieldEffects">
-                                <rect key="frame" x="288" y="351" width="257" height="66"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="257" id="scM-IP-q4O"/>
-                                </constraints>
-                                <color key="textColor" red="0.3411764706" green="0.39607843139999999" blue="0.46274509800000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="20"/>
-                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
-                                        <color key="value" red="0.3411764706" green="0.39607843139999999" blue="0.46274509800000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rA1-8r-xo8">
-                                <rect key="frame" x="587" y="351" width="55" height="66"/>
-                                <state key="normal" title="Confirm"/>
-                                <connections>
-                                    <action selector="confirmClick:" destination="qD0-On-rhm" eventType="touchUpInside" id="dM0-zn-lE7"/>
-                                    <segue destination="eZD-GN-D0P" kind="show" id="mx7-Tv-jub"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please enter your password to enter the Caregiver Portal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sSR-WI-zJf">
-                                <rect key="frame" x="38" y="105" width="948" height="65"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="65" id="FSe-sR-sxa"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="36"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstItem="sSR-WI-zJf" firstAttribute="leading" secondItem="3vK-aL-71n" secondAttribute="leadingMargin" constant="18" id="7Ms-w9-i0M"/>
-                            <constraint firstItem="sSR-WI-zJf" firstAttribute="top" secondItem="NAv-Mh-SdK" secondAttribute="bottom" constant="105" id="Cvk-zz-OEd"/>
-                            <constraint firstItem="CWO-30-dyX" firstAttribute="leading" secondItem="3vK-aL-71n" secondAttribute="leading" constant="288" id="TP9-zM-wex"/>
-                            <constraint firstItem="rA1-8r-xo8" firstAttribute="centerY" secondItem="3vK-aL-71n" secondAttribute="centerY" id="VqB-Xr-o7Y"/>
-                            <constraint firstItem="CWO-30-dyX" firstAttribute="centerY" secondItem="3vK-aL-71n" secondAttribute="centerY" id="iAX-Jk-phm"/>
-                            <constraint firstItem="CWO-30-dyX" firstAttribute="top" secondItem="rA1-8r-xo8" secondAttribute="top" id="jkq-hW-pfr"/>
-                            <constraint firstItem="sSR-WI-zJf" firstAttribute="centerX" secondItem="3vK-aL-71n" secondAttribute="centerX" id="kE5-4F-c56"/>
-                            <constraint firstItem="kB6-lm-rcX" firstAttribute="top" secondItem="CWO-30-dyX" secondAttribute="bottom" constant="351" id="m9g-4J-p1E"/>
-                            <constraint firstItem="rA1-8r-xo8" firstAttribute="leading" secondItem="CWO-30-dyX" secondAttribute="trailing" constant="42" id="ucZ-dd-LLT"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="passwordTextField" destination="CWO-30-dyX" id="pHg-nm-zLS"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="bN5-cn-QuL" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="959.76562499999989" y="726.5625"/>
         </scene>
         <!--Memory Book Table View Controller-->
         <scene sceneID="YWh-1f-n67">

@@ -25,14 +25,6 @@ class ContactTableViewController: UITableViewController {
         
     }
     
-//    @IBAction func homeButtonClicked(_ sender: Any) {
-//        performSegue(withIdentifier: "ContactsToHomeSegue", sender: sender)
-//    }
-//    @IBAction func homeButtonClicked(_ sender: Any) {
-//        performSegue(withIdentifier: "ContactsToHomeSegue", sender: sender)
-//
-//    }
-    
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -52,6 +44,11 @@ class ContactTableViewController: UITableViewController {
         cell.email.text = contact.value(forKeyPath: "email") as? String
         cell.number.text = contact.value(forKeyPath: "number") as? String
         cell.relationship.text = contact.value(forKeyPath: "relationship") as? String
+        if(contact.value(forKeyPath: "image") == nil) {
+            cell.contactImage.image = UIImage.fontAwesomeIcon(name: .user, textColor: UIColor.black, size: CGSize(width: 128, height: 128))
+        } else {
+            cell.contactImage.image = UIImage(data: contact.value(forKeyPath: "image") as! Data)
+        }
         //cell.contactImage.image = UIImage(data: contact.value(forKeyPath: "image") as! Data)
         
         return cell

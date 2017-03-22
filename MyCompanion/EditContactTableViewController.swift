@@ -16,6 +16,8 @@ class EditContactTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.setLeftBarButtonItems([self.editButtonItem], animated: false)
+        
+        contacts = ContactDataManager.fetchContacts()
 
     }
     
@@ -29,7 +31,7 @@ class EditContactTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        fetchContacts()
+//        fetchContacts()
         return contacts.count
     }
 
@@ -49,24 +51,24 @@ class EditContactTableViewController: UITableViewController {
         
     }
     
-    func getContext() -> NSManagedObjectContext {
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        return appDelegate.persistentContainer.viewContext
-    }
+//    func getContext() -> NSManagedObjectContext {
+//        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+//        return appDelegate.persistentContainer.viewContext
+//    }
     
-    func fetchContacts() {
-        let context = getContext()
-        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Contact")
-        
-        do {
-            contacts = try context.fetch(fetchRequest)
-            print("SUCCESS")
-        } catch let error as NSError {
-            let errorDialog = UIAlertController(title: "Error!", message: "Failed to save! \(error): \(error.userInfo)", preferredStyle: .alert)
-            errorDialog.addAction(UIAlertAction(title: "Cancel", style: .cancel))
-            present(errorDialog, animated: true)
-        }
-    }
+//    func fetchContacts() {
+//        let context = getContext()
+//        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Contact")
+//        
+//        do {
+//            contacts = try context.fetch(fetchRequest)
+//            print("SUCCESS")
+//        } catch let error as NSError {
+//            let errorDialog = UIAlertController(title: "Error!", message: "Failed to save! \(error): \(error.userInfo)", preferredStyle: .alert)
+//            errorDialog.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+//            present(errorDialog, animated: true)
+//        }
+//    }
     
     /*
      override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

@@ -85,25 +85,15 @@ class AddContactViewController: UIViewController, UIImagePickerControllerDelegat
         }
         else {
             
-            let context = getContext()
-            let entity = NSEntityDescription.entity(forEntityName: "Contact", in: context)
-            let contact = NSManagedObject(entity: entity!, insertInto: context)
+            var didStore = ContactDataManager.storeContact()
             
-            contact.setValue(nameTextField.text, forKey: "name")
-            contact.setValue(relationshipTextField.text, forKey: "relationship")
-            contact.setValue(numberTextField.text, forKey: "number")
-            contact.setValue(emailTextField.text, forKey: "email")
-            contact.setValue(imageData, forKey: "image")
-            
-            do {
-                try context.save()
-            } catch let error as NSError {
-                let errorDialog = UIAlertController(title: "Error!", message: "Failed to save! \(error): \(error.userInfo)", preferredStyle: .alert)
-                errorDialog.addAction(UIAlertAction(title: "Cancel", style: .cancel))
-                present(errorDialog, animated: true)
+            if(didStore) {
+                self.dismiss(animated: true)
+            } else {
+//                let errorDialog = UIAlertController(title: "Error!", message: "Failed to save! \(error): \(error.userInfo)", preferredStyle: .alert)
+                //            errorDialog.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+                //            present(errorDialog, animated: true)
             }
-            
-            self.dismiss(animated: true)
             
         }
         

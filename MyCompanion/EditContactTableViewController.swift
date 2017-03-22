@@ -91,18 +91,28 @@ class EditContactTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            let context = getContext()
-            context.delete(contacts[indexPath.row])
+            var didDelete = ContactDataManager.deleteContact(contact: contacts[indexPath.row])
             
-            do {
-                try context.save()
-            } catch let error as NSError {
-                let errorDialog = UIAlertController(title: "Error!", message: "Failed to save! \(error): \(error.userInfo)", preferredStyle: .alert)
-                errorDialog.addAction(UIAlertAction(title: "Cancel", style: .cancel))
-                present(errorDialog, animated: true)
+            print(didDelete)
+            
+            if didDelete {
+                contacts = ContactDataManager.fetchContacts()
+                tableView.deleteRows(at: [indexPath], with: .fade)
+            } else {
+                //SHOW ERROR
+                print ("didnt delete!!")
             }
+//            let context = getContext()
+//            context.delete(contacts[indexPath.row])
+//            
+//            do {
+//                try context.save()
+//            } catch let error as NSError {
+//                let errorDialog = UIAlertController(title: "Error!", message: "Failed to save! \(error): \(error.userInfo)", preferredStyle: .alert)
+//                errorDialog.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+//                present(errorDialog, animated: true)
+//            }
             
-            tableView.deleteRows(at: [indexPath], with: .fade)
         }
     }
     

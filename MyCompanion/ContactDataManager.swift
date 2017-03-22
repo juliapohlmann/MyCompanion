@@ -33,7 +33,7 @@ import UIKit
         }
     }
     
-    static func storeContact(name: String, relationship: String, number: String, email: String, imageData: NSData) -> Bool {
+    static func storeContact(name: String, relationship: String, number: String, email: String/*, imageData: NSData*/) -> Bool {
         
         let context = getContext()
         let entity = NSEntityDescription.entity(forEntityName: "Contact", in: context)
@@ -43,7 +43,7 @@ import UIKit
         contact.setValue(relationship, forKey: "relationship")
         contact.setValue(number, forKey: "number")
         contact.setValue(email, forKey: "email")
-        contact.setValue(imageData, forKey: "image")
+//        contact.setValue(imageData, forKey: "image")
         
         do {
             try context.save()
@@ -57,5 +57,21 @@ import UIKit
         }
         
 //        self.dismiss(animated: true)
+    }
+    
+    static func deleteContact(contact: NSManagedObject) -> Bool {
+        let context = getContext()
+        context.delete(contact)
+        
+        do {
+            try context.save()
+            return true
+        } catch let error as NSError {
+            return false
+//            let errorDialog = UIAlertController(title: "Error!", message: "Failed to save! \(error): \(error.userInfo)", preferredStyle: .alert)
+//            errorDialog.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+//            present(errorDialog, animated: true)
+        }
+
     }
 }

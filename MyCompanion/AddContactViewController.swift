@@ -86,7 +86,8 @@ class AddContactViewController: UIViewController, UIImagePickerControllerDelegat
             var didStore = ContactDataManager.storeContact(name: nameTextField.text!, relationship: relationshipTextField.text!, number: numberTextField.text!, email: emailTextField.text!/*, imageData: imageData!*/)
         
             if(didStore) {
-                self.dismiss(animated: true)
+                performSegue(withIdentifier: "backToEditContacts", sender: self)
+//                self.dismiss(animated: true)
             } else {
 //                let errorDialog = UIAlertController(title: "Error!", message: "Failed to save! \(error): \(error.userInfo)", preferredStyle: .alert)
                 //            errorDialog.addAction(UIAlertAction(title: "Cancel", style: .cancel))

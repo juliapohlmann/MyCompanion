@@ -609,15 +609,15 @@
             <objects>
                 <tableViewController id="Ola-8e-YDR" customClass="EditContactTableViewController" customModule="MyCompanion" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Iz0-aP-3fT">
-                        <rect key="frame" x="0.0" y="0.0" width="703" height="768"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="EditContactCell" id="evv-IB-ATc" customClass="EditContactTableViewCell" customModule="MyCompanion" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="703" height="44"/>
+                                <rect key="frame" x="0.0" y="28" width="1024" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="evv-IB-ATc" id="ISs-Gg-y80">
-                                    <rect key="frame" x="0.0" y="0.0" width="703" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="1024" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FXb-WD-CFD">
@@ -642,7 +642,7 @@
                     <navigationItem key="navigationItem" title="Contacts" id="3mS-EK-W7R">
                         <barButtonItem key="rightBarButtonItem" title="+" id="LUh-9S-Vep">
                             <connections>
-                                <segue destination="KAm-bB-keR" kind="showDetail" id="xOr-P6-iNA"/>
+                                <segue destination="e2L-FR-KWa" kind="showDetail" id="xOr-P6-iNA"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -759,7 +759,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zhw-5X-1qB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6353" y="3043"/>
+            <point key="canvasLocation" x="7076.953125" y="3042.96875"/>
         </scene>
         <!--Add Photo Page View Controller-->
         <scene sceneID="m8H-HZ-J2e">
@@ -879,7 +879,7 @@
             </objects>
             <point key="canvasLocation" x="6353" y="4474"/>
         </scene>
-        <!--Add Contact View Controller-->
+        <!--Title-->
         <scene sceneID="9pA-lv-8EW">
             <objects>
                 <viewController id="KAm-bB-keR" customClass="AddContactViewController" customModule="MyCompanion" customModuleProvider="target" sceneMemberID="viewController">
@@ -891,7 +891,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="703" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="D2g-gs-Q2E" customClass="JiroTextField" customModule="TextFieldEffects">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="D2g-gs-Q2E" customClass="JiroTextField" customModule="TextFieldEffects">
                                 <rect key="frame" x="165" y="115" width="416" height="66"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="textColor" red="0.3411764706" green="0.39607843139999999" blue="0.46274509800000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -903,7 +903,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Relationship" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BuT-pb-lHB" customClass="JiroTextField" customModule="TextFieldEffects">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Relationship" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BuT-pb-lHB" customClass="JiroTextField" customModule="TextFieldEffects">
                                 <rect key="frame" x="165" y="189" width="416" height="66"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="textColor" red="0.3411764706" green="0.39607843139999999" blue="0.46274509800000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -962,6 +962,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Title" id="uO9-yl-Y7o">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="58f-Gv-SeG">
+                            <connections>
+                                <segue destination="IIu-GC-wdr" kind="showDetail" identifier="backToEditContacts" id="RXJ-12-X15"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="emailTextField" destination="r1t-Xz-cN7" id="g0p-Wk-s8D"/>
                         <outlet property="imageView" destination="0x7-TV-UCH" id="mKA-aQ-4vz"/>
@@ -972,7 +979,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FTK-K0-zOT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5545" y="2960"/>
+            <point key="canvasLocation" x="6268.9453125" y="2959.375"/>
         </scene>
         <!--Add Reminder View Controller-->
         <scene sceneID="c9e-bZ-ZTp">
@@ -1346,8 +1353,27 @@
             </objects>
             <point key="canvasLocation" x="-720" y="-509"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="dV8-kd-zo7">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="e2L-FR-KWa" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="JDv-Nb-uZp">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="KAm-bB-keR" kind="relationship" relationship="rootViewController" id="MCI-E6-ZA4"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8tD-4W-Az6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5544.7265625" y="2959.375"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="GRi-cz-0S0"/>
+        <segue reference="RXJ-12-X15"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -72,28 +72,16 @@ class AddContactViewController: UIViewController, UIImagePickerControllerDelegat
 
     @IBAction func storeContact(_ sender: Any) {
         var controller : UIAlertController = UIAlertController()
-//        if(nameTextField.text! == "") {
-//            print(nameTextField.text)
-//            controller = UIAlertController(title: "Missing Name", message: "Please enter a name for the contact", preferredStyle: .alert)
-//        } else if(relationshipTextField.text! == "") {
-//            controller = UIAlertController(title: "Missing Relationship", message: "Please enter a relationship for the contact", preferredStyle: .alert)
-//        } else if((numberTextField.text! != "") && !isValidNumber(value: numberTextField.text!)) {
-//            controller = UIAlertController(title: "Incorrect Phone Number", message: "Please enter a valid phone number (ie. 555-123-4567)", preferredStyle: .alert)
-//        } else if((emailTextField.text! != "") && !isValidEmail(testStr: emailTextField.text!)) {
-//            controller = UIAlertController(title: "Incorrect Email Address", message: "Please enter a valid email address", preferredStyle: .alert)
-//        } else {
-//        // popup errors!
-//        if(!isValidEmail(testStr: emailTextField.text!)) {
-//            print("not valid email")
-//        }
-//        else if(!isValidNumber(value: numberTextField.text!)) {
-//            print("not valid number")
-//        }
-//        else if(imageData == nil) {
-//            //not forcing image, add grey person if none.
-//            print("no picture")
-//        }
-//        else {
+        if(nameTextField.text! == "") {
+            controller = UIAlertController(title: "Missing Name", message: "Please enter a name for the contact", preferredStyle: .alert)
+        } else if(relationshipTextField.text! == "") {
+            controller = UIAlertController(title: "Missing Relationship", message: "Please enter a relationship for the contact", preferredStyle: .alert)
+        } else if((numberTextField.text != "") && !(isValidNumber(value: numberTextField.text!))) {
+            controller = UIAlertController(title: "Incorrect Phone Number", message: "Please enter a valid phone number (ie. 555-123-4567)", preferredStyle: .alert)
+        } else if((emailTextField.text != "") && !(isValidEmail(testStr: emailTextField.text!))) {
+            controller = UIAlertController(title: "Incorrect Email Address", message: "Please enter a valid email address", preferredStyle: .alert)
+        }
+        else {
         
             var didStore = ContactDataManager.storeContact(name: nameTextField.text!, relationship: relationshipTextField.text!, number: numberTextField.text!, email: emailTextField.text!/*, imageData: imageData!*/)
         
@@ -106,6 +94,8 @@ class AddContactViewController: UIViewController, UIImagePickerControllerDelegat
             }
             
 //        }
+        }
+        
         let ok = UIAlertAction(title: "OK", style: .default, handler: nil)
         controller.addAction(ok)
         present(controller, animated: true, completion: nil)

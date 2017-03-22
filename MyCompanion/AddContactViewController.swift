@@ -83,7 +83,7 @@ class AddContactViewController: UIViewController, UIImagePickerControllerDelegat
         }
         else {
         
-            var didStore = ContactDataManager.storeContact(name: nameTextField.text!, relationship: relationshipTextField.text!, number: numberTextField.text!, email: emailTextField.text!/*, imageData: imageData!*/)
+            let didStore = ContactDataManager.storeContact(name: nameTextField.text!, relationship: relationshipTextField.text!, number: numberTextField.text!, email: emailTextField.text!/*, imageData: imageData!*/)
         
             if(didStore) {
                 performSegue(withIdentifier: "backToEditContacts", sender: self)

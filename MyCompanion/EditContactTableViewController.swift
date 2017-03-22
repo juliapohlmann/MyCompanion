@@ -91,7 +91,7 @@ class EditContactTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            var didDelete = ContactDataManager.deleteContact(contact: contacts[indexPath.row])
+            let didDelete = ContactDataManager.deleteContact(contact: contacts[indexPath.row])
             
             print(didDelete)
             

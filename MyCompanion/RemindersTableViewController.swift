@@ -19,7 +19,6 @@ class RemindersTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        loadSampleReminders()
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -39,14 +38,6 @@ class RemindersTableViewController: UITableViewController {
         cell.setReminder(reminder: reminders[indexPath.row])
         
         return cell
-    }
-    
-    
-    private func loadSampleReminders() {
-        reminders.append(Reminder(text: "rem1"))
-        reminders.append(Reminder(text: "rem2"))
-        reminders.append(Reminder(text: "rem2"))
-        reminders.append(Reminder(text: "rem2"))
     }
     
 }

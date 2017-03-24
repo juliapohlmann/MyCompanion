@@ -42,7 +42,6 @@
 		DAE3BB7C1E6C93D7009BB9E6 /* ReminderTileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE3BB7B1E6C93D7009BB9E6 /* ReminderTileViewController.swift */; };
 		DAE3BB7E1E6C9636009BB9E6 /* MemoryBookTileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE3BB7D1E6C9636009BB9E6 /* MemoryBookTileViewController.swift */; };
 		DAE3BB811E6CA3B5009BB9E6 /* RemindersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE3BB801E6CA3B5009BB9E6 /* RemindersTableViewController.swift */; };
-		DAE3BB831E6CA42E009BB9E6 /* Reminder.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE3BB821E6CA42E009BB9E6 /* Reminder.swift */; };
 		DAE3BB851E6CA57F009BB9E6 /* RemindersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE3BB841E6CA57F009BB9E6 /* RemindersTableViewCell.swift */; };
 		DAFA46B41E524AB000285267 /* ContactTileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFA46B31E524AB000285267 /* ContactTileViewController.swift */; };
 /* End PBXBuildFile section */
@@ -111,7 +110,6 @@
 		DAE3BB7B1E6C93D7009BB9E6 /* ReminderTileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReminderTileViewController.swift; sourceTree = "<group>"; };
 		DAE3BB7D1E6C9636009BB9E6 /* MemoryBookTileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemoryBookTileViewController.swift; sourceTree = "<group>"; };
 		DAE3BB801E6CA3B5009BB9E6 /* RemindersTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemindersTableViewController.swift; sourceTree = "<group>"; };
-		DAE3BB821E6CA42E009BB9E6 /* Reminder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reminder.swift; sourceTree = "<group>"; };
 		DAE3BB841E6CA57F009BB9E6 /* RemindersTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemindersTableViewCell.swift; sourceTree = "<group>"; };
 		DAFA46B31E524AB000285267 /* ContactTileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactTileViewController.swift; sourceTree = "<group>"; };
 		E2BED68DEEFE8761AF8FD18E /* Pods-MyCompanion.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyCompanion.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyCompanion/Pods-MyCompanion.debug.xcconfig"; sourceTree = "<group>"; };
@@ -271,7 +269,6 @@
 				1C4E121A1E818A2D0001DD3F /* AddReminderViewController.swift */,
 				DAE3BB801E6CA3B5009BB9E6 /* RemindersTableViewController.swift */,
 				DAE3BB841E6CA57F009BB9E6 /* RemindersTableViewCell.swift */,
-				DAE3BB821E6CA42E009BB9E6 /* Reminder.swift */,
 			);
 			name = Reminder;
 			sourceTree = "<group>";
@@ -576,7 +573,6 @@
 				1C4E121B1E818A2D0001DD3F /* AddReminderViewController.swift in Sources */,
 				DA63DC261E81BF9A00E1C5A8 /* EditContactTableViewCell.swift in Sources */,
 				DA63DC281E822AE700E1C5A8 /* ContactTableViewController.swift in Sources */,
-				DAE3BB831E6CA42E009BB9E6 /* Reminder.swift in Sources */,
 				DAE3BB811E6CA3B5009BB9E6 /* RemindersTableViewController.swift in Sources */,
 				1C4E12061E7CAF4F0001DD3F /* AddMemoryTableViewController.swift in Sources */,
 				DA1AB3F41E82FA740015E2EA /* ContactDataManager.swift in Sources */,

@@ -14,8 +14,12 @@
         <attribute name="text" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
+    <entity name="Reminder" representedClassName="Reminder" syncable="YES" codeGenerationType="class">
+        <attribute name="text" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
     <elements>
         <element name="Contact" positionX="-63" positionY="-18" width="128" height="120"/>
         <element name="MemoryBook" positionX="-54" positionY="27" width="128" height="120"/>
+        <element name="Reminder" positionX="-54" positionY="45" width="128" height="60"/>
     </elements>
 </model>

@@ -14,15 +14,9 @@ class ContactTableViewController: UITableViewController {
     @IBOutlet var homeButton: UIButton!
     var contacts: [NSManagedObject] = []
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.contacts = ContactDataManager.fetchContacts()
-    }
-    func dismiss(sender: AnyObject) {
-        
-        self.dismiss(animated: true)
-        
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {

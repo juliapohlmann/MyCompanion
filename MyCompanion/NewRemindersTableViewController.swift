@@ -7,24 +7,33 @@
 //
 
 import UIKit
+import CoreData
 
 class NewRemindersTableViewController: UITableViewController {
 
+    var reminders : [NSManagedObject] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        let back : UIBarButtonItem = UIBarButtonItem(title: "Back", style: .plain, target: self, action: #selector(dismiss(sender:)))
         
-        self.navigationItem.setLeftBarButtonItems([back, self.editButtonItem], animated: false)
-        
+        self.reminders = fetchReminders()
     }
     
-    // MARK: - Table view data source
+    func getContext() -> NSManagedObjectContext {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        return appDelegate.persistentContainer.viewContext
+    }
     
-    func dismiss(sender: AnyObject) {
+    func fetchReminders() -> [NSManagedObject] {
+        let context = getContext()
+        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Contact")
         
-        self.dismiss(animated: true)
-        
+        do {
+            self.reminders = try context.fetch(fetchRequest)
+            return self.reminders
+        } catch _ as NSError {
+            return []
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -36,12 +45,12 @@ class NewRemindersTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return reminders.count
     }
 
     /*

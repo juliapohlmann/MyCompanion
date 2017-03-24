@@ -30,8 +30,6 @@ class ContactTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        fetchContacts()
-        
         return contacts.count
     }
     

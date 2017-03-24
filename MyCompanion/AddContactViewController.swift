@@ -24,9 +24,17 @@ class AddContactViewController: UIViewController, UIImagePickerControllerDelegat
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        setStockPhoto()
+        
         imagePicker.delegate = self
         // Do any additional setup after loading the view.
+    }
+    
+    func setStockPhoto() {
+        imageView.layer.borderWidth = 2
+        imageView.layer.borderColor = UIColor.black.cgColor
+        
+        imageView.image = UIImage.fontAwesomeIcon(name: .user, textColor: UIColor.black, size: CGSize(width: 128, height: 128))
     }
 
     override func didReceiveMemoryWarning() {

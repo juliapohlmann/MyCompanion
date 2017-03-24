@@ -20,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //set UINavigation bar to not be translucent and set to off white
         UINavigationBar.appearance().isTranslucent = false
         UINavigationBar.appearance().barTintColor = UIColor(red: 247.0/255.0, green: 247.0/255.0, blue: 247.0/255.0, alpha: 1.0)
-        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName : UIColor.black]
+        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName : UIColor.black, NSFontAttributeName: UIFont(name: "AvenirNext-DemiBold", size: 19)!]
         UIBarButtonItem.appearance().tintColor = UIColor(red: 156.0/255.0, green: 39.0/255.0, blue: 176.0/255.0, alpha: 1.0)
 
         return true

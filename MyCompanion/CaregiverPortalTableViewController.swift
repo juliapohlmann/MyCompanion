@@ -32,6 +32,8 @@ class CaregiverPortalTableViewController: UITableViewController {
             self.performSegue(withIdentifier: "editContact", sender: self)
         } else if (indexPath[1] == 1) {
             self.performSegue(withIdentifier: "editMemoryBook", sender: self)
+        } else if (indexPath[1] == 3) {
+            self.performSegue(withIdentifier: "editReminders", sender: self)
         }
     }
     

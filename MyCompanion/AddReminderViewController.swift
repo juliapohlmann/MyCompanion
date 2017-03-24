@@ -17,6 +17,7 @@ class AddReminderViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        print("here")
         // Do any additional setup after loading the view.
     }
 
@@ -34,15 +35,20 @@ class AddReminderViewController: UIViewController {
         
         let context = getContext()
         let entity = NSEntityDescription.entity(forEntityName: "Reminder", in: context)
-        let contact = NSManagedObject(entity: entity!, insertInto: context)
+        let reminder = NSManagedObject(entity: entity!, insertInto: context)
         
-        contact.setValue(nameTextField.text, forKey: "text")
+        print("saving reminder")
+        
+        reminder.setValue(nameTextField.text, forKey: "text")
         
         do {
             
             try context.save()
             
         } catch _ as NSError {
+            
+            
+            
         }
         
     }

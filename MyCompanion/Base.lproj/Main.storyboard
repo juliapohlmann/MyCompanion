@@ -1051,9 +1051,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HRN-Cg-IeR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4580.859375" y="1447.65625"/>
+            <point key="canvasLocation" x="4680" y="1448"/>
         </scene>
-        <!--New Reminders Table View Controller-->
+        <!--Reminders-->
         <scene sceneID="MGp-2t-eHL">
             <objects>
                 <tableViewController id="9if-bL-szH" customClass="NewRemindersTableViewController" customModule="MyCompanion" customModuleProvider="target" sceneMemberID="viewController">
@@ -1062,7 +1062,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="5ZS-u3-vZe" style="IBUITableViewCellStyleDefault" id="Wfb-7F-kwb">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="reminder" textLabel="5ZS-u3-vZe" style="IBUITableViewCellStyleDefault" id="Wfb-7F-kwb">
                                 <rect key="frame" x="0.0" y="28" width="703" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Wfb-7F-kwb" id="xin-uN-TTo">
@@ -1085,7 +1085,8 @@
                             <outlet property="delegate" destination="9if-bL-szH" id="Hew-np-p0V"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="6wA-Oo-GON">
+                    <navigationItem key="navigationItem" title="Reminders" id="6wA-Oo-GON">
+                        <barButtonItem key="leftBarButtonItem" title="Edit" id="RK5-LW-cld"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="vgp-Gf-K2z">
                             <connections>
                                 <segue destination="Kgf-bC-lkV" kind="show" id="Q09-Ij-J5c"/>
@@ -1095,7 +1096,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mUe-yi-1P9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3852" y="1448"/>
+            <point key="canvasLocation" x="3943" y="1448"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="sDm-Ct-n6s">
@@ -1131,7 +1132,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l97-J6-wY8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3128" y="1448"/>
+            <point key="canvasLocation" x="3203" y="1448"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="7Aw-0Z-IMs">
@@ -1336,7 +1337,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="IIu-GC-wdr" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="qw7-PZ-r2a">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="qw7-PZ-r2a">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

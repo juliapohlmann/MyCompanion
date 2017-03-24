@@ -15,7 +15,9 @@ class NewRemindersTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
         self.reminders = fetchReminders()
     }
     
@@ -26,7 +28,7 @@ class NewRemindersTableViewController: UITableViewController {
     
     func fetchReminders() -> [NSManagedObject] {
         let context = getContext()
-        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Contact")
+        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Reminder")
         
         do {
             self.reminders = try context.fetch(fetchRequest)
@@ -50,18 +52,16 @@ class NewRemindersTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
+        print(reminders.count)
         return reminders.count
     }
-
-    /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "reminder", for: indexPath)
 
-        // Configure the cell...
+        cell.textLabel?.text = reminders[indexPath.row].value(forKeyPath: "text") as? String
 
         return cell
     }
-    */
 
     /*
     // Override to support conditional editing of the table view.

@@ -13,6 +13,9 @@ import CoreData
 class ContactTableViewController: UITableViewController {
     @IBOutlet var homeButton: UIButton!
     var contacts: [NSManagedObject] = []
+    let canCall = UserDefaults.standard.object(forKey: "canCall") as! Bool
+    let canEmail = UserDefaults.standard.object(forKey: "canEmail") as! Bool
+    let purpleColor = UIColor(red: 156/225, green: 39/255, blue: 176/255, alpha: 1.0)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,7 +29,7 @@ class ContactTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return contacts.count
     }
-    
+
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "ContactsTableViewCell", for: indexPath) as! ContactTableViewCell
@@ -34,7 +37,17 @@ class ContactTableViewController: UITableViewController {
         
         cell.name.text = contact.value(forKeyPath: "name") as? String
         cell.email.text = contact.value(forKeyPath: "email") as? String
+        if(canEmail) {
+            
+            cell.email.textColor = purpleColor
+            
+        }
         cell.number.text = contact.value(forKeyPath: "number") as? String
+        if(canCall) {
+            
+            cell.number.textColor = purpleColor
+            
+        }
         cell.relationship.text = contact.value(forKeyPath: "relationship") as? String
         if(contact.value(forKeyPath: "image") == nil) {
             cell.contactImage.image = UIImage.fontAwesomeIcon(name: .user, textColor: UIColor.black, size: CGSize(width: 128, height: 128))

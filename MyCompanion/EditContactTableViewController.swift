@@ -88,6 +88,10 @@ class EditContactTableViewController: UITableViewController {
      }
      */
     
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        self.performSegue(withIdentifier: "editContactSegue", sender: self);
+
+    }
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
@@ -118,7 +122,6 @@ class EditContactTableViewController: UITableViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if(segue.identifier == "addContactSegue") {
-            
             // pass data to next view
             let destinationNavigationController = segue.destination as! UINavigationController
             let targetController = destinationNavigationController.topViewController as! ContactDetailViewController
@@ -130,7 +133,10 @@ class EditContactTableViewController: UITableViewController {
             let destinationNavigationController = segue.destination as! UINavigationController
             let targetController = destinationNavigationController.topViewController as! ContactDetailViewController
             targetController.setType(type: "Edit Contact")
-            targetController.setContact(contact: contacts[indexPath.row[]])
+            if let indexPath = self.tableView.indexPathForSelectedRow {
+                let contact = contacts[indexPath.row]
+                targetController.contact = contact
+            }
         }
     }
     

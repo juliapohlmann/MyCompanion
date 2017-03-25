@@ -31,15 +31,14 @@ class ContactDetailViewController: UIViewController, UIImagePickerControllerDele
         self.type = type
     }
     
-    func setContact(contact: NSManagedObject) {
-        self.contact = contact
-        
-        nameTextField.text = contact.value(forKeyPath: "name") as? String
-        emailTextField.text = contact.value(forKeyPath: "email") as? String
-        numberTextField.text = contact.value(forKeyPath: "number") as? String
-        relationshipTextField.text = contact.value(forKeyPath: "relationship") as? String
-        if(contact.value(forKeyPath: "image") != nil) {
-            imageView.image = UIImage(data: contact.value(forKeyPath: "image") as! Data)
+    func setContactFields() {
+        print(contact)
+        nameTextField.text = contact?.value(forKeyPath: "name") as? String
+        emailTextField.text = contact?.value(forKeyPath: "email") as? String
+        numberTextField.text = contact?.value(forKeyPath: "number") as? String
+        relationshipTextField.text = contact?.value(forKeyPath: "relationship") as? String
+        if(contact?.value(forKeyPath: "image") != nil) {
+            imageView.image = UIImage(data: contact?.value(forKeyPath: "image") as! Data)
         }
 
     }
@@ -47,6 +46,9 @@ class ContactDetailViewController: UIViewController, UIImagePickerControllerDele
     override func viewDidLoad() {
         super.viewDidLoad()
         setStockPhoto()
+        if(self.type == "Edit Contact") {
+            setContactFields()
+        }
         self.navigationItem.title = self.type
 //        navBar.title = "Your Title"
 

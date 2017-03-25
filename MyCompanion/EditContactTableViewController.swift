@@ -116,6 +116,10 @@ class EditContactTableViewController: UITableViewController {
         }
     }
     
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if(
+//    }
+    
     
     /*
      // Override to support rearranging the table view.

@@ -11,10 +11,14 @@ import CoreData
 import TextFieldEffects
 import MobileCoreServices
 
-class AddContactViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class ContactDetailViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     @IBOutlet var imageView: UIImageView!
     let imagePicker = UIImagePickerController()
+    
+    var type : String = ""
+//    var navTitle : String = ""
+    
     
     @IBOutlet var nameTextField: JiroTextField!
     @IBOutlet var relationshipTextField: JiroTextField!
@@ -22,9 +26,16 @@ class AddContactViewController: UIViewController, UIImagePickerControllerDelegat
     @IBOutlet var emailTextField: JiroTextField!
     var imageData: NSData? = nil
     
+    func setType(type: String) {
+        self.type = type
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setStockPhoto()
+        self.navigationItem.title = self.type
+//        navBar.title = "Your Title"
+
         
         imagePicker.delegate = self
         // Do any additional setup after loading the view.
@@ -90,16 +101,19 @@ class AddContactViewController: UIViewController, UIImagePickerControllerDelegat
             controller = UIAlertController(title: "Incorrect Email Address", message: "Please enter a valid email address", preferredStyle: .alert)
         }
         else {
+            if(type == "Add Contact") {
+                let didStore = ContactDataManager.storeContact(name: nameTextField.text!, relationship: relationshipTextField.text!, number: numberTextField.text!, email: emailTextField.text!/*, imageData: imageData!*/)
         
-            let didStore = ContactDataManager.storeContact(name: nameTextField.text!, relationship: relationshipTextField.text!, number: numberTextField.text!, email: emailTextField.text!/*, imageData: imageData!*/)
-        
-            if(didStore) {
-                performSegue(withIdentifier: "backToEditContacts", sender: self)
-//                self.dismiss(animated: true)
+                if(didStore) {
+                    performSegue(withIdentifier: "backToEditContacts", sender: self)
+                } else {
+//                  let errorDialog = UIAlertController(title: "Error!", message: "Failed to save! \(error): \(error.userInfo)", preferredStyle: .alert)
+                    //            errorDialog.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+                    //            present(errorDialog, animated: true)
+                }
             } else {
-//                let errorDialog = UIAlertController(title: "Error!", message: "Failed to save! \(error): \(error.userInfo)", preferredStyle: .alert)
-                //            errorDialog.addAction(UIAlertAction(title: "Cancel", style: .cancel))
-                //            present(errorDialog, animated: true)
+                //EDIT CONTACT
+                print("attempting to edit contact")
             }
             
 //        }

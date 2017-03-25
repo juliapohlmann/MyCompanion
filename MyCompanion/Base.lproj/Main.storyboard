@@ -869,10 +869,10 @@
             </objects>
             <point key="canvasLocation" x="6353" y="4474"/>
         </scene>
-        <!--Add Contact-->
+        <!--Title-->
         <scene sceneID="9pA-lv-8EW">
             <objects>
-                <viewController id="KAm-bB-keR" customClass="AddContactViewController" customModule="MyCompanion" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="KAm-bB-keR" customClass="ContactDetailViewController" customModule="MyCompanion" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="fuO-b7-zJy"/>
                         <viewControllerLayoutGuide type="bottom" id="OEt-3k-shD"/>
@@ -989,7 +989,7 @@
                         </subviews>
                         <color key="backgroundColor" red="0.61176470589999998" green="0.1529411765" blue="0.69019607839999997" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Add Contact" id="uO9-yl-Y7o">
+                    <navigationItem key="navigationItem" title="Title" id="uO9-yl-Y7o">
                         <barButtonItem key="leftBarButtonItem" title="Back" id="58f-Gv-SeG">
                             <color key="tintColor" red="0.61176470589999998" green="0.14901960780000001" blue="0.69019607839999997" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
@@ -1437,7 +1437,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="JbG-nG-njc"/>
+        <segue reference="GaV-Bb-vbs"/>
         <segue reference="RXJ-12-X15"/>
     </inferredMetricsTieBreakers>
 </document>

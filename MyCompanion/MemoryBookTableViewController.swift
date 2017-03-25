@@ -59,7 +59,6 @@ class MemoryBookTableViewController: UITableViewController {
     }
     
     func fetchPages() {
-        print("fetching pages")
         let context = getContext()
         let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "MemoryBook")
         

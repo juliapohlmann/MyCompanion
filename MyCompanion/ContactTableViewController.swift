@@ -11,6 +11,7 @@ import UIKit
 import CoreData
 
 class ContactTableViewController: UITableViewController {
+    
     @IBOutlet var homeButton: UIButton!
     var contacts: [NSManagedObject] = []
     let canCall = UserDefaults.standard.object(forKey: "canCall") as! Bool

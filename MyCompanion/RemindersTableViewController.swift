@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import CoreData
 
 class RemindersTableViewController: UITableViewController {
     
@@ -15,10 +16,11 @@ class RemindersTableViewController: UITableViewController {
         performSegue(withIdentifier: "remindersToHomeSegue", sender: sender)
     }
     
-    var reminders = [Reminder]()
+    var reminders = [NSManagedObject]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        reminders = ReminderDataManager.fetchReminders()
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -35,7 +37,8 @@ class RemindersTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! RemindersTableViewCell
         
         cell.selectionStyle = UITableViewCellSelectionStyle.none
-        cell.setReminder(reminder: reminders[indexPath.row])
+        let reminderText = reminders[indexPath.row].value(forKeyPath: "text") as? String
+        cell.setReminder(reminderText: reminderText!)
         
         return cell
     }

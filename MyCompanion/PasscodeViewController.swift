@@ -20,6 +20,9 @@ class PasscodeViewController: UIViewController,UITextFieldDelegate {
 
         passwordField.delegate = self
         passwordField.becomeFirstResponder()
+        
+        UserDefaults.standard.set(true, forKey: "canCall")
+        UserDefaults.standard.set(true, forKey: "canEmail")
     }
     
     override func shouldPerformSegue(withIdentifier identifier: String?, sender: Any?) -> Bool {

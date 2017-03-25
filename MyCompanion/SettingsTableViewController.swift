@@ -24,6 +24,12 @@ class SettingsTableViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
 
+    
+    @IBAction func callsValueChanged(_ sender: Any) {
+    }
+    
+    @IBOutlet var emailsValueChanged: UISwitch!
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

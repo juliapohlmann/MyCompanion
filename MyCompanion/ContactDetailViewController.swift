@@ -11,10 +11,22 @@ import CoreData
 import TextFieldEffects
 import MobileCoreServices
 
+class landscapeImagePickerController: UIImagePickerController {
+    
+    func application(application: UIApplication,
+                     supportedInterfaceOrientationsForWindow window: UIWindow?)
+        -> UIInterfaceOrientationMask {
+            
+            return[.landscape, .portrait]
+            
+    }
+    
+}
+
 class ContactDetailViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     @IBOutlet var imageView: UIImageView!
-    let imagePicker = UIImagePickerController()
+    let imagePicker = landscapeImagePickerController()
     
     var type : String = ""
 //    var navTitle : String = ""
@@ -57,8 +69,11 @@ class ContactDetailViewController: UIViewController, UIImagePickerControllerDele
         imagePicker.allowsEditing = false
         imagePicker.sourceType = .photoLibrary
         imagePicker.mediaTypes = [kUTTypeImage as String]
+        imagePicker.modalPresentationStyle = .popover
+        let presentationController = imagePicker.popoverPresentationController
+        presentationController?.sourceView = self.imageView
         
-        present(imagePicker, animated: true, completion: nil)
+        self.present(imagePicker, animated: true) {}
     }
     
     // MARK: - UIImagePickerControllerDelegate Methods

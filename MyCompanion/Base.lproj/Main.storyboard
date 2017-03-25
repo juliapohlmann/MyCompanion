@@ -1198,6 +1198,9 @@
                                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MXv-Pb-uKN">
                                                     <rect key="frame" x="646" y="6" width="51" height="31"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <connections>
+                                                        <action selector="emailsValueChanged:" destination="ywy-ta-8HG" eventType="valueChanged" id="J0l-o5-DS9"/>
+                                                    </connections>
                                                 </switch>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Allow Emails" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zqb-EI-Lv4">
                                                     <rect key="frame" x="8" y="11" width="136" height="26"/>
@@ -1221,7 +1224,6 @@
                     <connections>
                         <outlet property="callsSwitch" destination="NfR-wk-LT3" id="NQa-zv-F4k"/>
                         <outlet property="emailsSwitch" destination="MXv-Pb-uKN" id="dYM-Th-Sid"/>
-                        <outlet property="emailsValueChanged" destination="MXv-Pb-uKN" id="fOu-tt-To3"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6sN-Gf-zk0" userLabel="First Responder" sceneMemberID="firstResponder"/>

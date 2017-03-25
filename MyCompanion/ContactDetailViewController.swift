@@ -127,7 +127,7 @@ class ContactDetailViewController: UIViewController, UIImagePickerControllerDele
         }
         else {
             if(type == "Add Contact") {
-                let didStore = ContactDataManager.storeContact(name: nameTextField.text!, relationship: relationshipTextField.text!, number: numberTextField.text!, email: emailTextField.text!/*, imageData: imageData!*/)
+                let didStore = ContactDataManager.storeContact(name: nameTextField.text!, relationship: relationshipTextField.text!, number: numberTextField.text!, email: emailTextField.text!, imageData: imageData!)
         
                 if(didStore) {
                     performSegue(withIdentifier: "backToEditContacts", sender: self)
@@ -137,7 +137,7 @@ class ContactDetailViewController: UIViewController, UIImagePickerControllerDele
             } else {
                 //EDIT CONTACT
                 print("Attempting to update contact")
-                let didUpdate = ContactDataManager.updateContact(contact: contact!, name: nameTextField.text!, relationship: relationshipTextField.text!, number: numberTextField.text!, email: emailTextField.text!/*, imageData: imageData!*/)
+                let didUpdate = ContactDataManager.updateContact(contact: contact!, name: nameTextField.text!, relationship: relationshipTextField.text!, number: numberTextField.text!, email: emailTextField.text!, imageData: imageData!)
                 
                 if(didUpdate) {
                     performSegue(withIdentifier: "backToEditContacts", sender: self)

@@ -30,7 +30,7 @@ import UIKit
         }
     }
     
-    static func storeContact(name: String, relationship: String, number: String, email: String/*, imageData: NSData*/) -> Bool {
+    static func storeContact(name: String, relationship: String, number: String, email: String, imageData: NSData) -> Bool {
         
         let context = getContext()
         let entity = NSEntityDescription.entity(forEntityName: "Contact", in: context)
@@ -40,7 +40,7 @@ import UIKit
         contact.setValue(relationship, forKey: "relationship")
         contact.setValue(number, forKey: "number")
         contact.setValue(email, forKey: "email")
-//        contact.setValue(imageData, forKey: "image")
+        contact.setValue(imageData, forKey: "image")
         
         do {
             try context.save()
@@ -64,14 +64,14 @@ import UIKit
 
     }
     
-    static func updateContact(contact: NSManagedObject, name: String, relationship: String, number: String, email: String/*, imageData: NSData*/) -> Bool {
+    static func updateContact(contact: NSManagedObject, name: String, relationship: String, number: String, email: String, imageData: NSData) -> Bool {
         let context = getContext()
 
         contact.setValue(name, forKey: "name")
         contact.setValue(relationship, forKey: "relationship")
         contact.setValue(number, forKey: "number")
         contact.setValue(email, forKey: "email")
-        //        contact.setValue(imageData, forKey: "image")
+        contact.setValue(imageData, forKey: "image")
         
         do {
             try context.save()

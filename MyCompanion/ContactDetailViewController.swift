@@ -17,6 +17,7 @@ class ContactDetailViewController: UIViewController, UIImagePickerControllerDele
     let imagePicker = UIImagePickerController()
     
     var type : String = ""
+    var contact : NSManagedObject?
 //    var navTitle : String = ""
     
     
@@ -28,6 +29,19 @@ class ContactDetailViewController: UIViewController, UIImagePickerControllerDele
     
     func setType(type: String) {
         self.type = type
+    }
+    
+    func setContact(contact: NSManagedObject) {
+        self.contact = contact
+        
+        nameTextField.text = contact.value(forKeyPath: "name") as? String
+        emailTextField.text = contact.value(forKeyPath: "email") as? String
+        numberTextField.text = contact.value(forKeyPath: "number") as? String
+        relationshipTextField.text = contact.value(forKeyPath: "relationship") as? String
+        if(contact.value(forKeyPath: "image") != nil) {
+            imageView.image = UIImage(data: contact.value(forKeyPath: "image") as! Data)
+        }
+
     }
     
     override func viewDidLoad() {
@@ -44,8 +58,9 @@ class ContactDetailViewController: UIViewController, UIImagePickerControllerDele
     func setStockPhoto() {
         imageView.layer.borderWidth = 2
         imageView.layer.borderColor = UIColor.black.cgColor
-        
-        imageView.image = UIImage.fontAwesomeIcon(name: .user, textColor: UIColor.black, size: CGSize(width: 128, height: 128))
+        if(imageView.image == nil) {
+            imageView.image = UIImage.fontAwesomeIcon(name: .user, textColor: UIColor.black, size: CGSize(width: 128, height: 128))
+        }
     }
 
     override func didReceiveMemoryWarning() {

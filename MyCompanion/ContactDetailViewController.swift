@@ -130,7 +130,17 @@ class ContactDetailViewController: UIViewController, UIImagePickerControllerDele
                 }
             } else {
                 //EDIT CONTACT
-                print("attempting to edit contact")
+                print("Attempting to update contact")
+                let didUpdate = ContactDataManager.updateContact(contact: contact!, name: nameTextField.text!, relationship: relationshipTextField.text!, number: numberTextField.text!, email: emailTextField.text!/*, imageData: imageData!*/)
+                
+                if(didUpdate) {
+                    performSegue(withIdentifier: "backToEditContacts", sender: self)
+                } else {
+                    //                  let errorDialog = UIAlertController(title: "Error!", message: "Failed to save! \(error): \(error.userInfo)", preferredStyle: .alert)
+                    //            errorDialog.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+                    //            present(errorDialog, animated: true)
+                }
+
             }
             
 //        }

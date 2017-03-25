@@ -122,12 +122,9 @@ class EditContactTableViewController: UITableViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if(segue.identifier == "addContactSegue") {
-            // pass data to next view
             let destinationNavigationController = segue.destination as! UINavigationController
             let targetController = destinationNavigationController.topViewController as! ContactDetailViewController
             targetController.setType(type: "Add Contact")
-//            let indexPath = self.tableView.indexPathForSelectedRow()
-//            viewController.pinCode = self.exams[indexPath.row]
         }
         else if (segue.identifier == "editContactSegue") {
             let destinationNavigationController = segue.destination as! UINavigationController

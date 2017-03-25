@@ -29,6 +29,7 @@ class ContactDetailViewController: UIViewController, UIImagePickerControllerDele
     let imagePicker = landscapeImagePickerController()
     
     var type : String = ""
+    var contact : NSManagedObject?
 //    var navTitle : String = ""
     
     
@@ -38,26 +39,35 @@ class ContactDetailViewController: UIViewController, UIImagePickerControllerDele
     @IBOutlet var emailTextField: JiroTextField!
     var imageData: NSData? = nil
     
-    func setType(type: String) {
-        self.type = type
+    func setContactFields() {
+        nameTextField.text = contact?.value(forKeyPath: "name") as? String
+        emailTextField.text = contact?.value(forKeyPath: "email") as? String
+        numberTextField.text = contact?.value(forKeyPath: "number") as? String
+        relationshipTextField.text = contact?.value(forKeyPath: "relationship") as? String
+        if(contact?.value(forKeyPath: "image") != nil) {
+            imageView.image = UIImage(data: contact?.value(forKeyPath: "image") as! Data)
+        }
+
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setStockPhoto()
+        if(self.type == "Edit Contact") {
+            setContactFields()
+        }
         self.navigationItem.title = self.type
-//        navBar.title = "Your Title"
 
         
         imagePicker.delegate = self
-        // Do any additional setup after loading the view.
     }
     
     func setStockPhoto() {
         imageView.layer.borderWidth = 2
         imageView.layer.borderColor = UIColor.black.cgColor
-        
-        imageView.image = UIImage.fontAwesomeIcon(name: .user, textColor: UIColor.black, size: CGSize(width: 128, height: 128))
+        if(imageView.image == nil) {
+            imageView.image = UIImage.fontAwesomeIcon(name: .user, textColor: UIColor.black, size: CGSize(width: 128, height: 128))
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -122,16 +132,19 @@ class ContactDetailViewController: UIViewController, UIImagePickerControllerDele
                 if(didStore) {
                     performSegue(withIdentifier: "backToEditContacts", sender: self)
                 } else {
-//                  let errorDialog = UIAlertController(title: "Error!", message: "Failed to save! \(error): \(error.userInfo)", preferredStyle: .alert)
-                    //            errorDialog.addAction(UIAlertAction(title: "Cancel", style: .cancel))
-                    //            present(errorDialog, animated: true)
+                    //
                 }
             } else {
                 //EDIT CONTACT
-                print("attempting to edit contact")
+                print("Attempting to update contact")
+                let didUpdate = ContactDataManager.updateContact(contact: contact!, name: nameTextField.text!, relationship: relationshipTextField.text!, number: numberTextField.text!, email: emailTextField.text!/*, imageData: imageData!*/)
+                
+                if(didUpdate) {
+                    performSegue(withIdentifier: "backToEditContacts", sender: self)
+                } else {
+                    //
+                }
             }
-            
-//        }
         }
         
         let ok = UIAlertAction(title: "OK", style: .default, handler: nil)

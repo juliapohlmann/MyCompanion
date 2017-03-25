@@ -27,9 +27,6 @@ import UIKit
             return contacts
         } catch _ as NSError {
             return []
-//            let errorDialog = UIAlertController(title: "Error!", message: "Failed to save! \(error): \(error.userInfo)", preferredStyle: .alert)
-//            errorDialog.addAction(UIAlertAction(title: "Cancel", style: .cancel))
-//            present(errorDialog, animated: true)
         }
     }
     
@@ -51,12 +48,7 @@ import UIKit
             
         } catch _ as NSError {
             return false
-//            let errorDialog = UIAlertController(title: "Error!", message: "Failed to save! \(error): \(error.userInfo)", preferredStyle: .alert)
-//            errorDialog.addAction(UIAlertAction(title: "Cancel", style: .cancel))
-//            present(errorDialog, animated: true)
         }
-        
-//        self.dismiss(animated: true)
     }
     
     static func deleteContact(contact: NSManagedObject) -> Bool {
@@ -87,9 +79,6 @@ import UIKit
             
         } catch _ as NSError {
             return false
-            //            let errorDialog = UIAlertController(title: "Error!", message: "Failed to save! \(error): \(error.userInfo)", preferredStyle: .alert)
-            //            errorDialog.addAction(UIAlertAction(title: "Cancel", style: .cancel))
-            //            present(errorDialog, animated: true)
         }
     }
 }

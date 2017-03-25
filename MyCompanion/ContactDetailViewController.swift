@@ -32,7 +32,6 @@ class ContactDetailViewController: UIViewController, UIImagePickerControllerDele
     }
     
     func setContactFields() {
-        print(contact)
         nameTextField.text = contact?.value(forKeyPath: "name") as? String
         emailTextField.text = contact?.value(forKeyPath: "email") as? String
         numberTextField.text = contact?.value(forKeyPath: "number") as? String
@@ -50,11 +49,9 @@ class ContactDetailViewController: UIViewController, UIImagePickerControllerDele
             setContactFields()
         }
         self.navigationItem.title = self.type
-//        navBar.title = "Your Title"
 
         
         imagePicker.delegate = self
-        // Do any additional setup after loading the view.
     }
     
     func setStockPhoto() {
@@ -124,9 +121,7 @@ class ContactDetailViewController: UIViewController, UIImagePickerControllerDele
                 if(didStore) {
                     performSegue(withIdentifier: "backToEditContacts", sender: self)
                 } else {
-//                  let errorDialog = UIAlertController(title: "Error!", message: "Failed to save! \(error): \(error.userInfo)", preferredStyle: .alert)
-                    //            errorDialog.addAction(UIAlertAction(title: "Cancel", style: .cancel))
-                    //            present(errorDialog, animated: true)
+                    //
                 }
             } else {
                 //EDIT CONTACT
@@ -136,14 +131,9 @@ class ContactDetailViewController: UIViewController, UIImagePickerControllerDele
                 if(didUpdate) {
                     performSegue(withIdentifier: "backToEditContacts", sender: self)
                 } else {
-                    //                  let errorDialog = UIAlertController(title: "Error!", message: "Failed to save! \(error): \(error.userInfo)", preferredStyle: .alert)
-                    //            errorDialog.addAction(UIAlertAction(title: "Cancel", style: .cancel))
-                    //            present(errorDialog, animated: true)
+                    //
                 }
-
             }
-            
-//        }
         }
         
         let ok = UIAlertAction(title: "OK", style: .default, handler: nil)

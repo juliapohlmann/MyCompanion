@@ -1010,7 +1010,7 @@
             </objects>
             <point key="canvasLocation" x="6268.9453125" y="2959.375"/>
         </scene>
-        <!--Add Reminder-->
+        <!--Title-->
         <scene sceneID="c9e-bZ-ZTp">
             <objects>
                 <viewController id="Kgf-bC-lkV" customClass="AddReminderViewController" customModule="MyCompanion" customModuleProvider="target" sceneMemberID="viewController">
@@ -1062,7 +1062,7 @@
                         </subviews>
                         <color key="backgroundColor" red="0.61176470589999998" green="0.1529411765" blue="0.69019607839999997" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Add Reminder" id="pYU-Go-u3W">
+                    <navigationItem key="navigationItem" title="Title" id="pYU-Go-u3W">
                         <barButtonItem key="leftBarButtonItem" title="Back" id="ze5-YE-tkG"/>
                     </navigationItem>
                     <connections>
@@ -1071,7 +1071,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HRN-Cg-IeR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5545" y="3679"/>
+            <point key="canvasLocation" x="6268.9453125" y="3678.90625"/>
         </scene>
         <!--Reminders-->
         <scene sceneID="MGp-2t-eHL">
@@ -1098,6 +1098,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="wWv-Ql-K67" kind="showDetail" identifier="editReminderSegue" id="IAW-LV-fko"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -1109,7 +1112,7 @@
                         <barButtonItem key="leftBarButtonItem" title="Edit" id="RK5-LW-cld"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="vgp-Gf-K2z">
                             <connections>
-                                <segue destination="Kgf-bC-lkV" kind="show" id="Q09-Ij-J5c"/>
+                                <segue destination="wWv-Ql-K67" kind="show" identifier="addReminderSegue" id="Q09-Ij-J5c"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -1389,7 +1392,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="IIu-GC-wdr" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="qw7-PZ-r2a">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="qw7-PZ-r2a">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -1455,7 +1458,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="e2L-FR-KWa" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="JDv-Nb-uZp">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="JDv-Nb-uZp">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -1468,11 +1471,30 @@
             </objects>
             <point key="canvasLocation" x="5544.7265625" y="2959.375"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="5Tn-pm-LN6">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="wWv-Ql-K67" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="POo-tQ-O66">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Kgf-bC-lkV" kind="relationship" relationship="rootViewController" id="Phh-0b-GJ1"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZdC-4z-LuX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5544.7265625" y="3678.90625"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="612-Tm-Bub"/>
         <segue reference="JbG-nG-njc"/>
         <segue reference="IlB-Sf-bGQ"/>
+        <segue reference="IAW-LV-fko"/>
         <segue reference="Gqw-bE-vvi"/>
     </inferredMetricsTieBreakers>
 </document>

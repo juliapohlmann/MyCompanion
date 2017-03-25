@@ -16,7 +16,9 @@ class ContactTableViewCell: UITableViewCell {
     @IBOutlet var contactImage: UIImageView!
     @IBOutlet var number: UILabel!
     @IBOutlet var email: UILabel!
-
+    let canCall = UserDefaults.standard.object(forKey: "canCall") as! Bool
+    let canEmail = UserDefaults.standard.object(forKey: "canEmail") as! Bool
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         
@@ -31,7 +33,7 @@ class ContactTableViewCell: UITableViewCell {
     
     func tapNumber(sender:UITapGestureRecognizer) {
         
-        if(true && number.text != "") {
+        if(canCall && number.text != "") {
             
             if let url = NSURL(string: "tel://\(number.text!.replacingOccurrences(of: "-", with: ""))"), UIApplication.shared.canOpenURL(url as URL) {
                 
@@ -45,7 +47,7 @@ class ContactTableViewCell: UITableViewCell {
     
     func tapEmail(sender:UITapGestureRecognizer) {
         
-        if(true && email.text != "") {
+        if(canEmail && email.text != "") {
             
             if let url = URL(string: "mailto:\(email.text!)") {
                 

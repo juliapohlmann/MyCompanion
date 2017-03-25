@@ -27,10 +27,6 @@ class ContactDetailViewController: UIViewController, UIImagePickerControllerDele
     @IBOutlet var emailTextField: JiroTextField!
     var imageData: NSData? = nil
     
-    func setType(type: String) {
-        self.type = type
-    }
-    
     func setContactFields() {
         nameTextField.text = contact?.value(forKeyPath: "name") as? String
         emailTextField.text = contact?.value(forKeyPath: "email") as? String

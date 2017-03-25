@@ -68,12 +68,12 @@ class EditContactTableViewController: UITableViewController {
         if(segue.identifier == "addContactSegue") {
             let destinationNavigationController = segue.destination as! UINavigationController
             let targetController = destinationNavigationController.topViewController as! ContactDetailViewController
-            targetController.setType(type: "Add Contact")
+            targetController.type = "Add Contact"
         }
         else if (segue.identifier == "editContactSegue") {
             let destinationNavigationController = segue.destination as! UINavigationController
             let targetController = destinationNavigationController.topViewController as! ContactDetailViewController
-            targetController.setType(type: "Edit Contact")
+            targetController.type = "Edit Contact"
             if let indexPath = self.tableView.indexPathForSelectedRow {
                 let contact = contacts[indexPath.row]
                 targetController.contact = contact

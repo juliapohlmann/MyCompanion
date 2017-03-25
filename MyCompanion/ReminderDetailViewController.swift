@@ -40,7 +40,7 @@ class ReminderDetailViewController: UIViewController {
         var controller : UIAlertController = UIAlertController()
         print("Name text field: \(nameTextField.text!)")
         if(nameTextField.text! == "") {
-            controller = UIAlertController(title: "Missing Text", message: "Please enter a text for the contact", preferredStyle: .alert)
+            controller = UIAlertController(title: "Missing Text", message: "Please enter text for the reminder", preferredStyle: .alert)
         }
         else {
             //ADD CHECK FOR REMINDER FORMAT
@@ -51,6 +51,9 @@ class ReminderDetailViewController: UIViewController {
             }
             performSegue(withIdentifier: "backToEditReminders", sender: self)
         }
+        let ok = UIAlertAction(title: "OK", style: .default, handler: nil)
+        controller.addAction(ok)
+        present(controller, animated: true, completion: nil)
     }
 
     /*

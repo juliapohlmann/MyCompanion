@@ -33,6 +33,8 @@ class CaregiverTileViewController: UIViewController {
     func addTextField(textField: UITextField!){
         // add the text field and make the result global
         textField.placeholder = "Password"
+        textField.isSecureTextEntry = true
+
         self.newWordField = textField
     }
     

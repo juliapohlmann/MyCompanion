@@ -1,18 +1,21 @@
 PODS:
+  - DOCheckboxControl (2.0.0)
   - FontAwesome.swift (1.0.0)
   - TextFieldEffects (1.3.1)
   - UICheckbox (0.0.2)
 
 DEPENDENCIES:
+  - DOCheckboxControl
   - FontAwesome.swift
   - TextFieldEffects
   - UICheckbox
 
 SPEC CHECKSUMS:
+  DOCheckboxControl: 49bf5b3a1e242e6b0efa4063e4a4ff038fd157dd
   FontAwesome.swift: 2d32a3d62195343c2004b7c9043294ed2948553a
   TextFieldEffects: faa47d428ee8eafb781a8413ac4345420d2328c4
   UICheckbox: 54af9bc308c8c2b18404f4c360172115c0daea36
 
-PODFILE CHECKSUM: bc45fd6ac6d0313e37370bb02ebfcd70390fa5a1
+PODFILE CHECKSUM: 754033ba1cc7f6d558465b0e383d312f70ea43bd
 
 COCOAPODS: 1.2.0

@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>DOCheckboxControl.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>FontAwesome.swift-FontAwesome.swift.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -41,42 +46,6 @@
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
-	<dict>
-		<key>13F3A5486B8CC41174CF659DE25162D8</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>77979430716929ED71E6E262A9F9A184</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>8FBA8A1F7FB8C229DA38567A5C5B042A</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>BE360DD5AD0FD96601C4CE8CC6C71C1F</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>C74D47B051BF84CA30E0723F127F42AD</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>D4E75FFE1A57FEF6498F6AC7D192E81B</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>EFFD01943D54F45A71CDCD26F3AEAAFE</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-	</dict>
+	<dict/>
 </dict>
 </plist>

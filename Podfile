@@ -13,6 +13,7 @@ target 'MyCompanion' do
   pod 'FontAwesome.swift'
   pod "TextFieldEffects"
   pod 'UICheckbox'
+  pod 'DOCheckboxControl'
 
   target 'MyCompanionTests' do
     inherit! :search_paths

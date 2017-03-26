@@ -21,7 +21,7 @@ class CaregiverPortalTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 4
+        return 5
     }
     
     // method to run when table view cell is tapped
@@ -36,6 +36,8 @@ class CaregiverPortalTableViewController: UITableViewController {
             self.performSegue(withIdentifier: "editReminders", sender: self)
         } else if (indexPath[1] == 0) {
             self.performSegue(withIdentifier: "generalSettings", sender: self)
+        } else if (indexPath[1] == 4) {
+            self.performSegue(withIdentifier: "caregiverForum", sender: self)
         }
     }
     

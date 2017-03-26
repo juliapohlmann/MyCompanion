@@ -59,7 +59,6 @@ class ReminderDataManager {
     }
     
     static func toggleReminder(reminder: NSManagedObject) -> Bool {
-        //ADD COOD HERE
         let context = getContext()
         
         let currentValue = reminder.value(forKey: "completed") as! Bool

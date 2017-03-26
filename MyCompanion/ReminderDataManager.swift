@@ -35,7 +35,8 @@ class ReminderDataManager {
         let reminder = NSManagedObject(entity: entity!, insertInto: context)
         
         reminder.setValue(reminderText, forKey: "text")
-        
+        reminder.setValue(false, forKey: "completed")
+
         do {
             try context.save()
             return true
@@ -48,6 +49,21 @@ class ReminderDataManager {
         let context = getContext()
         
         reminder.setValue(reminderText, forKey: "text")
+        
+        do {
+            try context.save()
+            return true
+        } catch _ as NSError {
+            return false
+        }
+    }
+    
+    static func toggleReminder(reminder: NSManagedObject) -> Bool {
+        //ADD COOD HERE
+        let context = getContext()
+        
+        let currentValue = reminder.value(forKey: "completed") as! Bool
+        reminder.setValue(!currentValue, forKey: "completed")
         
         do {
             try context.save()

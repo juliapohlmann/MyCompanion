@@ -37,8 +37,8 @@ class RemindersTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! RemindersTableViewCell
         
         cell.selectionStyle = UITableViewCellSelectionStyle.none
-        let reminderText = reminders[indexPath.row].value(forKeyPath: "text") as? String
-        cell.setReminder(reminderText: reminderText!)
+//        let reminderText = reminders[indexPath.row].value(forKeyPath: "text") as? String
+        cell.setReminder(reminder: reminders[indexPath.row])
         
         return cell
     }

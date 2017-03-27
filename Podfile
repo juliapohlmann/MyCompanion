@@ -12,7 +12,6 @@ target 'MyCompanion' do
   use_frameworks!
   pod 'FontAwesome.swift'
   pod "TextFieldEffects"
-  pod 'UICheckbox'
   pod 'DOCheckboxControl'
 
   target 'MyCompanionTests' do

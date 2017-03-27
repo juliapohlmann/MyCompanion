@@ -37,7 +37,7 @@ class AddLabelPhotoPageViewController: UIViewController, UIImagePickerController
         imageView.layer.borderWidth = 2
         imageView.layer.borderColor = UIColor.black.cgColor
         if(imageView.image == nil) {
-            imageView.image = UIImage.fontAwesomeIcon(name: .user, textColor: UIColor.black, size: CGSize(width: 128, height: 128))
+            imageView.image = UIImage.fontAwesomeIcon(name: .camera, textColor: UIColor.black, size: CGSize(width: 128, height: 128))
         }
     }
 

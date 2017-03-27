@@ -18,14 +18,12 @@ class ContactDetailViewController: UIViewController, UIImagePickerControllerDele
     
     var type : String = ""
     var contact : NSManagedObject?
-//    var navTitle : String = ""
-    
     
     @IBOutlet var nameTextField: JiroTextField!
     @IBOutlet var relationshipTextField: JiroTextField!
     @IBOutlet var numberTextField: JiroTextField!
     @IBOutlet var emailTextField: JiroTextField!
-    var imageData: NSData? = nil
+    var imageData: NSData?
     
     func setContactFields() {
         nameTextField.text = contact?.value(forKeyPath: "name") as? String
@@ -34,6 +32,7 @@ class ContactDetailViewController: UIViewController, UIImagePickerControllerDele
         relationshipTextField.text = contact?.value(forKeyPath: "relationship") as? String
         if(contact?.value(forKeyPath: "image") != nil) {
             imageView.image = UIImage(data: contact?.value(forKeyPath: "image") as! Data)
+            imageData = contact?.value(forKeyPath: "image") as! Data as NSData?
         }
 
     }
@@ -125,6 +124,7 @@ class ContactDetailViewController: UIViewController, UIImagePickerControllerDele
             } else {
                 //EDIT CONTACT
                 print("Attempting to update contact")
+                
                 let didUpdate = ContactDataManager.updateContact(contact: contact!, name: nameTextField.text!, relationship: relationshipTextField.text!, number: numberTextField.text!, email: emailTextField.text!, imageData: imageData!)
                 
                 if(didUpdate) {

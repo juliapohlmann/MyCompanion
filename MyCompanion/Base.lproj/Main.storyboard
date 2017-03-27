@@ -228,15 +228,6 @@
                             <rect key="frame" x="0.0" y="0.0" width="1024" height="92"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Daily Reminders" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="br2-Xr-4iM">
-                                    <rect key="frame" x="331" y="15" width="362" height="50"/>
-                                    <constraints>
-                                        <constraint firstAttribute="width" constant="362" id="Hxe-BO-HfY"/>
-                                    </constraints>
-                                    <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="36"/>
-                                    <nil key="textColor"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vqh-1y-LSj">
                                     <rect key="frame" x="33" y="15" width="102" height="62"/>
                                     <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="36"/>
@@ -248,6 +239,12 @@
                                         <segue destination="BYZ-38-t0r" kind="presentation" identifier="remindersToHomeSegue" id="QNv-iP-D82"/>
                                     </connections>
                                 </button>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Daily Reminders" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="br2-Xr-4iM">
+                                    <rect key="frame" x="376" y="21" width="272.5" height="50"/>
+                                    <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="36"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
                             </subviews>
                             <color key="backgroundColor" red="0.96862745098039216" green="0.96862745098039216" blue="0.96862745098039216" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
@@ -431,8 +428,8 @@
                             <rect key="frame" x="0.0" y="0.0" width="1024" height="92"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your friends and family" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ph9-sp-399">
-                                    <rect key="frame" x="321" y="22" width="382" height="50"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Friends And Family" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ph9-sp-399">
+                                    <rect key="frame" x="311" y="22" width="402" height="50"/>
                                     <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="36"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>

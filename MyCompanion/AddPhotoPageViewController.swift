@@ -28,10 +28,18 @@ class AddPhotoPageViewController: UIViewController, UIImagePickerControllerDeleg
         
         print(templateType ?? "mistake")
         
-        imageView.image = UIImage.fontAwesomeIcon(name: .camera, textColor: UIColor.black, size: CGSize(width: 128, height: 128))
+        setStockPhoto()
         // Do any additional setup after loading the view.
     }
 
+    func setStockPhoto() {
+        imageView.layer.borderWidth = 2
+        imageView.layer.borderColor = UIColor.black.cgColor
+        if(imageView.image == nil) {
+            imageView.image = UIImage.fontAwesomeIcon(name: .user, textColor: UIColor.black, size: CGSize(width: 128, height: 128))
+        }
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

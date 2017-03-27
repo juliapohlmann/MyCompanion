@@ -45,7 +45,6 @@ class ContactDetailViewController: UIViewController, UIImagePickerControllerDele
         }
         self.navigationItem.title = self.type
 
-        
         imagePicker.delegate = self
     }
     

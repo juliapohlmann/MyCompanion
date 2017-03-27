@@ -11,22 +11,10 @@ import CoreData
 import TextFieldEffects
 import MobileCoreServices
 
-class landscapeImagePickerController: UIImagePickerController {
-    
-    func application(application: UIApplication,
-                     supportedInterfaceOrientationsForWindow window: UIWindow?)
-        -> UIInterfaceOrientationMask {
-            
-            return[.landscape, .portrait]
-            
-    }
-    
-}
-
 class ContactDetailViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     @IBOutlet var imageView: UIImageView!
-    let imagePicker = landscapeImagePickerController()
+    let imagePicker = LandscapeImagePickerController()
     
     var type : String = ""
     var contact : NSManagedObject?

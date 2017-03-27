@@ -18,7 +18,7 @@ class AddLabelPhotoPageViewController: UIViewController, UIImagePickerController
     @IBOutlet var imageView: UIImageView!
     @IBOutlet var titleTextField: JiroTextField!
     @IBOutlet var textTextField: JiroTextField!
-    let imagePicker = UIImagePickerController()
+    let imagePicker = LandscapeImagePickerController()
     var imageData: NSData? = nil
     var templateType: String? = nil
     
@@ -48,14 +48,16 @@ class AddLabelPhotoPageViewController: UIViewController, UIImagePickerController
             print("video")
             imagePicker.mediaTypes = [kUTTypeMovie as String]
         }
-        present(imagePicker, animated: true, completion: nil)
+        imagePicker.modalPresentationStyle = .popover
+        let presentationController = imagePicker.popoverPresentationController
+        presentationController?.sourceView = self.imageView
+        
+        self.present(imagePicker, animated: true) {}
     }
     
     // MARK: - UIImagePickerControllerDelegate Methods
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-        
-        print("hereeee")
         
         let mediaType = info[UIImagePickerControllerMediaType] as! NSString
         

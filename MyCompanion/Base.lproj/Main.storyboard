@@ -52,7 +52,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kib-7Y-9od" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="32.8125" y="-636.71875"/>
+            <point key="canvasLocation" x="33" y="-783"/>
         </scene>
         <!--Dashboard View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -185,10 +185,10 @@
             </objects>
             <point key="canvasLocation" x="744" y="-429"/>
         </scene>
-        <!--View Controller-->
+        <!--View Memory Book View Controller-->
         <scene sceneID="VzV-pG-8Bt">
             <objects>
-                <viewController id="KnS-0o-LI9" sceneMemberID="viewController">
+                <viewController id="KnS-0o-LI9" customClass="ViewMemoryBookViewController" customModule="MyCompanion" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="GqE-KO-W2E"/>
                         <viewControllerLayoutGuide type="bottom" id="Yf1-KL-N8K"/>
@@ -197,24 +197,84 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UBT-vh-qzC">
+                                <rect key="frame" x="187" y="59" width="650" height="650"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                            </containerView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1vp-9h-4do">
+                                <rect key="frame" x="20" y="336" width="93" height="97"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="25"/>
+                                <state key="normal" title="Prev">
+                                    <color key="titleColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="clickPrevious:" destination="KnS-0o-LI9" eventType="touchUpInside" id="qrw-ju-GYF"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y9d-H0-qye">
+                                <rect key="frame" x="911" y="336" width="93" height="97"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="25"/>
+                                <state key="normal" title="Next">
+                                    <color key="titleColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="clickNext:" destination="KnS-0o-LI9" eventType="touchUpInside" id="BT6-QP-yh6"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4NY-IL-5Dc">
-                                <rect key="frame" x="193" y="109" width="219" height="69"/>
+                                <rect key="frame" x="0.0" y="0.0" width="219" height="69"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="36"/>
                                 <state key="normal" title="Back">
-                                    <color key="titleColor" red="0.61176470589999998" green="0.1529411765" blue="0.69019607839999997" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.96862745098039216" green="0.96862745098039216" blue="0.96862745098039216" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <segue destination="BYZ-38-t0r" kind="presentation" id="WLn-pA-tNl"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.61176470589999998" green="0.1529411765" blue="0.69019607839999997" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
+                    <connections>
+                        <outlet property="containerView" destination="UBT-vh-qzC" id="Ioi-dk-bcj"/>
+                        <outlet property="nextButton" destination="Y9d-H0-qye" id="o4k-Hp-oT9"/>
+                        <outlet property="previousButton" destination="1vp-9h-4do" id="0aj-Zy-q48"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3fd-BH-ylJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1511.71875" y="-430.46875"/>
+        </scene>
+        <!--Label Photo Page View Controller-->
+        <scene sceneID="prm-XV-WcH">
+            <objects>
+                <viewController storyboardIdentifier="LabelPhotoPageViewController" id="o7c-hZ-OZa" customClass="LabelPhotoPageViewController" customModule="MyCompanion" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Vvi-FU-Ddc"/>
+                        <viewControllerLayoutGuide type="bottom" id="sdA-yY-nDg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fgI-Ws-YI5">
+                        <rect key="frame" x="0.0" y="0.0" width="650" height="650"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HsO-LC-d1e">
+                                <rect key="frame" x="304" y="315" width="8" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="650" height="650"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1C1-8k-mse" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2120.5078125" y="-430.46875"/>
         </scene>
         <!--Reminders Table View Controller-->
         <scene sceneID="UZZ-3t-PNf">
@@ -1727,10 +1787,68 @@
             </objects>
             <point key="canvasLocation" x="6269" y="883"/>
         </scene>
+        <!--Photo Page View Controller-->
+        <scene sceneID="oNa-9o-jYL">
+            <objects>
+                <viewController storyboardIdentifier="PhotoPageViewController" id="HM8-8V-mhR" customClass="PhotoPageViewController" customModule="MyCompanion" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9CH-TX-eMQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="ZXf-ZZ-Bt2"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="v57-4r-0QV">
+                        <rect key="frame" x="0.0" y="0.0" width="650" height="650"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="col-N7-Onj">
+                                <rect key="frame" x="246" y="282" width="183" height="71"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="650" height="650"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rpS-X8-ReZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2560.546875" y="-430.46875"/>
+        </scene>
+        <!--Label Page View Controller-->
+        <scene sceneID="I9L-3I-1iB">
+            <objects>
+                <viewController storyboardIdentifier="LabelPageViewController" id="KWR-DO-0vM" customClass="LabelPageViewController" customModule="MyCompanion" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gIv-p4-NOE"/>
+                        <viewControllerLayoutGuide type="bottom" id="NeI-Bh-LfU"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="weR-ag-E1g" customClass="LabelPageViewController">
+                        <rect key="frame" x="0.0" y="0.0" width="650" height="650"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zls-yh-WU4">
+                                <rect key="frame" x="219" y="263" width="183" height="71"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="650" height="650"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sOT-Rd-MYl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3013" y="-430"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="IlB-Sf-bGQ"/>
-        <segue reference="QNv-iP-D82"/>
+        <segue reference="WLn-pA-tNl"/>
         <segue reference="mJU-au-Agg"/>
         <segue reference="IAW-LV-fko"/>
         <segue reference="xOr-P6-iNA"/>

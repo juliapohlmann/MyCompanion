@@ -11,6 +11,9 @@ import CoreData
 import TextFieldEffects
 
 class AddLabelPageViewController: UIViewController {
+    
+    var vcType : String = ""
+    var page : NSManagedObject?
 
     var templateType: String? = nil
     @IBOutlet var titleTextField: JiroTextField!
@@ -18,8 +21,15 @@ class AddLabelPageViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        if(vcType == "Edit") {
+            setPageFields()
+        }
         // Do any additional setup after loading the view.
+    }
+    
+    func setPageFields() {
+        titleTextField.text = page?.value(forKeyPath: "title") as? String
+        textTextField.text = page?.value(forKeyPath: "text") as? String
     }
 
     override func didReceiveMemoryWarning() {
@@ -28,45 +38,18 @@ class AddLabelPageViewController: UIViewController {
     }
     
     // MARK: Core Data
-    
-    func getContext() -> NSManagedObjectContext {
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        return appDelegate.persistentContainer.viewContext
-    }
-    
     @IBAction func storePage() {
-        let context = getContext()
-        let entity = NSEntityDescription.entity(forEntityName: "MemoryBook", in: context)
-        let mb = NSManagedObject(entity: entity!, insertInto: context)
-        
-        mb.setValue(titleTextField.text, forKey: "title")
-        mb.setValue(textTextField.text, forKey: "text")
-        mb.setValue(templateType, forKey: "templateType")
-        
-        // popup errors!
-        //        if(!isValidEmail(testStr: emailTextField.text!)) {
-        //            print("not valid email")
-        //        }
-        //        else if(!isValidNumber(value: numberTextField.text!)) {
-        //            print("not valid number")
-        //        }
-        //        else if(imageData == nil) {
-        //            print("no picture")
-        //        }
-        //        else {
-        
-        do {
-            try context.save()
-        } catch let error as NSError {
-            let errorDialog = UIAlertController(title: "Error!", message: "Failed to save! \(error): \(error.userInfo)", preferredStyle: .alert)
-            errorDialog.addAction(UIAlertAction(title: "Cancel", style: .cancel))
-            present(errorDialog, animated: true)
+        if vcType == "Add" {
+            let didStorePage = MemoryBookDataManager.storePage(title: titleTextField.text, text: textTextField.text, templateType: self.templateType, imageData: nil)
+            if didStorePage {
+                performSegue(withIdentifier: "addLabelPageToEditMemoryBook", sender: self)
+            }
+        } else if vcType == "Edit" {
+            let didUpdatePage = MemoryBookDataManager.updatePage(page: page!, title: titleTextField.text, text: nil, templateType: self.templateType, imageData: nil)
+            if didUpdatePage {
+                performSegue(withIdentifier: "addLabelPageToEditMemoryBook", sender: self)
+            }
         }
-        
-        self.dismiss(animated: true)
-        
-        //}
-        
     }
 
     /*

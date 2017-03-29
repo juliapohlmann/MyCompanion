@@ -14,7 +14,10 @@ import AVFoundation
 import FontAwesome_swift
 
 class AddLabelPhotoPageViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-
+    
+    var vcType : String = ""
+    var page : NSManagedObject?
+    
     @IBOutlet var imageView: UIImageView!
     @IBOutlet var titleTextField: JiroTextField!
     @IBOutlet var textTextField: JiroTextField!
@@ -27,10 +30,21 @@ class AddLabelPhotoPageViewController: UIViewController, UIImagePickerController
 
         imagePicker.delegate = self
         
-        print(templateType ?? "mistake")
-        
         setStockPhoto()
+        
+        if(vcType == "Edit") {
+            setPageFields()
+        }
         // Do any additional setup after loading the view.
+    }
+    
+    func setPageFields() {
+        titleTextField.text = page?.value(forKeyPath: "title") as? String
+        textTextField.text = page?.value(forKeyPath: "text") as? String
+        if(page?.value(forKeyPath: "image") != nil) {
+            imageView.image = UIImage(data: page?.value(forKeyPath: "image") as! Data)
+            imageData = page?.value(forKeyPath: "image") as! Data as NSData?
+        }
     }
     
     func setStockPhoto() {
@@ -110,46 +124,18 @@ class AddLabelPhotoPageViewController: UIViewController, UIImagePickerController
     }
     
     // MARK: Core Data
-    
-    func getContext() -> NSManagedObjectContext {
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        return appDelegate.persistentContainer.viewContext
-    }
-    
     @IBAction func storePage() {
-        let context = getContext()
-        let entity = NSEntityDescription.entity(forEntityName: "MemoryBook", in: context)
-        let mb = NSManagedObject(entity: entity!, insertInto: context)
-        
-        mb.setValue(titleTextField.text, forKey: "title")
-        mb.setValue(textTextField.text, forKey: "text")
-        mb.setValue(templateType, forKey: "templateType")
-        mb.setValue(imageData, forKey: "image")
-        
-        // popup errors!
-//        if(!isValidEmail(testStr: emailTextField.text!)) {
-//            print("not valid email")
-//        }
-//        else if(!isValidNumber(value: numberTextField.text!)) {
-//            print("not valid number")
-//        }
-//        else if(imageData == nil) {
-//            print("no picture")
-//        }
-//        else {
-        
-            do {
-                try context.save()
-            } catch let error as NSError {
-                let errorDialog = UIAlertController(title: "Error!", message: "Failed to save! \(error): \(error.userInfo)", preferredStyle: .alert)
-                errorDialog.addAction(UIAlertAction(title: "Cancel", style: .cancel))
-                present(errorDialog, animated: true)
+        if vcType == "Add" {
+            let didStorePage = MemoryBookDataManager.storePage(title: titleTextField.text!, text: textTextField.text!, templateType: self.templateType!, imageData: self.imageData!)
+            if didStorePage {
+                performSegue(withIdentifier: "addLabelPhotoPageToEditMemoryBook", sender: self)
             }
-            
-            self.dismiss(animated: true)
-            
-        //}
-        
+        } else if vcType == "Edit" {
+            let didUpdatePage = MemoryBookDataManager.updatePage(page: page!, title: titleTextField.text, text: nil, templateType: self.templateType, imageData: self.imageData)
+            if didUpdatePage {
+                performSegue(withIdentifier: "addLabelPhotoPageToEditMemoryBook", sender: self)
+            }
+        }
     }
 
     /*

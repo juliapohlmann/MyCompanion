@@ -75,18 +75,21 @@ class AddMemoryTableViewController: UITableViewController {
             
             let myVC = storyboard?.instantiateViewController(withIdentifier: "AddLabelPhotoPageViewController") as! AddLabelPhotoPageViewController
             myVC.templateType = types[cellClicked]
+            myVC.vcType = "Add"
             navigationController?.pushViewController(myVC, animated: true)
             
         } else if (indexPath.section == 2) {
             
             let myVC = storyboard?.instantiateViewController(withIdentifier: "AddLabelPageViewController") as! AddLabelPageViewController
             myVC.templateType = types[cellClicked]
+            myVC.vcType = "Add"
             navigationController?.pushViewController(myVC, animated: true)
 
         } else {
             
             let myVC = storyboard?.instantiateViewController(withIdentifier: "AddPhotoPageViewController") as! AddPhotoPageViewController
             myVC.templateType = types[cellClicked]
+            myVC.vcType = "Add"
             navigationController?.pushViewController(myVC, animated: true)
             
         }

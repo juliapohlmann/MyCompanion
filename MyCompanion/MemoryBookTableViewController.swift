@@ -15,6 +15,7 @@ class MemoryBookTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        pages = MemoryBookDataManager.fetchPages()
         
 //        let back : UIBarButtonItem = UIBarButtonItem(title: "Back", style: .plain, target: self, action: #selector(dismiss(sender:)))
         
@@ -37,7 +38,6 @@ class MemoryBookTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        fetchPages()
         
         return pages.count
     }
@@ -53,56 +53,76 @@ class MemoryBookTableViewController: UITableViewController {
         
     }
     
-    func getContext() -> NSManagedObjectContext {
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        return appDelegate.persistentContainer.viewContext
-    }
-    
-    func fetchPages() {
-        let context = getContext()
-        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "MemoryBook")
-        
-        do {
-            pages = try context.fetch(fetchRequest)
-            pages = pages.sorted(by: { $0.value(forKeyPath: "orderPosition") as! Int > $1.value(forKeyPath: "orderPosition") as! Int})
-        } catch let error as NSError {
-            let errorDialog = UIAlertController(title: "Error!", message: "Failed to save! \(error): \(error.userInfo)", preferredStyle: .alert)
-            errorDialog.addAction(UIAlertAction(title: "Cancel", style: .cancel))
-            present(errorDialog, animated: true)
-        }
-    }
-    
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         
         if editingStyle == .delete {
-            let context = getContext()
-            context.delete(pages[indexPath.row])
-            
-            do {
-                try context.save()
-            } catch let error as NSError {
-                let errorDialog = UIAlertController(title: "Error!", message: "Failed to save! \(error): \(error.userInfo)", preferredStyle: .alert)
-                errorDialog.addAction(UIAlertAction(title: "Cancel", style: .cancel))
-                present(errorDialog, animated: true)
+            let didDelete = MemoryBookDataManager.deletePage(page: pages[indexPath.row])
+            if didDelete {
+                pages = MemoryBookDataManager.fetchPages()
+                tableView.deleteRows(at: [indexPath], with: .fade)
+            } else {
+                print("didnt delete!")
             }
-            
-            tableView.deleteRows(at: [indexPath], with: .fade)
         }
     }
     
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
+    var types = ["11LP", "11RP", "11TP", "11DP", "11LV", "11RV", "11TV", "11DV", "1T", "1P", "1V"]
+
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        let context = getContext()
+        let cellClicked:Int = convertIndexPathToRow(indexPath: indexPath)
         
-        do {
-            try context.save()
-        } catch let error as NSError {
-            let errorDialog = UIAlertController(title: "Error!", message: "Failed to save! \(error): \(error.userInfo)", preferredStyle: .alert)
-            errorDialog.addAction(UIAlertAction(title: "Cancel", style: .cancel))
-            present(errorDialog, animated: true)
+        if(indexPath.section == 0 || indexPath.section == 1) {
+            
+            let myVC = storyboard?.instantiateViewController(withIdentifier: "AddLabelPhotoPageViewController") as! AddLabelPhotoPageViewController
+            myVC.templateType = types[cellClicked]
+            myVC.vcType = "Edit"
+            myVC.page = pages[indexPath.row]
+            navigationController?.pushViewController(myVC, animated: true)
+            
+        } else if (indexPath.section == 2) {
+            
+            let myVC = storyboard?.instantiateViewController(withIdentifier: "AddLabelPageViewController") as! AddLabelPageViewController
+            myVC.templateType = types[cellClicked]
+            myVC.vcType = "Edit"
+            myVC.page = pages[indexPath.row]
+            navigationController?.pushViewController(myVC, animated: true)
+            
+        } else {
+            
+            let myVC = storyboard?.instantiateViewController(withIdentifier: "AddPhotoPageViewController") as! AddPhotoPageViewController
+            myVC.templateType = types[cellClicked]
+            myVC.vcType = "Edit"
+            myVC.page = pages[indexPath.row]
+            navigationController?.pushViewController(myVC, animated: true)
+            
         }
         
     }
+    
+    func convertIndexPathToRow(indexPath: IndexPath) -> Int {
+        if(indexPath.section == 0) {
+            return indexPath.row
+        } else if(indexPath.section == 1) {
+            return indexPath.row + 4
+        } else  {
+            return indexPath.section + 6
+        }
+    }
+    
+//    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
+//        
+//        let context = getContext()
+//        
+//        do {
+//            try context.save()
+//        } catch let error as NSError {
+//            let errorDialog = UIAlertController(title: "Error!", message: "Failed to save! \(error): \(error.userInfo)", preferredStyle: .alert)
+//            errorDialog.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+//            present(errorDialog, animated: true)
+//        }
+//        
+//    }
     
     /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

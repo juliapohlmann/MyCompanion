@@ -9,7 +9,7 @@
 import UIKit
 import CoreData
 
-class MemoryBookTableViewController: UITableViewController {
+class EditMemoryBookTableViewController: UITableViewController {
 
     var pages: [NSManagedObject] = []
     
@@ -74,7 +74,7 @@ class MemoryBookTableViewController: UITableViewController {
         
         if(indexPath.section == 0 || indexPath.section == 1) {
             
-            let myVC = storyboard?.instantiateViewController(withIdentifier: "AddLabelPhotoPageViewController") as! AddLabelPhotoPageViewController
+            let myVC = storyboard?.instantiateViewController(withIdentifier: "DetailLabelPhotoPageViewController") as! DetailLabelPhotoPageViewController
             myVC.templateType = types[cellClicked]
             myVC.vcType = "Edit"
             myVC.page = pages[indexPath.row]
@@ -82,7 +82,7 @@ class MemoryBookTableViewController: UITableViewController {
             
         } else if (indexPath.section == 2) {
             
-            let myVC = storyboard?.instantiateViewController(withIdentifier: "AddLabelPageViewController") as! AddLabelPageViewController
+            let myVC = storyboard?.instantiateViewController(withIdentifier: "DetailLabelPageViewController") as! DetailLabelPageViewController
             myVC.templateType = types[cellClicked]
             myVC.vcType = "Edit"
             myVC.page = pages[indexPath.row]
@@ -90,7 +90,7 @@ class MemoryBookTableViewController: UITableViewController {
             
         } else {
             
-            let myVC = storyboard?.instantiateViewController(withIdentifier: "AddPhotoPageViewController") as! AddPhotoPageViewController
+            let myVC = storyboard?.instantiateViewController(withIdentifier: "DetailPhotoPageViewController") as! DetailPhotoPageViewController
             myVC.templateType = types[cellClicked]
             myVC.vcType = "Edit"
             myVC.page = pages[indexPath.row]

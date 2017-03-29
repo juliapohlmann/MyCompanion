@@ -10,7 +10,7 @@ import UIKit
 import CoreData
 import TextFieldEffects
 
-class AddLabelPageViewController: UIViewController {
+class DetailLabelPageViewController: UIViewController {
     
     var vcType : String = ""
     var page : NSManagedObject?

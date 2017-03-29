@@ -10,11 +10,11 @@
 		1C1615981E5A6E14009A3137 /* PasscodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C1615971E5A6E14009A3137 /* PasscodeViewController.swift */; };
 		1C16159A1E5A7E0B009A3137 /* CheckPasscodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C1615991E5A7E0B009A3137 /* CheckPasscodeViewController.swift */; };
 		1C4E11FE1E79E8AE0001DD3F /* StoryboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C4E11FD1E79E8AE0001DD3F /* StoryboardViewController.swift */; };
-		1C4E12041E7CAF350001DD3F /* MemoryBookTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C4E12031E7CAF350001DD3F /* MemoryBookTableViewController.swift */; };
-		1C4E12061E7CAF4F0001DD3F /* AddMemoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C4E12051E7CAF4F0001DD3F /* AddMemoryTableViewController.swift */; };
-		1C4E120C1E7CCE030001DD3F /* AddLabelPhotoPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C4E120B1E7CCE030001DD3F /* AddLabelPhotoPageViewController.swift */; };
-		1C4E12111E7F50A00001DD3F /* AddLabelPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C4E12101E7F50A00001DD3F /* AddLabelPageViewController.swift */; };
-		1C4E12131E7F50D10001DD3F /* AddPhotoPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C4E12121E7F50D10001DD3F /* AddPhotoPageViewController.swift */; };
+		1C4E12041E7CAF350001DD3F /* EditMemoryBookTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C4E12031E7CAF350001DD3F /* EditMemoryBookTableViewController.swift */; };
+		1C4E12061E7CAF4F0001DD3F /* AddPageTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C4E12051E7CAF4F0001DD3F /* AddPageTableViewController.swift */; };
+		1C4E120C1E7CCE030001DD3F /* DetailLabelPhotoPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C4E120B1E7CCE030001DD3F /* DetailLabelPhotoPageViewController.swift */; };
+		1C4E12111E7F50A00001DD3F /* DetailLabelPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C4E12101E7F50A00001DD3F /* DetailLabelPageViewController.swift */; };
+		1C4E12131E7F50D10001DD3F /* DetailPhotoPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C4E12121E7F50D10001DD3F /* DetailPhotoPageViewController.swift */; };
 		1C4E12191E81899B0001DD3F /* EditRemindersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C4E12181E81899B0001DD3F /* EditRemindersTableViewController.swift */; };
 		1C4E121B1E818A2D0001DD3F /* ReminderDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C4E121A1E818A2D0001DD3F /* ReminderDetailViewController.swift */; };
 		1CA3BE661E5D1C520016B247 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CA3BE651E5D1C520016B247 /* SettingsTableViewController.swift */; };
@@ -74,11 +74,11 @@
 		1C1615971E5A6E14009A3137 /* PasscodeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasscodeViewController.swift; sourceTree = "<group>"; };
 		1C1615991E5A7E0B009A3137 /* CheckPasscodeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckPasscodeViewController.swift; sourceTree = "<group>"; };
 		1C4E11FD1E79E8AE0001DD3F /* StoryboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardViewController.swift; sourceTree = "<group>"; };
-		1C4E12031E7CAF350001DD3F /* MemoryBookTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemoryBookTableViewController.swift; sourceTree = "<group>"; };
-		1C4E12051E7CAF4F0001DD3F /* AddMemoryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddMemoryTableViewController.swift; sourceTree = "<group>"; };
-		1C4E120B1E7CCE030001DD3F /* AddLabelPhotoPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddLabelPhotoPageViewController.swift; sourceTree = "<group>"; };
-		1C4E12101E7F50A00001DD3F /* AddLabelPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddLabelPageViewController.swift; sourceTree = "<group>"; };
-		1C4E12121E7F50D10001DD3F /* AddPhotoPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPhotoPageViewController.swift; sourceTree = "<group>"; };
+		1C4E12031E7CAF350001DD3F /* EditMemoryBookTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditMemoryBookTableViewController.swift; sourceTree = "<group>"; };
+		1C4E12051E7CAF4F0001DD3F /* AddPageTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPageTableViewController.swift; sourceTree = "<group>"; };
+		1C4E120B1E7CCE030001DD3F /* DetailLabelPhotoPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailLabelPhotoPageViewController.swift; sourceTree = "<group>"; };
+		1C4E12101E7F50A00001DD3F /* DetailLabelPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailLabelPageViewController.swift; sourceTree = "<group>"; };
+		1C4E12121E7F50D10001DD3F /* DetailPhotoPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailPhotoPageViewController.swift; sourceTree = "<group>"; };
 		1C4E12181E81899B0001DD3F /* EditRemindersTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditRemindersTableViewController.swift; sourceTree = "<group>"; };
 		1C4E121A1E818A2D0001DD3F /* ReminderDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReminderDetailViewController.swift; sourceTree = "<group>"; };
 		1CA3BE651E5D1C520016B247 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
@@ -170,16 +170,8 @@
 		1C4E12141E7F56430001DD3F /* MemoryBook */ = {
 			isa = PBXGroup;
 			children = (
-				1CCEA7791E89DF1D00252E2A /* ViewMemoryBookViewController.swift */,
-				1CCEA77B1E89E60E00252E2A /* LabelPhotoPageViewController.swift */,
-				1CCEA77D1E89E61B00252E2A /* LabelPageViewController.swift */,
-				1CCEA77F1E89E62800252E2A /* PhotoPageViewController.swift */,
-				1C4E12031E7CAF350001DD3F /* MemoryBookTableViewController.swift */,
-				1C4E12051E7CAF4F0001DD3F /* AddMemoryTableViewController.swift */,
-				1C4E120B1E7CCE030001DD3F /* AddLabelPhotoPageViewController.swift */,
-				1C4E12121E7F50D10001DD3F /* AddPhotoPageViewController.swift */,
-				1C4E12101E7F50A00001DD3F /* AddLabelPageViewController.swift */,
-				DAAF9C1C1E8AFA9A0050BE11 /* MemoryBookDataManager.swift */,
+				DA3045681E8C1BE8003CEC9B /* Patient side */,
+				DA3045671E8C1BCE003CEC9B /* Caregiver side */,
 			);
 			name = MemoryBook;
 			sourceTree = "<group>";
@@ -195,6 +187,30 @@
 				2B7A28B926C4AC51AF438EA7 /* Pods-MyCompanionUITests.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		DA3045671E8C1BCE003CEC9B /* Caregiver side */ = {
+			isa = PBXGroup;
+			children = (
+				1C4E12051E7CAF4F0001DD3F /* AddPageTableViewController.swift */,
+				1C4E120B1E7CCE030001DD3F /* DetailLabelPhotoPageViewController.swift */,
+				1C4E12121E7F50D10001DD3F /* DetailPhotoPageViewController.swift */,
+				1C4E12101E7F50A00001DD3F /* DetailLabelPageViewController.swift */,
+				DAAF9C1C1E8AFA9A0050BE11 /* MemoryBookDataManager.swift */,
+				1C4E12031E7CAF350001DD3F /* EditMemoryBookTableViewController.swift */,
+			);
+			name = "Caregiver side";
+			sourceTree = "<group>";
+		};
+		DA3045681E8C1BE8003CEC9B /* Patient side */ = {
+			isa = PBXGroup;
+			children = (
+				1CCEA7791E89DF1D00252E2A /* ViewMemoryBookViewController.swift */,
+				1CCEA77B1E89E60E00252E2A /* LabelPhotoPageViewController.swift */,
+				1CCEA77D1E89E61B00252E2A /* LabelPageViewController.swift */,
+				1CCEA77F1E89E62800252E2A /* PhotoPageViewController.swift */,
+			);
+			name = "Patient side";
 			sourceTree = "<group>";
 		};
 		DA8580ED1E4134560055134E = {
@@ -597,11 +613,11 @@
 				1CCEA7781E88A78E00252E2A /* LandscapeImagePickerController.swift in Sources */,
 				1CCEA77C1E89E60E00252E2A /* LabelPhotoPageViewController.swift in Sources */,
 				DAE3BB811E6CA3B5009BB9E6 /* RemindersTableViewController.swift in Sources */,
-				1C4E12061E7CAF4F0001DD3F /* AddMemoryTableViewController.swift in Sources */,
+				1C4E12061E7CAF4F0001DD3F /* AddPageTableViewController.swift in Sources */,
 				DA1AB3F41E82FA740015E2EA /* ContactDataManager.swift in Sources */,
 				1CCEA77A1E89DF1D00252E2A /* ViewMemoryBookViewController.swift in Sources */,
-				1C4E120C1E7CCE030001DD3F /* AddLabelPhotoPageViewController.swift in Sources */,
-				1C4E12131E7F50D10001DD3F /* AddPhotoPageViewController.swift in Sources */,
+				1C4E120C1E7CCE030001DD3F /* DetailLabelPhotoPageViewController.swift in Sources */,
+				1C4E12131E7F50D10001DD3F /* DetailPhotoPageViewController.swift in Sources */,
 				DA2C16861E54CF42001B3D14 /* IntroTileViewController.swift in Sources */,
 				DA63DC221E81AA7A00E1C5A8 /* CaregiverPortalTableViewController.swift in Sources */,
 				1CA3BE661E5D1C520016B247 /* SettingsTableViewController.swift in Sources */,
@@ -616,10 +632,10 @@
 				DA8581021E4134570055134E /* MyCompanion.xcdatamodeld in Sources */,
 				DAE3BB851E6CA57F009BB9E6 /* RemindersTableViewCell.swift in Sources */,
 				DA54D7851E86F05D00BE345C /* ReminderDataManager.swift in Sources */,
-				1C4E12041E7CAF350001DD3F /* MemoryBookTableViewController.swift in Sources */,
+				1C4E12041E7CAF350001DD3F /* EditMemoryBookTableViewController.swift in Sources */,
 				1C4E12191E81899B0001DD3F /* EditRemindersTableViewController.swift in Sources */,
 				DAFA46B41E524AB000285267 /* ContactTileViewController.swift in Sources */,
-				1C4E12111E7F50A00001DD3F /* AddLabelPageViewController.swift in Sources */,
+				1C4E12111E7F50A00001DD3F /* DetailLabelPageViewController.swift in Sources */,
 				1CCEA7801E89E62800252E2A /* PhotoPageViewController.swift in Sources */,
 				1C16159A1E5A7E0B009A3137 /* CheckPasscodeViewController.swift in Sources */,
 				DA63DC241E81BED500E1C5A8 /* EditContactTableViewController.swift in Sources */,

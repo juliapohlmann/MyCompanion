@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AddMemoryTableViewController: UITableViewController {
+class AddPageTableViewController: UITableViewController {
 
     var types = ["11LP", "11RP", "11TP", "11DP", "11LV", "11RV", "11TV", "11DV", "1T", "1P", "1V"]
     
@@ -73,21 +73,21 @@ class AddMemoryTableViewController: UITableViewController {
         
         if(indexPath.section == 0 || indexPath.section == 1) {
             
-            let myVC = storyboard?.instantiateViewController(withIdentifier: "AddLabelPhotoPageViewController") as! AddLabelPhotoPageViewController
+            let myVC = storyboard?.instantiateViewController(withIdentifier: "DetailLabelPhotoPageViewController") as! DetailLabelPhotoPageViewController
             myVC.templateType = types[cellClicked]
             myVC.vcType = "Add"
             navigationController?.pushViewController(myVC, animated: true)
             
         } else if (indexPath.section == 2) {
             
-            let myVC = storyboard?.instantiateViewController(withIdentifier: "AddLabelPageViewController") as! AddLabelPageViewController
+            let myVC = storyboard?.instantiateViewController(withIdentifier: "DetailLabelPageViewController") as! DetailLabelPageViewController
             myVC.templateType = types[cellClicked]
             myVC.vcType = "Add"
             navigationController?.pushViewController(myVC, animated: true)
 
         } else {
             
-            let myVC = storyboard?.instantiateViewController(withIdentifier: "AddPhotoPageViewController") as! AddPhotoPageViewController
+            let myVC = storyboard?.instantiateViewController(withIdentifier: "DetailPhotoPageViewController") as! DetailPhotoPageViewController
             myVC.templateType = types[cellClicked]
             myVC.vcType = "Add"
             navigationController?.pushViewController(myVC, animated: true)

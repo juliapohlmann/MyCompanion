@@ -13,7 +13,7 @@ import MobileCoreServices
 import AVFoundation
 import FontAwesome_swift
 
-class AddLabelPhotoPageViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class DetailLabelPhotoPageViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     var vcType : String = ""
     var page : NSManagedObject?

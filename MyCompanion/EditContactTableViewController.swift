@@ -18,7 +18,6 @@ class EditContactTableViewController: UITableViewController {
         self.navigationItem.setLeftBarButtonItems([self.editButtonItem], animated: false)
         
         contacts = ContactDataManager.fetchContacts()
-
     }
     
     // MARK: - Table view data source
@@ -43,12 +42,16 @@ class EditContactTableViewController: UITableViewController {
         return cell
         
     }
+    
+//    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+//        self.performSegue(withIdentifier: "editContactSegue", sender: self);
+//
+//    }
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.performSegue(withIdentifier: "editContactSegue", sender: self)
+    }
 
     
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        self.performSegue(withIdentifier: "editContactSegue", sender: self);
-
-    }
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {

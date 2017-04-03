@@ -14,9 +14,11 @@ class ContactTableViewController: UITableViewController {
     
     @IBOutlet var homeButton: UIButton!
     var contacts: [NSManagedObject] = []
-    let canCall = UserDefaults.standard.object(forKey: "canCall") as! Bool
-    let canEmail = UserDefaults.standard.object(forKey: "canEmail") as! Bool
     let purpleColor = UIColor(red: 156/225, green: 39/255, blue: 176/255, alpha: 1.0)
+
+//    let canCall = UserDefaults.standard.object(forKey: "canCall") as! Bool
+//    let canEmail = UserDefaults.standard.object(forKey: "canEmail") as! Bool
+//    let purpleColor = UIColor(red: 156/225, green: 39/255, blue: 176/255, alpha: 1.0)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,7 +44,8 @@ class ContactTableViewController: UITableViewController {
         cell.relationship.text = contact.value(forKeyPath: "relationship") as? String
         
         cell = setImage(cell: cell, contact: contact)
-        cell = formatCallEmail(cell: cell)
+        formatNumber(cell: cell)
+        formatEmail(cell: cell)
         
         return cell
     }
@@ -50,42 +53,29 @@ class ContactTableViewController: UITableViewController {
     func setImage(cell: ContactTableViewCell, contact: NSManagedObject) -> ContactTableViewCell {
         if(contact.value(forKeyPath: "image") == nil) {
             cell.contactImage.image = UIImage.fontAwesomeIcon(name: .user, textColor: UIColor.black, size: CGSize(width: 128, height: 128))
-            print("HERE")
         } else {
             cell.contactImage.image = UIImage(data: contact.value(forKeyPath: "image") as! Data)
         }
         return cell
     }
     
-    func formatCallEmail(cell: ContactTableViewCell) -> ContactTableViewCell {
+    func formatNumber(cell: ContactTableViewCell) {
+        let canCall = UserDefaults.standard.object(forKey: "canCall") as! Bool
+
         if (canCall) {
             cell.number.textColor = purpleColor
         }
+    }
+    
+    func formatEmail(cell: ContactTableViewCell) {
+        let canEmail = UserDefaults.standard.object(forKey: "canEmail") as! Bool
+
         if (canEmail) {
             cell.email.textColor = purpleColor
         }
-        return cell
     }
     
-//    func getContext() -> NSManagedObjectContext {
-//        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-//        return appDelegate.persistentContainer.viewContext
-//    }
-//    
-//    func fetchContacts() {
-//        let context = getContext()
-//        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Contact")
-//        
-//        do {
-//            contacts = try context.fetch(fetchRequest)
-//        } catch let error as NSError {
-//            let errorDialog = UIAlertController(title: "Error!", message: "Failed to save! \(error): \(error.userInfo)", preferredStyle: .alert)
-//            errorDialog.addAction(UIAlertAction(title: "Cancel", style: .cancel))
-//            present(errorDialog, animated: true)
-//        }
-//    }
-    
-//    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+    //    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
 //        if editingStyle == .delete {
 //            let context = getContext()
 //            context.delete(contacts[indexPath.row])

@@ -52,7 +52,6 @@ class SettingsTableViewController: UITableViewController {
         default: return "mistake"
             
         }
-        
     }
     /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

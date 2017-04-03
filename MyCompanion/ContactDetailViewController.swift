@@ -76,8 +76,6 @@ class ContactDetailViewController: UIViewController, UIImagePickerControllerDele
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         
-        print("hereeee")
-        
         if let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
             imageView.contentMode = .scaleAspectFit
             imageView.image = pickedImage
@@ -113,7 +111,7 @@ class ContactDetailViewController: UIViewController, UIImagePickerControllerDele
         }
         else {
             if(type == "Add Contact") {
-                let didStore = ContactDataManager.storeContact(name: nameTextField.text!, relationship: relationshipTextField.text!, number: numberTextField.text!, email: emailTextField.text!, imageData: imageData!)
+                let didStore = ContactDataManager.storeContact(name: nameTextField.text!, relationship: relationshipTextField.text!, number: numberTextField.text, email: emailTextField.text, imageData: imageData)
         
                 if(didStore) {
                     performSegue(withIdentifier: "backToEditContacts", sender: self)

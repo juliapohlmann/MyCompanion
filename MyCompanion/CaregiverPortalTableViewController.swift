@@ -27,17 +27,17 @@ class CaregiverPortalTableViewController: UITableViewController {
     // method to run when table view cell is tapped
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        // Segue to the second view controller
-        if(indexPath[1] == 2) {
-            self.performSegue(withIdentifier: "editContact", sender: self)
-        } else if (indexPath[1] == 1) {
+        switch(indexPath[1]) {
+        case 1:
             self.performSegue(withIdentifier: "editMemoryBook", sender: self)
-        } else if (indexPath[1] == 3) {
+        case 2:
+            self.performSegue(withIdentifier: "editContact", sender: self)
+        case 3:
             self.performSegue(withIdentifier: "editReminders", sender: self)
-        } else if (indexPath[1] == 0) {
-            self.performSegue(withIdentifier: "generalSettings", sender: self)
-        } else if (indexPath[1] == 4) {
+        case 4:
             self.performSegue(withIdentifier: "caregiverForum", sender: self)
+        default:
+            self.performSegue(withIdentifier: "generalSettings", sender: self)
         }
     }
     

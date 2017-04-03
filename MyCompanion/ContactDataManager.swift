@@ -30,7 +30,7 @@ import UIKit
         }
     }
     
-    static func storeContact(name: String, relationship: String, number: String, email: String, imageData: NSData) -> Bool {
+    static func storeContact(name: String, relationship: String, number: String!, email: String!, imageData: NSData!) -> Bool {
         
         let context = getContext()
         let entity = NSEntityDescription.entity(forEntityName: "Contact", in: context)
@@ -64,7 +64,7 @@ import UIKit
 
     }
     
-    static func updateContact(contact: NSManagedObject, name: String, relationship: String, number: String, email: String, imageData: NSData) -> Bool {
+    static func updateContact(contact: NSManagedObject, name: String, relationship: String, number: String!, email: String!, imageData: NSData!) -> Bool {
         let context = getContext()
 
         contact.setValue(name, forKey: "name")

@@ -37,6 +37,17 @@
                BlueprintName = "MyCompanionTests"
                ReferencedContainer = "container:MyCompanion.xcodeproj">
             </BuildableReference>
+            <SkippedTests>
+               <Test
+                  Identifier = "CaregiverPortalTableViewControllerTests">
+               </Test>
+               <Test
+                  Identifier = "MyCompanionTests">
+               </Test>
+               <Test
+                  Identifier = "SettingsTableViewControllerTests">
+               </Test>
+            </SkippedTests>
          </TestableReference>
          <TestableReference
             skipped = "NO">
@@ -47,6 +58,11 @@
                BlueprintName = "MyCompanionUITests"
                ReferencedContainer = "container:MyCompanion.xcodeproj">
             </BuildableReference>
+            <SkippedTests>
+               <Test
+                  Identifier = "MyCompanionUITests">
+               </Test>
+            </SkippedTests>
          </TestableReference>
       </Testables>
       <MacroExpansion>

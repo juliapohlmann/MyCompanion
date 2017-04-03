@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		1C1615981E5A6E14009A3137 /* PasscodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C1615971E5A6E14009A3137 /* PasscodeViewController.swift */; };
 		1C16159A1E5A7E0B009A3137 /* CheckPasscodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C1615991E5A7E0B009A3137 /* CheckPasscodeViewController.swift */; };
-		1C4E11FE1E79E8AE0001DD3F /* StoryboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C4E11FD1E79E8AE0001DD3F /* StoryboardViewController.swift */; };
 		1C4E12041E7CAF350001DD3F /* EditMemoryBookTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C4E12031E7CAF350001DD3F /* EditMemoryBookTableViewController.swift */; };
 		1C4E12061E7CAF4F0001DD3F /* AddPageTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C4E12051E7CAF4F0001DD3F /* AddPageTableViewController.swift */; };
 		1C4E120C1E7CCE030001DD3F /* DetailLabelPhotoPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C4E120B1E7CCE030001DD3F /* DetailLabelPhotoPageViewController.swift */; };
@@ -27,6 +26,9 @@
 		6908902E721E1B70ACB83D9D /* Pods_MyCompanionTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FB1E8DD63FDE025EFF94606 /* Pods_MyCompanionTests.framework */; };
 		85E610E145E74BEC93F2440A /* Pods_MyCompanionUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56C39383E4FF86AFA081F0EA /* Pods_MyCompanionUITests.framework */; };
 		93DCC6AA7C143FDF12A68B44 /* Pods_MyCompanion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD700589041BBF8E6FEA6A60 /* Pods_MyCompanion.framework */; };
+		DA0D202B1E9295E600FBFCB6 /* CaregiverPortalTableViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0D202A1E9295E600FBFCB6 /* CaregiverPortalTableViewControllerTests.swift */; };
+		DA0D202D1E929AAC00FBFCB6 /* SettingsTableViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0D202C1E929AAC00FBFCB6 /* SettingsTableViewControllerTests.swift */; };
+		DA0D20301E929F0200FBFCB6 /* ContactTableViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0D202F1E929F0200FBFCB6 /* ContactTableViewControllerTests.swift */; };
 		DA1AB3F41E82FA740015E2EA /* ContactDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1AB3F31E82FA740015E2EA /* ContactDataManager.swift */; };
 		DA2C16861E54CF42001B3D14 /* IntroTileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2C16851E54CF42001B3D14 /* IntroTileViewController.swift */; };
 		DA54D7851E86F05D00BE345C /* ReminderDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA54D7841E86F05D00BE345C /* ReminderDataManager.swift */; };
@@ -73,7 +75,6 @@
 /* Begin PBXFileReference section */
 		1C1615971E5A6E14009A3137 /* PasscodeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasscodeViewController.swift; sourceTree = "<group>"; };
 		1C1615991E5A7E0B009A3137 /* CheckPasscodeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckPasscodeViewController.swift; sourceTree = "<group>"; };
-		1C4E11FD1E79E8AE0001DD3F /* StoryboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardViewController.swift; sourceTree = "<group>"; };
 		1C4E12031E7CAF350001DD3F /* EditMemoryBookTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditMemoryBookTableViewController.swift; sourceTree = "<group>"; };
 		1C4E12051E7CAF4F0001DD3F /* AddPageTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPageTableViewController.swift; sourceTree = "<group>"; };
 		1C4E120B1E7CCE030001DD3F /* DetailLabelPhotoPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailLabelPhotoPageViewController.swift; sourceTree = "<group>"; };
@@ -96,6 +97,10 @@
 		BBE46EBB316E3847D61C703C /* Pods-MyCompanionTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyCompanionTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyCompanionTests/Pods-MyCompanionTests.debug.xcconfig"; sourceTree = "<group>"; };
 		BD700589041BBF8E6FEA6A60 /* Pods_MyCompanion.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyCompanion.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D59AD62633D366BD4EBD02DE /* Pods-MyCompanionTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyCompanionTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyCompanionTests/Pods-MyCompanionTests.release.xcconfig"; sourceTree = "<group>"; };
+		DA0D20291E92920900FBFCB6 /* MyCompanion.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MyCompanion.entitlements; sourceTree = "<group>"; };
+		DA0D202A1E9295E600FBFCB6 /* CaregiverPortalTableViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CaregiverPortalTableViewControllerTests.swift; sourceTree = "<group>"; };
+		DA0D202C1E929AAC00FBFCB6 /* SettingsTableViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTableViewControllerTests.swift; sourceTree = "<group>"; };
+		DA0D202F1E929F0200FBFCB6 /* ContactTableViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactTableViewControllerTests.swift; sourceTree = "<group>"; };
 		DA1AB3F31E82FA740015E2EA /* ContactDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactDataManager.swift; sourceTree = "<group>"; };
 		DA2C16851E54CF42001B3D14 /* IntroTileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroTileViewController.swift; sourceTree = "<group>"; };
 		DA54D7841E86F05D00BE345C /* ReminderDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReminderDataManager.swift; sourceTree = "<group>"; };
@@ -189,6 +194,14 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		DA0D202E1E929EE400FBFCB6 /* ContactTests */ = {
+			isa = PBXGroup;
+			children = (
+				DA0D202F1E929F0200FBFCB6 /* ContactTableViewControllerTests.swift */,
+			);
+			name = ContactTests;
+			sourceTree = "<group>";
+		};
 		DA3045671E8C1BCE003CEC9B /* Caregiver side */ = {
 			isa = PBXGroup;
 			children = (
@@ -238,10 +251,10 @@
 		DA8580F81E4134570055134E /* MyCompanion */ = {
 			isa = PBXGroup;
 			children = (
+				DA0D20291E92920900FBFCB6 /* MyCompanion.entitlements */,
 				DA8580F91E4134570055134E /* AppDelegate.swift */,
 				DA8580FB1E4134570055134E /* DashboardViewController.swift */,
 				DA8580FD1E4134570055134E /* Main.storyboard */,
-				1C4E11FD1E79E8AE0001DD3F /* StoryboardViewController.swift */,
 				DA63DC211E81AA7A00E1C5A8 /* CaregiverPortalTableViewController.swift */,
 				DA8581031E4134570055134E /* Assets.xcassets */,
 				DA8581051E4134570055134E /* LaunchScreen.storyboard */,
@@ -261,8 +274,11 @@
 		DA8581101E4134570055134E /* MyCompanionTests */ = {
 			isa = PBXGroup;
 			children = (
+				DA0D202E1E929EE400FBFCB6 /* ContactTests */,
 				DA8581111E4134570055134E /* MyCompanionTests.swift */,
 				DA8581131E4134570055134E /* Info.plist */,
+				DA0D202A1E9295E600FBFCB6 /* CaregiverPortalTableViewControllerTests.swift */,
+				DA0D202C1E929AAC00FBFCB6 /* SettingsTableViewControllerTests.swift */,
 			);
 			path = MyCompanionTests;
 			sourceTree = "<group>";
@@ -402,6 +418,11 @@
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = N8H54VZ747;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 0;
+							};
+						};
 					};
 					DA85810C1E4134570055134E = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -625,7 +646,6 @@
 				DAAF9C1D1E8AFA9A0050BE11 /* MemoryBookDataManager.swift in Sources */,
 				DA63DC2C1E822FC000E1C5A8 /* ContactTableViewCell.swift in Sources */,
 				1CCEA77E1E89E61B00252E2A /* LabelPageViewController.swift in Sources */,
-				1C4E11FE1E79E8AE0001DD3F /* StoryboardViewController.swift in Sources */,
 				DAE3BB7C1E6C93D7009BB9E6 /* ReminderTileViewController.swift in Sources */,
 				DA8580FC1E4134570055134E /* DashboardViewController.swift in Sources */,
 				1C1615981E5A6E14009A3137 /* PasscodeViewController.swift in Sources */,
@@ -650,6 +670,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA0D202D1E929AAC00FBFCB6 /* SettingsTableViewControllerTests.swift in Sources */,
+				DA0D202B1E9295E600FBFCB6 /* CaregiverPortalTableViewControllerTests.swift in Sources */,
+				DA0D20301E929F0200FBFCB6 /* ContactTableViewControllerTests.swift in Sources */,
 				DA8581121E4134570055134E /* MyCompanionTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

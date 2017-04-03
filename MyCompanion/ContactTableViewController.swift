@@ -33,32 +33,38 @@ class ContactTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ContactsTableViewCell", for: indexPath) as! ContactTableViewCell
+        var cell = tableView.dequeueReusableCell(withIdentifier: "ContactsTableViewCell", for: indexPath) as! ContactTableViewCell
         let contact = contacts[indexPath.row]
         
         cell.name.text = contact.value(forKeyPath: "name") as? String
         cell.email.text = contact.value(forKeyPath: "email") as? String
-        if(canEmail) {
-            
-            cell.email.textColor = purpleColor
-            
-        }
         cell.number.text = contact.value(forKeyPath: "number") as? String
-        if(canCall) {
-            
-            cell.number.textColor = purpleColor
-            
-        }
         cell.relationship.text = contact.value(forKeyPath: "relationship") as? String
+        
+        cell = setImage(cell: cell, contact: contact)
+        cell = formatCallEmail(cell: cell)
+        
+        return cell
+    }
+    
+    func setImage(cell: ContactTableViewCell, contact: NSManagedObject) -> ContactTableViewCell {
         if(contact.value(forKeyPath: "image") == nil) {
             cell.contactImage.image = UIImage.fontAwesomeIcon(name: .user, textColor: UIColor.black, size: CGSize(width: 128, height: 128))
+            print("HERE")
         } else {
             cell.contactImage.image = UIImage(data: contact.value(forKeyPath: "image") as! Data)
         }
-        //cell.contactImage.image = UIImage(data: contact.value(forKeyPath: "image") as! Data)
-        
         return cell
-        
+    }
+    
+    func formatCallEmail(cell: ContactTableViewCell) -> ContactTableViewCell {
+        if (canCall) {
+            cell.number.textColor = purpleColor
+        }
+        if (canEmail) {
+            cell.email.textColor = purpleColor
+        }
+        return cell
     }
     
 //    func getContext() -> NSManagedObjectContext {

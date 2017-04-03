@@ -34,7 +34,6 @@ class ContactDetailViewController: UIViewController, UIImagePickerControllerDele
             imageView.image = UIImage(data: contact?.value(forKeyPath: "image") as! Data)
             imageData = contact?.value(forKeyPath: "image") as! Data as NSData?
         }
-
     }
     
     override func viewDidLoad() {
@@ -51,9 +50,7 @@ class ContactDetailViewController: UIViewController, UIImagePickerControllerDele
     func setStockPhoto() {
         imageView.layer.borderWidth = 2
         imageView.layer.borderColor = UIColor.black.cgColor
-        if(imageView.image == nil) {
-            imageView.image = UIImage.fontAwesomeIcon(name: .user, textColor: UIColor.black, size: CGSize(width: 128, height: 128))
-        }
+        imageView.image = UIImage.fontAwesomeIcon(name: .user, textColor: UIColor.black, size: CGSize(width: 128, height: 128))
     }
 
     override func didReceiveMemoryWarning() {
@@ -93,26 +90,12 @@ class ContactDetailViewController: UIViewController, UIImagePickerControllerDele
 
     // MARK: Core Data
 
-    func getContext() -> NSManagedObjectContext {
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        return appDelegate.persistentContainer.viewContext
-    }
-
     @IBAction func storeContact(_ sender: Any) {
-        var controller : UIAlertController = UIAlertController()
-        if(nameTextField.text! == "") {
-            controller = UIAlertController(title: "Missing Name", message: "Please enter a name for the contact", preferredStyle: .alert)
-        } else if(relationshipTextField.text! == "") {
-            controller = UIAlertController(title: "Missing Relationship", message: "Please enter a relationship for the contact", preferredStyle: .alert)
-        } else if((numberTextField.text != "") && !(isValidNumber(value: numberTextField.text!))) {
-            controller = UIAlertController(title: "Incorrect Phone Number", message: "Please enter a valid phone number (ie. 555-123-4567)", preferredStyle: .alert)
-        } else if((emailTextField.text != "") && !(isValidEmail(testStr: emailTextField.text!))) {
-            controller = UIAlertController(title: "Incorrect Email Address", message: "Please enter a valid email address", preferredStyle: .alert)
-        }
-        else {
+        
+        if(checkInputValidity()) {
             if(type == "Add Contact") {
                 let didStore = ContactDataManager.storeContact(name: nameTextField.text!, relationship: relationshipTextField.text!, number: numberTextField.text, email: emailTextField.text, imageData: imageData)
-        
+                
                 if(didStore) {
                     performSegue(withIdentifier: "backToEditContacts", sender: self)
                 } else {
@@ -120,8 +103,6 @@ class ContactDetailViewController: UIViewController, UIImagePickerControllerDele
                 }
             } else {
                 //EDIT CONTACT
-                print("Attempting to update contact")
-                
                 let didUpdate = ContactDataManager.updateContact(contact: contact!, name: nameTextField.text!, relationship: relationshipTextField.text!, number: numberTextField.text!, email: emailTextField.text!, imageData: imageData!)
                 
                 if(didUpdate) {
@@ -131,17 +112,36 @@ class ContactDetailViewController: UIViewController, UIImagePickerControllerDele
                 }
             }
         }
-        
+    }
+    
+    func checkInputValidity() -> Bool {
+        if(nameTextField.text! == "") {
+            sendAlert(title: "Missing Name", message: "Please enter a name for the contact")
+            return false
+        } else if(relationshipTextField.text! == "") {
+            sendAlert(title: "Missing Relationship", message: "Please enter a relationship for the contact")
+            return false
+        } else if((numberTextField.text != "") && !(isValidNumber(value: numberTextField.text!))) {
+            sendAlert(title: "Incorrect Phone Number", message: "Please enter a valid phone number (ie. 555-123-4567)")
+            return false
+        } else if((emailTextField.text != "") && !(isValidEmail(value: emailTextField.text!))) {
+            sendAlert(title: "Incorrect Email Address", message: "Please enter a valid email address")
+            return false
+        }
+        return true
+    }
+    
+    func sendAlert(title: String, message: String) {
+        let controller : UIAlertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let ok = UIAlertAction(title: "OK", style: .default, handler: nil)
         controller.addAction(ok)
         present(controller, animated: true, completion: nil)
-        
     }
     
-    func isValidEmail(testStr:String) -> Bool {
+    func isValidEmail(value:String) -> Bool {
         let emailRegEx = "^(?:(?:(?:(?: )*(?:(?:(?:\\t| )*\\r\\n)?(?:\\t| )+))+(?: )*)|(?: )+)?(?:(?:(?:[-A-Za-z0-9!#$%&’*+/=?^_'{|}~]+(?:\\.[-A-Za-z0-9!#$%&’*+/=?^_'{|}~]+)*)|(?:\"(?:(?:(?:(?: )*(?:(?:[!#-Z^-~]|\\[|\\])|(?:\\\\(?:\\t|[ -~]))))+(?: )*)|(?: )+)\"))(?:@)(?:(?:(?:[A-Za-z0-9](?:[-A-Za-z0-9]{0,61}[A-Za-z0-9])?)(?:\\.[A-Za-z0-9](?:[-A-Za-z0-9]{0,61}[A-Za-z0-9])?)*)|(?:\\[(?:(?:(?:(?:(?:[0-9]|(?:[1-9][0-9])|(?:1[0-9][0-9])|(?:2[0-4][0-9])|(?:25[0-5]))\\.){3}(?:[0-9]|(?:[1-9][0-9])|(?:1[0-9][0-9])|(?:2[0-4][0-9])|(?:25[0-5]))))|(?:(?:(?: )*[!-Z^-~])*(?: )*)|(?:[Vv][0-9A-Fa-f]+\\.[-A-Za-z0-9._~!$&'()*+,;=:]+))\\])))(?:(?:(?:(?: )*(?:(?:(?:\\t| )*\\r\\n)?(?:\\t| )+))+(?: )*)|(?: )+)?$"
         let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
-        let result = emailTest.evaluate(with: testStr)
+        let result = emailTest.evaluate(with: value)
         return result
     }
     

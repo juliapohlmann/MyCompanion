@@ -31,6 +31,9 @@
 		DA0D20301E929F0200FBFCB6 /* ContactTableViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0D202F1E929F0200FBFCB6 /* ContactTableViewControllerTests.swift */; };
 		DA0D20321E92DA4900FBFCB6 /* ContactDetailViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0D20311E92DA4900FBFCB6 /* ContactDetailViewControllerTests.swift */; };
 		DA0D20341E92EAF800FBFCB6 /* EditContactTableViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0D20331E92EAF800FBFCB6 /* EditContactTableViewControllerTests.swift */; };
+		DA0D20391E930B5100FBFCB6 /* RemindersTableViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0D20381E930B5100FBFCB6 /* RemindersTableViewControllerTests.swift */; };
+		DA0D203B1E93423F00FBFCB6 /* ReminderDetailViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0D203A1E93423F00FBFCB6 /* ReminderDetailViewControllerTests.swift */; };
+		DA0D203D1E93474800FBFCB6 /* EditRemindersTableViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0D203C1E93474800FBFCB6 /* EditRemindersTableViewControllerTests.swift */; };
 		DA1AB3F41E82FA740015E2EA /* ContactDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1AB3F31E82FA740015E2EA /* ContactDataManager.swift */; };
 		DA2C16861E54CF42001B3D14 /* IntroTileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2C16851E54CF42001B3D14 /* IntroTileViewController.swift */; };
 		DA54D7851E86F05D00BE345C /* ReminderDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA54D7841E86F05D00BE345C /* ReminderDataManager.swift */; };
@@ -105,6 +108,9 @@
 		DA0D202F1E929F0200FBFCB6 /* ContactTableViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactTableViewControllerTests.swift; sourceTree = "<group>"; };
 		DA0D20311E92DA4900FBFCB6 /* ContactDetailViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactDetailViewControllerTests.swift; sourceTree = "<group>"; };
 		DA0D20331E92EAF800FBFCB6 /* EditContactTableViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditContactTableViewControllerTests.swift; sourceTree = "<group>"; };
+		DA0D20381E930B5100FBFCB6 /* RemindersTableViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemindersTableViewControllerTests.swift; sourceTree = "<group>"; };
+		DA0D203A1E93423F00FBFCB6 /* ReminderDetailViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReminderDetailViewControllerTests.swift; sourceTree = "<group>"; };
+		DA0D203C1E93474800FBFCB6 /* EditRemindersTableViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditRemindersTableViewControllerTests.swift; sourceTree = "<group>"; };
 		DA1AB3F31E82FA740015E2EA /* ContactDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactDataManager.swift; sourceTree = "<group>"; };
 		DA2C16851E54CF42001B3D14 /* IntroTileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroTileViewController.swift; sourceTree = "<group>"; };
 		DA54D7841E86F05D00BE345C /* ReminderDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReminderDataManager.swift; sourceTree = "<group>"; };
@@ -208,6 +214,16 @@
 			name = ContactTests;
 			sourceTree = "<group>";
 		};
+		DA0D20371E930B2C00FBFCB6 /* ReminderTests */ = {
+			isa = PBXGroup;
+			children = (
+				DA0D20381E930B5100FBFCB6 /* RemindersTableViewControllerTests.swift */,
+				DA0D203A1E93423F00FBFCB6 /* ReminderDetailViewControllerTests.swift */,
+				DA0D203C1E93474800FBFCB6 /* EditRemindersTableViewControllerTests.swift */,
+			);
+			name = ReminderTests;
+			sourceTree = "<group>";
+		};
 		DA3045671E8C1BCE003CEC9B /* Caregiver side */ = {
 			isa = PBXGroup;
 			children = (
@@ -280,6 +296,7 @@
 		DA8581101E4134570055134E /* MyCompanionTests */ = {
 			isa = PBXGroup;
 			children = (
+				DA0D20371E930B2C00FBFCB6 /* ReminderTests */,
 				DA0D202E1E929EE400FBFCB6 /* ContactTests */,
 				DA8581111E4134570055134E /* MyCompanionTests.swift */,
 				DA8581131E4134570055134E /* Info.plist */,
@@ -677,9 +694,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA0D20341E92EAF800FBFCB6 /* EditContactTableViewControllerTests.swift in Sources */,
+				DA0D203B1E93423F00FBFCB6 /* ReminderDetailViewControllerTests.swift in Sources */,
+				DA0D203D1E93474800FBFCB6 /* EditRemindersTableViewControllerTests.swift in Sources */,
 				DA0D202D1E929AAC00FBFCB6 /* SettingsTableViewControllerTests.swift in Sources */,
 				DA0D20321E92DA4900FBFCB6 /* ContactDetailViewControllerTests.swift in Sources */,
 				DA0D202B1E9295E600FBFCB6 /* CaregiverPortalTableViewControllerTests.swift in Sources */,
+				DA0D20391E930B5100FBFCB6 /* RemindersTableViewControllerTests.swift in Sources */,
 				DA0D20301E929F0200FBFCB6 /* ContactTableViewControllerTests.swift in Sources */,
 				DA8581121E4134570055134E /* MyCompanionTests.swift in Sources */,
 			);

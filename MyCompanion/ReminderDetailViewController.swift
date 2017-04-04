@@ -37,20 +37,27 @@ class ReminderDetailViewController: UIViewController {
     }
     
     @IBAction func storeReminder(_ sender: Any) {
-        var controller : UIAlertController = UIAlertController()
-        print("Name text field: \(nameTextField.text!)")
-        if(nameTextField.text! == "") {
-            controller = UIAlertController(title: "Missing Text", message: "Please enter text for the reminder", preferredStyle: .alert)
-        }
-        else {
+        if(checkInputValidity()) {
             //ADD CHECK FOR REMINDER FORMAT
             if(type == "Add Reminder") {
-                ReminderDataManager.storeReminder(reminderText: nameTextField.text!)
+                _ = ReminderDataManager.storeReminder(reminderText: nameTextField.text!)
             } else if (type == "Edit Reminder") {
-                ReminderDataManager.updateReminder(reminder: self.reminder!, reminderText: nameTextField.text!)
+                _ = ReminderDataManager.updateReminder(reminder: self.reminder!, reminderText: nameTextField.text!)
             }
             performSegue(withIdentifier: "backToEditReminders", sender: self)
         }
+    }
+    
+    func checkInputValidity() -> Bool {
+        if(nameTextField.text! == "") {
+            sendAlert(title: "MissingText", message: "Please enter text for the reminder")
+            return false
+        }
+        return true
+    }
+    
+    func sendAlert(title: String, message: String) {
+        let controller : UIAlertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let ok = UIAlertAction(title: "OK", style: .default, handler: nil)
         controller.addAction(ok)
         present(controller, animated: true, completion: nil)

@@ -19,11 +19,16 @@ class ViewMemoryBookViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         pages = fetchPages()
         
         if(pages.count != 0) {
             updateView()
+        } else {
+            
+            self.previousButton.isHidden = true
+            self.nextButton.isHidden = true
+            
         }
         
     }
@@ -49,22 +54,31 @@ class ViewMemoryBookViewController: UIViewController {
         }
         
         let page = pages[pageNum].value(forKeyPath: "templateType") as? String
-        var controller:UIViewController
         if(page?.hasPrefix("11"))! {
             
-            controller = self.storyboard!.instantiateViewController(withIdentifier: "LabelPhotoPageViewController") as! LabelPhotoPageViewController
+            let controller = self.storyboard!.instantiateViewController(withIdentifier: "LabelPhotoPageViewController") as! LabelPhotoPageViewController
             //controller.ANYPROPERTY=THEVALUE
-            
+            finishSetup(controller: controller)
             
         } else if (page?.hasSuffix("T"))! {
             
-            controller = self.storyboard!.instantiateViewController(withIdentifier: "LabelPageViewController") as! LabelPageViewController
+            let controller = self.storyboard!.instantiateViewController(withIdentifier: "LabelPageViewController") as! LabelPageViewController
+            print(pages[pageNum])
+            controller.pageText = pages[pageNum].value(forKeyPath: "text") as! String
+            controller.pageTitle = pages[pageNum].value(forKeyPath: "title") as! String
+            finishSetup(controller: controller)
             
         } else {
             
-            controller = self.storyboard!.instantiateViewController(withIdentifier: "PhotoPageViewController") as! PhotoPageViewController
-            
+            let controller = self.storyboard!.instantiateViewController(withIdentifier: "PhotoPageViewController") as! PhotoPageViewController
+            finishSetup(controller: controller)
         }
+        
+        
+        
+    }
+    
+    func finishSetup(controller: UIViewController) {
         
         controller.view.frame = self.containerView.bounds;
         controller.willMove(toParentViewController: self)

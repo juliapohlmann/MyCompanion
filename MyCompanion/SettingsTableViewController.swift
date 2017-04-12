@@ -17,6 +17,8 @@ class SettingsTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        
         let canCall = UserDefaults.standard.object(forKey: "canCall") as! Bool
         let canEmail = UserDefaults.standard.object(forKey: "canEmail") as! Bool
         

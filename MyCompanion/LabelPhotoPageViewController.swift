@@ -9,7 +9,7 @@
 import UIKit
 
 class LabelPhotoPageViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

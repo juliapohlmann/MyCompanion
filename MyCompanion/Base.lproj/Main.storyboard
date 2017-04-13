@@ -259,10 +259,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="650" height="650"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HsO-LC-d1e">
-                                <rect key="frame" x="304" y="315" width="8" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xgf-vr-bB7">
+                                <rect key="frame" x="20" y="28" width="610" height="68"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="40"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -1882,12 +1882,12 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="QNv-iP-D82"/>
+        <segue reference="WLn-pA-tNl"/>
         <segue reference="IlB-Sf-bGQ"/>
-        <segue reference="RXJ-12-X15"/>
-        <segue reference="xOr-P6-iNA"/>
         <segue reference="mJU-au-Agg"/>
         <segue reference="IAW-LV-fko"/>
+        <segue reference="xOr-P6-iNA"/>
+        <segue reference="RXJ-12-X15"/>
         <segue reference="xSR-mY-Q34"/>
     </inferredMetricsTieBreakers>
 </document>

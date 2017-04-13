@@ -10,6 +10,8 @@ import UIKit
 
 class PhotoPageViewController: UIViewController {
 
+    var imageData:NSData? = nil
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

@@ -23,12 +23,10 @@ class LabelPageViewController: UIViewController {
         
         if let titleLabel = self.view.viewWithTag(1) as? UILabel {
             titleLabel.text = pageTitle
-            print("yo1")
         }
         
         if let textLabel = self.view.viewWithTag(2) as? UILabel {
             textLabel.text = pageText
-            print("yo2")
         }
         
         // Do any additional setup after loading the view.

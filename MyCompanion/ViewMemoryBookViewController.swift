@@ -53,17 +53,19 @@ class ViewMemoryBookViewController: UIViewController {
             
         }
         
-        let page = pages[pageNum].value(forKeyPath: "templateType") as? String
-        if(page?.hasPrefix("11"))! {
+        let pageType = pages[pageNum].value(forKeyPath: "templateType") as? String
+        if(pageType?.hasPrefix("11"))! {
             
             let controller = self.storyboard!.instantiateViewController(withIdentifier: "LabelPhotoPageViewController") as! LabelPhotoPageViewController
-            //controller.ANYPROPERTY=THEVALUE
+            controller.templateType = pageType!
+            controller.pageText = pages[pageNum].value(forKeyPath: "text") as! String
+            controller.pageTitle = pages[pageNum].value(forKeyPath: "title") as! String
+            controller.imageData = pages[pageNum].value(forKeyPath: "image") as! NSData
             finishSetup(controller: controller)
             
-        } else if (page?.hasSuffix("T"))! {
+        } else if (pageType?.hasSuffix("T"))! {
             
             let controller = self.storyboard!.instantiateViewController(withIdentifier: "LabelPageViewController") as! LabelPageViewController
-            print(pages[pageNum])
             controller.pageText = pages[pageNum].value(forKeyPath: "text") as! String
             controller.pageTitle = pages[pageNum].value(forKeyPath: "title") as! String
             finishSetup(controller: controller)
@@ -71,6 +73,8 @@ class ViewMemoryBookViewController: UIViewController {
         } else {
             
             let controller = self.storyboard!.instantiateViewController(withIdentifier: "PhotoPageViewController") as! PhotoPageViewController
+            controller.imageData = pages[pageNum].value(forKeyPath: "image") as! NSData
+            
             finishSetup(controller: controller)
         }
         

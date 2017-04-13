@@ -43,7 +43,7 @@ class MemoryBookDataManager {
         }
     }
     
-    static func storePage(title: String!, text: String!, templateType: String!, imageData: NSData!) -> Bool{
+    static func storePage(title: String!, text: String!, templateType: String!, imageData: NSData!, videoID: String!) -> Bool{
         let context = getContext()
         let entity = NSEntityDescription.entity(forEntityName: "MemoryBook", in: context)
         let page = NSManagedObject(entity: entity!, insertInto: context)
@@ -52,6 +52,7 @@ class MemoryBookDataManager {
         page.setValue(text, forKey: "text")
         page.setValue(templateType, forKey: "templateType")
         page.setValue(imageData, forKey: "image")
+        page.setValue(videoID, forKey: "videoID")
         
         do {
             try context.save()
@@ -61,13 +62,14 @@ class MemoryBookDataManager {
         }
     }
     
-    static func updatePage(page: NSManagedObject, title: String!, text: String!, templateType: String!, imageData: NSData!) -> Bool{
+    static func updatePage(page: NSManagedObject, title: String!, text: String!, templateType: String!, imageData: NSData!, videoID: String!) -> Bool{
         let context = getContext()
         
         page.setValue(title, forKey: "title")
         page.setValue(text, forKey: "text")
         page.setValue(templateType, forKey: "templateType")
         page.setValue(imageData, forKey: "image")
+        page.setValue(videoID, forKey: "videoID")
         
         do {
             try context.save()

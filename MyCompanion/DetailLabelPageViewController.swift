@@ -15,7 +15,8 @@ class DetailLabelPageViewController: UIViewController {
     var vcType : String = ""
     var page : NSManagedObject?
 
-    var templateType: String? = nil
+    var templateType: String = ""
+    var videoID: String = ""
     @IBOutlet var titleTextField: JiroTextField!
     @IBOutlet var textTextField: JiroTextField!
     
@@ -40,12 +41,12 @@ class DetailLabelPageViewController: UIViewController {
     // MARK: Core Data
     @IBAction func storePage() {
         if vcType == "Add" {
-            let didStorePage = MemoryBookDataManager.storePage(title: titleTextField.text, text: textTextField.text, templateType: self.templateType, imageData: nil)
+            let didStorePage = MemoryBookDataManager.storePage(title: titleTextField.text, text: textTextField.text, templateType: self.templateType, imageData: nil, videoID: self.videoID)
             if didStorePage {
                 performSegue(withIdentifier: "addLabelPageToEditMemoryBook", sender: self)
             }
         } else if vcType == "Edit" {
-            let didUpdatePage = MemoryBookDataManager.updatePage(page: page!, title: titleTextField.text, text: nil, templateType: self.templateType, imageData: nil)
+            let didUpdatePage = MemoryBookDataManager.updatePage(page: page!, title: titleTextField.text, text: nil, templateType: self.templateType, imageData: nil, videoID: self.videoID)
             if didUpdatePage {
                 performSegue(withIdentifier: "addLabelPageToEditMemoryBook", sender: self)
             }

@@ -60,7 +60,11 @@ class ViewMemoryBookViewController: UIViewController {
             controller.templateType = pageType!
             controller.pageText = pages[pageNum].value(forKeyPath: "text") as! String
             controller.pageTitle = pages[pageNum].value(forKeyPath: "title") as! String
-            controller.imageData = pages[pageNum].value(forKeyPath: "image") as! NSData
+            if (pageType?.hasSuffix("P"))! {
+                controller.imageData = pages[pageNum].value(forKeyPath: "image") as! NSData
+            } else {
+                controller.videoID = pages[pageNum].value(forKeyPath: "videoID") as! String
+            }
             finishSetup(controller: controller)
             
         } else if (pageType?.hasSuffix("T"))! {
@@ -73,7 +77,14 @@ class ViewMemoryBookViewController: UIViewController {
         } else {
             
             let controller = self.storyboard!.instantiateViewController(withIdentifier: "PhotoPageViewController") as! PhotoPageViewController
-            controller.imageData = pages[pageNum].value(forKeyPath: "image") as! NSData
+            controller.templateType = pageType!
+            controller.pageTitle = pages[pageNum].value(forKeyPath: "title") as! String
+            if (pageType?.hasSuffix("P"))! {
+                controller.imageData = pages[pageNum].value(forKeyPath: "image") as! NSData
+            } else {
+                controller.videoID = pages[pageNum].value(forKeyPath: "videoID") as! String
+            }
+            
             
             finishSetup(controller: controller)
         }

@@ -22,6 +22,7 @@ class DetailPhotoPageViewController: UIViewController, UIImagePickerControllerDe
     @IBOutlet var titleTextField: JiroTextField!
     let imagePicker = LandscapeImagePickerController()
     var imageData: NSData? = nil
+    var videoID: String = ""
     var templateType: String? = nil
     
     override func viewDidLoad() {
@@ -90,10 +91,40 @@ class DetailPhotoPageViewController: UIViewController, UIImagePickerControllerDe
             
         } else if mediaType.isEqual(to: kUTTypeMovie as String) {
             
+            // thanks http://stackoverflow.com/questions/36536044/swift-video-to-document-directory
             // Media is a video
-            let videoUrl = info[UIImagePickerControllerMediaURL] as! NSURL
+            let uniqueID = NSUUID().uuidString
             
-            let asset = AVURLAsset(url: videoUrl as URL, options: nil)
+            let videoURL = info[UIImagePickerControllerMediaURL] as? URL as NSURL?
+            let myVideoVarData = try! Data(contentsOf: videoURL! as URL)
+            
+            //Now writing the data to the temp diroctory.
+            let tempPath = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory, FileManager.SearchPathDomainMask.userDomainMask, true)
+            let tempDocumentsDirectory: AnyObject = tempPath[0] as AnyObject
+            videoID = uniqueID  + "TEMPVIDEO.MOV"
+            let tempDataPath = tempDocumentsDirectory.appendingPathComponent(videoID) as String
+            try? myVideoVarData.write(to: URL(fileURLWithPath: tempDataPath), options: [])
+
+            //Now we remove the data from the temp Document Diroctory.
+            do{
+                let fileManager = FileManager.default
+                try fileManager.removeItem(atPath: tempDataPath)
+            } catch {
+                //Do nothing
+            }
+            
+            //Here we are writing the data to the Document Directory for use later on.
+            let docPaths = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory, FileManager.SearchPathDomainMask.userDomainMask, true)
+            let documentsDirectory: AnyObject = docPaths[0] as AnyObject
+            videoID = uniqueID  + "VIDEO.MOV"
+            let docDataPath = documentsDirectory.appendingPathComponent(videoID) as String
+            try? myVideoVarData.write(to: URL(fileURLWithPath: docDataPath), options: [])
+            print("docDataPath under picker ",docDataPath)
+            
+            print(docDataPath)
+            
+            //makes thumbnail
+            let asset = AVURLAsset(url: videoURL! as URL, options: nil)
             let imgGenerator = AVAssetImageGenerator(asset: asset)
             
             do {
@@ -102,13 +133,13 @@ class DetailPhotoPageViewController: UIViewController, UIImagePickerControllerDe
             } catch {
                 print(error)
             }
-            
-            do {
-                imageData = try NSData(contentsOf: videoUrl as URL, options: NSData.ReadingOptions())
-            } catch {
-                print(error)
-            }
-            
+//            
+//            do {
+//                imageData = try NSData(contentsOf: videoURL! as URL, options: NSData.ReadingOptions())
+//            } catch {
+//                print(error)
+//            }
+//            
         }
         
         dismiss(animated: true, completion: nil)
@@ -121,12 +152,12 @@ class DetailPhotoPageViewController: UIViewController, UIImagePickerControllerDe
     // MARK: Core Data
     @IBAction func storePage() {
         if vcType == "Add" {
-            let didStorePage = MemoryBookDataManager.storePage(title: titleTextField.text, text: nil, templateType: self.templateType, imageData: self.imageData)
+            let didStorePage = MemoryBookDataManager.storePage(title: titleTextField.text, text: nil, templateType: self.templateType, imageData: self.imageData, videoID: self.videoID)
             if didStorePage {
                 performSegue(withIdentifier: "addPhotoPageToEditMemoryBook", sender: self)
             }
         } else if vcType == "Edit" {
-            let didUpdatePage = MemoryBookDataManager.updatePage(page: page!, title: titleTextField.text, text: nil, templateType: self.templateType, imageData: self.imageData)
+            let didUpdatePage = MemoryBookDataManager.updatePage(page: page!, title: titleTextField.text, text: nil, templateType: self.templateType, imageData: self.imageData, videoID: self.videoID)
             if didUpdatePage {
                 performSegue(withIdentifier: "addPhotoPageToEditMemoryBook", sender: self)
             }

@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import AVKit
+import AVFoundation
 
 class LabelPhotoPageViewController: UIViewController {
     
@@ -14,6 +16,7 @@ class LabelPhotoPageViewController: UIViewController {
     var pageTitle : String = ""
     var pageText : String = ""
     var imageData : NSData? = nil
+    var videoID : String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +31,23 @@ class LabelPhotoPageViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    func getFilePathURL() -> URL{
+        let paths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
+        let documentsDirectory = paths[0]
+        let videoDataPath = documentsDirectory + "/" + videoID
+        print(videoDataPath)
+        return URL(fileURLWithPath: videoDataPath)
+    }
+    
+    func tapDetected() {
+        let player = AVPlayer(url: getFilePathURL())
+        let playerController = AVPlayerViewController()
+        playerController.player = player
+        self.present(playerController, animated: true) {
+            player.play()
+        }
+    }
+    
     func setupView() {
         
         if let titleLabel = self.view.viewWithTag(1) as? UILabel {
@@ -35,20 +55,44 @@ class LabelPhotoPageViewController: UIViewController {
         }
         
         var label : UILabel
-        let image = UIImage(data: imageData! as Data)
-        let imageView = UIImageView(image: image!)
         
-        if(templateType == "11TP") {
+        var imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 0, height: 0))
+        
+        if(templateType.hasSuffix("P")) {
+            let image = UIImage(data: imageData! as Data)
+            imageView = UIImageView(image: image!)
+        } else {
+            
+            //makes thumbnail
+            let videoURL = getFilePathURL()
+            let asset = AVURLAsset(url: videoURL as URL, options: nil)
+            let imgGenerator = AVAssetImageGenerator(asset: asset)
+            
+            do {
+                let cgImage = try imgGenerator.copyCGImage(at: CMTimeMake(0, 1), actualTime: nil)
+                imageView.image = UIImage(cgImage: cgImage)
+                let singleTap = UITapGestureRecognizer(target: self, action: #selector(PhotoPageViewController.tapDetected))
+                singleTap.numberOfTapsRequired = 1
+                imageView.isUserInteractionEnabled = true
+                imageView.addGestureRecognizer(singleTap)
+                
+            } catch {
+                print(error)
+            }
+            
+        }
+        
+        if(templateType.hasPrefix("11T")) {
             
             label = UILabel(frame: CGRect(x: 20, y: 362, width: 742, height: 268))
             imageView.frame = CGRect(x: 266, y: 104, width: 250, height: 250)
             
-        } else if(templateType == "11DP") {
+        } else if(templateType.hasPrefix("11D")) {
             
             label = UILabel(frame: CGRect(x: 20, y: 104, width: 742, height: 268))
             imageView.frame = CGRect(x: 266, y: 380, width: 250, height: 250)
             
-        } else if(templateType == "11RP") {
+        } else if(templateType.hasPrefix("11R")) {
             
             label = UILabel(frame: CGRect(x: 20, y: 104, width: 484, height: 526))
             imageView.frame = CGRect(x: 512, y: 200, width: 250, height: 250)

@@ -23,7 +23,8 @@ class DetailLabelPhotoPageViewController: UIViewController, UIImagePickerControl
     @IBOutlet var textTextField: JiroTextField!
     let imagePicker = LandscapeImagePickerController()
     var imageData: NSData? = nil
-    var templateType: String? = nil
+    var templateType: String = ""
+    var videoID: String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -63,7 +64,7 @@ class DetailLabelPhotoPageViewController: UIViewController, UIImagePickerControl
     @IBAction func loadImageButtonTapped(sender: UIButton) {
         imagePicker.allowsEditing = false
         imagePicker.sourceType = .photoLibrary
-        if(templateType?.characters.last == "P") {
+        if(templateType.characters.last == "P") {
             print("pic")
             imagePicker.mediaTypes = [kUTTypeImage as String]
         } else {
@@ -85,7 +86,6 @@ class DetailLabelPhotoPageViewController: UIViewController, UIImagePickerControl
         
         if mediaType.isEqual(to: kUTTypeImage as String) {
             
-            print("here")
             // Media is an image
             let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage
             imageView.contentMode = .scaleAspectFit
@@ -94,11 +94,40 @@ class DetailLabelPhotoPageViewController: UIViewController, UIImagePickerControl
             
         } else if mediaType.isEqual(to: kUTTypeMovie as String) {
             
-            print("here2")
+            // thanks http://stackoverflow.com/questions/36536044/swift-video-to-document-directory
             // Media is a video
-            let videoUrl = info[UIImagePickerControllerMediaURL] as! NSURL
+            let uniqueID = NSUUID().uuidString
             
-            let asset = AVURLAsset(url: videoUrl as URL, options: nil)
+            let videoURL = info[UIImagePickerControllerMediaURL] as? URL as NSURL?
+            let myVideoVarData = try! Data(contentsOf: videoURL! as URL)
+            
+            //Now writing the data to the temp diroctory.
+            let tempPath = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory, FileManager.SearchPathDomainMask.userDomainMask, true)
+            let tempDocumentsDirectory: AnyObject = tempPath[0] as AnyObject
+            videoID = uniqueID  + "TEMPVIDEO.MOV"
+            let tempDataPath = tempDocumentsDirectory.appendingPathComponent(videoID) as String
+            try? myVideoVarData.write(to: URL(fileURLWithPath: tempDataPath), options: [])
+            
+            //Now we remove the data from the temp Document Diroctory.
+            do{
+                let fileManager = FileManager.default
+                try fileManager.removeItem(atPath: tempDataPath)
+            } catch {
+                //Do nothing
+            }
+            
+            //Here we are writing the data to the Document Directory for use later on.
+            let docPaths = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory, FileManager.SearchPathDomainMask.userDomainMask, true)
+            let documentsDirectory: AnyObject = docPaths[0] as AnyObject
+            videoID = uniqueID  + "VIDEO.MOV"
+            let docDataPath = documentsDirectory.appendingPathComponent(videoID) as String
+            try? myVideoVarData.write(to: URL(fileURLWithPath: docDataPath), options: [])
+            print("docDataPath under picker ",docDataPath)
+            
+            print(docDataPath)
+            
+            //makes thumbnail
+            let asset = AVURLAsset(url: videoURL! as URL, options: nil)
             let imgGenerator = AVAssetImageGenerator(asset: asset)
             
             do {
@@ -107,13 +136,13 @@ class DetailLabelPhotoPageViewController: UIViewController, UIImagePickerControl
             } catch {
                 print(error)
             }
-            
-            do {
-                imageData = try NSData(contentsOf: videoUrl as URL, options: NSData.ReadingOptions())
-            } catch {
-                print(error)
-            }
-            
+            //
+            //            do {
+            //                imageData = try NSData(contentsOf: videoURL! as URL, options: NSData.ReadingOptions())
+            //            } catch {
+            //                print(error)
+            //            }
+            //
         }
         
         dismiss(animated: true, completion: nil)
@@ -126,12 +155,12 @@ class DetailLabelPhotoPageViewController: UIViewController, UIImagePickerControl
     // MARK: Core Data
     @IBAction func storePage() {
         if vcType == "Add" {
-            let didStorePage = MemoryBookDataManager.storePage(title: titleTextField.text!, text: textTextField.text!, templateType: self.templateType!, imageData: self.imageData!)
+            let didStorePage = MemoryBookDataManager.storePage(title: titleTextField.text!, text: textTextField.text!, templateType: self.templateType, imageData: self.imageData, videoID: self.videoID)
             if didStorePage {
                 performSegue(withIdentifier: "addLabelPhotoPageToEditMemoryBook", sender: self)
             }
         } else if vcType == "Edit" {
-            let didUpdatePage = MemoryBookDataManager.updatePage(page: page!, title: titleTextField.text, text: nil, templateType: self.templateType, imageData: self.imageData)
+            let didUpdatePage = MemoryBookDataManager.updatePage(page: page!, title: titleTextField.text, text: nil, templateType: self.templateType, imageData: self.imageData, videoID: self.videoID)
             if didUpdatePage {
                 performSegue(withIdentifier: "addLabelPhotoPageToEditMemoryBook", sender: self)
             }

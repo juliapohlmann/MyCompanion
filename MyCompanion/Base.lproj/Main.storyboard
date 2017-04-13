@@ -197,10 +197,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UBT-vh-qzC">
-                                <rect key="frame" x="187" y="59" width="650" height="650"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                            </containerView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1vp-9h-4do">
                                 <rect key="frame" x="20" y="336" width="93" height="97"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -224,16 +220,20 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4NY-IL-5Dc">
-                                <rect key="frame" x="0.0" y="0.0" width="219" height="69"/>
+                                <rect key="frame" x="0.0" y="8" width="179" height="69"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="36"/>
-                                <state key="normal" title="Back">
+                                <state key="normal" title="Home">
                                     <color key="titleColor" red="0.96862745098039216" green="0.96862745098039216" blue="0.96862745098039216" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <segue destination="BYZ-38-t0r" kind="presentation" id="WLn-pA-tNl"/>
                                 </connections>
                             </button>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UBT-vh-qzC">
+                                <rect key="frame" x="121" y="85" width="782" height="650"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </containerView>
                         </subviews>
                         <color key="backgroundColor" red="0.61176470589999998" green="0.1529411765" blue="0.69019607839999997" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
@@ -256,11 +256,11 @@
                         <viewControllerLayoutGuide type="bottom" id="sdA-yY-nDg"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="fgI-Ws-YI5">
-                        <rect key="frame" x="0.0" y="0.0" width="650" height="650"/>
+                        <rect key="frame" x="0.0" y="0.0" width="782" height="650"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xgf-vr-bB7">
-                                <rect key="frame" x="20" y="28" width="610" height="68"/>
+                                <rect key="frame" x="20" y="28" width="742" height="68"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="40"/>
                                 <nil key="textColor"/>
@@ -270,7 +270,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="650" height="650"/>
+                    <size key="freeformSize" width="782" height="650"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1C1-8k-mse" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1322,7 +1322,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="BKC-A8-poJ" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Zs9-0v-7cu">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Zs9-0v-7cu">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -1340,7 +1340,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="nyo-en-PZm" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="YGl-bR-Cjd">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="YGl-bR-Cjd">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -1609,7 +1609,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="IIu-GC-wdr" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="qw7-PZ-r2a">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="qw7-PZ-r2a">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -1675,7 +1675,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="e2L-FR-KWa" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="JDv-Nb-uZp">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="JDv-Nb-uZp">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -1693,7 +1693,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="wWv-Ql-K67" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="POo-tQ-O66">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="POo-tQ-O66">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -1711,7 +1711,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="a3f-Sg-oy4" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="8IZ-28-xdA">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="8IZ-28-xdA">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -1729,7 +1729,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="3LX-al-yOy" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="v1J-60-ad2">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="v1J-60-ad2">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -1747,7 +1747,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hct-h9-TCi" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="OwW-bO-Evy">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="OwW-bO-Evy">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -1765,7 +1765,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0NF-bY-dnS" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="7h0-hz-4Re">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="7h0-hz-4Re">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -1784,7 +1784,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="eur-Sj-qm3" sceneMemberID="viewController">
                     <toolbarItems/>
                     <splitViewDetailSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="OMA-vC-cvS">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="OMA-vC-cvS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -1806,11 +1806,11 @@
                         <viewControllerLayoutGuide type="bottom" id="ZXf-ZZ-Bt2"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="v57-4r-0QV">
-                        <rect key="frame" x="0.0" y="0.0" width="650" height="650"/>
+                        <rect key="frame" x="0.0" y="0.0" width="782" height="650"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yg0-ix-ndt">
-                                <rect key="frame" x="20" y="28" width="610" height="68"/>
+                                <rect key="frame" x="20" y="28" width="742" height="68"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="40"/>
                                 <nil key="textColor"/>
@@ -1820,11 +1820,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="650" height="650"/>
+                    <size key="freeformSize" width="782" height="650"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rpS-X8-ReZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2560.546875" y="-430.46875"/>
+            <point key="canvasLocation" x="2607" y="-430"/>
         </scene>
         <!--Label Page View Controller-->
         <scene sceneID="I9L-3I-1iB">
@@ -1835,18 +1835,18 @@
                         <viewControllerLayoutGuide type="bottom" id="NeI-Bh-LfU"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="weR-ag-E1g" customClass="LabelPageViewController">
-                        <rect key="frame" x="0.0" y="0.0" width="650" height="650"/>
+                        <rect key="frame" x="0.0" y="0.0" width="782" height="650"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZCz-Qr-xzy">
-                                <rect key="frame" x="20" y="28" width="610" height="68"/>
+                                <rect key="frame" x="20" y="28" width="742" height="68"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="40"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="13" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a51-0W-dNW">
-                                <rect key="frame" x="20" y="104" width="610" height="526"/>
+                                <rect key="frame" x="20" y="104" width="742" height="526"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="30"/>
                                 <nil key="textColor"/>
@@ -1856,18 +1856,18 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="650" height="650"/>
+                    <size key="freeformSize" width="782" height="650"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sOT-Rd-MYl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3012.890625" y="-430.46875"/>
+            <point key="canvasLocation" x="3096" y="-430"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Q4R-lu-k3z">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="6e6-a7-pTo" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="XvK-rK-HbG">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="XvK-rK-HbG">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

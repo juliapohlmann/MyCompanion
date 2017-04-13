@@ -19,6 +19,7 @@ class LabelPhotoPageViewController: UIViewController {
         super.viewDidLoad()
         
         setupView()
+        
         // Do any additional setup after loading the view.
     }
 
@@ -39,31 +40,29 @@ class LabelPhotoPageViewController: UIViewController {
         
         if(templateType == "11TP") {
             
-            label = UILabel(frame: CGRect(x: 20, y: 362, width: 610, height: 268))
-            imageView.frame = CGRect(x: 200, y: 104, width: 250, height: 250)
+            label = UILabel(frame: CGRect(x: 20, y: 362, width: 742, height: 268))
+            imageView.frame = CGRect(x: 266, y: 104, width: 250, height: 250)
             
         } else if(templateType == "11DP") {
             
-            print("here")
-            
-            label = UILabel(frame: CGRect(x: 20, y: 104, width: 610, height: 268))
-            imageView.frame = CGRect(x: 200, y: 380, width: 250, height: 250)
+            label = UILabel(frame: CGRect(x: 20, y: 104, width: 742, height: 268))
+            imageView.frame = CGRect(x: 266, y: 380, width: 250, height: 250)
             
         } else if(templateType == "11RP") {
             
-            label = UILabel(frame: CGRect(x: 20, y: 104, width: 326, height: 526))
-            imageView.frame = CGRect(x: 380, y: 200, width: 250, height: 250)
+            label = UILabel(frame: CGRect(x: 20, y: 104, width: 484, height: 526))
+            imageView.frame = CGRect(x: 512, y: 200, width: 250, height: 250)
             
         }//else if(templateType == "11LP") {
         else {
             
-            label = UILabel(frame: CGRect(x: 304, y: 104, width: 326, height: 526))
+            label = UILabel(frame: CGRect(x: 278, y: 104, width: 484, height: 526))
             imageView.frame = CGRect(x: 20, y: 200, width: 250, height: 250)
             
         }
         
         label.textAlignment = .left
-        label.font = UIFont(name: "AvenirNext-DemiBold", size: 25)
+        label.font = UIFont(name: "AvenirNext-DemiBold", size: 30)
         label.text = pageText
         label.numberOfLines = 100
         self.view.addSubview(label)

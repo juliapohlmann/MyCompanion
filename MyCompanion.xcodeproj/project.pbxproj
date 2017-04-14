@@ -23,6 +23,7 @@
 		1CCEA77C1E89E60E00252E2A /* LabelPhotoPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CCEA77B1E89E60E00252E2A /* LabelPhotoPageViewController.swift */; };
 		1CCEA77E1E89E61B00252E2A /* LabelPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CCEA77D1E89E61B00252E2A /* LabelPageViewController.swift */; };
 		1CCEA7801E89E62800252E2A /* PhotoPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CCEA77F1E89E62800252E2A /* PhotoPageViewController.swift */; };
+		1CE9A3F61EA15A8600D44333 /* play-btn.png in Resources */ = {isa = PBXBuildFile; fileRef = 1CE9A3F51EA15A8600D44333 /* play-btn.png */; };
 		6908902E721E1B70ACB83D9D /* Pods_MyCompanionTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FB1E8DD63FDE025EFF94606 /* Pods_MyCompanionTests.framework */; };
 		85E610E145E74BEC93F2440A /* Pods_MyCompanionUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56C39383E4FF86AFA081F0EA /* Pods_MyCompanionUITests.framework */; };
 		93DCC6AA7C143FDF12A68B44 /* Pods_MyCompanion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD700589041BBF8E6FEA6A60 /* Pods_MyCompanion.framework */; };
@@ -94,6 +95,7 @@
 		1CCEA77B1E89E60E00252E2A /* LabelPhotoPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LabelPhotoPageViewController.swift; sourceTree = "<group>"; };
 		1CCEA77D1E89E61B00252E2A /* LabelPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LabelPageViewController.swift; sourceTree = "<group>"; };
 		1CCEA77F1E89E62800252E2A /* PhotoPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoPageViewController.swift; sourceTree = "<group>"; };
+		1CE9A3F51EA15A8600D44333 /* play-btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "play-btn.png"; sourceTree = "<group>"; };
 		2B7A28B926C4AC51AF438EA7 /* Pods-MyCompanionUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyCompanionUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyCompanionUITests/Pods-MyCompanionUITests.release.xcconfig"; sourceTree = "<group>"; };
 		56C39383E4FF86AFA081F0EA /* Pods_MyCompanionUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyCompanionUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FB3639B2469D22A6B618391 /* Pods-MyCompanion.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyCompanion.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyCompanion/Pods-MyCompanion.release.xcconfig"; sourceTree = "<group>"; };
@@ -278,6 +280,7 @@
 				DA8580FB1E4134570055134E /* DashboardViewController.swift */,
 				DA8580FD1E4134570055134E /* Main.storyboard */,
 				DA63DC211E81AA7A00E1C5A8 /* CaregiverPortalTableViewController.swift */,
+				1CE9A3F51EA15A8600D44333 /* play-btn.png */,
 				DA8581031E4134570055134E /* Assets.xcassets */,
 				DA8581051E4134570055134E /* LaunchScreen.storyboard */,
 				DA8581081E4134570055134E /* Info.plist */,
@@ -488,6 +491,7 @@
 			files = (
 				DA8581071E4134570055134E /* LaunchScreen.storyboard in Resources */,
 				DA8581041E4134570055134E /* Assets.xcassets in Resources */,
+				1CE9A3F61EA15A8600D44333 /* play-btn.png in Resources */,
 				DA8580FF1E4134570055134E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

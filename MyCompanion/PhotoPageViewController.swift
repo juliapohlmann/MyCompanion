@@ -72,6 +72,12 @@ class PhotoPageViewController: UIViewController {
                 let cgImage = try imgGenerator.copyCGImage(at: CMTimeMake(0, 1), actualTime: nil)
                 if let imageView = self.view.viewWithTag(10) as? UIImageView {
                     imageView.image = UIImage(cgImage: cgImage)
+                    
+                    let playImage = UIImage(named: "play-btn.png")
+                    let playImageView = UIImageView(image:playImage)
+                    playImageView.frame = CGRect(x: 75, y: 75, width: 100, height: 100)
+                    imageView.addSubview(playImageView)
+                    
                     let singleTap = UITapGestureRecognizer(target: self, action: #selector(PhotoPageViewController.tapDetected))
                     singleTap.numberOfTapsRequired = 1
                     imageView.isUserInteractionEnabled = true

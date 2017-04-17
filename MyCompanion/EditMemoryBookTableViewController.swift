@@ -76,7 +76,7 @@ class EditMemoryBookTableViewController: UITableViewController {
             
             let myVC = storyboard?.instantiateViewController(withIdentifier: "DetailLabelPhotoPageViewController") as! DetailLabelPhotoPageViewController
             myVC.templateType = types[cellClicked]
-            myVC.vcType = "Edit"
+            myVC.vcType = "Edit Page"
             myVC.page = pages[indexPath.row]
             navigationController?.pushViewController(myVC, animated: true)
             
@@ -84,7 +84,7 @@ class EditMemoryBookTableViewController: UITableViewController {
             
             let myVC = storyboard?.instantiateViewController(withIdentifier: "DetailLabelPageViewController") as! DetailLabelPageViewController
             myVC.templateType = types[cellClicked]
-            myVC.vcType = "Edit"
+            myVC.vcType = "Edit Page"
             myVC.page = pages[indexPath.row]
             navigationController?.pushViewController(myVC, animated: true)
             
@@ -92,7 +92,7 @@ class EditMemoryBookTableViewController: UITableViewController {
             
             let myVC = storyboard?.instantiateViewController(withIdentifier: "DetailPhotoPageViewController") as! DetailPhotoPageViewController
             myVC.templateType = types[cellClicked]
-            myVC.vcType = "Edit"
+            myVC.vcType = "Edit Page"
             myVC.page = pages[indexPath.row]
             navigationController?.pushViewController(myVC, animated: true)
             

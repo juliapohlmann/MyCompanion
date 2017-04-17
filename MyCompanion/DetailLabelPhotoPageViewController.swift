@@ -33,7 +33,9 @@ class DetailLabelPhotoPageViewController: UIViewController, UIImagePickerControl
         
         setStockPhoto()
         
-        if(vcType == "Edit") {
+        self.navigationItem.title = self.vcType
+        
+        if(vcType == "Edit Page") {
             setPageFields()
         }
     }
@@ -172,12 +174,12 @@ class DetailLabelPhotoPageViewController: UIViewController, UIImagePickerControl
     
     // MARK: Core Data
     @IBAction func storePage() {
-        if vcType == "Add" {
+        if vcType == "Add Page" {
             let didStorePage = MemoryBookDataManager.storePage(title: titleTextField.text!, text: textTextField.text!, templateType: self.templateType, imageData: self.imageData, videoID: self.videoID)
             if didStorePage {
                 performSegue(withIdentifier: "addLabelPhotoPageToEditMemoryBook", sender: self)
             }
-        } else if vcType == "Edit" {
+        } else if vcType == "Edit Page" {
             let didUpdatePage = MemoryBookDataManager.updatePage(page: page!, title: titleTextField.text, text: textTextField.text!, templateType: self.templateType, imageData: self.imageData, videoID: self.videoID)
             if didUpdatePage {
                 performSegue(withIdentifier: "addLabelPhotoPageToEditMemoryBook", sender: self)

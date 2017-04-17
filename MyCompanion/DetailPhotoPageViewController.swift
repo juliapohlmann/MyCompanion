@@ -32,7 +32,7 @@ class DetailPhotoPageViewController: UIViewController, UIImagePickerControllerDe
         
         setStockPhoto()
         
-        if(vcType == "Edit") {
+        if(vcType == "Edit Page") {
             setPageFields()
         }
         // Do any additional setup after loading the view.
@@ -163,12 +163,12 @@ class DetailPhotoPageViewController: UIViewController, UIImagePickerControllerDe
     
     // MARK: Core Data
     @IBAction func storePage() {
-        if vcType == "Add" {
+        if vcType == "Add Page" {
             let didStorePage = MemoryBookDataManager.storePage(title: titleTextField.text, text: nil, templateType: self.templateType, imageData: self.imageData, videoID: self.videoID)
             if didStorePage {
                 performSegue(withIdentifier: "addPhotoPageToEditMemoryBook", sender: self)
             }
-        } else if vcType == "Edit" {
+        } else if vcType == "Edit Page" {
             let didUpdatePage = MemoryBookDataManager.updatePage(page: page!, title: titleTextField.text, text: nil, templateType: self.templateType, imageData: self.imageData, videoID: self.videoID)
             if didUpdatePage {
                 performSegue(withIdentifier: "addPhotoPageToEditMemoryBook", sender: self)

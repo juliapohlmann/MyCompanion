@@ -75,21 +75,21 @@ class AddPageTableViewController: UITableViewController {
             
             let myVC = storyboard?.instantiateViewController(withIdentifier: "DetailLabelPhotoPageViewController") as! DetailLabelPhotoPageViewController
             myVC.templateType = types[cellClicked]
-            myVC.vcType = "Add"
+            myVC.vcType = "Add Page"
             navigationController?.pushViewController(myVC, animated: true)
             
         } else if (indexPath.section == 2) {
             
             let myVC = storyboard?.instantiateViewController(withIdentifier: "DetailLabelPageViewController") as! DetailLabelPageViewController
             myVC.templateType = types[cellClicked]
-            myVC.vcType = "Add"
+            myVC.vcType = "Add Page"
             navigationController?.pushViewController(myVC, animated: true)
 
         } else {
             
             let myVC = storyboard?.instantiateViewController(withIdentifier: "DetailPhotoPageViewController") as! DetailPhotoPageViewController
             myVC.templateType = types[cellClicked]
-            myVC.vcType = "Add"
+            myVC.vcType = "Add Page"
             navigationController?.pushViewController(myVC, animated: true)
             
         }

@@ -22,7 +22,7 @@ class DetailLabelPageViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        if(vcType == "Edit") {
+        if(vcType == "Edit Page") {
             setPageFields()
         }
         // Do any additional setup after loading the view.
@@ -40,12 +40,12 @@ class DetailLabelPageViewController: UIViewController {
     
     // MARK: Core Data
     @IBAction func storePage() {
-        if vcType == "Add" {
+        if vcType == "Add Page" {
             let didStorePage = MemoryBookDataManager.storePage(title: titleTextField.text, text: textTextField.text, templateType: self.templateType, imageData: nil, videoID: self.videoID)
             if didStorePage {
                 performSegue(withIdentifier: "addLabelPageToEditMemoryBook", sender: self)
             }
-        } else if vcType == "Edit" {
+        } else if vcType == "Edit Page" {
             let didUpdatePage = MemoryBookDataManager.updatePage(page: page!, title: titleTextField.text, text: nil, templateType: self.templateType, imageData: nil, videoID: self.videoID)
             if didUpdatePage {
                 performSegue(withIdentifier: "addLabelPageToEditMemoryBook", sender: self)

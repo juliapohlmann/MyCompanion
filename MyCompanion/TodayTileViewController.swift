@@ -65,8 +65,8 @@ class TodayTileViewController: UIViewController, CLLocationManagerDelegate {
                 }
                 
                 if (placemarks?.count)! > 0 {
-                    let pm = placemarks?[0] as! CLPlacemark
-                    self.city = pm.locality!
+                    let pm = placemarks?[0]
+                    self.city = (pm?.locality!)!
                     print(self.city)
                 }
                 else {

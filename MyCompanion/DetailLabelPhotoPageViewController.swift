@@ -36,7 +36,23 @@ class DetailLabelPhotoPageViewController: UIViewController, UIImagePickerControl
         if(vcType == "Edit") {
             setPageFields()
         }
-        // Do any additional setup after loading the view.
+    }
+    
+    func setVideoThumbnail(){
+        let paths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
+        let documentsDirectory = paths[0]
+        let videoURL = documentsDirectory + "/" + (page?.value(forKeyPath: "videoID") as! String)
+        
+        let asset = AVURLAsset(url: URL(fileURLWithPath: videoURL) as URL, options: nil)
+        let imgGenerator = AVAssetImageGenerator(asset: asset)
+        
+        do {
+            let cgImage = try imgGenerator.copyCGImage(at: CMTimeMake(0, 1), actualTime: nil)
+            imageView.image = UIImage(cgImage: cgImage)
+        } catch {
+            print(error)
+        }
+        
     }
     
     func setPageFields() {
@@ -45,6 +61,8 @@ class DetailLabelPhotoPageViewController: UIViewController, UIImagePickerControl
         if(page?.value(forKeyPath: "image") != nil) {
             imageView.image = UIImage(data: page?.value(forKeyPath: "image") as! Data)
             imageData = page?.value(forKeyPath: "image") as! Data as NSData?
+        } else if(page?.value(forKeyPath: "videoID") != nil) {
+            setVideoThumbnail()
         }
     }
     
@@ -160,7 +178,7 @@ class DetailLabelPhotoPageViewController: UIViewController, UIImagePickerControl
                 performSegue(withIdentifier: "addLabelPhotoPageToEditMemoryBook", sender: self)
             }
         } else if vcType == "Edit" {
-            let didUpdatePage = MemoryBookDataManager.updatePage(page: page!, title: titleTextField.text, text: nil, templateType: self.templateType, imageData: self.imageData, videoID: self.videoID)
+            let didUpdatePage = MemoryBookDataManager.updatePage(page: page!, title: titleTextField.text, text: textTextField.text!, templateType: self.templateType, imageData: self.imageData, videoID: self.videoID)
             if didUpdatePage {
                 performSegue(withIdentifier: "addLabelPhotoPageToEditMemoryBook", sender: self)
             }

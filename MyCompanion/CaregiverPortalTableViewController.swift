@@ -35,7 +35,7 @@ class CaregiverPortalTableViewController: UITableViewController {
         case 3:
             self.performSegue(withIdentifier: "editReminders", sender: self)
         case 4:
-            self.performSegue(withIdentifier: "caregiverForum", sender: self)
+            self.performSegue(withIdentifier: "caregiverTips", sender: self)
         default:
             self.performSegue(withIdentifier: "generalSettings", sender: self)
         }

@@ -18,6 +18,7 @@
 		1C4E121B1E818A2D0001DD3F /* ReminderDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C4E121A1E818A2D0001DD3F /* ReminderDetailViewController.swift */; };
 		1C5B48F01EA7B9BB0082E1AC /* CaregiverTipsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C5B48EF1EA7B9BB0082E1AC /* CaregiverTipsTableViewController.swift */; };
 		1C5B48F21EA7BAC20082E1AC /* tips.json in Resources */ = {isa = PBXBuildFile; fileRef = 1C5B48F11EA7BAC20082E1AC /* tips.json */; };
+		1C5B48F41EA809AA0082E1AC /* DisplayTipsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C5B48F31EA809AA0082E1AC /* DisplayTipsViewController.swift */; };
 		1CA3BE661E5D1C520016B247 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CA3BE651E5D1C520016B247 /* SettingsTableViewController.swift */; };
 		1CC61A3E1E6FC2E800C92584 /* ContactDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC61A3D1E6FC2E800C92584 /* ContactDetailViewController.swift */; };
 		1CCEA7781E88A78E00252E2A /* LandscapeImagePickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CCEA7771E88A78E00252E2A /* LandscapeImagePickerController.swift */; };
@@ -92,6 +93,7 @@
 		1C4E121A1E818A2D0001DD3F /* ReminderDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReminderDetailViewController.swift; sourceTree = "<group>"; };
 		1C5B48EF1EA7B9BB0082E1AC /* CaregiverTipsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CaregiverTipsTableViewController.swift; sourceTree = "<group>"; };
 		1C5B48F11EA7BAC20082E1AC /* tips.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = tips.json; sourceTree = "<group>"; };
+		1C5B48F31EA809AA0082E1AC /* DisplayTipsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisplayTipsViewController.swift; sourceTree = "<group>"; };
 		1CA3BE651E5D1C520016B247 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		1CC61A3D1E6FC2E800C92584 /* ContactDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactDetailViewController.swift; sourceTree = "<group>"; };
 		1CCEA7771E88A78E00252E2A /* LandscapeImagePickerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LandscapeImagePickerController.swift; sourceTree = "<group>"; };
@@ -286,6 +288,7 @@
 				DA8580FD1E4134570055134E /* Main.storyboard */,
 				DA63DC211E81AA7A00E1C5A8 /* CaregiverPortalTableViewController.swift */,
 				1C5B48EF1EA7B9BB0082E1AC /* CaregiverTipsTableViewController.swift */,
+				1C5B48F31EA809AA0082E1AC /* DisplayTipsViewController.swift */,
 				1CE9A3F51EA15A8600D44333 /* play-btn.png */,
 				DA8581031E4134570055134E /* Assets.xcassets */,
 				DA8581051E4134570055134E /* LaunchScreen.storyboard */,
@@ -671,6 +674,7 @@
 				1C4E12061E7CAF4F0001DD3F /* AddPageTableViewController.swift in Sources */,
 				DA1AB3F41E82FA740015E2EA /* ContactDataManager.swift in Sources */,
 				1CCEA77A1E89DF1D00252E2A /* ViewMemoryBookViewController.swift in Sources */,
+				1C5B48F41EA809AA0082E1AC /* DisplayTipsViewController.swift in Sources */,
 				1C4E120C1E7CCE030001DD3F /* DetailLabelPhotoPageViewController.swift in Sources */,
 				1C4E12131E7F50D10001DD3F /* DetailPhotoPageViewController.swift in Sources */,
 				DA2C16861E54CF42001B3D14 /* IntroTileViewController.swift in Sources */,

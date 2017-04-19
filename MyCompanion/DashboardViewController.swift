@@ -14,9 +14,9 @@ class DashboardViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 //        
-//        UserDefaults.standard.set(true, forKey: "canCall")
-//        UserDefaults.standard.set(true, forKey: "canEmail")
-//        UserDefaults.standard.set("ipad", forKey: "userPassword")
+        UserDefaults.standard.set(true, forKey: "canCall")
+        UserDefaults.standard.set(true, forKey: "canEmail")
+        UserDefaults.standard.set("ipad", forKey: "userPassword")
     }
     
     override func didReceiveMemoryWarning() {

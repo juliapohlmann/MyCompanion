@@ -16,6 +16,8 @@ class ViewMemoryBookViewController: UIViewController {
     @IBOutlet var previousButton: UIButton!
     @IBOutlet var nextButton: UIButton!
     @IBOutlet var containerView: UIView!
+    @IBOutlet var prevLabel: UILabel!
+    @IBOutlet var nextLabel: UILabel!
     
     @IBOutlet var nextIcon: UIImageView!
     @IBOutlet var prevIcon: UIImageView!
@@ -45,6 +47,10 @@ class ViewMemoryBookViewController: UIViewController {
         
         self.previousButton.isHidden = false
         self.nextButton.isHidden = false
+        self.prevIcon.isHidden = false
+        self.nextIcon.isHidden = false
+        self.prevLabel.isHidden = false
+        self.nextLabel.isHidden = false
         
         //self.willMove(toParentViewController: nil)
         //self.collectionView.removeFromSuperview()
@@ -53,11 +59,15 @@ class ViewMemoryBookViewController: UIViewController {
         if(pageNum == 0) {
             
             self.previousButton.isHidden = true
+            self.prevIcon.isHidden = true
+            self.prevLabel.isHidden = true
             
         }
         if(pageNum + 1 == pages.count) {
             
             self.nextButton.isHidden = true
+            self.nextIcon.isHidden = true
+            self.nextLabel.isHidden = true
             
         }
         

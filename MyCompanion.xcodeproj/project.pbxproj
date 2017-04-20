@@ -40,6 +40,7 @@
 		DA0D203D1E93474800FBFCB6 /* EditRemindersTableViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0D203C1E93474800FBFCB6 /* EditRemindersTableViewControllerTests.swift */; };
 		DA1AB3F41E82FA740015E2EA /* ContactDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1AB3F31E82FA740015E2EA /* ContactDataManager.swift */; };
 		DA2C16861E54CF42001B3D14 /* IntroTileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2C16851E54CF42001B3D14 /* IntroTileViewController.swift */; };
+		DA369C801EA8414D0041CDD7 /* WeatherDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA369C7F1EA8414D0041CDD7 /* WeatherDataManager.swift */; };
 		DA54D7851E86F05D00BE345C /* ReminderDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA54D7841E86F05D00BE345C /* ReminderDataManager.swift */; };
 		DA63DC221E81AA7A00E1C5A8 /* CaregiverPortalTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA63DC211E81AA7A00E1C5A8 /* CaregiverPortalTableViewController.swift */; };
 		DA63DC241E81BED500E1C5A8 /* EditContactTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA63DC231E81BED500E1C5A8 /* EditContactTableViewController.swift */; };
@@ -121,6 +122,7 @@
 		DA0D203C1E93474800FBFCB6 /* EditRemindersTableViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditRemindersTableViewControllerTests.swift; sourceTree = "<group>"; };
 		DA1AB3F31E82FA740015E2EA /* ContactDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactDataManager.swift; sourceTree = "<group>"; };
 		DA2C16851E54CF42001B3D14 /* IntroTileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroTileViewController.swift; sourceTree = "<group>"; };
+		DA369C7F1EA8414D0041CDD7 /* WeatherDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherDataManager.swift; sourceTree = "<group>"; };
 		DA54D7841E86F05D00BE345C /* ReminderDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReminderDataManager.swift; sourceTree = "<group>"; };
 		DA63DC211E81AA7A00E1C5A8 /* CaregiverPortalTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CaregiverPortalTableViewController.swift; sourceTree = "<group>"; };
 		DA63DC231E81BED500E1C5A8 /* EditContactTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditContactTableViewController.swift; sourceTree = "<group>"; };
@@ -256,6 +258,16 @@
 			name = "Patient side";
 			sourceTree = "<group>";
 		};
+		DA369C821EA84E070041CDD7 /* CaregiverTips */ = {
+			isa = PBXGroup;
+			children = (
+				1C5B48F11EA7BAC20082E1AC /* tips.json */,
+				1C5B48EF1EA7B9BB0082E1AC /* CaregiverTipsTableViewController.swift */,
+				1C5B48F31EA809AA0082E1AC /* DisplayTipsViewController.swift */,
+			);
+			name = CaregiverTips;
+			sourceTree = "<group>";
+		};
 		DA8580ED1E4134560055134E = {
 			isa = PBXGroup;
 			children = (
@@ -281,14 +293,11 @@
 		DA8580F81E4134570055134E /* MyCompanion */ = {
 			isa = PBXGroup;
 			children = (
-				1C5B48F11EA7BAC20082E1AC /* tips.json */,
 				DA0D20291E92920900FBFCB6 /* MyCompanion.entitlements */,
 				DA8580F91E4134570055134E /* AppDelegate.swift */,
 				DA8580FB1E4134570055134E /* DashboardViewController.swift */,
 				DA8580FD1E4134570055134E /* Main.storyboard */,
 				DA63DC211E81AA7A00E1C5A8 /* CaregiverPortalTableViewController.swift */,
-				1C5B48EF1EA7B9BB0082E1AC /* CaregiverTipsTableViewController.swift */,
-				1C5B48F31EA809AA0082E1AC /* DisplayTipsViewController.swift */,
 				1CE9A3F51EA15A8600D44333 /* play-btn.png */,
 				DA8581031E4134570055134E /* Assets.xcassets */,
 				DA8581051E4134570055134E /* LaunchScreen.storyboard */,
@@ -296,6 +305,7 @@
 				DA8581001E4134570055134E /* MyCompanion.xcdatamodeld */,
 				1CA3BE651E5D1C520016B247 /* SettingsTableViewController.swift */,
 				1CCEA7771E88A78E00252E2A /* LandscapeImagePickerController.swift */,
+				DA369C821EA84E070041CDD7 /* CaregiverTips */,
 				1C4E12141E7F56430001DD3F /* MemoryBook */,
 				DAE3BB7F1E6CA382009BB9E6 /* SecurityViewControllers */,
 				DAE3BB7A1E6C93BA009BB9E6 /* TileViewControllers */,
@@ -331,6 +341,7 @@
 			isa = PBXGroup;
 			children = (
 				DA85812A1E41357B0055134E /* TodayTileViewController.swift */,
+				DA369C7F1EA8414D0041CDD7 /* WeatherDataManager.swift */,
 				DA2C16851E54CF42001B3D14 /* IntroTileViewController.swift */,
 				DA761C891E5CA42300B3679A /* CaregiverTileViewController.swift */,
 				DAFA46B31E524AB000285267 /* ContactTileViewController.swift */,
@@ -697,6 +708,7 @@
 				1C4E12111E7F50A00001DD3F /* DetailLabelPageViewController.swift in Sources */,
 				1CCEA7801E89E62800252E2A /* PhotoPageViewController.swift in Sources */,
 				1C16159A1E5A7E0B009A3137 /* CheckPasscodeViewController.swift in Sources */,
+				DA369C801EA8414D0041CDD7 /* WeatherDataManager.swift in Sources */,
 				DA63DC241E81BED500E1C5A8 /* EditContactTableViewController.swift in Sources */,
 				1CC61A3E1E6FC2E800C92584 /* ContactDetailViewController.swift in Sources */,
 				DA85812B1E41357B0055134E /* TodayTileViewController.swift in Sources */,

@@ -22,7 +22,7 @@ class ViewMemoryBookViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        //UIColor(red: 247.00, green: 247.00, blue: 147.00, alpha: 1.00)
         nextIcon.image = UIImage.fontAwesomeIcon(name: .arrowRight, textColor: UIColor.black, size: CGSize(width: 93, height: 81))
         
         prevIcon.image = UIImage.fontAwesomeIcon(name: .arrowLeft, textColor: UIColor.black, size: CGSize(width: 93, height: 81))

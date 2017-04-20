@@ -31,7 +31,6 @@ class TodayTileViewController: UIViewController, CLLocationManagerDelegate {
         
         //NEED TO PUT THIS IN WALKTHROUGH
         manager.requestAlwaysAuthorization()
-        
         manager.requestLocation()
     }
     
@@ -42,18 +41,16 @@ class TodayTileViewController: UIViewController, CLLocationManagerDelegate {
 
         return dateFormatter.string(from: date as Date)
     }
-    
+
 
     
     func getWeather() {
         var temp = 0.0
         var summary = ""
-        var responseData : AnyObject = self
         WeatherDataManager.weatherDataForLocation(latitude: lat, longitude: long) { (response, error) in
-            responseData = response!
+            let responseData : NSArray = response! as! NSArray
             summary = (responseData[0] as? String)!
             temp = (responseData[1] as? Double)!
-
             self.weatherLabel.text = "In \(self.city), it is \(round(temp))° and \(summary.lowercased())."
         }
     }
@@ -79,7 +76,7 @@ class TodayTileViewController: UIViewController, CLLocationManagerDelegate {
                     self.lat = location.coordinate.latitude
                     self.long = location.coordinate.longitude
                     
-//                    self.getWeather()
+                    self.getWeather()
                 }
                 else {
                     print("Problem with the data received from geocoder")

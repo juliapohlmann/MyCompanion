@@ -649,13 +649,61 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MyCompanion/TodayTileViewController.swift"
-            timestampString = "514352164.733663"
+            timestampString = "514398898.092415"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "55"
-            endingLineNumber = "55"
+            startingLineNumber = "54"
+            endingLineNumber = "54"
             landmarkName = "getWeather()"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MyCompanion/TodayTileViewController.swift"
+            timestampString = "514399350.899556"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "51"
+            endingLineNumber = "51"
+            landmarkName = "getWeather()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MyCompanion.TodayTileViewController.getWeather () -&gt; ()"
+                  moduleName = "MyCompanion"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/juliapohlmann/Desktop/MyCompanion/MyCompanion/TodayTileViewController.swift"
+                  timestampString = "514399353.010634"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "51"
+                  endingLineNumber = "51"
+                  offsetFromSymbolStart = "252">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MyCompanion.TodayTileViewController.(getWeather () -&gt; ()).(closure #1)"
+                  moduleName = "MyCompanion"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/juliapohlmann/Desktop/MyCompanion/MyCompanion/TodayTileViewController.swift"
+                  timestampString = "514399353.032888"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "50"
+                  endingLineNumber = "50"
+                  offsetFromSymbolStart = "22">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

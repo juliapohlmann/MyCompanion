@@ -57,12 +57,12 @@ class LabelPhotoPageViewController: UIViewController {
         var label : UILabel
         
         var imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 0, height: 0))
-        
+        //photo
         if(templateType.hasSuffix("P")) {
             let image = UIImage(data: imageData! as Data)
             imageView = UIImageView(image: image!)
         } else {
-            
+            //video
             //makes thumbnail
             let videoURL = getFilePathURL()
             let asset = AVURLAsset(url: videoURL as URL, options: nil)
@@ -88,24 +88,25 @@ class LabelPhotoPageViewController: UIViewController {
             
         }
         
+        //11T = photo/video top
         if(templateType.hasPrefix("11T")) {
             
             label = UILabel(frame: CGRect(x: 20, y: 362, width: 742, height: 268))
             imageView.frame = CGRect(x: 266, y: 104, width: 250, height: 250)
             
         } else if(templateType.hasPrefix("11D")) {
-            
+            //11D = bottom
             label = UILabel(frame: CGRect(x: 20, y: 104, width: 742, height: 268))
             imageView.frame = CGRect(x: 266, y: 380, width: 250, height: 250)
             
         } else if(templateType.hasPrefix("11R")) {
-            
+            //11R = right
             label = UILabel(frame: CGRect(x: 20, y: 104, width: 484, height: 526))
             imageView.frame = CGRect(x: 512, y: 200, width: 250, height: 250)
             
         }//else if(templateType == "11LP") {
         else {
-            
+            //11L = left
             label = UILabel(frame: CGRect(x: 278, y: 104, width: 484, height: 526))
             imageView.frame = CGRect(x: 20, y: 200, width: 250, height: 250)
             

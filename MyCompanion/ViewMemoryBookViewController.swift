@@ -17,8 +17,16 @@ class ViewMemoryBookViewController: UIViewController {
     @IBOutlet var nextButton: UIButton!
     @IBOutlet var containerView: UIView!
     
+    @IBOutlet var nextIcon: UIImageView!
+    @IBOutlet var prevIcon: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        nextIcon.image = UIImage.fontAwesomeIcon(name: .arrowRight, textColor: UIColor.black, size: CGSize(width: 93, height: 81))
+        
+        prevIcon.image = UIImage.fontAwesomeIcon(name: .arrowLeft, textColor: UIColor.black, size: CGSize(width: 93, height: 81))
+
         
         pages = fetchPages()
         

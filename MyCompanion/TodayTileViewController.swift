@@ -19,7 +19,7 @@ class TodayTileViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet var weatherLabel: UILabel!
     
     let manager = CLLocationManager()
-    
+    let INTERVAL_REFRESH = 900.0
     var currentData : NSManagedObject?
     
     override func viewDidLoad() {
@@ -33,7 +33,7 @@ class TodayTileViewController: UIViewController, CLLocationManagerDelegate {
         
         var weatherLocData = WeatherLocationDataManager.fetchWeatherLocationData()
         if(weatherLocData.count <= 0) {
-            WeatherLocationDataManager.storeWeatherLocationData()
+            _ = WeatherLocationDataManager.storeWeatherLocationData()
             weatherLocData = WeatherLocationDataManager.fetchWeatherLocationData()
             currentData = weatherLocData[0]
             manager.requestLocation()
@@ -71,7 +71,7 @@ class TodayTileViewController: UIViewController, CLLocationManagerDelegate {
 //        print("INTERVAL: \(interval), 15 minutes is 900 seconds")
         print("greater than 15? \(interval > 900)")
         
-        return (interval > 900)
+        return (interval > INTERVAL_REFRESH)
     }
     
     func getDateText() -> String {

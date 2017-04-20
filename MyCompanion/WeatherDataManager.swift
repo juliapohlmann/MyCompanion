@@ -28,7 +28,6 @@ class WeatherDataManager {
     static func weatherDataForLocation(latitude: Double, longitude: Double, completion: @escaping WeatherDataCompletion) {
         // Create URL
         let URL = baseURL.appendingPathComponent(apiKey).appendingPathComponent("\(latitude),\(longitude)")
-        print("URL: \(URL)")
         // Create Data Task
         URLSession.shared.dataTask(with: URL) { (data, response, error) in
             self.didFetchWeatherData(data: data, response: response, error: error, completion: completion)

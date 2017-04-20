@@ -79,7 +79,7 @@ class TodayTileViewController: UIViewController, CLLocationManagerDelegate {
                     self.lat = location.coordinate.latitude
                     self.long = location.coordinate.longitude
                     
-                    self.getWeather()
+//                    self.getWeather()
                 }
                 else {
                     print("Problem with the data received from geocoder")

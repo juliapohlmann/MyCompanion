@@ -601,11 +601,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MyCompanion/WeatherDataManager.swift"
-            timestampString = "514345407.127019"
+            timestampString = "514352695.667474"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "45"
-            endingLineNumber = "45"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
             landmarkName = "didFetchWeatherData(data:response:error:completion:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -617,11 +617,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MyCompanion/WeatherDataManager.swift"
-            timestampString = "514352164.733663"
+            timestampString = "514352695.667474"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "63"
-            endingLineNumber = "63"
+            startingLineNumber = "62"
+            endingLineNumber = "62"
             landmarkName = "processWeatherData(data:completion:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -633,11 +633,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MyCompanion/WeatherDataManager.swift"
-            timestampString = "514352164.733663"
+            timestampString = "514352695.667474"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "65"
-            endingLineNumber = "65"
+            startingLineNumber = "64"
+            endingLineNumber = "64"
             landmarkName = "processWeatherData(data:completion:)"
             landmarkType = "7">
          </BreakpointContent>

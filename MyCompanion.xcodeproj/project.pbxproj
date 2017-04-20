@@ -57,6 +57,7 @@
 		DA8581121E4134570055134E /* MyCompanionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8581111E4134570055134E /* MyCompanionTests.swift */; };
 		DA85811D1E4134570055134E /* MyCompanionUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA85811C1E4134570055134E /* MyCompanionUITests.swift */; };
 		DA85812B1E41357B0055134E /* TodayTileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA85812A1E41357B0055134E /* TodayTileViewController.swift */; };
+		DA8A8F0A1EA931C300BB2939 /* WeatherLocationDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8A8F091EA931C300BB2939 /* WeatherLocationDataManager.swift */; };
 		DAAF9C1D1E8AFA9A0050BE11 /* MemoryBookDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAF9C1C1E8AFA9A0050BE11 /* MemoryBookDataManager.swift */; };
 		DAE3BB7C1E6C93D7009BB9E6 /* ReminderTileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE3BB7B1E6C93D7009BB9E6 /* ReminderTileViewController.swift */; };
 		DAE3BB7E1E6C9636009BB9E6 /* MemoryBookTileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE3BB7D1E6C9636009BB9E6 /* MemoryBookTileViewController.swift */; };
@@ -145,6 +146,7 @@
 		DA85811C1E4134570055134E /* MyCompanionUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCompanionUITests.swift; sourceTree = "<group>"; };
 		DA85811E1E4134570055134E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DA85812A1E41357B0055134E /* TodayTileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodayTileViewController.swift; sourceTree = "<group>"; };
+		DA8A8F091EA931C300BB2939 /* WeatherLocationDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherLocationDataManager.swift; sourceTree = "<group>"; };
 		DAAF9C1C1E8AFA9A0050BE11 /* MemoryBookDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemoryBookDataManager.swift; sourceTree = "<group>"; };
 		DAE3BB7B1E6C93D7009BB9E6 /* ReminderTileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReminderTileViewController.swift; sourceTree = "<group>"; };
 		DAE3BB7D1E6C9636009BB9E6 /* MemoryBookTileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemoryBookTileViewController.swift; sourceTree = "<group>"; };
@@ -341,6 +343,7 @@
 			isa = PBXGroup;
 			children = (
 				DA85812A1E41357B0055134E /* TodayTileViewController.swift */,
+				DA8A8F091EA931C300BB2939 /* WeatherLocationDataManager.swift */,
 				DA369C7F1EA8414D0041CDD7 /* WeatherDataManager.swift */,
 				DA2C16851E54CF42001B3D14 /* IntroTileViewController.swift */,
 				DA761C891E5CA42300B3679A /* CaregiverTileViewController.swift */,
@@ -694,6 +697,7 @@
 				DAE3BB7E1E6C9636009BB9E6 /* MemoryBookTileViewController.swift in Sources */,
 				DAAF9C1D1E8AFA9A0050BE11 /* MemoryBookDataManager.swift in Sources */,
 				1C5B48F01EA7B9BB0082E1AC /* CaregiverTipsTableViewController.swift in Sources */,
+				DA8A8F0A1EA931C300BB2939 /* WeatherLocationDataManager.swift in Sources */,
 				DA63DC2C1E822FC000E1C5A8 /* ContactTableViewCell.swift in Sources */,
 				1CCEA77E1E89E61B00252E2A /* LabelPageViewController.swift in Sources */,
 				DAE3BB7C1E6C93D7009BB9E6 /* ReminderTileViewController.swift in Sources */,

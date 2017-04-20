@@ -54,7 +54,13 @@ class WeatherDataManager {
     
     static private func processWeatherData(data: Data, completion: WeatherDataCompletion) {
         if let JSON = try? JSONSerialization.jsonObject(with: data, options: []) as AnyObject {
-            completion(JSON, nil)
+            let currently = JSON["currently"] as? [String: AnyObject]
+            let summary = currently?["summary"] as? String
+            let temperature = currently?["temperature"] as? Double
+            
+            let toReturn = [summary!, temperature!] as [Any]
+            
+            completion(toReturn as? AnyObject, nil)
         } else {
             completion(nil, .InvalidResponse)
         }

@@ -19,6 +19,7 @@ class TodayTileViewController: UIViewController, CLLocationManagerDelegate {
     
     let manager = CLLocationManager()
     var city = ""
+    var state = ""
     var lat: Double = 0
     var long: Double = 0
     
@@ -42,47 +43,28 @@ class TodayTileViewController: UIViewController, CLLocationManagerDelegate {
         return dateFormatter.string(from: date as Date)
     }
     
-    //api key: c3c80470a6c9cf1a1abf7bc5588cc352
-    //https://api.darksky.net/forecast/c3c80470a6c9cf1a1abf7bc5588cc352/37.8267,-122.4233
+
     
     func getWeather() {
-        let apiKey = "c3c80470a6c9cf1a1abf7bc5588cc352"
-        let baseURL = URL(string:"https://api.darksky.net/forecast/")!
-        let authBaseURL = baseURL.appendingPathComponent(apiKey)
-         print("lat: \(lat), long: \(long)")
-        let temp = ""
-        let summary = ""
+        var temp = 0.0
+        var summary = ""
+        var responseData : AnyObject = self
         WeatherDataManager.weatherDataForLocation(latitude: lat, longitude: long) { (response, error) in
-            print("response: \(response!)")
-            
-            
-//            var data = response!.data(using: String.Encoding.utf8.rawValue)!
-//            let json = try? JSONSerialization.jsonObject(with: data)
-//            print(json)
-            
-//            print(json?["currently"])
-            
+            responseData = response!
+            summary = (responseData[0] as? String)!
+            temp = (responseData[1] as? Double)!
+
+            self.weatherLabel.text = "In \(self.city), it is \(round(temp))° and \(summary.lowercased())."
         }
-//            do {
-//                if let data = response,
-//                    let json = try JSONSerialization.jsonObject(with: data) as? [String: Any],
-//                    let weatherData = json["response"] as? [[String: Any]] {
-//                    let currently = weatherData[0]
-//                    temp = currently["apparentTemperature"] as? String
-//                    summary = currently["summary"] as? String
-//                }
-//            } catch {
-//                print("Error deserializing JSON: \(error)")
-//            }
-//        }
     }
+    
+
     
     
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         if let location = locations.first {
             CLGeocoder().reverseGeocodeLocation(location, completionHandler: {(placemarks, error) -> Void in
-                print(location)
                 
                 if error != nil {
                     print("Reverse geocoder failed with error" + (error?.localizedDescription)!)
@@ -92,11 +74,11 @@ class TodayTileViewController: UIViewController, CLLocationManagerDelegate {
                 if (placemarks?.count)! > 0 {
                     let pm = placemarks?[0]
                     self.city = (pm?.locality!)!
-                    self.locationLabel.text = "You are in \(self.city)."
+                    self.state = (pm?.administrativeArea!)!
+                    self.locationLabel.text = "You are in \(self.city), \(self.state)."
                     self.lat = location.coordinate.latitude
                     self.long = location.coordinate.longitude
                     
-                    print(self.city)
                     self.getWeather()
                 }
                 else {

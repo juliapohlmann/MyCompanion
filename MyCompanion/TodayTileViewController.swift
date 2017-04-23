@@ -45,9 +45,9 @@ class TodayTileViewController: UIViewController, CLLocationManagerDelegate {
                 let city = self.currentData!.value(forKeyPath: "city") as! String
                 let state = self.currentData!.value(forKeyPath: "state") as! String
                 let temperature = self.currentData!.value(forKeyPath: "temperature") as! Int
-                let weatherSummary = self.currentData!.value(forKeyPath: "weatherSummary") as! String
+                //let weatherSummary = self.currentData!.value(forKeyPath: "weatherSummary") as! String
                 setLocationText(city: city, state: state)
-                setWeatherText(city: city, temperature: temperature, weatherSummary: weatherSummary)
+                //setWeatherText(city: city, temperature: temperature, weatherSummary: weatherSummary)
             }
         }
     }

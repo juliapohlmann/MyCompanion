@@ -11,7 +11,7 @@ import CoreData
 import TextFieldEffects
 import MobileCoreServices
 
-class ContactDetailViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class ContactDetailViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate {
     
     @IBOutlet var imageView: UIImageView!
     let imagePicker = LandscapeImagePickerController()
@@ -25,6 +25,21 @@ class ContactDetailViewController: UIViewController, UIImagePickerControllerDele
     @IBOutlet var emailTextField: JiroTextField!
     var imageData: NSData?
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setStockPhoto()
+        if(self.type == "Edit Contact") {
+            setContactFields()
+        }
+        self.navigationItem.title = self.type
+        
+        imagePicker.delegate = self
+        nameTextField.delegate = self
+        relationshipTextField.delegate = self
+        numberTextField.delegate = self
+        emailTextField.delegate = self
+    }
+    
     func setContactFields() {
         nameTextField.text = contact?.value(forKeyPath: "name") as? String
         emailTextField.text = contact?.value(forKeyPath: "email") as? String
@@ -36,15 +51,9 @@ class ContactDetailViewController: UIViewController, UIImagePickerControllerDele
         }
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        setStockPhoto()
-        if(self.type == "Edit Contact") {
-            setContactFields()
-        }
-        self.navigationItem.title = self.type
-
-        imagePicker.delegate = self
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
     }
     
     func setStockPhoto() {

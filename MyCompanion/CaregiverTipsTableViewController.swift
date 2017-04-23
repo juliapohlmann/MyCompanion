@@ -41,6 +41,7 @@ class CaregiverTipsTableViewController: UITableViewController {
         
         let cell:UITableViewCell = self.tableView.dequeueReusableCell(withIdentifier: "caregiverTipsCell")!
         cell.textLabel?.text = currentCellInfo["SubCat"] as? String
+        cell.textLabel?.font = UIFont(name: "AvenirNext-DemiBold", size: 20)
         return cell
         
     }
@@ -106,7 +107,7 @@ class CaregiverTipsTableViewController: UITableViewController {
         let currentCellInfo = tips[convertIndexPathToRow(indexPath: indexPath!)] as NSDictionary
         
         nextScene?.text = (currentCellInfo["Info"] as? String)!
-
+        nextScene?.tipTitle = (currentCellInfo["SubCat"] as? String)!
     }
     
     

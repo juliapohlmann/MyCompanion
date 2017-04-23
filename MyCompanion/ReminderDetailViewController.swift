@@ -10,7 +10,7 @@ import UIKit
 import CoreData
 import TextFieldEffects
 
-class ReminderDetailViewController: UIViewController {
+class ReminderDetailViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet var nameTextField: JiroTextField!
     
@@ -24,7 +24,13 @@ class ReminderDetailViewController: UIViewController {
         }
         self.navigationItem.title = self.type
 
+        nameTextField.delegate = self
         // Do any additional setup after loading the view.
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
     }
     
     func loadReminder() {

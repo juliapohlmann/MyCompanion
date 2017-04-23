@@ -10,7 +10,7 @@ import UIKit
 import CoreData
 import TextFieldEffects
 
-class DetailLabelPageViewController: UIViewController {
+class DetailLabelPageViewController: UIViewController, UITextFieldDelegate {
     
     var vcType : String = ""
     var page : NSManagedObject?
@@ -25,7 +25,14 @@ class DetailLabelPageViewController: UIViewController {
         if(vcType == "Edit Page") {
             setPageFields()
         }
+        titleTextField.delegate = self
+        textTextField.delegate = self
         // Do any additional setup after loading the view.
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
     }
     
     func setPageFields() {

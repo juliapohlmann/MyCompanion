@@ -13,7 +13,7 @@ import MobileCoreServices
 import AVFoundation
 import FontAwesome_swift
 
-class DetailPhotoPageViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class DetailPhotoPageViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate {
     
     var page : NSManagedObject?
     var vcType : String = ""
@@ -29,6 +29,7 @@ class DetailPhotoPageViewController: UIViewController, UIImagePickerControllerDe
         super.viewDidLoad()
 
         imagePicker.delegate = self
+        titleTextField.delegate = self
         
         setStockPhoto()
         
@@ -36,6 +37,11 @@ class DetailPhotoPageViewController: UIViewController, UIImagePickerControllerDe
             setPageFields()
         }
         // Do any additional setup after loading the view.
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
     }
     
     func setVideoThumbnail(){

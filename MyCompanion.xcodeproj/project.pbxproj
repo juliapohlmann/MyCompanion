@@ -194,14 +194,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		1C4E12141E7F56430001DD3F /* MemoryBook */ = {
+		1C4E12141E7F56430001DD3F /* Memory Book */ = {
 			isa = PBXGroup;
 			children = (
 				DAAF9C1C1E8AFA9A0050BE11 /* MemoryBookDataManager.swift */,
 				DA3045671E8C1BCE003CEC9B /* Caregiver side */,
 				DA3045681E8C1BE8003CEC9B /* Patient side */,
 			);
-			name = MemoryBook;
+			name = "Memory Book";
 			sourceTree = "<group>";
 		};
 		20C332A64E5E9C90DC1180CE /* Pods */ = {
@@ -307,14 +307,23 @@
 			name = "Patient Side";
 			sourceTree = "<group>";
 		};
-		DA369C821EA84E070041CDD7 /* CaregiverTips */ = {
+		DA30B3771EADB6E500FA8B69 /* Caregiver Portal */ = {
+			isa = PBXGroup;
+			children = (
+				DA63DC211E81AA7A00E1C5A8 /* CaregiverPortalTableViewController.swift */,
+				1CA3BE651E5D1C520016B247 /* SettingsTableViewController.swift */,
+			);
+			name = "Caregiver Portal";
+			sourceTree = "<group>";
+		};
+		DA369C821EA84E070041CDD7 /* Caregiver Tips */ = {
 			isa = PBXGroup;
 			children = (
 				1C5B48F11EA7BAC20082E1AC /* tips.json */,
 				1C5B48EF1EA7B9BB0082E1AC /* CaregiverTipsTableViewController.swift */,
 				1C5B48F31EA809AA0082E1AC /* DisplayTipsViewController.swift */,
 			);
-			name = CaregiverTips;
+			name = "Caregiver Tips";
 			sourceTree = "<group>";
 		};
 		DA8580ED1E4134560055134E = {
@@ -347,18 +356,17 @@
 				DA8580FB1E4134570055134E /* DashboardViewController.swift */,
 				DA8580FD1E4134570055134E /* Main.storyboard */,
 				1CE476F71EAD764500B7A50C /* WalkthroughViewController.swift */,
-				DA63DC211E81AA7A00E1C5A8 /* CaregiverPortalTableViewController.swift */,
 				1CE9A3F51EA15A8600D44333 /* play-btn.png */,
 				DA8581031E4134570055134E /* Assets.xcassets */,
 				DA8581051E4134570055134E /* LaunchScreen.storyboard */,
 				DA8581081E4134570055134E /* Info.plist */,
 				DA8581001E4134570055134E /* MyCompanion.xcdatamodeld */,
-				1CA3BE651E5D1C520016B247 /* SettingsTableViewController.swift */,
 				1CCEA7771E88A78E00252E2A /* LandscapeImagePickerController.swift */,
-				DA369C821EA84E070041CDD7 /* CaregiverTips */,
-				1C4E12141E7F56430001DD3F /* MemoryBook */,
-				DAE3BB7F1E6CA382009BB9E6 /* SecurityViewControllers */,
-				DAE3BB7A1E6C93BA009BB9E6 /* TileViewControllers */,
+				DA30B3771EADB6E500FA8B69 /* Caregiver Portal */,
+				DA369C821EA84E070041CDD7 /* Caregiver Tips */,
+				1C4E12141E7F56430001DD3F /* Memory Book */,
+				DAE3BB7F1E6CA382009BB9E6 /* Security View Controllers */,
+				DAE3BB7A1E6C93BA009BB9E6 /* Tile View Controllers */,
 				DAE3BB871E6CA58F009BB9E6 /* Contact */,
 				DAE3BB861E6CA585009BB9E6 /* Reminder */,
 			);
@@ -387,7 +395,7 @@
 			path = MyCompanionUITests;
 			sourceTree = "<group>";
 		};
-		DAE3BB7A1E6C93BA009BB9E6 /* TileViewControllers */ = {
+		DAE3BB7A1E6C93BA009BB9E6 /* Tile View Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				DA30B3731EAD9D2E00FA8B69 /* Today Tile */,
@@ -396,16 +404,16 @@
 				DAE3BB7B1E6C93D7009BB9E6 /* ReminderTileViewController.swift */,
 				DAE3BB7D1E6C9636009BB9E6 /* MemoryBookTileViewController.swift */,
 			);
-			name = TileViewControllers;
+			name = "Tile View Controllers";
 			sourceTree = "<group>";
 		};
-		DAE3BB7F1E6CA382009BB9E6 /* SecurityViewControllers */ = {
+		DAE3BB7F1E6CA382009BB9E6 /* Security View Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				1C1615971E5A6E14009A3137 /* PasscodeViewController.swift */,
 				1C1615991E5A7E0B009A3137 /* CheckPasscodeViewController.swift */,
 			);
-			name = SecurityViewControllers;
+			name = "Security View Controllers";
 			sourceTree = "<group>";
 		};
 		DAE3BB861E6CA585009BB9E6 /* Reminder */ = {

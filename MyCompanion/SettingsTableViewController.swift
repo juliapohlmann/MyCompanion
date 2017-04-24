@@ -10,34 +10,55 @@ import UIKit
 import FontAwesome_swift
 
 class SettingsTableViewController: UITableViewController {
-
-    @IBOutlet var callsSwitch: UISwitch!
-    @IBOutlet var emailsSwitch: UISwitch!
+    
+    @IBOutlet var showEmailsSwitch: UISwitch!
+    @IBOutlet var showPhoneNumbersSwitch: UISwitch!
+    @IBOutlet var enableCallingSwitch: UISwitch!
+    @IBOutlet var enableEmailingSwitch: UISwitch!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        
         let canCall = UserDefaults.standard.object(forKey: "canCall") as! Bool
         let canEmail = UserDefaults.standard.object(forKey: "canEmail") as! Bool
+        let showPhoneNumbers = UserDefaults.standard.object(forKey: "showPhoneNumbers") as! Bool
+        let showEmails = UserDefaults.standard.object(forKey: "showEmails") as! Bool
         
-        callsSwitch.setOn(canCall, animated: false)
-        emailsSwitch.setOn(canEmail, animated: false)
-    }
+        enableCallingSwitch.setOn(canCall, animated: false)
+        enableEmailingSwitch.setOn(canEmail, animated: false)
+        showPhoneNumbersSwitch.setOn(showPhoneNumbers, animated: false)
+        showEmailsSwitch.setOn(showEmails, animated: false)
 
-    @IBAction func callsValueChanged(_ sender: Any) {
-        
-        UserDefaults.standard.set(callsSwitch.isOn, forKey: "canCall")
-        UserDefaults.standard.synchronize()
-        
     }
     
-    @IBAction func emailsValueChanged(_ sender: Any) {
-        
-        UserDefaults.standard.set(emailsSwitch.isOn, forKey: "canEmail")
+    @IBAction func toggleShowPhoneNumbers(_ sender: Any) {
+        UserDefaults.standard.set(showPhoneNumbersSwitch.isOn, forKey: "canCall")
         UserDefaults.standard.synchronize()
         
+        if(!showPhoneNumbersSwitch.isOn) {
+            enableCallingSwitch.setOn(showPhoneNumbersSwitch.isOn, animated: true)
+            toggleEnableCalling(self)
+        }
+    }
+    
+    @IBAction func toggleShowEmails(_ sender: Any) {
+        UserDefaults.standard.set(showEmailsSwitch.isOn, forKey: "canCall")
+        UserDefaults.standard.synchronize()
+        
+        if(!showEmailsSwitch.isOn) {
+            enableEmailingSwitch.setOn(showEmailsSwitch.isOn, animated: true)
+            toggleEnableEmailing(self)
+        }
+    }
+    
+    @IBAction func toggleEnableCalling(_ sender: Any) {
+        UserDefaults.standard.set(enableCallingSwitch.isOn, forKey: "canCall")
+        UserDefaults.standard.synchronize()
+    }
+    
+    @IBAction func toggleEnableEmailing(_ sender: Any) {
+        UserDefaults.standard.set(enableEmailingSwitch.isOn, forKey: "canEmail")
+        UserDefaults.standard.synchronize()
     }
     
     override func didReceiveMemoryWarning() {

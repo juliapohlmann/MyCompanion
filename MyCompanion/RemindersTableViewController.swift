@@ -20,6 +20,10 @@ class RemindersTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        UserDefaults.standard.set(true, forKey: "canCall")
+        UserDefaults.standard.set(true, forKey: "canEmail")
+        UserDefaults.standard.set(true, forKey: "showPhoneNumbers")
+        UserDefaults.standard.set(true, forKey: "showEmails")
         reminders = ReminderDataManager.fetchReminders()
     }
     

@@ -34,7 +34,7 @@ class ContactTableViewCell: UITableViewCell {
 
         if(canCall && number.text != "") {
             if let url = NSURL(string: "tel://\(number.text!.replacingOccurrences(of: "-", with: ""))"), UIApplication.shared.canOpenURL(url as URL) {
-                UIApplication.shared.openURL(url as URL)
+                UIApplication.shared.open(url as URL, options: [:], completionHandler: nil)
             }
         }
     }

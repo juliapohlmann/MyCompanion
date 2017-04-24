@@ -33,17 +33,16 @@ class TodayTileViewController: UIViewController, CLLocationManagerDelegate {
         //
         
         var weatherLocData = WeatherLocationDataManager.fetchWeatherLocationData()
-        initialWeatherFetch()
-//        if(weatherLocData.count == 0) {
-//            initialWeatherFetch()
-//        } else {
-//            currentData = weatherLocData[0]
-//            if(shouldUpdateWeatherLocation()) {
-//                manager.requestLocation()
-//            } else {
-//                useCachedValues()
-//            }
-//        }
+        if(weatherLocData.count == 0) {
+            initialWeatherFetch()
+        } else {
+            currentData = weatherLocData[0]
+            if(shouldUpdateWeatherLocation()) {
+                manager.requestLocation()
+            } else {
+                useCachedValues()
+            }
+        }
     }
     
     private func useCachedValues() {

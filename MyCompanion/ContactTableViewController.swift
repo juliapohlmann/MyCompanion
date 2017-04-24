@@ -30,6 +30,15 @@ class ContactTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if(contacts.count == 0) {
+            let emptyLabel = UILabel(frame: CGRect(x: 0, y: 0, width: tableView.bounds.size.width, height: tableView.bounds.size.height))
+            emptyLabel.text = "No contacts available. Enter a new contact in the Caregiver Portal."
+            emptyLabel.textAlignment = .center
+            
+            tableView.separatorStyle  = .none
+            tableView.backgroundView = emptyLabel
+            tableView.alwaysBounceVertical = false
+        }
         return contacts.count
     }
 

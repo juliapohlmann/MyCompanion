@@ -40,7 +40,6 @@
 		DA0D203B1E93423F00FBFCB6 /* ReminderDetailViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0D203A1E93423F00FBFCB6 /* ReminderDetailViewControllerTests.swift */; };
 		DA0D203D1E93474800FBFCB6 /* EditRemindersTableViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0D203C1E93474800FBFCB6 /* EditRemindersTableViewControllerTests.swift */; };
 		DA1AB3F41E82FA740015E2EA /* ContactDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1AB3F31E82FA740015E2EA /* ContactDataManager.swift */; };
-		DA2C16861E54CF42001B3D14 /* IntroTileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2C16851E54CF42001B3D14 /* IntroTileViewController.swift */; };
 		DA369C801EA8414D0041CDD7 /* WeatherDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA369C7F1EA8414D0041CDD7 /* WeatherDataManager.swift */; };
 		DA54D7851E86F05D00BE345C /* ReminderDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA54D7841E86F05D00BE345C /* ReminderDataManager.swift */; };
 		DA63DC221E81AA7A00E1C5A8 /* CaregiverPortalTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA63DC211E81AA7A00E1C5A8 /* CaregiverPortalTableViewController.swift */; };
@@ -124,7 +123,6 @@
 		DA0D203A1E93423F00FBFCB6 /* ReminderDetailViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReminderDetailViewControllerTests.swift; sourceTree = "<group>"; };
 		DA0D203C1E93474800FBFCB6 /* EditRemindersTableViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditRemindersTableViewControllerTests.swift; sourceTree = "<group>"; };
 		DA1AB3F31E82FA740015E2EA /* ContactDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactDataManager.swift; sourceTree = "<group>"; };
-		DA2C16851E54CF42001B3D14 /* IntroTileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroTileViewController.swift; sourceTree = "<group>"; };
 		DA369C7F1EA8414D0041CDD7 /* WeatherDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherDataManager.swift; sourceTree = "<group>"; };
 		DA54D7841E86F05D00BE345C /* ReminderDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReminderDataManager.swift; sourceTree = "<group>"; };
 		DA63DC211E81AA7A00E1C5A8 /* CaregiverPortalTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CaregiverPortalTableViewController.swift; sourceTree = "<group>"; };
@@ -199,8 +197,9 @@
 		1C4E12141E7F56430001DD3F /* MemoryBook */ = {
 			isa = PBXGroup;
 			children = (
-				DA3045681E8C1BE8003CEC9B /* Patient side */,
+				DAAF9C1C1E8AFA9A0050BE11 /* MemoryBookDataManager.swift */,
 				DA3045671E8C1BCE003CEC9B /* Caregiver side */,
+				DA3045681E8C1BE8003CEC9B /* Patient side */,
 			);
 			name = MemoryBook;
 			sourceTree = "<group>";
@@ -245,7 +244,6 @@
 				1C4E120B1E7CCE030001DD3F /* DetailLabelPhotoPageViewController.swift */,
 				1C4E12121E7F50D10001DD3F /* DetailPhotoPageViewController.swift */,
 				1C4E12101E7F50A00001DD3F /* DetailLabelPageViewController.swift */,
-				DAAF9C1C1E8AFA9A0050BE11 /* MemoryBookDataManager.swift */,
 				1C4E12031E7CAF350001DD3F /* EditMemoryBookTableViewController.swift */,
 			);
 			name = "Caregiver side";
@@ -260,6 +258,53 @@
 				1CCEA77F1E89E62800252E2A /* PhotoPageViewController.swift */,
 			);
 			name = "Patient side";
+			sourceTree = "<group>";
+		};
+		DA30B3711EAD9CE300FA8B69 /* Caregiver Side */ = {
+			isa = PBXGroup;
+			children = (
+				DA63DC231E81BED500E1C5A8 /* EditContactTableViewController.swift */,
+				DA63DC251E81BF9A00E1C5A8 /* EditContactTableViewCell.swift */,
+				1CC61A3D1E6FC2E800C92584 /* ContactDetailViewController.swift */,
+			);
+			name = "Caregiver Side";
+			sourceTree = "<group>";
+		};
+		DA30B3721EAD9CF200FA8B69 /* Patient Side */ = {
+			isa = PBXGroup;
+			children = (
+				DA63DC271E822AE700E1C5A8 /* ContactTableViewController.swift */,
+				DA63DC2B1E822FC000E1C5A8 /* ContactTableViewCell.swift */,
+			);
+			name = "Patient Side";
+			sourceTree = "<group>";
+		};
+		DA30B3731EAD9D2E00FA8B69 /* Today Tile */ = {
+			isa = PBXGroup;
+			children = (
+				DA369C7F1EA8414D0041CDD7 /* WeatherDataManager.swift */,
+				DA8A8F091EA931C300BB2939 /* WeatherLocationDataManager.swift */,
+				DA85812A1E41357B0055134E /* TodayTileViewController.swift */,
+			);
+			name = "Today Tile";
+			sourceTree = "<group>";
+		};
+		DA30B3741EAD9D5A00FA8B69 /* Caregiver Side */ = {
+			isa = PBXGroup;
+			children = (
+				1C4E121A1E818A2D0001DD3F /* ReminderDetailViewController.swift */,
+				1C4E12181E81899B0001DD3F /* EditRemindersTableViewController.swift */,
+			);
+			name = "Caregiver Side";
+			sourceTree = "<group>";
+		};
+		DA30B3751EAD9D6100FA8B69 /* Patient Side */ = {
+			isa = PBXGroup;
+			children = (
+				DAE3BB801E6CA3B5009BB9E6 /* RemindersTableViewController.swift */,
+				DAE3BB841E6CA57F009BB9E6 /* RemindersTableViewCell.swift */,
+			);
+			name = "Patient Side";
 			sourceTree = "<group>";
 		};
 		DA369C821EA84E070041CDD7 /* CaregiverTips */ = {
@@ -345,10 +390,7 @@
 		DAE3BB7A1E6C93BA009BB9E6 /* TileViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				DA85812A1E41357B0055134E /* TodayTileViewController.swift */,
-				DA8A8F091EA931C300BB2939 /* WeatherLocationDataManager.swift */,
-				DA369C7F1EA8414D0041CDD7 /* WeatherDataManager.swift */,
-				DA2C16851E54CF42001B3D14 /* IntroTileViewController.swift */,
+				DA30B3731EAD9D2E00FA8B69 /* Today Tile */,
 				DA761C891E5CA42300B3679A /* CaregiverTileViewController.swift */,
 				DAFA46B31E524AB000285267 /* ContactTileViewController.swift */,
 				DAE3BB7B1E6C93D7009BB9E6 /* ReminderTileViewController.swift */,
@@ -369,11 +411,9 @@
 		DAE3BB861E6CA585009BB9E6 /* Reminder */ = {
 			isa = PBXGroup;
 			children = (
-				1C4E12181E81899B0001DD3F /* EditRemindersTableViewController.swift */,
-				1C4E121A1E818A2D0001DD3F /* ReminderDetailViewController.swift */,
-				DAE3BB801E6CA3B5009BB9E6 /* RemindersTableViewController.swift */,
-				DAE3BB841E6CA57F009BB9E6 /* RemindersTableViewCell.swift */,
 				DA54D7841E86F05D00BE345C /* ReminderDataManager.swift */,
+				DA30B3751EAD9D6100FA8B69 /* Patient Side */,
+				DA30B3741EAD9D5A00FA8B69 /* Caregiver Side */,
 			);
 			name = Reminder;
 			sourceTree = "<group>";
@@ -381,12 +421,9 @@
 		DAE3BB871E6CA58F009BB9E6 /* Contact */ = {
 			isa = PBXGroup;
 			children = (
-				DA63DC271E822AE700E1C5A8 /* ContactTableViewController.swift */,
-				DA63DC2B1E822FC000E1C5A8 /* ContactTableViewCell.swift */,
-				1CC61A3D1E6FC2E800C92584 /* ContactDetailViewController.swift */,
-				DA63DC231E81BED500E1C5A8 /* EditContactTableViewController.swift */,
-				DA63DC251E81BF9A00E1C5A8 /* EditContactTableViewCell.swift */,
 				DA1AB3F31E82FA740015E2EA /* ContactDataManager.swift */,
+				DA30B3721EAD9CF200FA8B69 /* Patient Side */,
+				DA30B3711EAD9CE300FA8B69 /* Caregiver Side */,
 			);
 			name = Contact;
 			sourceTree = "<group>";
@@ -695,7 +732,6 @@
 				1C5B48F41EA809AA0082E1AC /* DisplayTipsViewController.swift in Sources */,
 				1C4E120C1E7CCE030001DD3F /* DetailLabelPhotoPageViewController.swift in Sources */,
 				1C4E12131E7F50D10001DD3F /* DetailPhotoPageViewController.swift in Sources */,
-				DA2C16861E54CF42001B3D14 /* IntroTileViewController.swift in Sources */,
 				DA63DC221E81AA7A00E1C5A8 /* CaregiverPortalTableViewController.swift in Sources */,
 				1CA3BE661E5D1C520016B247 /* SettingsTableViewController.swift in Sources */,
 				DAE3BB7E1E6C9636009BB9E6 /* MemoryBookTileViewController.swift in Sources */,

@@ -53,8 +53,6 @@ class ContactTableViewController: UITableViewController {
             if(emailingEnabled) {
                 cell.enableEmailing()
             }
-        } else {
-            cell.email.text = ""
         }
         if (showPhoneNumbers){
             cell.number.text = contact.value(forKeyPath: "number") as? String
@@ -62,8 +60,6 @@ class ContactTableViewController: UITableViewController {
             if(callingEnabled) {
                 cell.enableCalling()
             }
-        } else {
-            cell.number.text = ""
         }
         
         cell = setImage(cell: cell, contact: contact)

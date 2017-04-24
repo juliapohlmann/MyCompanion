@@ -222,7 +222,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "29"
             endingLineNumber = "29"
-            landmarkName = "tableViewHeadersTest()"
+            landmarkName = "testTableViewHeaders()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1119,6 +1119,22 @@
             startingLineNumber = "43"
             endingLineNumber = "43"
             landmarkName = "storeWeatherLocationData()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MyCompanionTests/AddPageTableViewControllerTests.swift"
+            timestampString = "514750700.563959"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "14"
+            endingLineNumber = "14"
+            landmarkName = "setUp()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

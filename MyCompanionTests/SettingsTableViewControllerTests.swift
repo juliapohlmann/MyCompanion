@@ -27,8 +27,10 @@ class SettingsTableViewControllerTests: XCTestCase {
         let controller = SettingsTableViewControllerMock()
         var expected = "Contacts Settings"
         XCTAssertEqual(expected, controller.tableView(UITableView(), titleForHeaderInSection: 0))
-        expected = "mistake"
+        expected = "Reminders Settings"
         XCTAssertEqual(expected, controller.tableView(UITableView(), titleForHeaderInSection: 1))
+        expected = "mistake"
+        XCTAssertEqual(expected, controller.tableView(UITableView(), titleForHeaderInSection: 2))
     }
     
 }

@@ -37,16 +37,22 @@ class DetailLabelPhotoPageViewController: UIViewController, UIImagePickerControl
         
         self.navigationItem.title = self.vcType
         
+        //if editing a page, make sure to load current values
         if(vcType == "Edit Page") {
             setPageFields()
         }
     }
+    
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         self.view.endEditing(true)
         return false
     }
     
+    /**
+        Helper function to get thumbnail image from video
+     
+     */
     func setVideoThumbnail(){
         let paths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
         let documentsDirectory = paths[0]
@@ -64,6 +70,10 @@ class DetailLabelPhotoPageViewController: UIViewController, UIImagePickerControl
         
     }
     
+    /**
+        Sets fields of page with current page values for editing page
+     
+     */
     func setPageFields() {
         titleTextField.text = page?.value(forKeyPath: "title") as? String
         textTextField.text = page?.value(forKeyPath: "text") as? String
@@ -75,6 +85,10 @@ class DetailLabelPhotoPageViewController: UIViewController, UIImagePickerControl
         }
     }
     
+    /**
+        Sets stock image before an image is uploaded
+     
+     */
     func setStockPhoto() {
         imageView.layer.borderWidth = 2
         imageView.layer.borderColor = UIColor.black.cgColor
@@ -82,22 +96,23 @@ class DetailLabelPhotoPageViewController: UIViewController, UIImagePickerControl
             imageView.image = UIImage.fontAwesomeIcon(name: .camera, textColor: UIColor.black, size: CGSize(width: 128, height: 128))
         }
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
     
+    /**
+        On load image button click, show thumbnail of photo
+     
+        - Parameter sender: UIButton that was pressed
+     
+     */
     @IBAction func loadImageButtonTapped(sender: UIButton) {
         imagePicker.allowsEditing = false
         imagePicker.sourceType = .photoLibrary
+        
         if(templateType.characters.last == "P") {
-            print("pic")
             imagePicker.mediaTypes = [kUTTypeImage as String]
         } else {
-            print("video")
             imagePicker.mediaTypes = [kUTTypeMovie as String]
         }
+        
         imagePicker.modalPresentationStyle = .popover
         let presentationController = imagePicker.popoverPresentationController
         presentationController?.sourceView = self.imageView
@@ -106,6 +121,7 @@ class DetailLabelPhotoPageViewController: UIViewController, UIImagePickerControl
     }
     
     // MARK: - UIImagePickerControllerDelegate Methods
+    
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         
@@ -175,11 +191,23 @@ class DetailLabelPhotoPageViewController: UIViewController, UIImagePickerControl
         dismiss(animated: true, completion: nil)
     }
     
+    /**
+        Dismiss picker once cancelled
+     
+        - Parameter picker: picker to dismiss
+     
+     */
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         dismiss(animated: true, completion: nil)
     }
     
     // MARK: Core Data
+    
+    /**
+        Based on type of vc, whether editing or creating a page, pass data to MemoryBookData
+        manager to update and segue
+     
+     */
     @IBAction func storePage() {
         if vcType == "Add Page" {
             let didStorePage = MemoryBookDataManager.storePage(title: titleTextField.text!, text: textTextField.text!, templateType: self.templateType, imageData: self.imageData, videoID: self.videoID)

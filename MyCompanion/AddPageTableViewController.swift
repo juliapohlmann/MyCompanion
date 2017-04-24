@@ -16,21 +16,10 @@ class AddPageTableViewController: UITableViewController {
         super.viewDidLoad()
         
         tableView.tableFooterView = UIView(frame: .zero)
-        
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
     // MARK: - Table view data source
-
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 5
     }
@@ -45,18 +34,14 @@ class AddPageTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView,
                             titleForHeaderInSection section: Int) -> String? {
-
         switch(section){
-            
             case 0: return "1 text, 1 pic"
             case 1: return "1 text, 1 vid"
             case 2: return "1 text"
             case 3: return "1 pic"
             case 4: return "1 vid"
             default: return "mistake"
-            
         }
-        
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -72,46 +57,42 @@ class AddPageTableViewController: UITableViewController {
         let cellClicked:Int = convertIndexPathToRow(indexPath: indexPath)
         
         if(indexPath.section == 0 || indexPath.section == 1) {
-            
             let myVC = storyboard?.instantiateViewController(withIdentifier: "DetailLabelPhotoPageViewController") as! DetailLabelPhotoPageViewController
             myVC.templateType = types[cellClicked]
             myVC.vcType = "Add Page"
             navigationController?.pushViewController(myVC, animated: true)
             
         } else if (indexPath.section == 2) {
-            
             let myVC = storyboard?.instantiateViewController(withIdentifier: "DetailLabelPageViewController") as! DetailLabelPageViewController
             myVC.templateType = types[cellClicked]
             myVC.vcType = "Add Page"
             navigationController?.pushViewController(myVC, animated: true)
-
-        } else {
             
+        } else {
             let myVC = storyboard?.instantiateViewController(withIdentifier: "DetailPhotoPageViewController") as! DetailPhotoPageViewController
             myVC.templateType = types[cellClicked]
             myVC.vcType = "Add Page"
             navigationController?.pushViewController(myVC, animated: true)
-            
         }
-        
     }
     
+    
+    /**
+        Helper function to convert given index path to a row number
+        
+        - Parameter indexPath: IndexPath to convert
+     
+        - Returns: int of row path corresponds to
+     */
     func convertIndexPathToRow(indexPath: IndexPath) -> Int {
         
         if(indexPath.section == 0) {
-            
             return indexPath.row
-            
         } else if(indexPath.section == 1) {
-            
             return indexPath.row + 4
-            
         } else  {
-            
             return indexPath.section + 6
-            
         }
-        
     }
 
 }

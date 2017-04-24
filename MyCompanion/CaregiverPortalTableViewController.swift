@@ -24,7 +24,6 @@ class CaregiverPortalTableViewController: UITableViewController {
         return 5
     }
     
-    // method to run when table view cell is tapped
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         switch(indexPath[1]) {

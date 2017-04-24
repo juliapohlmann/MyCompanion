@@ -65,7 +65,7 @@ class CaregiverPortalTableViewControllerTests: XCTestCase {
         controller.tableView(UITableView(), didSelectRowAt: indexPath as IndexPath)
         XCTAssertEqual(expected, controller.segueToPerform)
         
-        expected = "caregiverForum"
+        expected = "caregiverTips"
         indexPath = NSIndexPath(row: 4, section: 0)
         controller.tableView(UITableView(), didSelectRowAt: indexPath as IndexPath)
         XCTAssertEqual(expected, controller.segueToPerform)

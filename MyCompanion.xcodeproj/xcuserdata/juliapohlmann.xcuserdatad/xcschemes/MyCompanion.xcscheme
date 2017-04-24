@@ -42,10 +42,25 @@
                   Identifier = "CaregiverPortalTableViewControllerTests">
                </Test>
                <Test
+                  Identifier = "ContactDetailViewControllerTests">
+               </Test>
+               <Test
+                  Identifier = "ContactTableViewControllerTests">
+               </Test>
+               <Test
+                  Identifier = "EditContactTableViewControllerTests">
+               </Test>
+               <Test
+                  Identifier = "EditRemindersTableViewControllerTests">
+               </Test>
+               <Test
                   Identifier = "MyCompanionTests">
                </Test>
                <Test
-                  Identifier = "SettingsTableViewControllerTests">
+                  Identifier = "ReminderDetailViewControllerTests">
+               </Test>
+               <Test
+                  Identifier = "RemindersTableViewControllerTests">
                </Test>
             </SkippedTests>
          </TestableReference>

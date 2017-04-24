@@ -40,7 +40,7 @@
 		DA0D203B1E93423F00FBFCB6 /* ReminderDetailViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0D203A1E93423F00FBFCB6 /* ReminderDetailViewControllerTests.swift */; };
 		DA0D203D1E93474800FBFCB6 /* EditRemindersTableViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0D203C1E93474800FBFCB6 /* EditRemindersTableViewControllerTests.swift */; };
 		DA1AB3F41E82FA740015E2EA /* ContactDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1AB3F31E82FA740015E2EA /* ContactDataManager.swift */; };
-		DA369C801EA8414D0041CDD7 /* WeatherDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA369C7F1EA8414D0041CDD7 /* WeatherDataManager.swift */; };
+		DA369C801EA8414D0041CDD7 /* WeatherFetchManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA369C7F1EA8414D0041CDD7 /* WeatherFetchManager.swift */; };
 		DA54D7851E86F05D00BE345C /* ReminderDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA54D7841E86F05D00BE345C /* ReminderDataManager.swift */; };
 		DA63DC221E81AA7A00E1C5A8 /* CaregiverPortalTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA63DC211E81AA7A00E1C5A8 /* CaregiverPortalTableViewController.swift */; };
 		DA63DC241E81BED500E1C5A8 /* EditContactTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA63DC231E81BED500E1C5A8 /* EditContactTableViewController.swift */; };
@@ -123,7 +123,7 @@
 		DA0D203A1E93423F00FBFCB6 /* ReminderDetailViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReminderDetailViewControllerTests.swift; sourceTree = "<group>"; };
 		DA0D203C1E93474800FBFCB6 /* EditRemindersTableViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditRemindersTableViewControllerTests.swift; sourceTree = "<group>"; };
 		DA1AB3F31E82FA740015E2EA /* ContactDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactDataManager.swift; sourceTree = "<group>"; };
-		DA369C7F1EA8414D0041CDD7 /* WeatherDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherDataManager.swift; sourceTree = "<group>"; };
+		DA369C7F1EA8414D0041CDD7 /* WeatherFetchManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherFetchManager.swift; sourceTree = "<group>"; };
 		DA54D7841E86F05D00BE345C /* ReminderDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReminderDataManager.swift; sourceTree = "<group>"; };
 		DA63DC211E81AA7A00E1C5A8 /* CaregiverPortalTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CaregiverPortalTableViewController.swift; sourceTree = "<group>"; };
 		DA63DC231E81BED500E1C5A8 /* EditContactTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditContactTableViewController.swift; sourceTree = "<group>"; };
@@ -282,8 +282,8 @@
 		DA30B3731EAD9D2E00FA8B69 /* Today Tile */ = {
 			isa = PBXGroup;
 			children = (
-				DA369C7F1EA8414D0041CDD7 /* WeatherDataManager.swift */,
 				DA8A8F091EA931C300BB2939 /* WeatherLocationDataManager.swift */,
+				DA369C7F1EA8414D0041CDD7 /* WeatherFetchManager.swift */,
 				DA85812A1E41357B0055134E /* TodayTileViewController.swift */,
 			);
 			name = "Today Tile";
@@ -752,7 +752,7 @@
 				1C4E12111E7F50A00001DD3F /* DetailLabelPageViewController.swift in Sources */,
 				1CCEA7801E89E62800252E2A /* PhotoPageViewController.swift in Sources */,
 				1C16159A1E5A7E0B009A3137 /* CheckPasscodeViewController.swift in Sources */,
-				DA369C801EA8414D0041CDD7 /* WeatherDataManager.swift in Sources */,
+				DA369C801EA8414D0041CDD7 /* WeatherFetchManager.swift in Sources */,
 				DA63DC241E81BED500E1C5A8 /* EditContactTableViewController.swift in Sources */,
 				1CC61A3E1E6FC2E800C92584 /* ContactDetailViewController.swift in Sources */,
 				DA85812B1E41357B0055134E /* TodayTileViewController.swift in Sources */,

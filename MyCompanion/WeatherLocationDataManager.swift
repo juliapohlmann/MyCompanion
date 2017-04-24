@@ -44,11 +44,9 @@ class WeatherLocationDataManager {
         do {
             try context.save()
             return true
-            
         } catch _ as NSError {
             return false
         }
-
     }
     
     static func updateLocationData(weatherLocationData: NSManagedObject, latitude: Double, longitude: Double, city: String, state: String) -> Bool {

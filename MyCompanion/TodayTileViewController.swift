@@ -33,17 +33,17 @@ class TodayTileViewController: UIViewController, CLLocationManagerDelegate {
         //
         
         var weatherLocData = WeatherLocationDataManager.fetchWeatherLocationData()
-        
-        if(weatherLocData.count == 0) {
-            initialWeatherFetch()
-        } else {
-            currentData = weatherLocData[0]
-            if(shouldUpdateWeatherLocation()) {
-                manager.requestLocation()
-            } else {
-                useCachedValues()
-            }
-        }
+        initialWeatherFetch()
+//        if(weatherLocData.count == 0) {
+//            initialWeatherFetch()
+//        } else {
+//            currentData = weatherLocData[0]
+//            if(shouldUpdateWeatherLocation()) {
+//                manager.requestLocation()
+//            } else {
+//                useCachedValues()
+//            }
+//        }
     }
     
     private func useCachedValues() {
@@ -109,7 +109,7 @@ class TodayTileViewController: UIViewController, CLLocationManagerDelegate {
         let latitude = currentData!.value(forKeyPath: "latitude") as! Double
         let longitude = currentData!.value(forKeyPath: "longitude") as! Double
         
-        WeatherDataManager.weatherDataForLocation(latitude: latitude, longitude: longitude) { (response, error) in
+        WeatherFetchManager.weatherDataForLocation(latitude: latitude, longitude: longitude) { (response, error) in
             if(error) {
                 self.setWeatherText(city: nil, temperature: nil, weatherSummary: nil, error: true)
                 print("Problem retrieving weather information")

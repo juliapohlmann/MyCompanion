@@ -101,14 +101,13 @@ class CaregiverTipsTableViewController: UITableViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destinationNavigationController = segue.destination as! UINavigationController
+        let targetController = destinationNavigationController.topViewController as! DisplayTipsViewController
         
-        let nextScene = segue.destination as? DisplayTipsViewController
         let indexPath = self.tableView.indexPathForSelectedRow
         let currentCellInfo = tips[convertIndexPathToRow(indexPath: indexPath!)] as NSDictionary
         
-        nextScene?.text = (currentCellInfo["Info"] as? String)!
-        nextScene?.tipTitle = (currentCellInfo["SubCat"] as? String)!
+        targetController.text = (currentCellInfo["Info"] as? String)!
+        targetController.tipTitle = (currentCellInfo["SubCat"] as? String)!
     }
-    
-    
 }

@@ -24,6 +24,10 @@ class SettingsTableViewController: UITableViewController {
         setSwitchValues()
     }
     
+    /**
+        Helper function to get user defaults and set switches to those values
+     
+     */
     func setSwitchValues() {
         let canCall = UserDefaults.standard.object(forKey: "canCall") as! Bool
         let canEmail = UserDefaults.standard.object(forKey: "canEmail") as! Bool
@@ -40,6 +44,8 @@ class SettingsTableViewController: UITableViewController {
         
         resetRemindersDailySwitch.setOn(resetRemindersDaily, animated: false)
     }
+    
+    // MARK: - UISwitch functions
     
     /**
         When show phone number switch value is changed, change user defualt value

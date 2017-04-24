@@ -889,11 +889,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MyCompanion/WeatherLocationDataManager.swift"
-            timestampString = "514699332.826164"
+            timestampString = "514755453.323756"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "46"
-            endingLineNumber = "46"
+            startingLineNumber = "61"
+            endingLineNumber = "61"
             landmarkName = "storeWeatherLocationData()"
             landmarkType = "7">
          </BreakpointContent>
@@ -905,11 +905,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MyCompanion/WeatherLocationDataManager.swift"
-            timestampString = "514699333.392931"
+            timestampString = "514755453.323756"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "48"
-            endingLineNumber = "48"
+            startingLineNumber = "63"
+            endingLineNumber = "63"
             landmarkName = "storeWeatherLocationData()"
             landmarkType = "7">
          </BreakpointContent>
@@ -921,11 +921,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MyCompanion/WeatherLocationDataManager.swift"
-            timestampString = "514699334.184736"
+            timestampString = "514755453.323756"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "45"
-            endingLineNumber = "45"
+            startingLineNumber = "60"
+            endingLineNumber = "60"
             landmarkName = "storeWeatherLocationData()"
             landmarkType = "7">
          </BreakpointContent>
@@ -937,11 +937,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MyCompanion/WeatherLocationDataManager.swift"
-            timestampString = "514699335.225284"
+            timestampString = "514755453.323756"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "41"
-            endingLineNumber = "41"
+            startingLineNumber = "56"
+            endingLineNumber = "56"
             landmarkName = "storeWeatherLocationData()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1097,11 +1097,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MyCompanion/WeatherLocationDataManager.swift"
-            timestampString = "514699815.071493"
+            timestampString = "514755453.323756"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "49"
-            endingLineNumber = "49"
+            startingLineNumber = "64"
+            endingLineNumber = "64"
             landmarkName = "storeWeatherLocationData()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1113,11 +1113,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MyCompanion/WeatherLocationDataManager.swift"
-            timestampString = "514699833.651693"
+            timestampString = "514755453.323756"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "43"
-            endingLineNumber = "43"
+            startingLineNumber = "58"
+            endingLineNumber = "58"
             landmarkName = "storeWeatherLocationData()"
             landmarkType = "7">
          </BreakpointContent>

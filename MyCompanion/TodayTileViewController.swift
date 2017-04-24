@@ -25,7 +25,7 @@ class TodayTileViewController: UIViewController, CLLocationManagerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        dateLabel.text = getDateText()
+        setDateText()
         manager.delegate = self
         
         //NEED TO PUT THIS IN WALKTHROUGH
@@ -45,7 +45,10 @@ class TodayTileViewController: UIViewController, CLLocationManagerDelegate {
         }
     }
     
-    private func useCachedValues() {
+    /**
+        Uses existing weather location data values to populate field values
+     */
+    func useCachedValues() {
         let city = self.currentData!.value(forKeyPath: "city") as! String
         let state = self.currentData!.value(forKeyPath: "state") as! String
         let temperature = self.currentData!.value(forKeyPath: "temperature") as! Int
@@ -55,7 +58,10 @@ class TodayTileViewController: UIViewController, CLLocationManagerDelegate {
         setWeatherText(city: city, temperature: temperature, weatherSummary: weatherSummary, error: false)
     }
     
-    private func initialWeatherFetch() {
+    /**
+        Creates weather location data object then starts fetching of location/weather
+     */
+    func initialWeatherFetch() {
         let storeResult = WeatherLocationDataManager.storeWeatherLocationData()
         if(storeResult) {
             let weatherLocData = WeatherLocationDataManager.fetchWeatherLocationData()
@@ -67,7 +73,15 @@ class TodayTileViewController: UIViewController, CLLocationManagerDelegate {
         }
     }
     
-    private func setWeatherText(city: String?, temperature: Int?, weatherSummary: String?, error: Bool?) {
+    /**
+        Sets weather text field text to values of passed parameter or static message if error fetching
+     
+        - Parameter city: city to show
+        - Parameter temperature: temperature to show
+        - Parameter weatherSummary: weather summary to show
+        - Parameter error: whether there was an error updating values
+     */
+    func setWeatherText(city: String?, temperature: Int?, weatherSummary: String?, error: Bool?) {
         if(error!) {
             self.weatherLabel.text = "Fetching your weather now..."
         }
@@ -76,7 +90,14 @@ class TodayTileViewController: UIViewController, CLLocationManagerDelegate {
         }
     }
     
-    private func setLocationText(city: String?, state: String?, error: Bool?) {
+    /**
+        Sets location text field text to values of passed parameter or static message if error fetching
+     
+        - Parameter city: city to show
+        - Parameter state: state to show
+        - Parameter error: whether there was an error updating values
+     */
+    func setLocationText(city: String?, state: String?, error: Bool?) {
         if(error!) {
             self.locationLabel.text = "Fetching your location now..."
         }
@@ -85,7 +106,12 @@ class TodayTileViewController: UIViewController, CLLocationManagerDelegate {
         }
     }
     
-    private func shouldUpdateWeatherLocation() -> Bool {
+    /**
+        Abstracts logic to determine if weather should be fetched or use cached values
+     
+        - Returns: true if should be updated
+     */
+    func shouldUpdateWeatherLocation() -> Bool {
         let currentDate = Date()
         let lastUpdated = currentData!.value(forKeyPath: "lastUpdated") as! Date
         
@@ -94,17 +120,23 @@ class TodayTileViewController: UIViewController, CLLocationManagerDelegate {
         return (interval > INTERVAL_REFRESH)
     }
     
-    private func getDateText() -> String {
+    /**
+        Sets the date text field
+     
+     */
+    func setDateText() {
         let date = NSDate()
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "EEEE, MMMM dd, yyyy"
 
-        return dateFormatter.string(from: date as Date)
+        dateLabel.text = dateFormatter.string(from: date as Date)
     }
 
 
-    
-    private func getWeather() {
+    /**
+        Fetches weather and updates label value
+     */
+    func getWeather() {
         let latitude = currentData!.value(forKeyPath: "latitude") as! Double
         let longitude = currentData!.value(forKeyPath: "longitude") as! Double
         
@@ -127,6 +159,12 @@ class TodayTileViewController: UIViewController, CLLocationManagerDelegate {
         }
     }
     
+    /**
+        called if getting location succeeded
+     
+        - Parameter manager: CLLocationManager
+        - Parameter locations: array of locations
+     */
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         if let location = locations.first {
             CLGeocoder().reverseGeocodeLocation(location, completionHandler: {(placemarks, error) -> Void in
@@ -162,6 +200,12 @@ class TodayTileViewController: UIViewController, CLLocationManagerDelegate {
         }
     }
     
+    /**
+        called if getting location failed
+     
+        - Parameter manager: CLLocationManager
+        - Parameter error: failure error
+     */
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         print("Failed to find user's location: \(error.localizedDescription)")
         self.setLocationText(city: nil, state: nil, error: true)

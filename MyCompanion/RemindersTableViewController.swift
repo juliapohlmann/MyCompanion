@@ -12,6 +12,8 @@ import CoreData
 
 class RemindersTableViewController: UITableViewController {
     
+    
+    
     @IBAction func homeClicked(_ sender: Any) {
         performSegue(withIdentifier: "remindersToHomeSegue", sender: sender)
     }
@@ -20,11 +22,8 @@ class RemindersTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        UserDefaults.standard.set(true, forKey: "canCall")
-        UserDefaults.standard.set(true, forKey: "canEmail")
-        UserDefaults.standard.set(true, forKey: "showPhoneNumbers")
-        UserDefaults.standard.set(true, forKey: "showEmails")
         reminders = ReminderDataManager.fetchReminders()
+
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {

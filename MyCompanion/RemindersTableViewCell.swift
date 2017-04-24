@@ -38,8 +38,12 @@ class RemindersTableViewCell: UITableViewCell {
     
     
     @IBAction func onClick(_ sender: Any) {
-//        let didToggle = ReminderDataManager.toggleReminder(reminder: reminder!)
-        setText(striked: checkbox.isSelected)
-
+        let didToggle = ReminderDataManager.toggleReminder(reminder: reminder!)
+        if(didToggle) {
+            setText(striked: checkbox.isSelected)
+        } else {
+            checkbox.isSelected = false
+            print("Problem toggling reminder")
+        }
     }
 }

@@ -16,6 +16,8 @@ class SettingsTableViewController: UITableViewController {
     @IBOutlet var enableCallingSwitch: UISwitch!
     @IBOutlet var enableEmailingSwitch: UISwitch!
     
+    @IBOutlet var resetRemindersDailySwitch: UISwitch!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -24,10 +26,16 @@ class SettingsTableViewController: UITableViewController {
         let showPhoneNumbers = UserDefaults.standard.object(forKey: "showPhoneNumbers") as! Bool
         let showEmails = UserDefaults.standard.object(forKey: "showEmails") as! Bool
         
+        let resetRemindersDaily = UserDefaults.standard.object(forKey: "resetRemindersDaily") as! Bool
+
+        
         enableCallingSwitch.setOn(canCall, animated: false)
         enableEmailingSwitch.setOn(canEmail, animated: false)
         showPhoneNumbersSwitch.setOn(showPhoneNumbers, animated: false)
         showEmailsSwitch.setOn(showEmails, animated: false)
+        
+        resetRemindersDailySwitch.setOn(resetRemindersDaily, animated: false)
+
 
     }
     
@@ -61,6 +69,12 @@ class SettingsTableViewController: UITableViewController {
         UserDefaults.standard.set(enableEmailingSwitch.isOn, forKey: "canEmail")
         UserDefaults.standard.synchronize()
     }
+    
+    @IBAction func toggleResetRemindersDaily(_ sender: Any) {
+        UserDefaults.standard.set(resetRemindersDailySwitch.isOn, forKey: "resetRemindersDaily")
+        UserDefaults.standard.synchronize()
+    }
+    
 
     override func tableView(_ tableView: UITableView,
                             titleForHeaderInSection section: Int) -> String? {
@@ -68,6 +82,7 @@ class SettingsTableViewController: UITableViewController {
         switch(section){
             
         case 0: return "Contacts Settings"
+        case 1: return "Reminders Settings"
         default: return "mistake"
             
         }

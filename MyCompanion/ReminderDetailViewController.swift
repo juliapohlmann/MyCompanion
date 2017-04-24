@@ -68,5 +68,9 @@ class ReminderDetailViewController: UIViewController, UITextFieldDelegate {
         controller.addAction(ok)
         present(controller, animated: true, completion: nil)
     }
+    
+//    func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if(segue.identifier == ")
+//    }
 
 }

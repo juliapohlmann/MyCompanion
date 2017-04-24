@@ -17,6 +17,7 @@ class ContactTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         self.contacts = ContactDataManager.fetchContacts()
     }
     

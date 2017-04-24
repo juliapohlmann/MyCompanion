@@ -13,15 +13,15 @@ class WeatherDataManager {
     static let apiKey = "c3c80470a6c9cf1a1abf7bc5588cc352"
     static let baseURL = URL(string:"https://api.darksky.net/forecast/")!
     
-    typealias WeatherDataCompletion = (AnyObject?, WeatherDataManagerError?) -> ()
+    typealias WeatherDataCompletion = (AnyObject?, Bool) -> ()
 
-    enum WeatherDataManagerError: Error {
-        
-        case Unknown
-        case FailedRequest
-        case InvalidResponse
-        
-    }
+//    enum WeatherDataManagerError: Error {
+//        
+//        case Unknown
+//        case FailedRequest
+//        case InvalidResponse
+//        
+//    }
 
     
     // MARK: - Requesting Data
@@ -37,17 +37,17 @@ class WeatherDataManager {
     // MARK: - Helper Methods
     static private func didFetchWeatherData(data: Data?, response: URLResponse?, error: Error?, completion: WeatherDataCompletion) {
         if let _ = error {
-            completion(nil, .FailedRequest)
+            completion(nil, true)
             
         } else if let data = data, let response = response as? HTTPURLResponse {
             if response.statusCode == 200 {
                 processWeatherData(data: data, completion: completion)
             } else {
-                completion(nil, .FailedRequest)
+                completion(nil, true)
             }
             
         } else {
-            completion(nil, .Unknown)
+            completion(nil, true)
         }
     }
     
@@ -59,9 +59,9 @@ class WeatherDataManager {
             
             let toReturn = [summary!, temperature!] as [Any]
             
-            completion(toReturn as? AnyObject, nil)
+            completion(toReturn as AnyObject?, false)
         } else {
-            completion(nil, .InvalidResponse)
+            completion(nil, true)
         }
     }
     

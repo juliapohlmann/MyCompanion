@@ -11,6 +11,7 @@ import CoreData
 import UIKit
 
 class WeatherLocationDataManager {
+    
     static func getContext() -> NSManagedObjectContext {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         return appDelegate.persistentContainer.viewContext

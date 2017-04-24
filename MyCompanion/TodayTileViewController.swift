@@ -30,51 +30,72 @@ class TodayTileViewController: UIViewController, CLLocationManagerDelegate {
         
         //NEED TO PUT THIS IN WALKTHROUGH
         manager.requestAlwaysAuthorization()
+        //
         
         var weatherLocData = WeatherLocationDataManager.fetchWeatherLocationData()
-        if(weatherLocData.count <= 0) {
-            _ = WeatherLocationDataManager.storeWeatherLocationData()
-            weatherLocData = WeatherLocationDataManager.fetchWeatherLocationData()
-            currentData = weatherLocData[0]
-            manager.requestLocation()
+        
+        if(weatherLocData.count == 0) {
+            initialWeatherFetch()
         } else {
             currentData = weatherLocData[0]
             if(shouldUpdateWeatherLocation()) {
                 manager.requestLocation()
             } else {
-                let city = self.currentData!.value(forKeyPath: "city") as! String
-                let state = self.currentData!.value(forKeyPath: "state") as! String
-                let temperature = self.currentData!.value(forKeyPath: "temperature") as! Int
-                //let weatherSummary = self.currentData!.value(forKeyPath: "weatherSummary") as! String
-                setLocationText(city: city, state: state)
-                //setWeatherText(city: city, temperature: temperature, weatherSummary: weatherSummary)
+                useCachedValues()
             }
         }
     }
     
-    func setWeatherText(city: String, temperature: Int, weatherSummary: String) {
+    private func useCachedValues() {
+        let city = self.currentData!.value(forKeyPath: "city") as! String
+        let state = self.currentData!.value(forKeyPath: "state") as! String
+        let temperature = self.currentData!.value(forKeyPath: "temperature") as! Int
+        let weatherSummary = self.currentData!.value(forKeyPath: "weatherSummary") as! String
         
-        self.weatherLabel.text = "In \(city), it is \(temperature)° and \(weatherSummary)."
+        setLocationText(city: city, state: state, error: false)
+        setWeatherText(city: city, temperature: temperature, weatherSummary: weatherSummary, error: false)
     }
     
-    func setLocationText(city: String, state: String) {
-        self.locationLabel.text = "You are in \(city), \(state)."
+    private func initialWeatherFetch() {
+        let storeResult = WeatherLocationDataManager.storeWeatherLocationData()
+        if(storeResult) {
+            let weatherLocData = WeatherLocationDataManager.fetchWeatherLocationData()
+            currentData = weatherLocData[0]
+            manager.requestLocation()
+        } else {
+            print("Error creating weather data object")
+            setWeatherText(city: nil, temperature: nil, weatherSummary: nil, error: true)
+        }
     }
     
-    func shouldUpdateWeatherLocation() -> Bool {
+    private func setWeatherText(city: String?, temperature: Int?, weatherSummary: String?, error: Bool?) {
+        if(error!) {
+            self.weatherLabel.text = "Fetching your weather now..."
+        }
+        else {
+            self.weatherLabel.text = "In \(city!), it is \(temperature!)° and \(weatherSummary!)."
+        }
+    }
+    
+    private func setLocationText(city: String?, state: String?, error: Bool?) {
+        if(error!) {
+            self.locationLabel.text = "Fetching your location now..."
+        }
+        else {
+            self.locationLabel.text = "You are in \(city!), \(state!)."
+        }
+    }
+    
+    private func shouldUpdateWeatherLocation() -> Bool {
         let currentDate = Date()
-//        print("CURRENT: \(currentDate)")
         let lastUpdated = currentData!.value(forKeyPath: "lastUpdated") as! Date
-//        print("LAST UPDATE LOCATION: \(lastUpdated)")
         
         let interval = currentDate.timeIntervalSince(lastUpdated)
-//        print("INTERVAL: \(interval), 15 minutes is 900 seconds")
-        print("greater than 15? \(interval > 900)")
         
         return (interval > INTERVAL_REFRESH)
     }
     
-    func getDateText() -> String {
+    private func getDateText() -> String {
         let date = NSDate()
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "EEEE, MMMM dd, yyyy"
@@ -84,23 +105,28 @@ class TodayTileViewController: UIViewController, CLLocationManagerDelegate {
 
 
     
-    func getWeather() {
+    private func getWeather() {
         let latitude = currentData!.value(forKeyPath: "latitude") as! Double
         let longitude = currentData!.value(forKeyPath: "longitude") as! Double
+        
         WeatherDataManager.weatherDataForLocation(latitude: latitude, longitude: longitude) { (response, error) in
-            let responseData : NSArray = response! as! NSArray
-            let weatherSummary = ((responseData[0] as? String)!).lowercased()
-            let temperature = Int((responseData[1] as? Double)!)
-            let city = self.currentData!.value(forKeyPath: "city") as! String
-            self.setWeatherText(city: city, temperature: temperature, weatherSummary: weatherSummary)
-            
-            _ = WeatherLocationDataManager.updateWeatherData(weatherLocationData: self.currentData!, temperature: temperature, weatherSummary: weatherSummary)
+            if(error) {
+                self.setWeatherText(city: nil, temperature: nil, weatherSummary: nil, error: true)
+                print("Problem retrieving weather information")
+            } else {
+                let responseData : NSArray = response! as! NSArray
+                let weatherSummary = ((responseData[0] as? String)!).lowercased()
+                let temperature = Int((responseData[1] as? Double)!)
+                let city = self.currentData!.value(forKeyPath: "city") as! String
+                self.setWeatherText(city: city, temperature: temperature, weatherSummary: weatherSummary, error: false)
+                
+                let updateResult = WeatherLocationDataManager.updateWeatherData(weatherLocationData: self.currentData!, temperature: temperature, weatherSummary: weatherSummary)
+                if(!updateResult) {
+                    print("Problem saving weather data to core data")
+                }
+            }
         }
     }
-    
-
-    
-    
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         if let location = locations.first {
@@ -108,6 +134,7 @@ class TodayTileViewController: UIViewController, CLLocationManagerDelegate {
                 
                 if error != nil {
                     print("Reverse geocoder failed with error" + (error?.localizedDescription)!)
+                    self.setLocationText(city: nil, state: nil, error: true)
                     return
                 }
                 
@@ -116,15 +143,18 @@ class TodayTileViewController: UIViewController, CLLocationManagerDelegate {
                     
                     let city = (pm?.locality!)!
                     let state = (pm?.administrativeArea!)!
-//                    self.locationLabel.text = "You are in \(city), \(state)."
-                    self.setLocationText(city: city, state: state)
+                    self.setLocationText(city: city, state: state, error: false)
                     
                     let latitude = location.coordinate.latitude
                     let longitude = location.coordinate.longitude
                     
-                    _ = WeatherLocationDataManager.updateLocationData(weatherLocationData: self.currentData!, latitude: latitude, longitude: longitude, city: city, state: state)
+                    let updateResult = WeatherLocationDataManager.updateLocationData(weatherLocationData: self.currentData!, latitude: latitude, longitude: longitude, city: city, state: state)
                     
-                    self.getWeather()
+                    if(updateResult) {
+                        self.getWeather()
+                    } else {
+                        print("Problem saving location data to core data")
+                    }
                 }
                 else {
                     print("Problem with the data received from geocoder")
@@ -135,5 +165,6 @@ class TodayTileViewController: UIViewController, CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         print("Failed to find user's location: \(error.localizedDescription)")
+        self.setLocationText(city: nil, state: nil, error: true)
     }
 }

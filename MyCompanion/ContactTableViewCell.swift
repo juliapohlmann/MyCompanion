@@ -17,13 +17,20 @@ class ContactTableViewCell: UITableViewCell {
     @IBOutlet var number: UILabel!
     @IBOutlet var email: UILabel!
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
+    let PURPLE_COLOR = UIColor(red: 156/225, green: 39/255, blue: 176/255, alpha: 1.0)
+
+    
+    func enableCalling() {
+        number.textColor = PURPLE_COLOR
         
         let tapNumber = UITapGestureRecognizer(target: self, action: #selector(ContactTableViewCell.tapNumber))
         number.isUserInteractionEnabled = true
         number.addGestureRecognizer(tapNumber)
-        
+    }
+    
+    func enableEmailing() {
+        email.textColor = PURPLE_COLOR
+
         let tapEmail = UITapGestureRecognizer(target: self, action: #selector(ContactTableViewCell.tapEmail))
         email.isUserInteractionEnabled = true
         email.addGestureRecognizer(tapEmail)

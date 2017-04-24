@@ -32,7 +32,7 @@ class SettingsTableViewController: UITableViewController {
     }
     
     @IBAction func toggleShowPhoneNumbers(_ sender: Any) {
-        UserDefaults.standard.set(showPhoneNumbersSwitch.isOn, forKey: "canCall")
+        UserDefaults.standard.set(showPhoneNumbersSwitch.isOn, forKey: "showPhoneNumbers")
         UserDefaults.standard.synchronize()
         
         if(!showPhoneNumbersSwitch.isOn) {
@@ -42,8 +42,9 @@ class SettingsTableViewController: UITableViewController {
     }
     
     @IBAction func toggleShowEmails(_ sender: Any) {
-        UserDefaults.standard.set(showEmailsSwitch.isOn, forKey: "canCall")
+        UserDefaults.standard.set(showEmailsSwitch.isOn, forKey: "showEmails")
         UserDefaults.standard.synchronize()
+
         
         if(!showEmailsSwitch.isOn) {
             enableEmailingSwitch.setOn(showEmailsSwitch.isOn, animated: true)
@@ -59,11 +60,6 @@ class SettingsTableViewController: UITableViewController {
     @IBAction func toggleEnableEmailing(_ sender: Any) {
         UserDefaults.standard.set(enableEmailingSwitch.isOn, forKey: "canEmail")
         UserDefaults.standard.synchronize()
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
     override func tableView(_ tableView: UITableView,

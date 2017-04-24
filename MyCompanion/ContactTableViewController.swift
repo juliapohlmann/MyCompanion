@@ -14,11 +14,6 @@ class ContactTableViewController: UITableViewController {
     
     @IBOutlet var homeButton: UIButton!
     var contacts: [NSManagedObject] = []
-    let purpleColor = UIColor(red: 156/225, green: 39/255, blue: 176/255, alpha: 1.0)
-
-//    let canCall = UserDefaults.standard.object(forKey: "canCall") as! Bool
-//    let canEmail = UserDefaults.standard.object(forKey: "canEmail") as! Bool
-//    let purpleColor = UIColor(red: 156/225, green: 39/255, blue: 176/255, alpha: 1.0)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,13 +43,30 @@ class ContactTableViewController: UITableViewController {
         let contact = contacts[indexPath.row]
         
         cell.name.text = contact.value(forKeyPath: "name") as? String
-        cell.email.text = contact.value(forKeyPath: "email") as? String
-        cell.number.text = contact.value(forKeyPath: "number") as? String
         cell.relationship.text = contact.value(forKeyPath: "relationship") as? String
         
+        let showPhoneNumbers = UserDefaults.standard.object(forKey: "showPhoneNumbers") as! Bool
+        let showEmails = UserDefaults.standard.object(forKey: "showEmails") as! Bool
+        if(showEmails) {
+            cell.email.text = contact.value(forKeyPath: "email") as? String
+            let emailingEnabled = UserDefaults.standard.object(forKey: "canEmail") as! Bool
+            if(emailingEnabled) {
+                cell.enableEmailing()
+            }
+        } else {
+            cell.email.text = ""
+        }
+        if (showPhoneNumbers){
+            cell.number.text = contact.value(forKeyPath: "number") as? String
+            let callingEnabled = UserDefaults.standard.object(forKey: "canCall") as! Bool
+            if(callingEnabled) {
+                cell.enableCalling()
+            }
+        } else {
+            cell.number.text = ""
+        }
+        
         cell = setImage(cell: cell, contact: contact)
-        formatNumber(cell: cell)
-        formatEmail(cell: cell)
         
         return cell
     }
@@ -66,22 +78,6 @@ class ContactTableViewController: UITableViewController {
             cell.contactImage.image = UIImage(data: contact.value(forKeyPath: "image") as! Data)
         }
         return cell
-    }
-    
-    func formatNumber(cell: ContactTableViewCell) {
-        let canCall = UserDefaults.standard.object(forKey: "canCall") as! Bool
-
-        if (canCall) {
-            cell.number.textColor = purpleColor
-        }
-    }
-    
-    func formatEmail(cell: ContactTableViewCell) {
-        let canEmail = UserDefaults.standard.object(forKey: "canEmail") as! Bool
-
-        if (canEmail) {
-            cell.email.textColor = purpleColor
-        }
     }
     
     //    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {

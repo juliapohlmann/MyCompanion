@@ -11,6 +11,11 @@ import UIKit
 class CaregiverTipsTableViewController: UITableViewController {
     
     var tips:[NSDictionary] = []
+    let numWB = 4
+    let numC = 5
+    let numB = 13
+    let numDC = 3
+    let numA = 4
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,7 +26,6 @@ class CaregiverTipsTableViewController: UITableViewController {
                 let data = try Data(contentsOf: file)
                 let json = try JSONSerialization.jsonObject(with: data, options: [])
                 if let object = json as? [Any] {
-                    // json is an array
                     tips = object as! [NSDictionary]
                     self.tableView.reloadData()
                 } else {
@@ -56,15 +60,15 @@ class CaregiverTipsTableViewController: UITableViewController {
         
         switch(section) {
         case 0:
-            return 4
+            return numWB
         case 1:
-            return 5
+            return numC
         case 2:
-            return 13
+            return numB
         case 3:
-            return 3
+            return numDC
         case 4:
-            return 4
+            return numA
         default: return 0
         }
 
@@ -90,10 +94,10 @@ class CaregiverTipsTableViewController: UITableViewController {
         switch(indexPath.section){
             
         case 0: return indexPath.row
-        case 1: return indexPath.row + 4
-        case 2: return indexPath.row + 9
-        case 3: return indexPath.row + 22
-        case 4: return indexPath.row + 25
+        case 1: return indexPath.row + numWB
+        case 2: return indexPath.row + numWB + numC
+        case 3: return indexPath.row + numWB + numC + numB
+        case 4: return indexPath.row + numWB + numC + numB + numDC
         default: return indexPath.row
             
         }

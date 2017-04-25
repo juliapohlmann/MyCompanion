@@ -124,4 +124,43 @@ class ReminderDataManager {
         
     }
     
+    /**
+        Toggles a reminders value to false
+     
+        - Parameter reminder: reminder to be toggled
+     
+        - Returns: bool of whether value change was succesful
+     */
+    static func resetReminder(reminder: NSManagedObject) -> Bool {
+        let context = getContext()
+        
+        reminder.setValue(false, forKey: "completed")
+        
+        do {
+            try context.save()
+            return true
+        } catch _ as NSError {
+            return false
+        }
+    }
+    
+    /**
+        Resets all completed values to false
+     
+        - Returns: bool of whether values change was succesful
+     */
+    static func resetAllReminders() -> Bool {
+        let reminders = fetchReminders()
+        var didSucceed = false
+        for reminder in reminders {
+            let result = resetReminder(reminder: reminder)
+            if (!result) {
+                didSucceed = result
+            }
+        }
+        
+        return didSucceed
+        
+    }
+    
 }

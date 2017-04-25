@@ -107,7 +107,6 @@ class SettingsTableViewController: UITableViewController {
         When reset reminders daily switch value is changed, change user defualt value
      
         - Parameter sender: toggled switch
-     
      */
     @IBAction func toggleResetRemindersDaily(_ sender: Any) {
         UserDefaults.standard.set(resetRemindersDailySwitch.isOn, forKey: "resetRemindersDaily")

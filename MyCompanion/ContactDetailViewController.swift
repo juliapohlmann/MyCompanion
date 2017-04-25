@@ -28,11 +28,13 @@ class ContactDetailViewController: UIViewController, UIImagePickerControllerDele
     override func viewDidLoad() {
         super.viewDidLoad()
         setStockPhoto()
+        
         if(self.type == "Edit Contact") {
             setContactFields()
         }
         self.navigationItem.title = self.type
         
+        //set all fields delegate as self
         imagePicker.delegate = self
         nameTextField.delegate = self
         relationshipTextField.delegate = self
@@ -40,6 +42,10 @@ class ContactDetailViewController: UIViewController, UIImagePickerControllerDele
         emailTextField.delegate = self
     }
     
+    /**
+        If editing an existing contact, set fields with saved values
+     
+     */
     func setContactFields() {
         nameTextField.text = contact?.value(forKeyPath: "name") as? String
         emailTextField.text = contact?.value(forKeyPath: "email") as? String
@@ -51,22 +57,33 @@ class ContactDetailViewController: UIViewController, UIImagePickerControllerDele
         }
     }
     
+    /**
+        Textfield delegate method when done editing
+     
+        - Parameter textField: text field to end editing
+     
+        - Returns: returns false always
+     */
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         self.view.endEditing(true)
         return false
     }
     
+    /**
+        Set stock photo if no photo saved/uploaded
+     
+     */
     func setStockPhoto() {
         imageView.layer.borderWidth = 2
         imageView.layer.borderColor = UIColor.black.cgColor
         imageView.image = UIImage.fontAwesomeIcon(name: .user, textColor: UIColor.black, size: CGSize(width: 128, height: 128))
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
+    /**
+        Function that is called when load image button is tapped
+     
+        - Parameter sender: button that was clicked
+     */
     @IBAction func loadImageButtonTapped(sender: UIButton) {
         imagePicker.allowsEditing = false
         imagePicker.sourceType = .photoLibrary
@@ -93,36 +110,45 @@ class ContactDetailViewController: UIViewController, UIImagePickerControllerDele
         dismiss(animated: true, completion: nil)
     }
     
+    /**
+        Delegate method for when image picker controll is cancelled
+     
+        - Parameter picker: picker to dismiss
+     */
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         dismiss(animated: true, completion: nil)
     }
 
-    // MARK: Core Data
-
+    /**
+        Function that is called when save button is tapped
+     
+        - Parameter sender: button clicked
+     */
     @IBAction func storeContact(_ sender: Any) {
-        
         if(checkInputValidity()) {
+            //if adding contact, use store contact method
             if(type == "Add Contact") {
                 let didStore = ContactDataManager.storeContact(name: nameTextField.text!, relationship: relationshipTextField.text!, number: numberTextField.text, email: emailTextField.text, imageData: imageData)
                 
                 if(didStore) {
                     performSegue(withIdentifier: "backToEditContacts", sender: self)
-                } else {
-                    //
                 }
             } else {
-                //EDIT CONTACT
+                //editing contact, update fields of passed contact
                 let didUpdate = ContactDataManager.updateContact(contact: contact!, name: nameTextField.text!, relationship: relationshipTextField.text!, number: numberTextField.text!, email: emailTextField.text!, imageData: imageData!)
                 
                 if(didUpdate) {
                     performSegue(withIdentifier: "backToEditContacts", sender: self)
-                } else {
-                    //
                 }
             }
         }
     }
     
+    /**
+        Helper function that checks input values are valid
+     
+        - Returns: true if valid, false if not
+     */
     func checkInputValidity() -> Bool {
         if(nameTextField.text! == "") {
             sendAlert(title: "Missing Name", message: "Please enter a name for the contact")
@@ -140,6 +166,12 @@ class ContactDetailViewController: UIViewController, UIImagePickerControllerDele
         return true
     }
     
+    /**
+        Presents UI Alert Controller if input is not valid
+     
+        - Parameter title: title of alert controller
+        - Parameter message: message of alert controller
+     */
     func sendAlert(title: String, message: String) {
         let controller : UIAlertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let ok = UIAlertAction(title: "OK", style: .default, handler: nil)
@@ -147,13 +179,23 @@ class ContactDetailViewController: UIViewController, UIImagePickerControllerDele
         present(controller, animated: true, completion: nil)
     }
     
-    func isValidEmail(value:String) -> Bool {
+    /**
+        Helper function to determine the validity of a given email
+     
+        - Parameter value: email to check
+     */
+    func isValidEmail(value: String) -> Bool {
         let emailRegEx = "^(?:(?:(?:(?: )*(?:(?:(?:\\t| )*\\r\\n)?(?:\\t| )+))+(?: )*)|(?: )+)?(?:(?:(?:[-A-Za-z0-9!#$%&’*+/=?^_'{|}~]+(?:\\.[-A-Za-z0-9!#$%&’*+/=?^_'{|}~]+)*)|(?:\"(?:(?:(?:(?: )*(?:(?:[!#-Z^-~]|\\[|\\])|(?:\\\\(?:\\t|[ -~]))))+(?: )*)|(?: )+)\"))(?:@)(?:(?:(?:[A-Za-z0-9](?:[-A-Za-z0-9]{0,61}[A-Za-z0-9])?)(?:\\.[A-Za-z0-9](?:[-A-Za-z0-9]{0,61}[A-Za-z0-9])?)*)|(?:\\[(?:(?:(?:(?:(?:[0-9]|(?:[1-9][0-9])|(?:1[0-9][0-9])|(?:2[0-4][0-9])|(?:25[0-5]))\\.){3}(?:[0-9]|(?:[1-9][0-9])|(?:1[0-9][0-9])|(?:2[0-4][0-9])|(?:25[0-5]))))|(?:(?:(?: )*[!-Z^-~])*(?: )*)|(?:[Vv][0-9A-Fa-f]+\\.[-A-Za-z0-9._~!$&'()*+,;=:]+))\\])))(?:(?:(?:(?: )*(?:(?:(?:\\t| )*\\r\\n)?(?:\\t| )+))+(?: )*)|(?: )+)?$"
         let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
         let result = emailTest.evaluate(with: value)
         return result
     }
     
+    /**
+        Helper function to determine the validity of a given phone number
+     
+        - Parameter value: number to check
+     */
     func isValidNumber(value: String) -> Bool {
         let PHONE_REGEX = "^\\d{3}-\\d{3}-\\d{4}$"
         let phoneTest = NSPredicate(format: "SELF MATCHES %@", PHONE_REGEX)

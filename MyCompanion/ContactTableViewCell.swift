@@ -17,25 +17,14 @@ class ContactTableViewCell: UITableViewCell {
     @IBOutlet var number: UILabel!
     @IBOutlet var email: UILabel!
     
+    //Purple color to change number/email to if calling/emailing enabled
     let PURPLE_COLOR = UIColor(red: 156/225, green: 39/255, blue: 176/255, alpha: 1.0)
 
-    
-    func enableCalling() {
-        number.textColor = PURPLE_COLOR
+    /**
+        Function that is called when number field is tapped
         
-        let tapNumber = UITapGestureRecognizer(target: self, action: #selector(ContactTableViewCell.tapNumber))
-        number.isUserInteractionEnabled = true
-        number.addGestureRecognizer(tapNumber)
-    }
-    
-    func enableEmailing() {
-        email.textColor = PURPLE_COLOR
-
-        let tapEmail = UITapGestureRecognizer(target: self, action: #selector(ContactTableViewCell.tapEmail))
-        email.isUserInteractionEnabled = true
-        email.addGestureRecognizer(tapEmail)
-    }
-    
+        - Parameter sender: gesture recognizer
+     */
     func tapNumber(sender:UITapGestureRecognizer) {
         let canCall = UserDefaults.standard.object(forKey: "canCall") as! Bool
 
@@ -46,6 +35,11 @@ class ContactTableViewCell: UITableViewCell {
         }
     }
     
+    /**
+        Function that is called when email field is tapped
+     
+        - Parameter sender: gesture recognizer
+     */
     func tapEmail(sender:UITapGestureRecognizer) {
         let canEmail = UserDefaults.standard.object(forKey: "canEmail") as! Bool
         if(canEmail && email.text != "") {
@@ -56,10 +50,26 @@ class ContactTableViewCell: UITableViewCell {
         
     }
     
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
+    /**
+        Helper function to make number field recognize gesture and change appearance
+     */
+    func enableCalling() {
+        number.textColor = PURPLE_COLOR
         
-        // Configure the view for the selected state
+        let tapNumber = UITapGestureRecognizer(target: self, action: #selector(ContactTableViewCell.tapNumber))
+        number.isUserInteractionEnabled = true
+        number.addGestureRecognizer(tapNumber)
+    }
+    
+    /**
+        Helper function to make email field recognize gesture and change appearance
+     */
+    func enableEmailing() {
+        email.textColor = PURPLE_COLOR
+        
+        let tapEmail = UITapGestureRecognizer(target: self, action: #selector(ContactTableViewCell.tapEmail))
+        email.isUserInteractionEnabled = true
+        email.addGestureRecognizer(tapEmail)
     }
 
 }

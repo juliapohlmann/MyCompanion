@@ -68,6 +68,14 @@ class ContactTableViewController: UITableViewController {
         return cell
     }
     
+    /**
+        Helper function to sest image if editing contact to the saved image
+     
+        - Parameter cell: cell to set image for
+        - Parameter contact: contact that is being edited
+     
+        - Returns: updated cell
+     */
     func setImage(cell: ContactTableViewCell, contact: NSManagedObject) -> ContactTableViewCell {
         if(contact.value(forKeyPath: "image") == nil) {
             cell.contactImage.image = UIImage.fontAwesomeIcon(name: .user, textColor: UIColor.black, size: CGSize(width: 128, height: 128))

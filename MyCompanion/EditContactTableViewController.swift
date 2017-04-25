@@ -43,10 +43,6 @@ class EditContactTableViewController: UITableViewController {
         
     }
     
-//    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-//        self.performSegue(withIdentifier: "editContactSegue", sender: self);
-//
-//    }
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.performSegue(withIdentifier: "editContactSegue", sender: self)
     }

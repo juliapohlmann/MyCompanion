@@ -14,6 +14,17 @@ class CaregiverTileViewController: UIViewController {
     @IBOutlet var caregiverImage: UIImageView!
     @IBOutlet var newWordField: UITextField?
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        caregiverImage.image = UIImage.fontAwesomeIcon(name: .cog, textColor: UIColor.black, size: CGSize(width: 128, height: 128))
+    }
+    
+    /**
+        Called when alert prompt is entered
+     
+        - Parameter alert: alert that was closed
+     */
     func wordEntered(alert: UIAlertAction!){
         
         let originalPassword = UserDefaults.standard.object(forKey: "userPassword") as! String
@@ -21,35 +32,36 @@ class CaregiverTileViewController: UIViewController {
         if(newWordField?.text == originalPassword) {
             
             performSegue(withIdentifier: "caregiverTileToCaregiverPageSegue", sender: self)
-            
         } else {
-            
             presentPrompt()
-            
         }
-        
     }
     
+    /**
+        Adds text field to alert controller
+     
+        - Parameter textField: text field to add to alert
+     */
     func addTextField(textField: UITextField!){
-        // add the text field and make the result global
         textField.placeholder = "Password"
         textField.isSecureTextEntry = true
 
         self.newWordField = textField
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        caregiverImage.image = UIImage.fontAwesomeIcon(name: .cog, textColor: UIColor.black, size: CGSize(width: 128, height: 128))
-    }
-    
+    /**
+        present prompt when caregiver portal tile is clicked
+     
+        - Parameter sender: button clicked
+     */
     @IBAction func caregiverPortalClick(_ sender: Any) {
-        
         presentPrompt()
-        
     }
     
+    /**
+        Creates UI Alert Controller and shows it
+     
+     */
     func presentPrompt() {
         
         let newWordPrompt = UIAlertController(title: "Enter Password", message: "Please enter the caregiver password", preferredStyle: UIAlertControllerStyle.alert)
@@ -58,7 +70,5 @@ class CaregiverTileViewController: UIViewController {
         newWordPrompt.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: wordEntered))
         
         present(newWordPrompt, animated: true, completion: nil)
-        
-        
     }
 }

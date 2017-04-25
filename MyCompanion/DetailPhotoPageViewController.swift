@@ -144,10 +144,7 @@ class DetailPhotoPageViewController: UIViewController, UIImagePickerControllerDe
             videoID = uniqueID  + "VIDEO.MOV"
             let docDataPath = documentsDirectory.appendingPathComponent(videoID) as String
             try? myVideoVarData.write(to: URL(fileURLWithPath: docDataPath), options: [])
-            print("docDataPath under picker ",docDataPath)
-            
-            print(docDataPath)
-            
+
             //makes thumbnail
             let asset = AVURLAsset(url: videoURL! as URL, options: nil)
             let imgGenerator = AVAssetImageGenerator(asset: asset)

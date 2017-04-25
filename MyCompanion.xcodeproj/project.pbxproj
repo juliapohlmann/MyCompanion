@@ -28,6 +28,17 @@
 		1CCEA7801E89E62800252E2A /* PhotoPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CCEA77F1E89E62800252E2A /* PhotoPageViewController.swift */; };
 		1CE476F81EAD764500B7A50C /* WalkthroughViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE476F71EAD764500B7A50C /* WalkthroughViewController.swift */; };
 		1CE9A3F61EA15A8600D44333 /* play-btn.png in Resources */ = {isa = PBXBuildFile; fileRef = 1CE9A3F51EA15A8600D44333 /* play-btn.png */; };
+		1CF3EF351EAFFF810071AD91 /* 1T_Fiverr.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1CF3EF2A1EAFFF810071AD91 /* 1T_Fiverr.jpg */; };
+		1CF3EF361EAFFF810071AD91 /* 1P_Fiverr.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1CF3EF2B1EAFFF810071AD91 /* 1P_Fiverr.jpg */; };
+		1CF3EF371EAFFF810071AD91 /* 1V_Fiverr.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1CF3EF2C1EAFFF810071AD91 /* 1V_Fiverr.jpg */; };
+		1CF3EF381EAFFF810071AD91 /* 11DP_Fiverr.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1CF3EF2D1EAFFF810071AD91 /* 11DP_Fiverr.jpg */; };
+		1CF3EF391EAFFF810071AD91 /* 11DV_Fiverr.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1CF3EF2E1EAFFF810071AD91 /* 11DV_Fiverr.jpg */; };
+		1CF3EF3A1EAFFF810071AD91 /* 11LP_Fiverr.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1CF3EF2F1EAFFF810071AD91 /* 11LP_Fiverr.jpg */; };
+		1CF3EF3B1EAFFF810071AD91 /* 11LV_Fiverr.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1CF3EF301EAFFF810071AD91 /* 11LV_Fiverr.jpg */; };
+		1CF3EF3D1EAFFF810071AD91 /* 11RV_Fiverr.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1CF3EF321EAFFF810071AD91 /* 11RV_Fiverr.jpg */; };
+		1CF3EF3E1EAFFF810071AD91 /* 11TP_Fiverr.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1CF3EF331EAFFF810071AD91 /* 11TP_Fiverr.jpg */; };
+		1CF3EF3F1EAFFF810071AD91 /* 11TV_Fiverr.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1CF3EF341EAFFF810071AD91 /* 11TV_Fiverr.jpg */; };
+		1CF3EF411EB005A40071AD91 /* 11RP_Fiverr.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1CF3EF401EB005A40071AD91 /* 11RP_Fiverr.jpg */; };
 		6908902E721E1B70ACB83D9D /* Pods_MyCompanionTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FB1E8DD63FDE025EFF94606 /* Pods_MyCompanionTests.framework */; };
 		85E610E145E74BEC93F2440A /* Pods_MyCompanionUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56C39383E4FF86AFA081F0EA /* Pods_MyCompanionUITests.framework */; };
 		93DCC6AA7C143FDF12A68B44 /* Pods_MyCompanion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD700589041BBF8E6FEA6A60 /* Pods_MyCompanion.framework */; };
@@ -105,6 +116,17 @@
 		1CCEA77F1E89E62800252E2A /* PhotoPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoPageViewController.swift; sourceTree = "<group>"; };
 		1CE476F71EAD764500B7A50C /* WalkthroughViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkthroughViewController.swift; sourceTree = "<group>"; };
 		1CE9A3F51EA15A8600D44333 /* play-btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "play-btn.png"; sourceTree = "<group>"; };
+		1CF3EF2A1EAFFF810071AD91 /* 1T_Fiverr.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1T_Fiverr.jpg; sourceTree = "<group>"; };
+		1CF3EF2B1EAFFF810071AD91 /* 1P_Fiverr.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1P_Fiverr.jpg; sourceTree = "<group>"; };
+		1CF3EF2C1EAFFF810071AD91 /* 1V_Fiverr.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1V_Fiverr.jpg; sourceTree = "<group>"; };
+		1CF3EF2D1EAFFF810071AD91 /* 11DP_Fiverr.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 11DP_Fiverr.jpg; sourceTree = "<group>"; };
+		1CF3EF2E1EAFFF810071AD91 /* 11DV_Fiverr.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 11DV_Fiverr.jpg; sourceTree = "<group>"; };
+		1CF3EF2F1EAFFF810071AD91 /* 11LP_Fiverr.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 11LP_Fiverr.jpg; sourceTree = "<group>"; };
+		1CF3EF301EAFFF810071AD91 /* 11LV_Fiverr.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 11LV_Fiverr.jpg; sourceTree = "<group>"; };
+		1CF3EF321EAFFF810071AD91 /* 11RV_Fiverr.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 11RV_Fiverr.jpg; sourceTree = "<group>"; };
+		1CF3EF331EAFFF810071AD91 /* 11TP_Fiverr.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 11TP_Fiverr.jpg; sourceTree = "<group>"; };
+		1CF3EF341EAFFF810071AD91 /* 11TV_Fiverr.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 11TV_Fiverr.jpg; sourceTree = "<group>"; };
+		1CF3EF401EB005A40071AD91 /* 11RP_Fiverr.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 11RP_Fiverr.jpg; sourceTree = "<group>"; };
 		2B7A28B926C4AC51AF438EA7 /* Pods-MyCompanionUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyCompanionUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyCompanionUITests/Pods-MyCompanionUITests.release.xcconfig"; sourceTree = "<group>"; };
 		56C39383E4FF86AFA081F0EA /* Pods_MyCompanionUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyCompanionUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FB3639B2469D22A6B618391 /* Pods-MyCompanion.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyCompanion.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyCompanion/Pods-MyCompanion.release.xcconfig"; sourceTree = "<group>"; };
@@ -202,6 +224,25 @@
 				DA3045681E8C1BE8003CEC9B /* Patient side */,
 			);
 			name = "Memory Book";
+			sourceTree = "<group>";
+		};
+		1CF3EF291EAFFF5D0071AD91 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				1CE9A3F51EA15A8600D44333 /* play-btn.png */,
+				1CF3EF2A1EAFFF810071AD91 /* 1T_Fiverr.jpg */,
+				1CF3EF2B1EAFFF810071AD91 /* 1P_Fiverr.jpg */,
+				1CF3EF2C1EAFFF810071AD91 /* 1V_Fiverr.jpg */,
+				1CF3EF2D1EAFFF810071AD91 /* 11DP_Fiverr.jpg */,
+				1CF3EF2E1EAFFF810071AD91 /* 11DV_Fiverr.jpg */,
+				1CF3EF2F1EAFFF810071AD91 /* 11LP_Fiverr.jpg */,
+				1CF3EF301EAFFF810071AD91 /* 11LV_Fiverr.jpg */,
+				1CF3EF321EAFFF810071AD91 /* 11RV_Fiverr.jpg */,
+				1CF3EF401EB005A40071AD91 /* 11RP_Fiverr.jpg */,
+				1CF3EF331EAFFF810071AD91 /* 11TP_Fiverr.jpg */,
+				1CF3EF341EAFFF810071AD91 /* 11TV_Fiverr.jpg */,
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 		20C332A64E5E9C90DC1180CE /* Pods */ = {
@@ -373,7 +414,6 @@
 				DA8580FB1E4134570055134E /* DashboardViewController.swift */,
 				DA8580FD1E4134570055134E /* Main.storyboard */,
 				1CE476F71EAD764500B7A50C /* WalkthroughViewController.swift */,
-				1CE9A3F51EA15A8600D44333 /* play-btn.png */,
 				DA8581031E4134570055134E /* Assets.xcassets */,
 				DA8581051E4134570055134E /* LaunchScreen.storyboard */,
 				DA8581081E4134570055134E /* Info.plist */,
@@ -386,6 +426,7 @@
 				DAE3BB7A1E6C93BA009BB9E6 /* Tile View Controllers */,
 				DAE3BB871E6CA58F009BB9E6 /* Contact */,
 				DAE3BB861E6CA585009BB9E6 /* Reminder */,
+				1CF3EF291EAFFF5D0071AD91 /* Images */,
 			);
 			path = MyCompanion;
 			sourceTree = "<group>";
@@ -576,11 +617,22 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1CF3EF371EAFFF810071AD91 /* 1V_Fiverr.jpg in Resources */,
 				DA8581071E4134570055134E /* LaunchScreen.storyboard in Resources */,
+				1CF3EF381EAFFF810071AD91 /* 11DP_Fiverr.jpg in Resources */,
+				1CF3EF3D1EAFFF810071AD91 /* 11RV_Fiverr.jpg in Resources */,
+				1CF3EF3B1EAFFF810071AD91 /* 11LV_Fiverr.jpg in Resources */,
+				1CF3EF391EAFFF810071AD91 /* 11DV_Fiverr.jpg in Resources */,
 				DA8581041E4134570055134E /* Assets.xcassets in Resources */,
+				1CF3EF3F1EAFFF810071AD91 /* 11TV_Fiverr.jpg in Resources */,
+				1CF3EF351EAFFF810071AD91 /* 1T_Fiverr.jpg in Resources */,
 				1C5B48F21EA7BAC20082E1AC /* tips.json in Resources */,
+				1CF3EF3E1EAFFF810071AD91 /* 11TP_Fiverr.jpg in Resources */,
+				1CF3EF3A1EAFFF810071AD91 /* 11LP_Fiverr.jpg in Resources */,
+				1CF3EF361EAFFF810071AD91 /* 1P_Fiverr.jpg in Resources */,
 				1CE9A3F61EA15A8600D44333 /* play-btn.png in Resources */,
 				DA8580FF1E4134570055134E /* Main.storyboard in Resources */,
+				1CF3EF411EB005A40071AD91 /* 11RP_Fiverr.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

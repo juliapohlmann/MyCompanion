@@ -11,6 +11,11 @@ import UIKit
 class AddPageTableViewController: UITableViewController {
 
     var types = ["11LP", "11RP", "11TP", "11DP", "11LV", "11RV", "11TV", "11DV", "1T", "1P", "1V"]
+    let OneOnePtypes = 4
+    let OneOneVtypes = 4
+    let OneTtypes = 1
+    let OnePtypes = 1
+    let OneVtypes = 1
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,29 +30,39 @@ class AddPageTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if(section == 0 || section == 1) {
-            return 4
-        } else {
-            return 1
+        
+        switch(section){
+        case 0:return OneOnePtypes;
+        case 1:return OneOneVtypes;
+        case 2:return OneTtypes;
+        case 3:return OnePtypes;
+        case 4:return OneVtypes;
+        default:return 0
         }
+        
     }
     
     override func tableView(_ tableView: UITableView,
                             titleForHeaderInSection section: Int) -> String? {
         switch(section){
-            case 0: return "1 text, 1 pic"
-            case 1: return "1 text, 1 vid"
-            case 2: return "1 text"
-            case 3: return "1 pic"
-            case 4: return "1 vid"
-            default: return "mistake"
+            case 0: return "1 Picture/Text"
+            case 1: return "1 Video/Text"
+            case 2: return "1 Text"
+            case 3: return "1 Picture"
+            case 4: return "1 Video"
+            default: return "Error"
         }
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: "templateType", for: indexPath)
 
-        cell.textLabel?.text = types[convertIndexPathToRow(indexPath: indexPath)]
+        //cell.textLabel?.text = types[convertIndexPathToRow(indexPath: indexPath)]
+        let fileName = types[convertIndexPathToRow(indexPath: indexPath)] + "_Fiverr.jpg"
+
+        cell.imageView!.image = UIImage(named: fileName)
+        cell.imageView!.center = cell.center
         
         return cell
     }
@@ -89,9 +104,13 @@ class AddPageTableViewController: UITableViewController {
         if(indexPath.section == 0) {
             return indexPath.row
         } else if(indexPath.section == 1) {
-            return indexPath.row + 4
-        } else  {
-            return indexPath.section + 6
+            return indexPath.row + OneOnePtypes
+        } else if(indexPath.section == 2) {
+            return indexPath.row + OneOnePtypes + OneOneVtypes
+        } else if(indexPath.section == 3) {
+            return indexPath.row + OneOnePtypes + OneOneVtypes + OneTtypes
+        } else {
+            return indexPath.row + OneOnePtypes + OneOneVtypes + OneTtypes + OnePtypes
         }
     }
 

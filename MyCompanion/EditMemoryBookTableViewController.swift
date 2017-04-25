@@ -56,12 +56,9 @@ class EditMemoryBookTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         
         if editingStyle == .delete {
-            let didDelete = MemoryBookDataManager.deletePage(page: pages[indexPath.row])
-            if didDelete {
+            if MemoryBookDataManager.deletePage(page: pages[indexPath.row]) {
                 pages = MemoryBookDataManager.fetchPages()
                 tableView.deleteRows(at: [indexPath], with: .fade)
-            } else {
-                print("didnt delete!")
             }
         }
     }

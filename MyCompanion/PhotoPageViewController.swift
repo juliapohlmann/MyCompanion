@@ -36,7 +36,6 @@ class PhotoPageViewController: UIViewController {
         let paths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
         let documentsDirectory = paths[0]
         let videoDataPath = documentsDirectory + "/" + videoID
-        print(videoDataPath)
         return URL(fileURLWithPath: videoDataPath)
     }
     

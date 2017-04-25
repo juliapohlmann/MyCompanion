@@ -165,10 +165,7 @@ class DetailLabelPhotoPageViewController: UIViewController, UIImagePickerControl
             videoID = uniqueID  + "VIDEO.MOV"
             let docDataPath = documentsDirectory.appendingPathComponent(videoID) as String
             try? myVideoVarData.write(to: URL(fileURLWithPath: docDataPath), options: [])
-            print("docDataPath under picker ",docDataPath)
-            
-            print(docDataPath)
-            
+
             //makes thumbnail
             let asset = AVURLAsset(url: videoURL! as URL, options: nil)
             let imgGenerator = AVAssetImageGenerator(asset: asset)
@@ -179,13 +176,6 @@ class DetailLabelPhotoPageViewController: UIViewController, UIImagePickerControl
             } catch {
                 print(error)
             }
-            //
-            //            do {
-            //                imageData = try NSData(contentsOf: videoURL! as URL, options: NSData.ReadingOptions())
-            //            } catch {
-            //                print(error)
-            //            }
-            //
         }
         
         dismiss(animated: true, completion: nil)

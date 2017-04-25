@@ -30,7 +30,7 @@ class WalkthroughViewController: UIViewController {
         
         updateView()
         
-        //do we need more for caching?
+        //do we need more for caching?..
         UserDefaults.standard.set("ipad", forKey: "userPassword")
         
         UserDefaults.standard.set(true, forKey: "canCall")
@@ -38,6 +38,7 @@ class WalkthroughViewController: UIViewController {
         UserDefaults.standard.set(true, forKey: "showPhoneNumbers")
         UserDefaults.standard.set(true, forKey: "showEmails")
         UserDefaults.standard.set(true, forKey: "resetRemindersDaily")
+        UserDefaults.standard.set(Date(),forKey: "lastOpened")
     }
 
     override func didReceiveMemoryWarning() {

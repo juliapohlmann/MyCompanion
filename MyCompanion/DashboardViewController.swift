@@ -31,7 +31,7 @@ class DashboardViewController: UIViewController {
         let shouldResetDaily = UserDefaults.standard.object(forKey: "resetRemindersDaily") as! Bool
         
         if(shouldResetDaily) {
-
+            
             let lastOpened : Date = UserDefaults.standard.object(forKey: "lastOpened") as! Date
             let currentDate = Date()
 

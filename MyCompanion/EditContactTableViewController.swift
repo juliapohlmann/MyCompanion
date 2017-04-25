@@ -51,15 +51,10 @@ class EditContactTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            let didDelete = ContactDataManager.deleteContact(contact: contacts[indexPath.row])
-            
-            if didDelete {
+            if ContactDataManager.deleteContact(contact: contacts[indexPath.row]) {
                 contacts = ContactDataManager.fetchContacts()
                 tableView.deleteRows(at: [indexPath], with: .fade)
-            } else {
-                print ("didnt delete!!")
             }
-            
         }
     }
     

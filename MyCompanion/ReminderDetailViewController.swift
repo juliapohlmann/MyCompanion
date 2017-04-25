@@ -55,7 +55,7 @@ class ReminderDetailViewController: UIViewController, UITextFieldDelegate {
      */
     @IBAction func storeReminder(_ sender: Any) {
         if(checkInputValidity()) {
-            let didSucceed = false
+            var didSucceed = false
             if(type == "Add Reminder") {
                 didSucceed = ReminderDataManager.storeReminder(reminderText: nameTextField.text!)
             } else if (type == "Edit Reminder") {

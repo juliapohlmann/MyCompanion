@@ -28,32 +28,53 @@ class ReminderDetailViewController: UIViewController, UITextFieldDelegate {
         // Do any additional setup after loading the view.
     }
     
+    /**
+        Textfield delegate method when done editing
+     
+        - Parameter textField: text field to end editing
+     
+        - Returns: returns false always
+     */
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         self.view.endEditing(true)
         return false
     }
     
+    /**
+        If editing an existing reminder, load the reminder text
+     
+     */
     func loadReminder() {
         nameTextField.text = reminder?.value(forKeyPath: "text") as? String
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
     
+    /**
+        Function that is called when save button is tapped
+     
+        - Parameter sender: button clicked
+     */
     @IBAction func storeReminder(_ sender: Any) {
         if(checkInputValidity()) {
-            //ADD CHECK FOR REMINDER FORMAT
+            let didSucceed = false
             if(type == "Add Reminder") {
-                _ = ReminderDataManager.storeReminder(reminderText: nameTextField.text!)
+                didSucceed = ReminderDataManager.storeReminder(reminderText: nameTextField.text!)
             } else if (type == "Edit Reminder") {
-                _ = ReminderDataManager.updateReminder(reminder: self.reminder!, reminderText: nameTextField.text!)
+                didSucceed = ReminderDataManager.updateReminder(reminder: self.reminder!, reminderText: nameTextField.text!)
             }
-            performSegue(withIdentifier: "backToEditReminders", sender: self)
+            
+            if(didSucceed) {
+                performSegue(withIdentifier: "backToEditReminders", sender: self)
+            } else {
+                print("Problem updating/saving reminder")
+            }
         }
     }
     
+    /**
+        Helper function that checks input values are valid
+     
+        - Returns: true if valid, false if not
+     */
     func checkInputValidity() -> Bool {
         if(nameTextField.text! == "") {
             sendAlert(title: "MissingText", message: "Please enter text for the reminder")
@@ -62,15 +83,16 @@ class ReminderDetailViewController: UIViewController, UITextFieldDelegate {
         return true
     }
     
+    /**
+        Presents UI Alert Controller if input is not valid
+     
+        - Parameter title: title of alert controller
+        - Parameter message: message of alert controller
+     */
     func sendAlert(title: String, message: String) {
         let controller : UIAlertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let ok = UIAlertAction(title: "OK", style: .default, handler: nil)
         controller.addAction(ok)
         present(controller, animated: true, completion: nil)
     }
-    
-//    func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if(segue.identifier == ")
-//    }
-
 }

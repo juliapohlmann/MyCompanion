@@ -126,20 +126,21 @@ class ContactDetailViewController: UIViewController, UIImagePickerControllerDele
      */
     @IBAction func storeContact(_ sender: Any) {
         if(checkInputValidity()) {
+            let didSucceed = false
             //if adding contact, use store contact method
             if(type == "Add Contact") {
-                let didStore = ContactDataManager.storeContact(name: nameTextField.text!, relationship: relationshipTextField.text!, number: numberTextField.text, email: emailTextField.text, imageData: imageData)
+                didSucceed = ContactDataManager.storeContact(name: nameTextField.text!, relationship: relationshipTextField.text!, number: numberTextField.text, email: emailTextField.text, imageData: imageData)
                 
                 if(didStore) {
                     performSegue(withIdentifier: "backToEditContacts", sender: self)
                 }
             } else {
                 //editing contact, update fields of passed contact
-                let didUpdate = ContactDataManager.updateContact(contact: contact!, name: nameTextField.text!, relationship: relationshipTextField.text!, number: numberTextField.text!, email: emailTextField.text!, imageData: imageData!)
-                
-                if(didUpdate) {
-                    performSegue(withIdentifier: "backToEditContacts", sender: self)
-                }
+                didSucceed = ContactDataManager.updateContact(contact: contact!, name: nameTextField.text!, relationship: relationshipTextField.text!, number: numberTextField.text!, email: emailTextField.text!, imageData: imageData!)
+            }
+            
+            if(didSucceed) {
+                performSegue(withIdentifier: "backToEditContacts", sender: self)
             }
         }
     }

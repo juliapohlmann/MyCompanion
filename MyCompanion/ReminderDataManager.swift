@@ -12,11 +12,21 @@ import UIKit
 
 class ReminderDataManager {
     
+    /**
+        Gets current context so core data operations can be done
+     
+        - Returns: current context
+     */
     static func getContext() -> NSManagedObjectContext {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         return appDelegate.persistentContainer.viewContext
     }
     
+    /**
+        Returns reminders from core data
+     
+        - Returns: array of core data objects
+     */
     static func fetchReminders() -> [NSManagedObject] {
         let context = getContext()
         let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Reminder")
@@ -29,6 +39,13 @@ class ReminderDataManager {
         }
     }
     
+    /**
+        Create new contact and save text
+     
+        - Parameter reminderText: text to store
+     
+        - Returns: bool of whether store was succesful
+     */
     static func storeReminder(reminderText: String) -> Bool {
         let context = getContext()
         let entity = NSEntityDescription.entity(forEntityName: "Reminder", in: context)
@@ -45,6 +62,14 @@ class ReminderDataManager {
         }
     }
     
+    /**
+        Update text of existing reminder
+     
+        - Parameter reminder: reminder to update
+        - Parameter reminderText: text to store
+     
+        - Returns: bool of whether update was succesful
+     */
     static func updateReminder(reminder: NSManagedObject, reminderText: String) -> Bool {
         let context = getContext()
         
@@ -58,6 +83,13 @@ class ReminderDataManager {
         }
     }
     
+    /**
+        Toggles value of completed for reminder
+     
+        - Parameter reminder: reminder to toggle value of
+     
+        - Returns: bool of whether toggle was succesful
+     */
     static func toggleReminder(reminder: NSManagedObject) -> Bool {
         let context = getContext()
         
@@ -72,6 +104,13 @@ class ReminderDataManager {
         }
     }
     
+    /**
+        Deletes reminder from core data
+     
+        - Parameter reminder: reminder to be deleted
+     
+        - Returns: bool of whether delete was succesful
+     */
     static func deleteReminder(reminder: NSManagedObject) -> Bool {
         let context = getContext()
         context.delete(reminder)

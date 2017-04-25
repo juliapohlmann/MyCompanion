@@ -12,18 +12,22 @@ import CoreData
 
 class RemindersTableViewController: UITableViewController {
     
-    
-    
-    @IBAction func homeClicked(_ sender: Any) {
-        performSegue(withIdentifier: "remindersToHomeSegue", sender: sender)
-    }
-    
     var reminders = [NSManagedObject]()
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         reminders = ReminderDataManager.fetchReminders()
 
+    }
+    
+    /**
+        When home is clicked, segue to dashboard view controller
+     
+        - Parameter sender = button clicked
+     
+     */
+    @IBAction func homeClicked(_ sender: Any) {
+        performSegue(withIdentifier: "remindersToHomeSegue", sender: sender)
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -49,13 +53,9 @@ class RemindersTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! RemindersTableViewCell
         
         cell.selectionStyle = UITableViewCellSelectionStyle.none
-//        let reminderText = reminders[indexPath.row].value(forKeyPath: "text") as? String
         cell.setReminder(reminder: reminders[indexPath.row])
         
         return cell
     }
-    
-    
-    
 }
 

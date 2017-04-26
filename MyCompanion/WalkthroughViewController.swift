@@ -147,8 +147,8 @@ class WalkthroughViewController: UIViewController, CLLocationManagerDelegate {
                 textField.isSecureTextEntry = true
             }
             
-            alertController.addAction(saveAction)
             alertController.addAction(cancelAction)
+            alertController.addAction(saveAction)
             
             self.present(alertController, animated: true, completion: nil)
             
@@ -167,7 +167,8 @@ class WalkthroughViewController: UIViewController, CLLocationManagerDelegate {
             introText.text = "You're all good to go! Click next to enter MyCompanion!"
 
         } else if(progress == 12) {
-            
+            UserDefaults.standard.set(Date(), forKey: "lastOpened")
+            UserDefaults.standard.synchronize()
             self.performSegue(withIdentifier: "toDashboard", sender: self)
             
         }

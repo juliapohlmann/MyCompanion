@@ -13,13 +13,27 @@ class DashboardViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        if(shouldResetReminders()) {
-            _ = ReminderDataManager.resetAllReminders()
+
+        if(shouldWalkthrough()) {
+            
+            DispatchQueue.main.async( execute: {
+                self.performSegue(withIdentifier: "segueToWalkthrough", sender: self)
+            })
+        } else {
+            if(shouldResetReminders()) {
+                _ = ReminderDataManager.resetAllReminders()
+            }
+            UserDefaults.standard.set(Date(), forKey: "lastOpened")
+            UserDefaults.standard.synchronize()
         }
-        
-        UserDefaults.standard.set(Date(), forKey: "lastOpened")
-        UserDefaults.standard.synchronize()
+    }
+    
+    func shouldWalkthrough() -> Bool{
+        if let _ = UserDefaults.standard.object(forKey: "lastOpened") as? Date, let _ = UserDefaults.standard.object(forKey: "userPassword") as? String {
+            return false
+        } else {
+            return true
+        }
     }
     
     /**

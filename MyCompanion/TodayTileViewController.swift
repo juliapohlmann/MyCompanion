@@ -28,10 +28,6 @@ class TodayTileViewController: UIViewController, CLLocationManagerDelegate {
         setDateText()
         manager.delegate = self
         
-        //NEED TO PUT THIS IN WALKTHROUGH
-        manager.requestAlwaysAuthorization()
-        //
-        
         var weatherLocData = WeatherLocationDataManager.fetchWeatherLocationData()
         if(weatherLocData.count == 0) {
             initialWeatherFetch()

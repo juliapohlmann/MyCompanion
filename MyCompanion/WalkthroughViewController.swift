@@ -128,7 +128,6 @@ class WalkthroughViewController: UIViewController, CLLocationManagerDelegate {
         
             let saveAction = UIAlertAction(title: "Save", style: UIAlertActionStyle.default, handler: {
                 alert -> Void in
-                
                 let password = alertController.textFields![0].text
                 UserDefaults.standard.set(password, forKey: "userPassword")
                 UserDefaults.standard.synchronize()
@@ -145,6 +144,7 @@ class WalkthroughViewController: UIViewController, CLLocationManagerDelegate {
             
             alertController.addTextField { (textField : UITextField!) -> Void in
                 textField.placeholder = "Enter Password"
+                textField.isSecureTextEntry = true
             }
             
             alertController.addAction(saveAction)

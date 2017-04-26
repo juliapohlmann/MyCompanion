@@ -125,8 +125,8 @@ class ContactTableViewControllerTests: XCTestCase {
         return contacts.last!
     }
     
-    func deleteContact(contact: NSManagedObject) {
-        ContactDataManager.deleteContact(contact: contact)
-    }
+//    func deleteContact(contact: NSManagedObject) {
+//        ContactDataManager.deleteContact(contact: contact)
+//    }
     
 }

@@ -39,11 +39,6 @@ class WalkthroughViewController: UIViewController, CLLocationManagerDelegate {
         UserDefaults.standard.set(true, forKey: "resetRemindersDaily")
         UserDefaults.standard.set(Date(),forKey: "lastOpened")
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
     
     @IBAction func clickPrevious(_ sender: Any) {
         
@@ -61,120 +56,85 @@ class WalkthroughViewController: UIViewController, CLLocationManagerDelegate {
     
     func updateView() {
         
-        self.previousButton.isHidden = false
-        self.nextButton.isHidden = false
-        self.prevIcon.isHidden = false
-        self.nextIcon.isHidden = false
-        self.prevLabel.isHidden = false
-        self.nextLabel.isHidden = false
+        toggleAllElements(isHidden: false)
         
-        if(progress == 0) {
-            
-            self.previousButton.isHidden = true
-            self.prevIcon.isHidden = true
-            self.prevLabel.isHidden = true
-            
-        }
-        
-        if(progress == 12) {
-            
-            self.nextButton.isHidden = true
-            self.nextIcon.isHidden = true
-            self.nextLabel.isHidden = true
-            self.previousButton.isHidden = true
-            self.prevIcon.isHidden = true
-            self.prevLabel.isHidden = true
-            self.introPic.isHidden = true
-            self.introText.isHidden = true
-            
-        }
-        
-        if(progress == 0) {
-            
-            introText.text = "Welcome to MyCompanion! This app provides a ton of tools to help caregivers!"
-            
-            
-        } else if(progress == 1) {
-            
-            introText.text = "MyCompanion is a hub for dementia ____ - where they can find information about where they are, their life, their friends, and their schedule."
-            
-        } else if(progress == 2) {
-            
-            introText.text = "This information is set by the caregiver, who has their own portal where they have full control of information accessed by the ____"
-            
-        } else if(progress == 3) {
-            
-            introText.text = "Caregivers control their list of contacts, and whether they're allowed to call and email them."
-            
-        } else if(progress == 4) {
-            
-            introText.text = "Caregivers can also set reminders, which reset daily."
-            
-        }else if(progress == 5) {
-            
+        switch progress {
+        case 0:
+            hidePreviousElements()
+            introText.text = "Welcome to MyCompanion! This application will help you connect with your loved ones as you live each day to its fullest!"
+        case 1:
+            introText.text = "MyCompanion aims to help individuals with dementia with their day to day activities, from remembering happy time with family to knowing their current location and weather."
+        case 2:
+            introText.text = "All of the settings and information is set and controller by the caregiver. These controls are in a portal which is password protected and features a quick help section with information fromt the Alzheimer's Assocation."
+        case 3:
+            introText.text = "Users can view their family and friends and be reminded of their relationship with that individual and a photo. Optionally, caregivers can choose to display the phone number and email and even enable calling and emailing from within MyCompanion."
+        case 4:
+            introText.text = "A reminders list helps individuals to create and adhere to a daily schedule. Caregivers set the reminders in the caregiver portal and individuals can complete them. Caregivers can also allow reminders to reset daily!"
+        case 5:
             introText.text = "Caregivers can also set a memory book. This is a place for caregivers to tell the life story of their ___ through pictures and videos."
-            
-        }else if(progress == 6) {
-            
+        case 6:
             introText.text = "Caregivers have full control on what actions a __ can make while using the app, allowing each caregiver to customize the experience for each individual."
-            
-        }else if(progress == 7) {
-            
+        case 7:
             introText.text = "The caregiver is protected by a password. You'll have to set a password next. "
-            
-        }else if(progress == 8){
-            
-            let alertController = UIAlertController(title: "Enter Password", message: "", preferredStyle: UIAlertControllerStyle.alert)
-        
-            let saveAction = UIAlertAction(title: "Save", style: UIAlertActionStyle.default, handler: {
-                alert -> Void in
-                let password = alertController.textFields![0].text
-                UserDefaults.standard.set(password, forKey: "userPassword")
-                UserDefaults.standard.synchronize()
-                
-                self.progress = 9
-                self.updateView()
-                
-            })
-            
-            let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.default, handler: {
-                (action : UIAlertAction!) -> Void in
-                
-            })
-            
-            alertController.addTextField { (textField : UITextField!) -> Void in
-                textField.placeholder = "Enter Password"
-                textField.isSecureTextEntry = true
-            }
-            
-            alertController.addAction(cancelAction)
-            alertController.addAction(saveAction)
-            
-            self.present(alertController, animated: true, completion: nil)
-            
-        } else if(progress == 9) {
-            
+        case 8:
+            askPassword()
+        case 9:
             introText.text = "We will also need access to your location to provide information about your location and weather "
-            
-        } else if(progress == 10) {
-            
-            let manager = CLLocationManager()
-            manager.delegate = self
-            manager.requestAlwaysAuthorization()
-            
-        } else if(progress == 11) {
-            
+        case 10:
             introText.text = "You're all good to go! Click next to enter MyCompanion!"
-
-        } else if(progress == 12) {
+        case 11:
+            toggleAllElements(isHidden: true)
             UserDefaults.standard.set(Date(), forKey: "lastOpened")
             UserDefaults.standard.synchronize()
             self.performSegue(withIdentifier: "toDashboard", sender: self)
+        default:
+            print("not applicable progress value")
+        }
+    }
+    
+    func askPassword() {
+        let alertController = UIAlertController(title: "Enter Password", message: "", preferredStyle: UIAlertControllerStyle.alert)
+        
+        let saveAction = UIAlertAction(title: "Save", style: UIAlertActionStyle.default, handler: {
+            alert -> Void in
+            let password = alertController.textFields![0].text
+            UserDefaults.standard.set(password, forKey: "userPassword")
+            UserDefaults.standard.synchronize()
             
+            self.progress = 9
+            self.updateView()
+            
+        })
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.default, handler: {
+            (action : UIAlertAction!) -> Void in
+            
+        })
+        
+        alertController.addTextField { (textField : UITextField!) -> Void in
+            textField.placeholder = "Enter Password"
+            textField.isSecureTextEntry = true
         }
         
+        alertController.addAction(cancelAction)
+        alertController.addAction(saveAction)
         
-        
+        self.present(alertController, animated: true, completion: nil)
+    }
+    
+    func toggleAllElements(isHidden: Bool) {
+        self.previousButton.isHidden = isHidden
+        self.nextButton.isHidden = isHidden
+        self.prevIcon.isHidden = isHidden
+        self.nextIcon.isHidden = isHidden
+        self.prevLabel.isHidden = isHidden
+        self.nextLabel.isHidden = isHidden
+    }
+    
+    func hidePreviousElements() {
+        self.previousButton.isHidden = true
+        self.prevIcon.isHidden = true
+        self.prevLabel.isHidden = true
     }
 
 }

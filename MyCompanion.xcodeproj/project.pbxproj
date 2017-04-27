@@ -69,6 +69,12 @@
 		DA85811D1E4134570055134E /* MyCompanionUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA85811C1E4134570055134E /* MyCompanionUITests.swift */; };
 		DA85812B1E41357B0055134E /* TodayTileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA85812A1E41357B0055134E /* TodayTileViewController.swift */; };
 		DA8A8F0A1EA931C300BB2939 /* WeatherLocationDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8A8F091EA931C300BB2939 /* WeatherLocationDataManager.swift */; };
+		DA8FDA611EB22C990037880F /* Reminders_Walkthrough.png in Resources */ = {isa = PBXBuildFile; fileRef = DA8FDA5B1EB22C990037880F /* Reminders_Walkthrough.png */; };
+		DA8FDA621EB22C990037880F /* MemoryBook_Walkthrough.png in Resources */ = {isa = PBXBuildFile; fileRef = DA8FDA5C1EB22C990037880F /* MemoryBook_Walkthrough.png */; };
+		DA8FDA631EB22C990037880F /* CaregiverTips_Walkthrough.png in Resources */ = {isa = PBXBuildFile; fileRef = DA8FDA5D1EB22C990037880F /* CaregiverTips_Walkthrough.png */; };
+		DA8FDA641EB22C990037880F /* CaregiverPortal_Walkthrough.png in Resources */ = {isa = PBXBuildFile; fileRef = DA8FDA5E1EB22C990037880F /* CaregiverPortal_Walkthrough.png */; };
+		DA8FDA651EB22C990037880F /* Contacts_Walkthrough.png in Resources */ = {isa = PBXBuildFile; fileRef = DA8FDA5F1EB22C990037880F /* Contacts_Walkthrough.png */; };
+		DA8FDA661EB22C990037880F /* Dashboard_Walkthrough.png in Resources */ = {isa = PBXBuildFile; fileRef = DA8FDA601EB22C990037880F /* Dashboard_Walkthrough.png */; };
 		DAAF9C1D1E8AFA9A0050BE11 /* MemoryBookDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAF9C1C1E8AFA9A0050BE11 /* MemoryBookDataManager.swift */; };
 		DAE3BB7C1E6C93D7009BB9E6 /* ReminderTileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE3BB7B1E6C93D7009BB9E6 /* ReminderTileViewController.swift */; };
 		DAE3BB7E1E6C9636009BB9E6 /* MemoryBookTileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE3BB7D1E6C9636009BB9E6 /* MemoryBookTileViewController.swift */; };
@@ -169,6 +175,12 @@
 		DA85811E1E4134570055134E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DA85812A1E41357B0055134E /* TodayTileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodayTileViewController.swift; sourceTree = "<group>"; };
 		DA8A8F091EA931C300BB2939 /* WeatherLocationDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherLocationDataManager.swift; sourceTree = "<group>"; };
+		DA8FDA5B1EB22C990037880F /* Reminders_Walkthrough.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Reminders_Walkthrough.png; path = "../../MyCompanion Captures/Reminders_Walkthrough.png"; sourceTree = "<group>"; };
+		DA8FDA5C1EB22C990037880F /* MemoryBook_Walkthrough.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = MemoryBook_Walkthrough.png; path = "../../MyCompanion Captures/MemoryBook_Walkthrough.png"; sourceTree = "<group>"; };
+		DA8FDA5D1EB22C990037880F /* CaregiverTips_Walkthrough.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = CaregiverTips_Walkthrough.png; path = "../../MyCompanion Captures/CaregiverTips_Walkthrough.png"; sourceTree = "<group>"; };
+		DA8FDA5E1EB22C990037880F /* CaregiverPortal_Walkthrough.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = CaregiverPortal_Walkthrough.png; path = "../../MyCompanion Captures/CaregiverPortal_Walkthrough.png"; sourceTree = "<group>"; };
+		DA8FDA5F1EB22C990037880F /* Contacts_Walkthrough.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Contacts_Walkthrough.png; path = "../../MyCompanion Captures/Contacts_Walkthrough.png"; sourceTree = "<group>"; };
+		DA8FDA601EB22C990037880F /* Dashboard_Walkthrough.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Dashboard_Walkthrough.png; path = "../../MyCompanion Captures/Dashboard_Walkthrough.png"; sourceTree = "<group>"; };
 		DAAF9C1C1E8AFA9A0050BE11 /* MemoryBookDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemoryBookDataManager.swift; sourceTree = "<group>"; };
 		DAE3BB7B1E6C93D7009BB9E6 /* ReminderTileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReminderTileViewController.swift; sourceTree = "<group>"; };
 		DAE3BB7D1E6C9636009BB9E6 /* MemoryBookTileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemoryBookTileViewController.swift; sourceTree = "<group>"; };
@@ -229,6 +241,12 @@
 		1CF3EF291EAFFF5D0071AD91 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				DA8FDA5B1EB22C990037880F /* Reminders_Walkthrough.png */,
+				DA8FDA5C1EB22C990037880F /* MemoryBook_Walkthrough.png */,
+				DA8FDA5D1EB22C990037880F /* CaregiverTips_Walkthrough.png */,
+				DA8FDA5E1EB22C990037880F /* CaregiverPortal_Walkthrough.png */,
+				DA8FDA5F1EB22C990037880F /* Contacts_Walkthrough.png */,
+				DA8FDA601EB22C990037880F /* Dashboard_Walkthrough.png */,
 				1CE9A3F51EA15A8600D44333 /* play-btn.png */,
 				1CF3EF2A1EAFFF810071AD91 /* 1T_Fiverr.jpg */,
 				1CF3EF2B1EAFFF810071AD91 /* 1P_Fiverr.jpg */,
@@ -622,17 +640,23 @@
 				1CF3EF381EAFFF810071AD91 /* 11DP_Fiverr.jpg in Resources */,
 				1CF3EF3D1EAFFF810071AD91 /* 11RV_Fiverr.jpg in Resources */,
 				1CF3EF3B1EAFFF810071AD91 /* 11LV_Fiverr.jpg in Resources */,
+				DA8FDA611EB22C990037880F /* Reminders_Walkthrough.png in Resources */,
 				1CF3EF391EAFFF810071AD91 /* 11DV_Fiverr.jpg in Resources */,
+				DA8FDA631EB22C990037880F /* CaregiverTips_Walkthrough.png in Resources */,
 				DA8581041E4134570055134E /* Assets.xcassets in Resources */,
 				1CF3EF3F1EAFFF810071AD91 /* 11TV_Fiverr.jpg in Resources */,
 				1CF3EF351EAFFF810071AD91 /* 1T_Fiverr.jpg in Resources */,
+				DA8FDA651EB22C990037880F /* Contacts_Walkthrough.png in Resources */,
+				DA8FDA621EB22C990037880F /* MemoryBook_Walkthrough.png in Resources */,
 				1C5B48F21EA7BAC20082E1AC /* tips.json in Resources */,
 				1CF3EF3E1EAFFF810071AD91 /* 11TP_Fiverr.jpg in Resources */,
 				1CF3EF3A1EAFFF810071AD91 /* 11LP_Fiverr.jpg in Resources */,
+				DA8FDA641EB22C990037880F /* CaregiverPortal_Walkthrough.png in Resources */,
 				1CF3EF361EAFFF810071AD91 /* 1P_Fiverr.jpg in Resources */,
 				1CE9A3F61EA15A8600D44333 /* play-btn.png in Resources */,
 				DA8580FF1E4134570055134E /* Main.storyboard in Resources */,
 				1CF3EF411EB005A40071AD91 /* 11RP_Fiverr.jpg in Resources */,
+				DA8FDA661EB22C990037880F /* Dashboard_Walkthrough.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

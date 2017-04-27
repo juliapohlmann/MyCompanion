@@ -72,15 +72,15 @@
                                 <rect key="frame" x="121" y="59" width="782" height="650"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="15" baselineAdjustment="alignBaselines" minimumFontSize="26" translatesAutoresizingMaskIntoConstraints="NO" id="hld-4F-99o">
-                                        <rect key="frame" x="8" y="266" width="766" height="376"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="15" baselineAdjustment="alignBaselines" minimumFontSize="25" translatesAutoresizingMaskIntoConstraints="NO" id="hld-4F-99o">
+                                        <rect key="frame" x="8" y="341" width="766" height="301"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="25"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zof-YS-wxT">
-                                        <rect key="frame" x="271" y="8" width="250" height="250"/>
+                                        <rect key="frame" x="222" y="8" width="320" height="320"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                 </subviews>
@@ -103,7 +103,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mqp-za-Qg1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="32" y="-671"/>
+            <point key="canvasLocation" x="32" y="-999"/>
         </scene>
         <!--Dashboard View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -118,31 +118,31 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AVv-Gs-Fol">
-                                <rect key="frame" x="522" y="40" width="482" height="344"/>
+                                <rect key="frame" x="522" y="20" width="482" height="354"/>
                                 <connections>
                                     <segue destination="Hzs-jB-lcY" kind="embed" id="2sq-ac-Ysd"/>
                                 </connections>
                             </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uDF-vx-2Lw">
-                                <rect key="frame" x="20" y="404" width="315" height="344"/>
+                                <rect key="frame" x="20" y="394" width="315" height="354"/>
                                 <connections>
                                     <segue destination="D77-TD-m1a" kind="embed" id="HwB-SJ-4yL"/>
                                 </connections>
                             </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XCR-30-YbH">
-                                <rect key="frame" x="355" y="404" width="315" height="344"/>
+                                <rect key="frame" x="355" y="394" width="315" height="354"/>
                                 <connections>
                                     <segue destination="oJA-Pt-ytX" kind="embed" id="NXJ-vo-Bal"/>
                                 </connections>
                             </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EJx-V5-8Bw">
-                                <rect key="frame" x="689" y="404" width="315" height="344"/>
+                                <rect key="frame" x="689" y="394" width="315" height="354"/>
                                 <connections>
                                     <segue destination="ptB-jL-s6y" kind="embed" id="S74-79-F90"/>
                                 </connections>
                             </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zi7-EH-YEb">
-                                <rect key="frame" x="20" y="40" width="482" height="344"/>
+                                <rect key="frame" x="20" y="20" width="482" height="354"/>
                                 <connections>
                                     <segue destination="o2X-zk-lPT" kind="embed" id="3HO-wf-grk"/>
                                 </connections>
@@ -191,7 +191,7 @@
                         <viewControllerLayoutGuide type="bottom" id="wDT-y5-HJc"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Rzj-Og-jIQ">
-                        <rect key="frame" x="0.0" y="0.0" width="482" height="344"/>
+                        <rect key="frame" x="0.0" y="0.0" width="482" height="354"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gXr-1u-RUx">
@@ -211,7 +211,7 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rPB-NB-Hf6">
-                                <rect key="frame" x="0.0" y="0.0" width="482" height="344"/>
+                                <rect key="frame" x="0.0" y="0.0" width="482" height="354"/>
                                 <connections>
                                     <action selector="memoryBookClick:" destination="Hzs-jB-lcY" eventType="touchUpInside" id="EEj-Hs-U2P"/>
                                     <segue destination="KnS-0o-LI9" kind="presentation" identifier="memoryBookTileToMemoryBookSegue" id="H2L-Hj-1tP"/>
@@ -409,7 +409,7 @@
                                 <rect key="frame" x="0.0" y="120" width="1024" height="88"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0Vw-X1-CKF" id="lGU-Td-cln">
-                                    <rect key="frame" x="0.0" y="0.0" width="1024" height="87.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="1024" height="87"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="REMINDER TEXT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rcS-aU-7dP">
@@ -454,7 +454,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2zs-2u-iRV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-889.45312499999989" y="626.5625"/>
+            <point key="canvasLocation" x="-1164" y="578"/>
         </scene>
         <!--Reminder Tile View Controller-->
         <scene sceneID="hpP-jB-rBc">
@@ -465,7 +465,7 @@
                         <viewControllerLayoutGuide type="bottom" id="IMh-5x-48q"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="SEt-an-5FI">
-                        <rect key="frame" x="0.0" y="0.0" width="315" height="344"/>
+                        <rect key="frame" x="0.0" y="0.0" width="315" height="354"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cZr-X3-aGP">
@@ -482,7 +482,7 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ApA-Kk-tgT">
-                                <rect key="frame" x="0.0" y="0.0" width="315" height="344"/>
+                                <rect key="frame" x="0.0" y="0.0" width="315" height="354"/>
                                 <connections>
                                     <action selector="reminderClick:" destination="D77-TD-m1a" eventType="touchUpInside" id="CSL-fK-BDz"/>
                                     <segue destination="zVN-dJ-7iN" kind="presentation" identifier="reminderTileToReminderPageSegue" id="JYI-gR-lRr"/>
@@ -520,11 +520,11 @@
                         <viewControllerLayoutGuide type="bottom" id="tyB-7W-nyd"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="ykZ-3Q-A8h">
-                        <rect key="frame" x="0.0" y="0.0" width="315" height="344"/>
+                        <rect key="frame" x="0.0" y="0.0" width="315" height="354"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tp0-WB-4uI">
-                                <rect key="frame" x="84.5" y="271" width="146" height="62"/>
+                                <rect key="frame" x="85" y="271" width="146" height="62"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="36"/>
                                 <state key="normal" title="Contacts">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -537,7 +537,7 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bs3-ax-fuf">
-                                <rect key="frame" x="0.0" y="0.0" width="315" height="344"/>
+                                <rect key="frame" x="0.0" y="0.0" width="315" height="354"/>
                                 <connections>
                                     <action selector="contactClick:" destination="oJA-Pt-ytX" eventType="touchUpInside" id="IEB-Cf-MAh"/>
                                     <segue destination="f1G-Sn-6h1" kind="presentation" identifier="contactTileToContactPageSegue" id="hGT-hV-31C"/>
@@ -604,7 +604,7 @@
                                 <rect key="frame" x="0.0" y="120" width="1024" height="279"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="NZn-nw-td7" id="2S3-SI-R4D">
-                                    <rect key="frame" x="0.0" y="0.0" width="1024" height="278.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="1024" height="278"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0of-PY-R6E">
@@ -678,7 +678,7 @@
                         <viewControllerLayoutGuide type="bottom" id="j9d-Wb-l1F"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="VQC-eK-RDY">
-                        <rect key="frame" x="0.0" y="0.0" width="315" height="344"/>
+                        <rect key="frame" x="0.0" y="0.0" width="315" height="354"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sld-LR-o4y">
@@ -695,7 +695,7 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TBc-EY-0Ib">
-                                <rect key="frame" x="0.0" y="0.0" width="315" height="344"/>
+                                <rect key="frame" x="0.0" y="0.0" width="315" height="354"/>
                                 <connections>
                                     <action selector="caregiverPortalClick:" destination="ptB-jL-s6y" eventType="touchUpInside" id="4q0-bw-MRS"/>
                                     <segue destination="eZD-GN-D0P" kind="show" identifier="caregiverTileToCaregiverPageSegue" id="GIl-Gm-D5P"/>
@@ -736,11 +736,11 @@
                                 <rect key="frame" x="0.0" y="28" width="703" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="f1F-O8-WLb" id="TQj-AD-ehf">
-                                    <rect key="frame" x="0.0" y="0.0" width="703" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="703" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="WDN-M6-Y5e">
-                                            <rect key="frame" x="15.5" y="0.0" width="672" height="43.5"/>
+                                            <rect key="frame" x="15" y="0.0" width="673" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="20"/>
                                             <nil key="textColor"/>
@@ -783,7 +783,7 @@
                                 <rect key="frame" x="0.0" y="28" width="703" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="evv-IB-ATc" id="ISs-Gg-y80">
-                                    <rect key="frame" x="0.0" y="0.0" width="703" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="703" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FXb-WD-CFD">
@@ -830,10 +830,10 @@
                         <color key="sectionIndexColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="templateType" rowHeight="275" id="PbG-Mt-2Jv">
-                                <rect key="frame" x="0.0" y="55.5" width="703" height="275"/>
+                                <rect key="frame" x="0.0" y="56" width="703" height="275"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="PbG-Mt-2Jv" id="tOI-8H-AjX">
-                                    <rect key="frame" x="0.0" y="0.0" width="703" height="274.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="703" height="274"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="62h-JL-ydw">
@@ -876,11 +876,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="703" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="agT-df-rhb">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="agT-df-rhb">
                                 <rect key="frame" x="78" y="72" width="546" height="565"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mZQ-a3-STk">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mZQ-a3-STk">
                                         <rect key="frame" x="82" y="416" width="416" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="30"/>
@@ -892,7 +892,7 @@
                                             <action selector="storePage" destination="OCr-tQ-26s" eventType="touchUpInside" id="zZ0-sA-PV4"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZTQ-y6-C8B">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZTQ-y6-C8B">
                                         <rect key="frame" x="289" y="255" width="209" height="150"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="24"/>
@@ -904,7 +904,7 @@
                                             <action selector="loadImageButtonTappedWithSender:" destination="KAm-bB-keR" eventType="touchUpInside" id="hkU-qj-Yjf"/>
                                         </connections>
                                     </button>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HuE-Vh-DMz" customClass="HoshiTextField" customModule="TextFieldEffects">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HuE-Vh-DMz" customClass="HoshiTextField" customModule="TextFieldEffects">
                                         <rect key="frame" x="82" y="100" width="416" height="66"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="textColor" red="0.3411764706" green="0.39607843139999999" blue="0.46274509800000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -922,7 +922,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter Text" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="flD-oO-K5z" customClass="HoshiTextField" customModule="TextFieldEffects">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter Text" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="flD-oO-K5z" customClass="HoshiTextField" customModule="TextFieldEffects">
                                         <rect key="frame" x="82" y="174" width="416" height="66"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="textColor" red="0.3411764706" green="0.39607843139999999" blue="0.46274509800000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -940,7 +940,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </textField>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="E71-U7-rC7">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="E71-U7-rC7">
                                         <rect key="frame" x="82" y="255" width="150" height="150"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
@@ -981,11 +981,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="703" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dZo-L6-Aoa">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dZo-L6-Aoa">
                                 <rect key="frame" x="78" y="72" width="546" height="565"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6da-mI-4aW" customClass="HoshiTextField" customModule="TextFieldEffects">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6da-mI-4aW" customClass="HoshiTextField" customModule="TextFieldEffects">
                                         <rect key="frame" x="82" y="100" width="416" height="66"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="textColor" red="0.3411764706" green="0.39607843139999999" blue="0.46274509800000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1003,11 +1003,11 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </textField>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dSg-AT-U5G">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dSg-AT-U5G">
                                         <rect key="frame" x="82" y="181" width="150" height="150"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aVA-vz-Vvq">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aVA-vz-Vvq">
                                         <rect key="frame" x="82" y="342" width="416" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="30"/>
@@ -1020,7 +1020,7 @@
                                             <action selector="storePage" destination="TfM-Ik-16O" eventType="touchUpInside" id="JTU-dL-weq"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fzM-b4-PdD">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fzM-b4-PdD">
                                         <rect key="frame" x="289" y="181" width="209" height="150"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="24"/>
@@ -1069,11 +1069,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="703" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nFE-E2-TZx">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nFE-E2-TZx">
                                 <rect key="frame" x="78" y="72" width="546" height="565"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5VY-hM-N9d" customClass="HoshiTextField" customModule="TextFieldEffects">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5VY-hM-N9d" customClass="HoshiTextField" customModule="TextFieldEffects">
                                         <rect key="frame" x="82" y="174" width="416" height="66"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="textColor" red="0.3411764706" green="0.39607843139999999" blue="0.46274509800000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1091,7 +1091,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter Text" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fvR-Di-wod" customClass="HoshiTextField" customModule="TextFieldEffects">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter Text" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fvR-Di-wod" customClass="HoshiTextField" customModule="TextFieldEffects">
                                         <rect key="frame" x="82" y="248" width="416" height="66"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="textColor" red="0.3411764706" green="0.39607843139999999" blue="0.46274509800000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1109,7 +1109,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oFE-2u-fYe">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oFE-2u-fYe">
                                         <rect key="frame" x="82" y="329" width="416" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="30"/>
@@ -1158,11 +1158,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="703" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hqF-Fr-gbx">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hqF-Fr-gbx">
                                 <rect key="frame" x="78" y="72" width="546" height="565"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name" textAlignment="natural" minimumFontSize="24" translatesAutoresizingMaskIntoConstraints="NO" id="D2g-gs-Q2E" customClass="HoshiTextField" customModule="TextFieldEffects">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name" textAlignment="natural" minimumFontSize="24" translatesAutoresizingMaskIntoConstraints="NO" id="D2g-gs-Q2E" customClass="HoshiTextField" customModule="TextFieldEffects">
                                         <rect key="frame" x="82" y="45" width="396" height="66"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="textColor" red="0.3411764706" green="0.39607843139999999" blue="0.46274509800000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1180,7 +1180,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Relationship" textAlignment="natural" minimumFontSize="24" translatesAutoresizingMaskIntoConstraints="NO" id="BuT-pb-lHB" customClass="HoshiTextField" customModule="TextFieldEffects">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Relationship" textAlignment="natural" minimumFontSize="24" translatesAutoresizingMaskIntoConstraints="NO" id="BuT-pb-lHB" customClass="HoshiTextField" customModule="TextFieldEffects">
                                         <rect key="frame" x="82" y="119" width="396" height="66"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="textColor" red="0.3411764706" green="0.39607843139999999" blue="0.46274509800000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1198,7 +1198,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Phone Number" textAlignment="natural" minimumFontSize="24" translatesAutoresizingMaskIntoConstraints="NO" id="9GB-78-yxS" customClass="HoshiTextField" customModule="TextFieldEffects">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Phone Number" textAlignment="natural" minimumFontSize="24" translatesAutoresizingMaskIntoConstraints="NO" id="9GB-78-yxS" customClass="HoshiTextField" customModule="TextFieldEffects">
                                         <rect key="frame" x="82" y="193" width="396" height="66"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="textColor" red="0.3411764706" green="0.39607843139999999" blue="0.46274509800000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1216,7 +1216,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="24" translatesAutoresizingMaskIntoConstraints="NO" id="r1t-Xz-cN7" customClass="HoshiTextField" customModule="TextFieldEffects">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="24" translatesAutoresizingMaskIntoConstraints="NO" id="r1t-Xz-cN7" customClass="HoshiTextField" customModule="TextFieldEffects">
                                         <rect key="frame" x="82" y="267" width="396" height="66"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="textColor" red="0.3411764706" green="0.39607843139999999" blue="0.46274509800000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1234,7 +1234,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sWS-1M-6zi">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sWS-1M-6zi">
                                         <rect key="frame" x="289" y="348" width="189" height="146"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="24"/>
@@ -1245,11 +1245,11 @@
                                             <action selector="loadImageButtonTappedWithSender:" destination="KAm-bB-keR" eventType="touchUpInside" id="FU0-OI-MlD"/>
                                         </connections>
                                     </button>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0x7-TV-UCH">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0x7-TV-UCH">
                                         <rect key="frame" x="82" y="348" width="185" height="146"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kSf-8q-Rt0">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kSf-8q-Rt0">
                                         <rect key="frame" x="82" y="510" width="396" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="30"/>
@@ -1298,11 +1298,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="703" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Enp-sd-dv0">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Enp-sd-dv0">
                                 <rect key="frame" x="78" y="72" width="553" height="548"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zn0-4f-1OW">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zn0-4f-1OW">
                                         <rect key="frame" x="136" y="285" width="258" height="49"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="30"/>
@@ -1313,7 +1313,7 @@
                                             <action selector="storeReminder:" destination="Kgf-bC-lkV" eventType="touchUpInside" id="mDO-PT-fZ5"/>
                                         </connections>
                                     </button>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter reminder text" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gH6-i2-MkP" customClass="HoshiTextField" customModule="TextFieldEffects">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter reminder text" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gH6-i2-MkP" customClass="HoshiTextField" customModule="TextFieldEffects">
                                         <rect key="frame" x="78" y="163" width="416" height="66"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="textColor" red="0.3411764706" green="0.39607843139999999" blue="0.46274509800000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1419,11 +1419,11 @@
                                 <rect key="frame" x="0.0" y="28" width="703" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Wfb-7F-kwb" id="xin-uN-TTo">
-                                    <rect key="frame" x="0.0" y="0.0" width="703" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="703" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="5ZS-u3-vZe">
-                                            <rect key="frame" x="15.5" y="0.0" width="672" height="43.5"/>
+                                            <rect key="frame" x="15" y="0.0" width="673" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="20"/>
                                             <nil key="textColor"/>
@@ -1453,7 +1453,7 @@
             </objects>
             <point key="canvasLocation" x="4846" y="3679"/>
         </scene>
-        <!--Caregiver Tips Table View Controller-->
+        <!--Caregiver Tips-->
         <scene sceneID="NvN-hn-VYh">
             <objects>
                 <tableViewController id="msu-2S-72a" customClass="CaregiverTipsTableViewController" customModule="MyCompanion" customModuleProvider="target" sceneMemberID="viewController">
@@ -1463,10 +1463,10 @@
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="caregiverTipsCell" id="kib-6m-DUc">
-                                <rect key="frame" x="0.0" y="55.5" width="703" height="44"/>
+                                <rect key="frame" x="0.0" y="56" width="703" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="kib-6m-DUc" id="uGt-cf-2jo">
-                                    <rect key="frame" x="0.0" y="0.0" width="703" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="703" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
@@ -1479,7 +1479,7 @@
                             <outlet property="delegate" destination="msu-2S-72a" id="VGw-n3-rOM"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="SqF-DU-f3K"/>
+                    <navigationItem key="navigationItem" title="Caregiver Tips" id="w0A-Yv-pUQ"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VLQ-k0-5TL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1490,7 +1490,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="BKC-A8-poJ" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Zs9-0v-7cu">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Zs9-0v-7cu">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -1508,7 +1508,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="nyo-en-PZm" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="YGl-bR-Cjd">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="YGl-bR-Cjd">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -1533,10 +1533,10 @@
                             <tableViewSection id="CNk-gp-vzb">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="buv-Mb-8v1">
-                                        <rect key="frame" x="0.0" y="35" width="703" height="44"/>
+                                        <rect key="frame" x="0.0" y="35" width="703.5" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="buv-Mb-8v1" id="HUf-Kq-NeX">
-                                            <rect key="frame" x="0.0" y="0.0" width="703" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="703" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Show phone numbers" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ODu-Xx-bhA">
@@ -1557,10 +1557,10 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="nmE-TY-eO2">
-                                        <rect key="frame" x="0.0" y="79" width="703" height="44"/>
+                                        <rect key="frame" x="0.0" y="79" width="703.5" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="nmE-TY-eO2" id="yg9-ux-8mr">
-                                            <rect key="frame" x="0.0" y="0.0" width="703" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="703" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Enable calling from Contact page" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sJb-47-4At">
@@ -1581,10 +1581,10 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="BBz-Ca-L0k">
-                                        <rect key="frame" x="0.0" y="123" width="703" height="44"/>
+                                        <rect key="frame" x="0.0" y="123" width="703.5" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="BBz-Ca-L0k" id="WeI-wY-89C">
-                                            <rect key="frame" x="0.0" y="0.0" width="703" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="703" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Show email addresses" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D1Y-7L-Aa0">
@@ -1605,10 +1605,10 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="7df-oA-tHc">
-                                        <rect key="frame" x="0.0" y="167" width="703" height="44"/>
+                                        <rect key="frame" x="0.0" y="167" width="703.5" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7df-oA-tHc" id="bR0-zi-Ttw">
-                                            <rect key="frame" x="0.0" y="0.0" width="703" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="703" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MXv-Pb-uKN">
@@ -1633,10 +1633,10 @@
                             <tableViewSection id="3dl-3d-a08">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="hvC-V1-0o4">
-                                        <rect key="frame" x="0.0" y="247" width="703" height="44"/>
+                                        <rect key="frame" x="0.0" y="247" width="703.5" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hvC-V1-0o4" id="pRT-Qk-LSE">
-                                            <rect key="frame" x="0.0" y="0.0" width="703" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="703" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Reset reminders daily" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ghk-TI-eBF">
@@ -1657,18 +1657,30 @@
                                             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="ofN-wA-3KS">
-                                        <rect key="frame" x="0.0" y="291" width="703" height="44"/>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection id="CDo-3J-9pv">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Dfl-5a-bZu">
+                                        <rect key="frame" x="0.0" y="327" width="703.5" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ofN-wA-3KS" id="0cp-cb-BFt">
-                                            <rect key="frame" x="0.0" y="0.0" width="703" height="43.5"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Dfl-5a-bZu" id="Tx1-Ix-IWY">
+                                            <rect key="frame" x="0.0" y="0.0" width="703" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5IX-1S-qBz">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Password required for Caregiver Portal access" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="120-PO-s9v">
+                                                    <rect key="frame" x="20" y="11" width="400" height="26"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="19"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1go-p7-WqR">
                                                     <rect key="frame" x="646" y="6" width="51" height="31"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </switch>
                                             </subviews>
+                                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </cells>
@@ -1708,7 +1720,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="55"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4f8-3n-JdQ" id="pzu-TO-dJM">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="54.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="54"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="General Settings" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eQf-ib-lDN">
@@ -1725,7 +1737,7 @@
                                         <rect key="frame" x="0.0" y="55" width="320" height="55"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="TW5-g4-afT" id="2fi-3L-k3n">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="54.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="54"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Edit Memory Book" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WzE-yg-gaO">
@@ -1742,7 +1754,7 @@
                                         <rect key="frame" x="0.0" y="110" width="320" height="55"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="XRX-z7-Trw" id="KhD-Td-dvI">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="54.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="54"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Edit Contacts" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q5b-nf-ZaD">
@@ -1759,7 +1771,7 @@
                                         <rect key="frame" x="0.0" y="165" width="320" height="55"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ya5-Rc-huS" id="Rut-mD-7jH">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="54.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="54"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Edit Reminders" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JJZ-fC-qTM">
@@ -1776,7 +1788,7 @@
                                         <rect key="frame" x="0.0" y="220" width="320" height="55"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cTj-lD-KcZ" id="zJq-Gz-fgD">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="54.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="54"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Caregiver Forum" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ld7-bR-YuH">
@@ -1852,7 +1864,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="IIu-GC-wdr" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="qw7-PZ-r2a">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="qw7-PZ-r2a">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -1874,7 +1886,7 @@
                         <viewControllerLayoutGuide type="bottom" id="PDp-VG-glu"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="7tX-o0-IO9">
-                        <rect key="frame" x="0.0" y="0.0" width="482" height="344"/>
+                        <rect key="frame" x="0.0" y="0.0" width="482" height="354"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="A good day!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ywg-Q8-yCj">
@@ -1916,14 +1928,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tgY-Gh-xCh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-720.1171875" y="-509.375"/>
+            <point key="canvasLocation" x="-839" y="-548"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="dV8-kd-zo7">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="e2L-FR-KWa" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="JDv-Nb-uZp">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="JDv-Nb-uZp">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -1941,7 +1953,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="wWv-Ql-K67" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="POo-tQ-O66">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="POo-tQ-O66">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -1959,7 +1971,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="a3f-Sg-oy4" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="8IZ-28-xdA">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="8IZ-28-xdA">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -1977,7 +1989,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hct-h9-TCi" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="OwW-bO-Evy">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="OwW-bO-Evy">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -1995,7 +2007,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0NF-bY-dnS" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="7h0-hz-4Re">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="7h0-hz-4Re">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -2013,7 +2025,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="eur-Sj-qm3" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="OMA-vC-cvS">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="OMA-vC-cvS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -2100,7 +2112,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="6e6-a7-pTo" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="XvK-rK-HbG">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="XvK-rK-HbG">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -2118,7 +2130,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="L7f-gs-OJl" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Axo-Hq-4aH">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Axo-Hq-4aH">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -2136,7 +2148,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="evT-F1-tfe" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="10h-bs-UKt">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="10h-bs-UKt">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -2151,13 +2163,13 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="IlB-Sf-bGQ"/>
-        <segue reference="jkO-TI-eR3"/>
-        <segue reference="T8N-bo-CUt"/>
         <segue reference="8Mr-wE-qrS"/>
+        <segue reference="RXJ-12-X15"/>
+        <segue reference="xOr-P6-iNA"/>
+        <segue reference="QNv-iP-D82"/>
+        <segue reference="IlB-Sf-bGQ"/>
+        <segue reference="T8N-bo-CUt"/>
         <segue reference="mJU-au-Agg"/>
         <segue reference="IAW-LV-fko"/>
-        <segue reference="xOr-P6-iNA"/>
-        <segue reference="RXJ-12-X15"/>
     </inferredMetricsTieBreakers>
 </document>

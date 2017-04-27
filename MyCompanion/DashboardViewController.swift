@@ -10,7 +10,6 @@ import UIKit
 
 class DashboardViewController: UIViewController {
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -20,6 +19,7 @@ class DashboardViewController: UIViewController {
                 self.performSegue(withIdentifier: "segueToWalkthrough", sender: self)
             })
         } else {
+
             if(shouldResetReminders()) {
                 _ = ReminderDataManager.resetAllReminders()
             }

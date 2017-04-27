@@ -32,12 +32,12 @@ class AddPageTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         switch(section){
-        case 0:return OneOnePtypes;
-        case 1:return OneOneVtypes;
-        case 2:return OneTtypes;
-        case 3:return OnePtypes;
-        case 4:return OneVtypes;
-        default:return 0
+        case 0: return OneOnePtypes
+        case 1: return OneOneVtypes
+        case 2: return OneTtypes
+        case 3: return OnePtypes
+        case 4: return OneVtypes
+        default: return 0
         }
         
     }

@@ -25,19 +25,32 @@ class TodayTileViewController: UIViewController, CLLocationManagerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setDateText()
-        manager.delegate = self
+        if(shouldLoadTodayTile()) {
+            setDateText()
         
-        var weatherLocData = WeatherLocationDataManager.fetchWeatherLocationData()
-        if(weatherLocData.count == 0) {
-            initialWeatherFetch()
-        } else {
-            currentData = weatherLocData[0]
-            if(shouldUpdateWeatherLocation()) {
-                manager.requestLocation()
+            manager.requestAlwaysAuthorization()
+
+            manager.delegate = self
+        
+            var weatherLocData = WeatherLocationDataManager.fetchWeatherLocationData()
+            if(weatherLocData.count == 0) {
+                initialWeatherFetch()
             } else {
-                useCachedValues()
+                currentData = weatherLocData[0]
+                if(shouldUpdateWeatherLocation()) {
+                    manager.requestLocation()
+                } else {
+                    useCachedValues()
+                }
             }
+        }
+    }
+    
+    func shouldLoadTodayTile() -> Bool {
+        if let _ = UserDefaults.standard.object(forKey: "lastOpened") as? Date, let _ = UserDefaults.standard.object(forKey: "userPassword") as? String {
+            return true
+        } else {
+            return false
         }
     }
     

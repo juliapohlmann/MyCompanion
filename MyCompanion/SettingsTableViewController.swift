@@ -112,18 +112,19 @@ class SettingsTableViewController: UITableViewController {
         UserDefaults.standard.set(resetRemindersDailySwitch.isOn, forKey: "resetRemindersDaily")
         UserDefaults.standard.synchronize()
     }
-    
 
     // MARK: - Table view data source
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         
         switch(section){
-            case 0:
-                return "Contacts Settings"
-            case 1:
-                return "Reminders Settings"
-            default:
-                return "mistake"
+        case 0:
+            return "Contacts Settings"
+        case 1:
+            return "Reminders Settings"
+        case 2:
+            return "Security Settings"
+        default:
+            return "mistake"
         }
     }
 

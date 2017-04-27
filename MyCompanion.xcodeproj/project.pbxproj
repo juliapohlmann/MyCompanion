@@ -74,6 +74,7 @@
 		DA8FDA781EB24B460037880F /* CaregiverPortal_Walkthrough.png in Resources */ = {isa = PBXBuildFile; fileRef = DA8FDA731EB24B460037880F /* CaregiverPortal_Walkthrough.png */; };
 		DA8FDA791EB24B460037880F /* Contacts_Walkthrough.png in Resources */ = {isa = PBXBuildFile; fileRef = DA8FDA741EB24B460037880F /* Contacts_Walkthrough.png */; };
 		DA8FDA7A1EB24B460037880F /* Dashboard_Walkthrough.png in Resources */ = {isa = PBXBuildFile; fileRef = DA8FDA751EB24B460037880F /* Dashboard_Walkthrough.png */; };
+		DA8FDA7E1EB2544A0037880F /* Reminders_Walkthrough.png in Resources */ = {isa = PBXBuildFile; fileRef = DA8FDA7D1EB2544A0037880F /* Reminders_Walkthrough.png */; };
 		DAAF9C1D1E8AFA9A0050BE11 /* MemoryBookDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAF9C1C1E8AFA9A0050BE11 /* MemoryBookDataManager.swift */; };
 		DAE3BB7C1E6C93D7009BB9E6 /* ReminderTileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE3BB7B1E6C93D7009BB9E6 /* ReminderTileViewController.swift */; };
 		DAE3BB7E1E6C9636009BB9E6 /* MemoryBookTileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE3BB7D1E6C9636009BB9E6 /* MemoryBookTileViewController.swift */; };
@@ -179,6 +180,7 @@
 		DA8FDA731EB24B460037880F /* CaregiverPortal_Walkthrough.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CaregiverPortal_Walkthrough.png; sourceTree = "<group>"; };
 		DA8FDA741EB24B460037880F /* Contacts_Walkthrough.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Contacts_Walkthrough.png; sourceTree = "<group>"; };
 		DA8FDA751EB24B460037880F /* Dashboard_Walkthrough.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Dashboard_Walkthrough.png; sourceTree = "<group>"; };
+		DA8FDA7D1EB2544A0037880F /* Reminders_Walkthrough.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Reminders_Walkthrough.png; sourceTree = "<group>"; };
 		DAAF9C1C1E8AFA9A0050BE11 /* MemoryBookDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemoryBookDataManager.swift; sourceTree = "<group>"; };
 		DAE3BB7B1E6C93D7009BB9E6 /* ReminderTileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReminderTileViewController.swift; sourceTree = "<group>"; };
 		DAE3BB7D1E6C9636009BB9E6 /* MemoryBookTileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemoryBookTileViewController.swift; sourceTree = "<group>"; };
@@ -239,6 +241,7 @@
 		1CF3EF291EAFFF5D0071AD91 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				DA8FDA7D1EB2544A0037880F /* Reminders_Walkthrough.png */,
 				DA8FDA711EB24B460037880F /* MemoryBook_Walkthrough.png */,
 				DA8FDA721EB24B460037880F /* CaregiverTips_Walkthrough.png */,
 				DA8FDA731EB24B460037880F /* CaregiverPortal_Walkthrough.png */,
@@ -632,6 +635,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA8FDA7E1EB2544A0037880F /* Reminders_Walkthrough.png in Resources */,
 				1CF3EF371EAFFF810071AD91 /* 1V_Fiverr.jpg in Resources */,
 				DA8581071E4134570055134E /* LaunchScreen.storyboard in Resources */,
 				1CF3EF381EAFFF810071AD91 /* 11DP_Fiverr.jpg in Resources */,

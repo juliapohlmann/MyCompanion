@@ -136,7 +136,7 @@ class SettingsTableViewController: UITableViewController {
         case 2:
             return "Security Settings"
         default:
-            return "mistake"
+            return ""
         }
     }
 

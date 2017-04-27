@@ -31,15 +31,36 @@ class WalkthroughViewController: UIViewController, CLLocationManagerDelegate {
         
         updateView()
         
-        UserDefaults.standard.set("ipad", forKey: "userPassword")
-        UserDefaults.standard.set(true, forKey: "canCall")
-        UserDefaults.standard.set(true, forKey: "canEmail")
-        UserDefaults.standard.set(true, forKey: "showPhoneNumbers")
-        UserDefaults.standard.set(true, forKey: "showEmails")
-        UserDefaults.standard.set(true, forKey: "resetRemindersDaily")
-        UserDefaults.standard.set(Date(),forKey: "lastOpened")
-        UserDefaults.standard.set(true, forKey: "passwordEnabled")
+        
+        setTrueIfNull(key: "canCall")
+        setTrueIfNull(key: "canEmail")
+        setTrueIfNull(key: "showPhoneNumbers")
+        setTrueIfNull(key: "showEmails")
+        setTrueIfNull(key: "resetRemindersDaily")
+        setTrueIfNull(key: "passwordEnabled")
+        
+        if (UserDefaults.standard.object(forKey: "lastOpened") as? Date) == nil {
+            UserDefaults.standard.set(Date(), forKey: "lastOpened")
+        }
+    
+        if (UserDefaults.standard.object(forKey: "userPassword") as? String) == nil {
+            UserDefaults.standard.set("", forKey: "userPassword")
+        }
+        
+//        UserDefaults.standard.set(true, forKey: "canCall")
+//        UserDefaults.standard.set(true, forKey: "canEmail")
+//        UserDefaults.standard.set(true, forKey: "showPhoneNumbers")
+//        UserDefaults.standard.set(true, forKey: "showEmails")
+//        UserDefaults.standard.set(true, forKey: "resetRemindersDaily")
+//        UserDefaults.standard.set(Date(),forKey: "lastOpened")
+//        UserDefaults.standard.set(true, forKey: "passwordEnabled")
 
+    }
+    
+    func setTrueIfNull(key: String) {
+        if (UserDefaults.standard.object(forKey: key) as? Bool) == nil {
+            UserDefaults.standard.set(true, forKey: key)
+        }
     }
     
     @IBAction func clickPrevious(_ sender: Any) {
@@ -66,10 +87,18 @@ class WalkthroughViewController: UIViewController, CLLocationManagerDelegate {
             introText.text = "Welcome to MyCompanion! This application will help you connect with your loved ones as you live each day to its fullest!"
             setPicture(pictureName: "Dashboard")
         case 1:
-            introText.text = "All of the settings and information is set and controller by the caregiver. These controls are in a portal which is password protected and features a quick help section with information from the Alzheimer's Assocation. Now you will be asked to enter a password to access this section."
+            introText.text = "All of the settings and information is set and controller by the caregiver. These controls are in a portal which is password protected and features a quick help section with information from the Alzheimer's Assocation."
+            if(shouldAskPassword()) {
+                introText.text = "\(introText.text!) Now you will be asked to enter a password to access this section."
+            }
             setPicture(pictureName: "CaregiverPortal")
         case 2:
-            askPassword()
+            if(shouldAskPassword()) {
+                askPassword()
+            }
+            else {
+                clickNext(self)
+            }
         case 3:
             introText.text = "Users can view their family and friends and be reminded of their relationship with that individual and a photo."
             setPicture(pictureName: "Contacts")
@@ -89,6 +118,11 @@ class WalkthroughViewController: UIViewController, CLLocationManagerDelegate {
         default:
             print("not applicable progress value")
         }
+    }
+    
+    func shouldAskPassword() -> Bool {
+        let storedPassword = UserDefaults.standard.object(forKey: "userPassword") as! String
+        return storedPassword.isEmpty
     }
     
     func setPicture(pictureName: String) {

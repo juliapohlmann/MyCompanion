@@ -132,7 +132,7 @@ class ContactDetailViewController: UIViewController, UIImagePickerControllerDele
                 didSucceed = ContactDataManager.storeContact(name: nameTextField.text!, relationship: relationshipTextField.text!, number: numberTextField.text, email: emailTextField.text, imageData: imageData)
             } else {
                 //editing contact, update fields of passed contact
-                didSucceed = ContactDataManager.updateContact(contact: contact!, name: nameTextField.text!, relationship: relationshipTextField.text!, number: numberTextField.text!, email: emailTextField.text!, imageData: imageData!)
+                didSucceed = ContactDataManager.updateContact(contact: contact!, name: nameTextField.text!, relationship: relationshipTextField.text!, number: numberTextField.text, email: emailTextField.text, imageData: imageData)
             }
             
             if(didSucceed) {

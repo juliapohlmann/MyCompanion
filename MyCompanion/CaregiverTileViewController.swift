@@ -55,7 +55,15 @@ class CaregiverTileViewController: UIViewController {
         - Parameter sender: button clicked
      */
     @IBAction func caregiverPortalClick(_ sender: Any) {
-        presentPrompt()
+        if(shouldPresentPrompt()) {
+            presentPrompt()
+        } else {
+            performSegue(withIdentifier: "caregiverTileToCaregiverPageSegue", sender: self)
+        }
+    }
+    
+    func shouldPresentPrompt() -> Bool {
+        return UserDefaults.standard.object(forKey: "passwordEnabled") as! Bool
     }
     
     /**

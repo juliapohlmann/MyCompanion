@@ -18,6 +18,8 @@ class SettingsTableViewController: UITableViewController {
     
     @IBOutlet var resetRemindersDailySwitch: UISwitch!
     
+    @IBOutlet var enablePasswordSwitch: UISwitch!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -36,11 +38,14 @@ class SettingsTableViewController: UITableViewController {
         
         let resetRemindersDaily = UserDefaults.standard.object(forKey: "resetRemindersDaily") as! Bool
         
+        let passwordEnabled = UserDefaults.standard.object(forKey: "passwordEnabled") as! Bool
+
         
         enableCallingSwitch.setOn(canCall, animated: false)
         enableEmailingSwitch.setOn(canEmail, animated: false)
         showPhoneNumbersSwitch.setOn(showPhoneNumbers, animated: false)
         showEmailsSwitch.setOn(showEmails, animated: false)
+        enablePasswordSwitch.setOn(passwordEnabled, animated: false)
         
         resetRemindersDailySwitch.setOn(resetRemindersDaily, animated: false)
     }
@@ -112,6 +117,13 @@ class SettingsTableViewController: UITableViewController {
         UserDefaults.standard.set(resetRemindersDailySwitch.isOn, forKey: "resetRemindersDaily")
         UserDefaults.standard.synchronize()
     }
+    
+    
+    @IBAction func toggleEnablePassword(_ sender: Any) {
+        UserDefaults.standard.set(enablePasswordSwitch.isOn, forKey: "passwordEnabled")
+        UserDefaults.standard.synchronize()
+    }
+    
 
     // MARK: - Table view data source
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {

@@ -38,6 +38,8 @@ class WalkthroughViewController: UIViewController, CLLocationManagerDelegate {
         UserDefaults.standard.set(true, forKey: "showEmails")
         UserDefaults.standard.set(true, forKey: "resetRemindersDaily")
         UserDefaults.standard.set(Date(),forKey: "lastOpened")
+        UserDefaults.standard.set(true, forKey: "passwordEnabled")
+
     }
     
     @IBAction func clickPrevious(_ sender: Any) {
@@ -62,18 +64,25 @@ class WalkthroughViewController: UIViewController, CLLocationManagerDelegate {
         case 0:
             hidePreviousElements()
             introText.text = "Welcome to MyCompanion! This application will help you connect with your loved ones as you live each day to its fullest!"
+            setPicture(pictureName: "Dashboard")
         case 1:
             introText.text = "MyCompanion aims to help individuals with dementia with their day to day activities, from remembering happy time with family to knowing their current location and weather."
+            setPicture(pictureName: "Dashboard")
         case 2:
             introText.text = "All of the settings and information is set and controller by the caregiver. These controls are in a portal which is password protected and features a quick help section with information fromt the Alzheimer's Assocation."
+            setPicture(pictureName: "CaregiverPortal")
         case 3:
             introText.text = "Users can view their family and friends and be reminded of their relationship with that individual and a photo. Optionally, caregivers can choose to display the phone number and email and even enable calling and emailing from within MyCompanion."
+            setPicture(pictureName: "Contacts")
         case 4:
             introText.text = "A reminders list helps individuals to create and adhere to a daily schedule. Caregivers set the reminders in the caregiver portal and individuals can complete them. Caregivers can also allow reminders to reset daily!"
+            setPicture(pictureName: "Reminders")
         case 5:
             introText.text = "Caregivers can also set a memory book. This is a place for caregivers to tell the life story of their ___ through pictures and videos."
+            setPicture(pictureName: "MemoryBook")
         case 6:
             introText.text = "Caregivers have full control on what actions a __ can make while using the app, allowing each caregiver to customize the experience for each individual."
+            setPicture(pictureName: "CaregiverPortal")
         case 7:
             introText.text = "The caregiver is protected by a password. You'll have to set a password next. "
         case 8:
@@ -90,6 +99,15 @@ class WalkthroughViewController: UIViewController, CLLocationManagerDelegate {
         default:
             print("not applicable progress value")
         }
+    }
+    
+    func setPicture(pictureName: String) {
+        let fileName = pictureName + "_Walkthrough.png"
+        
+        introPic!.image = UIImage(named: fileName)
+//        introPic!.center =
+//        cell.imageView!.image = UIImage(named: fileName)
+//        cell.imageView!.center = cell.center
     }
     
     func askPassword() {

@@ -29,11 +29,12 @@ class DashboardViewController: UIViewController {
     }
     
     func shouldWalkthrough() -> Bool{
-        if let _ = UserDefaults.standard.object(forKey: "lastOpened") as? Date, let _ = UserDefaults.standard.object(forKey: "userPassword") as? String {
-            return false
-        } else {
-            return true
-        }
+        return true
+//        if let _ = UserDefaults.standard.object(forKey: "lastOpened") as? Date, let _ = UserDefaults.standard.object(forKey: "userPassword") as? String {
+//            return false
+//        } else {
+//            return true
+//        }
     }
     
     /**

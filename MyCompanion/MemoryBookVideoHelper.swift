@@ -59,11 +59,13 @@ class MemoryBookVideoHelper {
         imageView.addGestureRecognizer(singleTap)
     }
     
+    /**
+        Helper function that takes a video URL and makes a thumbnail from the image at 0,1
+     
+        - Parameter videoURL: nsurl video is at
+        - Parameter imageView: imageView to add thumbnail as image to
+     */
     static func setVideoThumbnail(videoURL: URL, imageView: UIImageView!) {
-//        let paths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
-//        let documentsDirectory = paths[0]
-//        let videoURL = URL(fileURLWithPath: documentsDirectory + "/" + (page?.value(forKeyPath: "videoID") as! String))
-        
         let asset = AVURLAsset(url: videoURL, options: nil)
         let imgGenerator = AVAssetImageGenerator(asset: asset)
         
@@ -75,6 +77,11 @@ class MemoryBookVideoHelper {
         }
     }
     
+    /**
+        Helper function that sets a stock image in the given image view
+     
+        - Parameter imageView: imageView to add stock photo as image to
+     */
     static func setStockPhoto(imageView: UIImageView) {
         imageView.layer.borderWidth = 2
         imageView.layer.borderColor = UIColor.black.cgColor
@@ -83,8 +90,15 @@ class MemoryBookVideoHelper {
         }
     }
     
-    // thanks http://stackoverflow.com/questions/36536044/swift-video-to-document-directory
-
+    /**
+        Helper function to write the given data to file manager so it can be accessed when veiwing the memory book
+        Modeled after an example on: http://stackoverflow.com/questions/36536044/swift-video-to-document-directory
+     
+        - Parameter videoURL: nsurl to write to document
+        - Parameter videoID: string of id to add it at
+     
+        - Returns: updated videoID string
+     */
     static func writeVideoToDocument(videoURL: NSURL!, videoID: String) -> String {
         var tempVideoID = videoID
         let uniqueID = NSUUID().uuidString
@@ -98,15 +112,15 @@ class MemoryBookVideoHelper {
         let tempDataPath = tempDocumentsDirectory.appendingPathComponent(tempVideoID) as String
         try? myVideoVarData.write(to: URL(fileURLWithPath: tempDataPath), options: [])
         
-        //Now we remove the data from the temp Document Diroctory.
+        //remove data from temp directory to prepare to write it for real
         do{
             let fileManager = FileManager.default
             try fileManager.removeItem(atPath: tempDataPath)
         } catch {
-            //Do nothing
+            print("Error removing temp item")
         }
         
-        //Here we are writing the data to the Document Directory for use later on.
+        //add data so we can access it in memory book viewer
         let docPaths = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory, FileManager.SearchPathDomainMask.userDomainMask, true)
         let documentsDirectory: AnyObject = docPaths[0] as AnyObject
         tempVideoID = uniqueID  + "VIDEO.MOV"
@@ -116,11 +130,4 @@ class MemoryBookVideoHelper {
         return tempVideoID
 
     }
-    
-    
-    
-    
-    
-    
-    
 }

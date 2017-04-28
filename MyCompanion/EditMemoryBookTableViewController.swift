@@ -73,18 +73,21 @@ class EditMemoryBookTableViewController: UITableViewController {
             myVC.vcType = "Edit Page"
             myVC.page = pages[indexPath.row]
             navigationController?.pushViewController(myVC, animated: true)
+            
         } else if (pageType!.hasSuffix("T")) {
             let myVC = storyboard?.instantiateViewController(withIdentifier: "DetailLabelPageViewController") as! DetailLabelPageViewController
             myVC.templateType = pageType!
             myVC.vcType = "Edit Page"
             myVC.page = pages[indexPath.row]
             navigationController?.pushViewController(myVC, animated: true)
+            
         } else {
             let myVC = storyboard?.instantiateViewController(withIdentifier: "DetailPhotoPageViewController") as! DetailPhotoPageViewController
             myVC.templateType = pageType!
             myVC.vcType = "Edit Page"
             myVC.page = pages[indexPath.row]
             navigationController?.pushViewController(myVC, animated: true)
+            
         }
     }
 }

@@ -47,35 +47,12 @@ class DetailLabelPhotoPageViewController: UIViewController, UIImagePickerControl
         Helper function telling whether to return once editing is done
      
         - Parameter textField: textField to return from
-     
         - Returns: whether to return after editing ended
-     
      */
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         self.view.endEditing(true)
         return false
     }
-    
-//    /**
-//        Helper function to get thumbnail image from video
-//     
-//     */
-//    func setVideoThumbnail(){
-//        let paths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
-//        let documentsDirectory = paths[0]
-//        let videoURL = documentsDirectory + "/" + (page?.value(forKeyPath: "videoID") as! String)
-//        
-//        let asset = AVURLAsset(url: URL(fileURLWithPath: videoURL) as URL, options: nil)
-//        let imgGenerator = AVAssetImageGenerator(asset: asset)
-//        
-//        do {
-//            let cgImage = try imgGenerator.copyCGImage(at: CMTimeMake(0, 1), actualTime: nil)
-//            imageView.image = UIImage(cgImage: cgImage)
-//        } catch {
-//            print(error)
-//        }
-//        
-//    }
     
     /**
         Sets fields of page with current page values for editing page
@@ -95,18 +72,6 @@ class DetailLabelPhotoPageViewController: UIViewController, UIImagePickerControl
             videoID = page?.value(forKeyPath: "videoID") as! String
         }
     }
-    
-//    /**
-//        Sets stock image before an image is uploaded
-//     
-//     */
-//    func setStockPhoto() {
-//        imageView.layer.borderWidth = 2
-//        imageView.layer.borderColor = UIColor.black.cgColor
-//        if(imageView.image == nil) {
-//            imageView.image = UIImage.fontAwesomeIcon(name: .camera, textColor: UIColor.black, size: CGSize(width: 128, height: 128))
-//        }
-//    }
     
     /**
         On load image button click, show thumbnail of photo
@@ -181,17 +146,6 @@ class DetailLabelPhotoPageViewController: UIViewController, UIImagePickerControl
             videoID = MemoryBookVideoHelper.writeVideoToDocument(videoURL: videoURL, videoID: videoID)
             
             MemoryBookVideoHelper.setVideoThumbnail(videoURL: videoURL as! URL, imageView: imageView)
-            
-            //makes thumbnail
-//            let asset = AVURLAsset(url: videoURL as! URL, options: nil)
-//            let imgGenerator = AVAssetImageGenerator(asset: asset)
-//            
-//            do {
-//                let cgImage = try imgGenerator.copyCGImage(at: CMTimeMake(0, 1), actualTime: nil)
-//                imageView.image = UIImage(cgImage: cgImage)
-//            } catch {
-//                print(error)
-//            }
         }
         
         dismiss(animated: true, completion: nil)

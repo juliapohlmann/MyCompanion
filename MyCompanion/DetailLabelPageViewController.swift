@@ -31,6 +31,12 @@ class DetailLabelPageViewController: UIViewController, UITextFieldDelegate {
         // Do any additional setup after loading the view.
     }
     
+    /**
+        Helper function telling whether to return once editing is done
+     
+        - Parameter textField: textField to return from
+        - Returns: whether to return after editing ended
+     */
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         self.view.endEditing(true)
         return false
@@ -39,11 +45,6 @@ class DetailLabelPageViewController: UIViewController, UITextFieldDelegate {
     func setPageFields() {
         titleTextField.text = page?.value(forKeyPath: "title") as? String
         textTextField.text = page?.value(forKeyPath: "text") as? String
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     // MARK: Core Data

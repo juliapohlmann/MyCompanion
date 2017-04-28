@@ -11,6 +11,9 @@ import FontAwesome_swift
 
 class SettingsTableViewController: UITableViewController {
     
+    @IBOutlet var showLocationSwitch: UISwitch!
+    @IBOutlet var showWeatherSwitch: UISwitch!
+    
     @IBOutlet var showEmailsSwitch: UISwitch!
     @IBOutlet var showPhoneNumbersSwitch: UISwitch!
     @IBOutlet var enableCallingSwitch: UISwitch!
@@ -31,6 +34,10 @@ class SettingsTableViewController: UITableViewController {
      
      */
     func setSwitchValues() {
+        
+        let shouldShowLocation = UserDefaults.standard.object(forKey: "showLocation") as! Bool
+        let shouldShowWeather = UserDefaults.standard.object(forKey: "showWeather") as! Bool
+        
         let canCall = UserDefaults.standard.object(forKey: "canCall") as! Bool
         let canEmail = UserDefaults.standard.object(forKey: "canEmail") as! Bool
         let showPhoneNumbers = UserDefaults.standard.object(forKey: "showPhoneNumbers") as! Bool
@@ -41,6 +48,10 @@ class SettingsTableViewController: UITableViewController {
         let passwordEnabled = UserDefaults.standard.object(forKey: "passwordEnabled") as! Bool
 
         
+        showLocationSwitch.setOn(shouldShowLocation, animated: false)
+        showWeatherSwitch.setOn(shouldShowWeather, animated: false)
+
+        
         enableCallingSwitch.setOn(canCall, animated: false)
         enableEmailingSwitch.setOn(canEmail, animated: false)
         showPhoneNumbersSwitch.setOn(showPhoneNumbers, animated: false)
@@ -48,6 +59,22 @@ class SettingsTableViewController: UITableViewController {
         enablePasswordSwitch.setOn(passwordEnabled, animated: false)
         
         resetRemindersDailySwitch.setOn(resetRemindersDaily, animated: false)
+    }
+    
+    @IBAction func toggleShowLocation(_ sender: Any) {
+        UserDefaults.standard.set(showLocationSwitch.isOn, forKey: "showLocation")
+        UserDefaults.standard.synchronize()
+        
+        if(!showLocationSwitch.isOn) {
+            showWeatherSwitch.setOn(showLocationSwitch.isOn, animated: true)
+            toggleShowWeather(self)
+        }
+
+    }
+    
+    @IBAction func toggleShowWeather(_ sender: Any) {
+        UserDefaults.standard.set(showWeatherSwitch.isOn, forKey: "showWeather")
+        UserDefaults.standard.synchronize()
     }
     
     // MARK: - UISwitch functions
@@ -130,10 +157,12 @@ class SettingsTableViewController: UITableViewController {
         
         switch(section){
         case 0:
-            return "Contacts Settings"
+            return "Today Tile Settings"
         case 1:
-            return "Reminders Settings"
+            return "Contacts Settings"
         case 2:
+            return "Reminders Settings"
+        case 3:
             return "Security Settings"
         default:
             return ""

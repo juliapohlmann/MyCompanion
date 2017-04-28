@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MyCompanion/TodayTileViewController.swift"
-            timestampString = "514931548.410125"
+            timestampString = "515082033.064318"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "33"
-            endingLineNumber = "33"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
@@ -649,11 +649,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MyCompanion/TodayTileViewController.swift"
-            timestampString = "515034225.829352"
+            timestampString = "515082033.064318"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "128"
-            endingLineNumber = "128"
+            startingLineNumber = "141"
+            endingLineNumber = "141"
             landmarkName = "shouldUpdateWeatherLocation()"
             landmarkType = "7">
             <Locations>
@@ -697,11 +697,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MyCompanion/TodayTileViewController.swift"
-            timestampString = "515034225.829352"
+            timestampString = "515082033.064318"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "165"
-            endingLineNumber = "165"
+            startingLineNumber = "178"
+            endingLineNumber = "178"
             landmarkName = "getWeather()"
             landmarkType = "7">
          </BreakpointContent>
@@ -745,11 +745,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MyCompanion/TodayTileViewController.swift"
-            timestampString = "515034225.829352"
+            timestampString = "515082033.064318"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "78"
-            endingLineNumber = "78"
+            startingLineNumber = "86"
+            endingLineNumber = "86"
             landmarkName = "initialWeatherFetch()"
             landmarkType = "7">
          </BreakpointContent>
@@ -761,11 +761,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MyCompanion/TodayTileViewController.swift"
-            timestampString = "515034225.829352"
+            timestampString = "515082033.064318"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "75"
-            endingLineNumber = "75"
+            startingLineNumber = "83"
+            endingLineNumber = "83"
             landmarkName = "initialWeatherFetch()"
             landmarkType = "7">
          </BreakpointContent>
@@ -777,11 +777,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MyCompanion/TodayTileViewController.swift"
-            timestampString = "515034225.829352"
+            timestampString = "515082033.064318"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "79"
-            endingLineNumber = "79"
+            startingLineNumber = "87"
+            endingLineNumber = "87"
             landmarkName = "initialWeatherFetch()"
             landmarkType = "7">
          </BreakpointContent>
@@ -793,11 +793,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MyCompanion/TodayTileViewController.swift"
-            timestampString = "515034225.829352"
+            timestampString = "515082033.064318"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "158"
-            endingLineNumber = "158"
+            startingLineNumber = "171"
+            endingLineNumber = "171"
             landmarkName = "getWeather()"
             landmarkType = "7">
             <Locations>
@@ -841,11 +841,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MyCompanion/TodayTileViewController.swift"
-            timestampString = "515034225.829352"
+            timestampString = "515082033.064318"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "162"
-            endingLineNumber = "162"
+            startingLineNumber = "175"
+            endingLineNumber = "175"
             landmarkName = "getWeather()"
             landmarkType = "7">
          </BreakpointContent>
@@ -857,11 +857,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MyCompanion/TodayTileViewController.swift"
-            timestampString = "515034225.829352"
+            timestampString = "515082033.064318"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "166"
-            endingLineNumber = "166"
+            startingLineNumber = "179"
+            endingLineNumber = "179"
             landmarkName = "getWeather()"
             landmarkType = "7">
          </BreakpointContent>
@@ -873,11 +873,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MyCompanion/TodayTileViewController.swift"
-            timestampString = "515034225.829352"
+            timestampString = "515082033.064318"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "164"
-            endingLineNumber = "164"
+            startingLineNumber = "177"
+            endingLineNumber = "177"
             landmarkName = "getWeather()"
             landmarkType = "7">
          </BreakpointContent>
@@ -953,11 +953,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MyCompanion/TodayTileViewController.swift"
-            timestampString = "515034225.829352"
+            timestampString = "515082033.064318"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "77"
-            endingLineNumber = "77"
+            startingLineNumber = "85"
+            endingLineNumber = "85"
             landmarkName = "initialWeatherFetch()"
             landmarkType = "7">
          </BreakpointContent>
@@ -969,11 +969,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MyCompanion/TodayTileViewController.swift"
-            timestampString = "515034225.829352"
+            timestampString = "515082033.064318"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "146"
-            endingLineNumber = "146"
+            startingLineNumber = "159"
+            endingLineNumber = "159"
             landmarkName = "TodayTileViewController"
             landmarkType = "3">
             <Locations>
@@ -1017,11 +1017,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MyCompanion/TodayTileViewController.swift"
-            timestampString = "515034225.829352"
+            timestampString = "515082033.064318"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "145"
-            endingLineNumber = "145"
+            startingLineNumber = "158"
+            endingLineNumber = "158"
             landmarkName = "TodayTileViewController"
             landmarkType = "3">
          </BreakpointContent>
@@ -1033,11 +1033,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MyCompanion/TodayTileViewController.swift"
-            timestampString = "515034225.829352"
+            timestampString = "515082033.064318"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "180"
-            endingLineNumber = "180"
+            startingLineNumber = "193"
+            endingLineNumber = "193"
             landmarkName = "locationManager(_:didUpdateLocations:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1049,11 +1049,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MyCompanion/TodayTileViewController.swift"
-            timestampString = "515034225.829352"
+            timestampString = "515082033.064318"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "150"
-            endingLineNumber = "150"
+            startingLineNumber = "163"
+            endingLineNumber = "163"
             landmarkName = "getWeather()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1065,11 +1065,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MyCompanion/TodayTileViewController.swift"
-            timestampString = "515034225.829352"
+            timestampString = "515082033.064318"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "149"
-            endingLineNumber = "149"
+            startingLineNumber = "162"
+            endingLineNumber = "162"
             landmarkName = "getWeather()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1081,11 +1081,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MyCompanion/TodayTileViewController.swift"
-            timestampString = "515034225.829352"
+            timestampString = "515082033.064318"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "147"
-            endingLineNumber = "147"
+            startingLineNumber = "160"
+            endingLineNumber = "160"
             landmarkName = "TodayTileViewController"
             landmarkType = "3">
          </BreakpointContent>

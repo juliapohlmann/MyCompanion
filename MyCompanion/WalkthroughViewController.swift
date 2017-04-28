@@ -38,6 +38,9 @@ class WalkthroughViewController: UIViewController, CLLocationManagerDelegate {
         setTrueIfNull(key: "showEmails")
         setTrueIfNull(key: "resetRemindersDaily")
         setTrueIfNull(key: "passwordEnabled")
+        setTrueIfNull(key: "showLocation")
+        setTrueIfNull(key: "showWeather")
+
         
         if (UserDefaults.standard.object(forKey: "lastOpened") as? Date) == nil {
             UserDefaults.standard.set(Date(), forKey: "lastOpened")

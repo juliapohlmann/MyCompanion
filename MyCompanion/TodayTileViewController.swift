@@ -31,7 +31,7 @@ class TodayTileViewController: UIViewController, CLLocationManagerDelegate {
             manager.requestAlwaysAuthorization()
 
             manager.delegate = self
-        
+            
             var weatherLocData = WeatherLocationDataManager.fetchWeatherLocationData()
             if(weatherLocData.count == 0) {
                 initialWeatherFetch()
@@ -44,6 +44,14 @@ class TodayTileViewController: UIViewController, CLLocationManagerDelegate {
                 }
             }
         }
+    }
+    
+    func shouldShowLocation() -> Bool {
+        return UserDefaults.standard.object(forKey: "showLocation") as! Bool
+    }
+    
+    func shouldShowWeather() -> Bool {
+        return UserDefaults.standard.object(forKey: "showWeather") as! Bool
     }
     
     func shouldLoadTodayTile() -> Bool {
@@ -93,10 +101,12 @@ class TodayTileViewController: UIViewController, CLLocationManagerDelegate {
      */
     func setWeatherText(city: String?, temperature: Int?, weatherSummary: String?, error: Bool?) {
         if(error!) {
-            self.weatherLabel.text = "Fetching your weather now..."
-        }
-        else {
+            self.weatherLabel.isHidden = true
+        } else if (shouldShowWeather() && shouldShowLocation()) {
+            self.weatherLabel.isHidden = false
             self.weatherLabel.text = "In \(city!), it is \(temperature!)° and \(weatherSummary!)."
+        } else {
+            self.weatherLabel.isHidden = true
         }
     }
     
@@ -109,10 +119,13 @@ class TodayTileViewController: UIViewController, CLLocationManagerDelegate {
      */
     func setLocationText(city: String?, state: String?, error: Bool?) {
         if(error!) {
-            self.locationLabel.text = "Fetching your location now..."
+            self.locationLabel.isHidden = true
+        } else if (shouldShowLocation()) {
+            self.locationLabel.isHidden = false
+            self.locationLabel.text = "You are in \(city!), \(state!)."
         }
         else {
-            self.locationLabel.text = "You are in \(city!), \(state!)."
+            self.locationLabel.isHidden = true
         }
     }
     

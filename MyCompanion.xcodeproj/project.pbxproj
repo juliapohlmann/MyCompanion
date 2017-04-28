@@ -57,6 +57,7 @@
 		DA63DC281E822AE700E1C5A8 /* ContactTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA63DC271E822AE700E1C5A8 /* ContactTableViewController.swift */; };
 		DA63DC2C1E822FC000E1C5A8 /* ContactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA63DC2B1E822FC000E1C5A8 /* ContactTableViewCell.swift */; };
 		DA761C8A1E5CA42300B3679A /* CaregiverTileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA761C891E5CA42300B3679A /* CaregiverTileViewController.swift */; };
+		DA7E04B81EB389D50086A82A /* CaregiverPortal_Walkthrough.png in Resources */ = {isa = PBXBuildFile; fileRef = DA7E04B71EB389D50086A82A /* CaregiverPortal_Walkthrough.png */; };
 		DA8580FA1E4134570055134E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8580F91E4134570055134E /* AppDelegate.swift */; };
 		DA8580FC1E4134570055134E /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8580FB1E4134570055134E /* DashboardViewController.swift */; };
 		DA8580FF1E4134570055134E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA8580FD1E4134570055134E /* Main.storyboard */; };
@@ -67,7 +68,6 @@
 		DA8A8F0A1EA931C300BB2939 /* WeatherLocationDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8A8F091EA931C300BB2939 /* WeatherLocationDataManager.swift */; };
 		DA8FDA761EB24B460037880F /* MemoryBook_Walkthrough.png in Resources */ = {isa = PBXBuildFile; fileRef = DA8FDA711EB24B460037880F /* MemoryBook_Walkthrough.png */; };
 		DA8FDA771EB24B460037880F /* CaregiverTips_Walkthrough.png in Resources */ = {isa = PBXBuildFile; fileRef = DA8FDA721EB24B460037880F /* CaregiverTips_Walkthrough.png */; };
-		DA8FDA781EB24B460037880F /* CaregiverPortal_Walkthrough.png in Resources */ = {isa = PBXBuildFile; fileRef = DA8FDA731EB24B460037880F /* CaregiverPortal_Walkthrough.png */; };
 		DA8FDA791EB24B460037880F /* Contacts_Walkthrough.png in Resources */ = {isa = PBXBuildFile; fileRef = DA8FDA741EB24B460037880F /* Contacts_Walkthrough.png */; };
 		DA8FDA7A1EB24B460037880F /* Dashboard_Walkthrough.png in Resources */ = {isa = PBXBuildFile; fileRef = DA8FDA751EB24B460037880F /* Dashboard_Walkthrough.png */; };
 		DA8FDA7E1EB2544A0037880F /* Reminders_Walkthrough.png in Resources */ = {isa = PBXBuildFile; fileRef = DA8FDA7D1EB2544A0037880F /* Reminders_Walkthrough.png */; };
@@ -148,6 +148,7 @@
 		DA63DC271E822AE700E1C5A8 /* ContactTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactTableViewController.swift; sourceTree = "<group>"; };
 		DA63DC2B1E822FC000E1C5A8 /* ContactTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactTableViewCell.swift; sourceTree = "<group>"; };
 		DA761C891E5CA42300B3679A /* CaregiverTileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CaregiverTileViewController.swift; sourceTree = "<group>"; };
+		DA7E04B71EB389D50086A82A /* CaregiverPortal_Walkthrough.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CaregiverPortal_Walkthrough.png; sourceTree = "<group>"; };
 		DA8580F61E4134570055134E /* MyCompanion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyCompanion.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA8580F91E4134570055134E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DA8580FB1E4134570055134E /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
@@ -162,7 +163,6 @@
 		DA8A8F091EA931C300BB2939 /* WeatherLocationDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherLocationDataManager.swift; sourceTree = "<group>"; };
 		DA8FDA711EB24B460037880F /* MemoryBook_Walkthrough.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MemoryBook_Walkthrough.png; sourceTree = "<group>"; };
 		DA8FDA721EB24B460037880F /* CaregiverTips_Walkthrough.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CaregiverTips_Walkthrough.png; sourceTree = "<group>"; };
-		DA8FDA731EB24B460037880F /* CaregiverPortal_Walkthrough.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CaregiverPortal_Walkthrough.png; sourceTree = "<group>"; };
 		DA8FDA741EB24B460037880F /* Contacts_Walkthrough.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Contacts_Walkthrough.png; sourceTree = "<group>"; };
 		DA8FDA751EB24B460037880F /* Dashboard_Walkthrough.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Dashboard_Walkthrough.png; sourceTree = "<group>"; };
 		DA8FDA7D1EB2544A0037880F /* Reminders_Walkthrough.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Reminders_Walkthrough.png; sourceTree = "<group>"; };
@@ -219,10 +219,10 @@
 		1CF3EF291EAFFF5D0071AD91 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				DA7E04B71EB389D50086A82A /* CaregiverPortal_Walkthrough.png */,
 				DA8FDA7D1EB2544A0037880F /* Reminders_Walkthrough.png */,
 				DA8FDA711EB24B460037880F /* MemoryBook_Walkthrough.png */,
 				DA8FDA721EB24B460037880F /* CaregiverTips_Walkthrough.png */,
-				DA8FDA731EB24B460037880F /* CaregiverPortal_Walkthrough.png */,
 				DA8FDA741EB24B460037880F /* Contacts_Walkthrough.png */,
 				DA8FDA751EB24B460037880F /* Dashboard_Walkthrough.png */,
 				1CE9A3F51EA15A8600D44333 /* play-btn.png */,
@@ -570,6 +570,7 @@
 				DA8581071E4134570055134E /* LaunchScreen.storyboard in Resources */,
 				1CF3EF381EAFFF810071AD91 /* 11DP_Fiverr.jpg in Resources */,
 				1CF3EF3D1EAFFF810071AD91 /* 11RV_Fiverr.jpg in Resources */,
+				DA7E04B81EB389D50086A82A /* CaregiverPortal_Walkthrough.png in Resources */,
 				1CF3EF3B1EAFFF810071AD91 /* 11LV_Fiverr.jpg in Resources */,
 				1CF3EF391EAFFF810071AD91 /* 11DV_Fiverr.jpg in Resources */,
 				DA8581041E4134570055134E /* Assets.xcassets in Resources */,
@@ -582,7 +583,6 @@
 				1CF3EF3A1EAFFF810071AD91 /* 11LP_Fiverr.jpg in Resources */,
 				1CF3EF361EAFFF810071AD91 /* 1P_Fiverr.jpg in Resources */,
 				DA8FDA7A1EB24B460037880F /* Dashboard_Walkthrough.png in Resources */,
-				DA8FDA781EB24B460037880F /* CaregiverPortal_Walkthrough.png in Resources */,
 				1CE9A3F61EA15A8600D44333 /* play-btn.png in Resources */,
 				DA8FDA791EB24B460037880F /* Contacts_Walkthrough.png in Resources */,
 				DA8580FF1E4134570055134E /* Main.storyboard in Resources */,

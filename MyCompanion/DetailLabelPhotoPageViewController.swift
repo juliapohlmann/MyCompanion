@@ -96,38 +96,7 @@ class DetailLabelPhotoPageViewController: UIViewController, UIImagePickerControl
         self.present(imagePicker, animated: true) {}
     }
     
-    // MARK: - UIImagePickerControllerDelegate Methods
-    func writeVideo(info: [String : Any]) -> NSURL{
-        
-        let uniqueID = NSUUID().uuidString
-        let videoURL = info[UIImagePickerControllerMediaURL] as? URL as NSURL?
-        let myVideoVarData = try! Data(contentsOf: videoURL! as URL)
-        
-        //Now writing the data to the temp diroctory.
-        let tempPath = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory, FileManager.SearchPathDomainMask.userDomainMask, true)
-        let tempDocumentsDirectory: AnyObject = tempPath[0] as AnyObject
-        videoID = uniqueID  + "TEMPVIDEO.MOV"
-        let tempDataPath = tempDocumentsDirectory.appendingPathComponent(videoID) as String
-        try? myVideoVarData.write(to: URL(fileURLWithPath: tempDataPath), options: [])
-        
-        //Now we remove the data from the temp Document Diroctory.
-        do{
-            let fileManager = FileManager.default
-            try fileManager.removeItem(atPath: tempDataPath)
-        } catch {
-            //Do nothing
-        }
-        
-        //Here we are writing the data to the Document Directory for use later on.
-        let docPaths = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory, FileManager.SearchPathDomainMask.userDomainMask, true)
-        let documentsDirectory: AnyObject = docPaths[0] as AnyObject
-        videoID = uniqueID  + "VIDEO.MOV"
-        let docDataPath = documentsDirectory.appendingPathComponent(videoID) as String
-        try? myVideoVarData.write(to: URL(fileURLWithPath: docDataPath), options: [])
-
-        return videoURL!
-    }
-    
+//    // MARK: - UIImagePickerControllerDelegate Methods
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         
         let mediaType = info[UIImagePickerControllerMediaType] as! NSString

@@ -25,17 +25,16 @@ class SettingsTableViewControllerTests: XCTestCase {
     func testTableViewHeaders() {
         class SettingsTableViewControllerMock: SettingsTableViewController {}
         let controller = SettingsTableViewControllerMock()
-        var expected = "Contacts Settings"
+        var expected = "Today Tile Settings"
         XCTAssertEqual(expected, controller.tableView(UITableView(), titleForHeaderInSection: 0))
-        expected = "Reminders Settings"
+        expected = "Contacts Settings"
         XCTAssertEqual(expected, controller.tableView(UITableView(), titleForHeaderInSection: 1))
-        expected = "Security Settings"
+        expected = "Reminders Settings"
         XCTAssertEqual(expected, controller.tableView(UITableView(), titleForHeaderInSection: 2))
-        expected = ""
+        expected = "Security Settings"
         XCTAssertEqual(expected, controller.tableView(UITableView(), titleForHeaderInSection: 3))
-//        expected = "mistake"
-//        XCTAssertEqual(expected, controller.tableView(UITableView(), titleForHeaderInSection: 4))
-
+        expected = ""
+        XCTAssertEqual(expected, controller.tableView(UITableView(), titleForHeaderInSection: 4))
     }
     
 }

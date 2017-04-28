@@ -72,7 +72,6 @@ class CaregiverTipsTableViewController: UITableViewController {
             return numA
         default: return 0
         }
-
     }
     
     override func tableView(_ tableView: UITableView,

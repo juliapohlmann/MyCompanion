@@ -26,6 +26,7 @@ class AddPageTableViewControllerTests: XCTestCase {
         let controller = AddPageTableViewControllerMock()
         let expected = 5
         XCTAssertEqual(expected, controller.numberOfSections(in: UITableView()))
+        
     }
     
     func testTableViewIntReturned() {

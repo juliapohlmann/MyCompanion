@@ -20,6 +20,5 @@ class DisplayTipsViewController: UIViewController {
 
         textView.text = text
         titleLabel.text = tipTitle
-        // Do any additional setup after loading the view.
     }
 }

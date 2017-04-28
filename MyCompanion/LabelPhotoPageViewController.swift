@@ -104,7 +104,6 @@ class LabelPhotoPageViewController: UIViewController {
             //11L = left
             label = UILabel(frame: CGRect(x: 278, y: 104, width: 484, height: 526))
             imageView.frame = CGRect(x: 20, y: 200, width: 250, height: 250)
-            
         }
         
         return label

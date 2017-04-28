@@ -25,12 +25,12 @@ class ViewMemoryBookViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        nextIcon.image = UIImage.fontAwesomeIcon(name: .arrowRight, textColor: UIColor.black, size: CGSize(width: 93, height: 81))
         
+        
+        nextIcon.image = UIImage.fontAwesomeIcon(name: .arrowRight, textColor: UIColor.black, size: CGSize(width: 93, height: 81))
         prevIcon.image = UIImage.fontAwesomeIcon(name: .arrowLeft, textColor: UIColor.black, size: CGSize(width: 93, height: 81))
 
-        pages = fetchPages()
-        
+        pages = MemoryBookDataManager.fetchPages()
         
         if(pages.count != 0) {
             updateView()
@@ -43,9 +43,12 @@ class ViewMemoryBookViewController: UIViewController {
             controller.pageTitle = "Create your memory book now!"
             finishSetup(controller: controller)
         }
-        
     }
     
+    /**
+        Helper function that updates the inner view with the correct memory book page and formats it correctly
+
+     */
     func updateView() {
         
         toggleAllPrevious(isHidden: false)
@@ -53,9 +56,10 @@ class ViewMemoryBookViewController: UIViewController {
         
         if(pageNum == 0) {
             toggleAllPrevious(isHidden: true)
-        }
-        
-        if(pageNum + 1 == pages.count) {
+        } else if (pageNum > 0 && (pageNum + 1 != pages.count)) {
+            toggleAllPrevious(isHidden: false)
+            toggleAllNext(isHidden: false)
+        } else {
             toggleAllNext(isHidden: true)
         }
         
@@ -96,18 +100,33 @@ class ViewMemoryBookViewController: UIViewController {
         }
     }
     
+    /**
+        Helper function to toggle previous items to given state
+        
+        - Parameter isHidden: value to toggle to
+     */
     func toggleAllPrevious(isHidden: Bool) {
         self.previousButton.isHidden = isHidden
         self.prevIcon.isHidden = isHidden
         self.prevLabel.isHidden = isHidden
     }
     
+    /**
+        Helper function to toggle next items to given state
+     
+        - Parameter isHidden: value to toggle to
+     */
     func toggleAllNext(isHidden: Bool) {
         self.nextButton.isHidden = isHidden
         self.nextIcon.isHidden = isHidden
         self.nextLabel.isHidden = isHidden
     }
     
+    /**
+        Helper function to finish step needed for all pages
+     
+        - Parameter controller: controller to work with
+     */
     func finishSetup(controller: UIViewController) {
         
         controller.view.frame = self.containerView.bounds;
@@ -115,41 +134,15 @@ class ViewMemoryBookViewController: UIViewController {
         self.containerView.addSubview(controller.view)
         self.addChildViewController(controller)
         controller.didMove(toParentViewController: self)
-        
     }
     
     @IBAction func clickPrevious(_ sender: Any) {
-        
         pageNum = pageNum - 1
         updateView()
-        
     }
     
     @IBAction func clickNext(_ sender: Any) {
-        
         pageNum = pageNum + 1
         updateView()
-        
     }
-    
-    func getContext() -> NSManagedObjectContext {
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        return appDelegate.persistentContainer.viewContext
-    }
-    
-    func fetchPages() -> [NSManagedObject] {
-        var pages : [NSManagedObject] = []
-        let context = getContext()
-        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "MemoryBook")
-        
-        do {
-            pages = try context.fetch(fetchRequest)
-            return pages
-        } catch _ as NSError {
-            return []
-        }
-    }
-    
-
-
 }

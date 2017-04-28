@@ -15,7 +15,9 @@ class ReminderTileViewController : UIViewController {
     @IBOutlet var remindersImage: UIImageView!
     
     @IBAction func reminderClick(_ sender: Any) {
-        performSegue(withIdentifier: "reminderTileToReminderPageSegue", sender: sender)
+        let reminderVC = storyboard!.instantiateViewController(withIdentifier: "reminderTableViewController")
+        self.present(reminderVC, animated: true, completion: nil)
+//        performSegue(withIdentifier: "reminderTileToReminderPageSegue", sender: sender)
     }
     
     

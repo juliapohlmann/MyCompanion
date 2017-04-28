@@ -14,7 +14,8 @@ class ContactTileViewController : UIViewController {
     @IBOutlet var contactsImage: UIImageView!
     
     @IBAction func contactClick(_ sender: Any) {
-        performSegue(withIdentifier: "contactTileToContactPageSegue", sender: sender)
+        let contactVC = storyboard!.instantiateViewController(withIdentifier: "contactTableViewController")
+        self.present(contactVC, animated: true, completion: nil)
     }
     
     override func viewDidLoad() {

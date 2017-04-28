@@ -30,8 +30,7 @@ class CaregiverTileViewController: UIViewController {
         let originalPassword = UserDefaults.standard.object(forKey: "userPassword") as! String
         
         if(newWordField?.text == originalPassword) {
-            
-            performSegue(withIdentifier: "caregiverTileToCaregiverPageSegue", sender: self)
+            showCaregiverPortal()
         } else {
             presentPrompt()
         }
@@ -58,7 +57,7 @@ class CaregiverTileViewController: UIViewController {
         if(shouldPresentPrompt()) {
             presentPrompt()
         } else {
-            performSegue(withIdentifier: "caregiverTileToCaregiverPageSegue", sender: self)
+            showCaregiverPortal()
         }
     }
     
@@ -78,5 +77,10 @@ class CaregiverTileViewController: UIViewController {
         newWordPrompt.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: wordEntered))
         
         present(newWordPrompt, animated: true, completion: nil)
+    }
+    
+    func showCaregiverPortal() {
+        let caregiverPortal = storyboard!.instantiateViewController(withIdentifier: "caregiverPortalSplitViewController")
+        self.present(caregiverPortal, animated: true, completion: nil)
     }
 }

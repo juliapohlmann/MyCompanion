@@ -372,7 +372,7 @@
         <!--Reminders Table View Controller-->
         <scene sceneID="UZZ-3t-PNf">
             <objects>
-                <tableViewController id="zVN-dJ-7iN" customClass="RemindersTableViewController" customModule="MyCompanion" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="reminderTableViewController" id="zVN-dJ-7iN" customClass="RemindersTableViewController" customModule="MyCompanion" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="88" sectionHeaderHeight="28" sectionFooterHeight="28" id="G1n-FN-Sud">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -484,7 +484,6 @@
                                 <rect key="frame" x="0.0" y="0.0" width="315" height="344"/>
                                 <connections>
                                     <action selector="reminderClick:" destination="D77-TD-m1a" eventType="touchUpInside" id="CSL-fK-BDz"/>
-                                    <segue destination="zVN-dJ-7iN" kind="presentation" identifier="reminderTileToReminderPageSegue" id="JYI-gR-lRr"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -539,7 +538,6 @@
                                 <rect key="frame" x="0.0" y="0.0" width="315" height="344"/>
                                 <connections>
                                     <action selector="contactClick:" destination="oJA-Pt-ytX" eventType="touchUpInside" id="IEB-Cf-MAh"/>
-                                    <segue destination="f1G-Sn-6h1" kind="presentation" identifier="contactTileToContactPageSegue" id="hGT-hV-31C"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -567,7 +565,7 @@
         <!--Contact Table View Controller-->
         <scene sceneID="Tln-Lv-wDB">
             <objects>
-                <tableViewController id="f1G-Sn-6h1" customClass="ContactTableViewController" customModule="MyCompanion" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="contactTableViewController" id="f1G-Sn-6h1" customClass="ContactTableViewController" customModule="MyCompanion" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="279" sectionHeaderHeight="28" sectionFooterHeight="28" id="rIJ-bR-PxV">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -697,7 +695,6 @@
                                 <rect key="frame" x="0.0" y="0.0" width="315" height="344"/>
                                 <connections>
                                     <action selector="caregiverPortalClick:" destination="ptB-jL-s6y" eventType="touchUpInside" id="4q0-bw-MRS"/>
-                                    <segue destination="eZD-GN-D0P" kind="show" identifier="caregiverTileToCaregiverPageSegue" id="GIl-Gm-D5P"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1878,10 +1875,10 @@
             </objects>
             <point key="canvasLocation" x="2472" y="2208"/>
         </scene>
-        <!--Split View Controller-->
+        <!--caregiverPortalSplitViewController-->
         <scene sceneID="SUT-Yb-Fms">
             <objects>
-                <splitViewController id="eZD-GN-D0P" sceneMemberID="viewController">
+                <splitViewController storyboardIdentifier="caregiverPortalSplitViewController" title="caregiverPortalSplitViewController" id="eZD-GN-D0P" sceneMemberID="viewController">
                     <connections>
                         <segue destination="b27-BN-Qgp" kind="relationship" relationship="masterViewController" id="miW-yZ-Ph0"/>
                         <segue destination="a3f-Sg-oy4" kind="relationship" relationship="detailViewController" id="IFS-fi-JYG"/>
@@ -2195,13 +2192,13 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="WLn-pA-tNl"/>
+        <segue reference="QNv-iP-D82"/>
         <segue reference="877-sf-rr6"/>
-        <segue reference="IlB-Sf-bGQ"/>
         <segue reference="yIN-HV-dx8"/>
         <segue reference="kQ8-xZ-Q3L"/>
         <segue reference="mJU-au-Agg"/>
         <segue reference="IAW-LV-fko"/>
+        <segue reference="IFS-fi-JYG"/>
         <segue reference="RXJ-12-X15"/>
         <segue reference="xOr-P6-iNA"/>
     </inferredMetricsTieBreakers>

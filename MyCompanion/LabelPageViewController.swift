@@ -2,18 +2,20 @@
 //  LabelPageViewController.swift
 //  MyCompanion
 //
-//  Created by Shyam Kotak on 3/27/17.
+//  Created by Julia Pohlmann on 4/28/17.
 //  Copyright © 2017 EECS395. All rights reserved.
 //
 
+import Foundation
 import UIKit
 
 class LabelPageViewController: UIViewController {
     
     @IBOutlet var titleLabel: UILabel!
+    @IBOutlet var textLabel: UILabel!
     
-    var pageText : String = ""
-    var pageTitle : String = ""
+    var pageText: String = ""
+    var pageTitle: String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +27,5 @@ class LabelPageViewController: UIViewController {
         if let textLabel = self.view.viewWithTag(2) as? UILabel {
             textLabel.text = pageText
         }
-        
     }
 }

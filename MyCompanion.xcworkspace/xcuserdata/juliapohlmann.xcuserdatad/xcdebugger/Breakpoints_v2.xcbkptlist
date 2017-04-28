@@ -47,7 +47,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "21"
             endingLineNumber = "21"
-            landmarkName = "fetchContacts()"
+            landmarkName = "getContext()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -137,11 +137,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MyCompanion/MemoryBookDataManager.swift"
-            timestampString = "512425716.006213"
+            timestampString = "515101836.178285"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "37"
-            endingLineNumber = "37"
+            startingLineNumber = "54"
+            endingLineNumber = "54"
             landmarkName = "deletePage(page:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -318,7 +318,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "40"
             endingLineNumber = "40"
-            landmarkName = "storeContact(name:relationship:number:email:imageData:)"
+            landmarkName = "fetchContacts()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1312,22 +1312,6 @@
             endingLineNumber = "33"
             landmarkName = "shouldWalkthrough()"
             landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MyCompanion/MemoryBookPageHelper.swift"
-            timestampString = "515100495.614274"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "52"
-            endingLineNumber = "52"
-            landmarkName = "MemoryBookPageHelper"
-            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

@@ -25,8 +25,11 @@ class PhotoPageViewController: UIViewController {
         setupView()
     }
     
+    /**
+        Called when a tap is detected to start the video player and play the video
+     */
     func tapDetected() {
-        let player = AVPlayer(url: MemoryBookPageHelper.getFilePathURL(videoID: videoID))
+        let player = AVPlayer(url: MemoryBookVideoHelper.getFilePathURL(videoID: videoID))
         let playerController = AVPlayerViewController()
         playerController.player = player
         self.present(playerController, animated: true) {
@@ -53,7 +56,7 @@ class PhotoPageViewController: UIViewController {
         } else {
             
             //makes thumbnail
-            let videoURL = MemoryBookPageHelper.getFilePathURL(videoID: videoID)
+            let videoURL = MemoryBookVideoHelper.getFilePathURL(videoID: videoID)
             let asset = AVURLAsset(url: videoURL as URL, options: nil)
             let imgGenerator = AVAssetImageGenerator(asset: asset)
             
@@ -62,9 +65,9 @@ class PhotoPageViewController: UIViewController {
                 if let imageView = self.view.viewWithTag(10) as? UIImageView {
                     imageView.image = UIImage(cgImage: cgImage)
                     
-                    MemoryBookPageHelper.addPlayButtonToView(imageView: imageView)
+                    MemoryBookVideoHelper.addPlayButtonToView(imageView: imageView)
                     
-                    MemoryBookPageHelper.addTapRecognizer(sender: self, type: "PhotoPageViewController", imageView: imageView)
+                    MemoryBookVideoHelper.addTapRecognizer(sender: self, type: "PhotoPageViewController", imageView: imageView)
                 }
             } catch {
                 print(error)

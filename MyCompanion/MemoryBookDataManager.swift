@@ -12,11 +12,21 @@ import UIKit
 
 class MemoryBookDataManager {
     
+    /**
+        Gets current context so core data operations can be done
+     
+        - Returns: current context
+     */
     static func getContext() -> NSManagedObjectContext {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         return appDelegate.persistentContainer.viewContext
     }
     
+    /**
+        Returns pages from core data
+     
+        - Returns: array of core data objects
+     */
     static func fetchPages() -> [NSManagedObject] {
         let context = getContext()
         let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "MemoryBook")
@@ -31,6 +41,13 @@ class MemoryBookDataManager {
         }
     }
     
+    /**
+        Deletes give page from core data
+     
+        - Parameter page: page to be deleted
+     
+        - Returns: bool of whether delete was succesful
+     */
     static func deletePage(page: NSManagedObject) -> Bool {
         let context = getContext()
         context.delete(page)
@@ -43,6 +60,18 @@ class MemoryBookDataManager {
         }
     }
     
+    /**
+        Create new memory book page and save
+     
+        - Parameters:
+            - title: title to be stored
+            - text: text to be stored
+            - templateType: template type to be stored
+            - imageData: image data to be stored
+            - videoID: videoID to be stored
+     
+        - Returns: bool of whether store was succesful
+     */
     static func storePage(title: String!, text: String!, templateType: String!, imageData: NSData!, videoID: String!) -> Bool{
         let context = getContext()
         let entity = NSEntityDescription.entity(forEntityName: "MemoryBook", in: context)
@@ -62,6 +91,19 @@ class MemoryBookDataManager {
         }
     }
     
+    /**
+        Update memory book page and save
+     
+        - Parameters:
+            - page: core data object to be updated
+            - title: title to be stored
+            - text: text to be stored
+            - templateType: template type to be stored
+            - imageData: image data to be stored
+            - videoID: videoID to be stored
+     
+        - Returns: bool of whether store was succesful
+     */
     static func updatePage(page: NSManagedObject, title: String!, text: String!, templateType: String!, imageData: NSData!, videoID: String!) -> Bool{
         let context = getContext()
         

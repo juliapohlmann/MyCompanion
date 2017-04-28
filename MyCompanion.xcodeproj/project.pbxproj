@@ -58,7 +58,7 @@
 		DA761C8A1E5CA42300B3679A /* CaregiverTileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA761C891E5CA42300B3679A /* CaregiverTileViewController.swift */; };
 		DA7E04B81EB389D50086A82A /* CaregiverPortal_Walkthrough.png in Resources */ = {isa = PBXBuildFile; fileRef = DA7E04B71EB389D50086A82A /* CaregiverPortal_Walkthrough.png */; };
 		DA7E04BA1EB3B61B0086A82A /* LabelPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7E04B91EB3B61B0086A82A /* LabelPageViewController.swift */; };
-		DA7E04BC1EB3BA4D0086A82A /* MemoryBookPageHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7E04BB1EB3BA4D0086A82A /* MemoryBookPageHelper.swift */; };
+		DA7E04BC1EB3BA4D0086A82A /* MemoryBookVideoHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7E04BB1EB3BA4D0086A82A /* MemoryBookVideoHelper.swift */; };
 		DA8580FA1E4134570055134E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8580F91E4134570055134E /* AppDelegate.swift */; };
 		DA8580FC1E4134570055134E /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8580FB1E4134570055134E /* DashboardViewController.swift */; };
 		DA8580FF1E4134570055134E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA8580FD1E4134570055134E /* Main.storyboard */; };
@@ -150,7 +150,7 @@
 		DA761C891E5CA42300B3679A /* CaregiverTileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CaregiverTileViewController.swift; sourceTree = "<group>"; };
 		DA7E04B71EB389D50086A82A /* CaregiverPortal_Walkthrough.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CaregiverPortal_Walkthrough.png; sourceTree = "<group>"; };
 		DA7E04B91EB3B61B0086A82A /* LabelPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LabelPageViewController.swift; sourceTree = "<group>"; };
-		DA7E04BB1EB3BA4D0086A82A /* MemoryBookPageHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemoryBookPageHelper.swift; sourceTree = "<group>"; };
+		DA7E04BB1EB3BA4D0086A82A /* MemoryBookVideoHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemoryBookVideoHelper.swift; sourceTree = "<group>"; };
 		DA8580F61E4134570055134E /* MyCompanion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyCompanion.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA8580F91E4134570055134E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DA8580FB1E4134570055134E /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
@@ -211,6 +211,7 @@
 		1C4E12141E7F56430001DD3F /* Memory Book */ = {
 			isa = PBXGroup;
 			children = (
+				DA7E04BB1EB3BA4D0086A82A /* MemoryBookVideoHelper.swift */,
 				DAAF9C1C1E8AFA9A0050BE11 /* MemoryBookDataManager.swift */,
 				DA3045671E8C1BCE003CEC9B /* Caregiver side */,
 				DA3045681E8C1BE8003CEC9B /* Patient side */,
@@ -293,7 +294,6 @@
 		DA3045681E8C1BE8003CEC9B /* Patient side */ = {
 			isa = PBXGroup;
 			children = (
-				DA7E04BB1EB3BA4D0086A82A /* MemoryBookPageHelper.swift */,
 				1CCEA7791E89DF1D00252E2A /* ViewMemoryBookViewController.swift */,
 				1CCEA77B1E89E60E00252E2A /* LabelPhotoPageViewController.swift */,
 				1CCEA77F1E89E62800252E2A /* PhotoPageViewController.swift */,
@@ -727,7 +727,7 @@
 				DAE3BB851E6CA57F009BB9E6 /* RemindersTableViewCell.swift in Sources */,
 				DA54D7851E86F05D00BE345C /* ReminderDataManager.swift in Sources */,
 				1C4E12041E7CAF350001DD3F /* EditMemoryBookTableViewController.swift in Sources */,
-				DA7E04BC1EB3BA4D0086A82A /* MemoryBookPageHelper.swift in Sources */,
+				DA7E04BC1EB3BA4D0086A82A /* MemoryBookVideoHelper.swift in Sources */,
 				1C4E12191E81899B0001DD3F /* EditRemindersTableViewController.swift in Sources */,
 				DAFA46B41E524AB000285267 /* ContactTileViewController.swift in Sources */,
 				1C4E12111E7F50A00001DD3F /* DetailLabelPageViewController.swift in Sources */,

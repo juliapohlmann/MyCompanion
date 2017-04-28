@@ -22,33 +22,16 @@ class LabelPhotoPageViewController: UIViewController {
         super.viewDidLoad()
         
         setupView()
-        
-    }
-
-    
-//    func getFilePathURL() -> URL{
-//        let paths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
-//        let documentsDirectory = paths[0]
-//        let videoDataPath = documentsDirectory + "/" + videoID
-//        return URL(fileURLWithPath: videoDataPath)
-//    }
-    
-    func tapDetected() {
-        let player = AVPlayer(url: MemoryBookPageHelper.getFilePathURL(videoID: videoID))
-        let playerController = AVPlayerViewController()
-        playerController.player = player
-        self.present(playerController, animated: true) {
-            player.play()
-        }
     }
     
+    /**
+        Helper method to set up the view of the label photo page view controller
+     */
     func setupView() {
         
         if let titleLabel = self.view.viewWithTag(1) as? UILabel {
             titleLabel.text = pageTitle
         }
-        
-        var label : UILabel
         
         var imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 0, height: 0))
         
@@ -60,17 +43,31 @@ class LabelPhotoPageViewController: UIViewController {
             //video
             loadVideo(imageView: imageView)
         }
-        
+        var label : UILabel
         label = formatImageLocation(imageView: imageView)
-        
         formatLabel(label: label)
         
         self.view.addSubview(label)
         view.addSubview(imageView)
-        
-        
     }
     
+    /**
+        Called when a tap is detected to start the video player and play the video
+     */
+    func tapDetected() {
+        let player = AVPlayer(url: MemoryBookVideoHelper.getFilePathURL(videoID: videoID))
+        let playerController = AVPlayerViewController()
+        playerController.player = player
+        self.present(playerController, animated: true) {
+            player.play()
+        }
+    }
+    
+    /**
+        Helper function to format the label's font and text and alignment
+     
+        - Parameter label: label to format
+     */
     func formatLabel(label: UILabel) {
         label.textAlignment = .left
         label.font = UIFont(name: "AvenirNext-DemiBold", size: 30)
@@ -78,6 +75,12 @@ class LabelPhotoPageViewController: UIViewController {
         label.numberOfLines = 100
     }
     
+    /**
+        Helper function to format the images location on the page
+     
+        - Parameter imageView: image to format
+        - Returns: label with location and size specified
+     */
     func formatImageLocation(imageView: UIImageView) -> UILabel {
         var label : UILabel
         //11T = photo/video top
@@ -107,8 +110,13 @@ class LabelPhotoPageViewController: UIViewController {
         return label
     }
     
+    /**
+        Helper function to load the video and format thumbnail
+     
+        - Parameter imageView: where to show the thumbnail of the video
+     */
     func loadVideo(imageView: UIImageView) {
-        let videoURL = MemoryBookPageHelper.getFilePathURL(videoID: videoID)
+        let videoURL = MemoryBookVideoHelper.getFilePathURL(videoID: videoID)
         let asset = AVURLAsset(url: videoURL as URL, options: nil)
         let imgGenerator = AVAssetImageGenerator(asset: asset)
         
@@ -116,9 +124,9 @@ class LabelPhotoPageViewController: UIViewController {
             let cgImage = try imgGenerator.copyCGImage(at: CMTimeMake(0, 1), actualTime: nil)
             imageView.image = UIImage(cgImage: cgImage)
             
-            MemoryBookPageHelper.addPlayButtonToView(imageView: imageView)
+            MemoryBookVideoHelper.addPlayButtonToView(imageView: imageView)
             
-            MemoryBookPageHelper.addTapRecognizer(sender: self, type: "LabelPhotoPageViewController", imageView: imageView)
+            MemoryBookVideoHelper.addTapRecognizer(sender: self, type: "LabelPhotoPageViewController", imageView: imageView)
         } catch {
             print(error)
         }

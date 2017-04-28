@@ -31,7 +31,7 @@ class DetailPhotoPageViewController: UIViewController, UIImagePickerControllerDe
         imagePicker.delegate = self
         titleTextField.delegate = self
         
-        setStockPhoto()
+        MemoryBookVideoHelper.setStockPhoto(imageView: imageView)
         
         if(vcType == "Edit Page") {
             setPageFields()
@@ -44,22 +44,22 @@ class DetailPhotoPageViewController: UIViewController, UIImagePickerControllerDe
         return false
     }
     
-    func setVideoThumbnail(){
-        let paths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
-        let documentsDirectory = paths[0]
-        let videoURL = documentsDirectory + "/" + (page?.value(forKeyPath: "videoID") as! String)
-        
-        let asset = AVURLAsset(url: URL(fileURLWithPath: videoURL) as URL, options: nil)
-        let imgGenerator = AVAssetImageGenerator(asset: asset)
-        
-        do {
-            let cgImage = try imgGenerator.copyCGImage(at: CMTimeMake(0, 1), actualTime: nil)
-            imageView.image = UIImage(cgImage: cgImage)
-        } catch {
-            print(error)
-        }
-        
-    }
+//    func setVideoThumbnail(){
+//        let paths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
+//        let documentsDirectory = paths[0]
+//        let videoURL = documentsDirectory + "/" + (page?.value(forKeyPath: "videoID") as! String)
+//        
+//        let asset = AVURLAsset(url: URL(fileURLWithPath: videoURL) as URL, options: nil)
+//        let imgGenerator = AVAssetImageGenerator(asset: asset)
+//        
+//        do {
+//            let cgImage = try imgGenerator.copyCGImage(at: CMTimeMake(0, 1), actualTime: nil)
+//            imageView.image = UIImage(cgImage: cgImage)
+//        } catch {
+//            print(error)
+//        }
+//        
+//    }
     
     func setPageFields() {
         titleTextField.text = page?.value(forKeyPath: "title") as? String
@@ -68,18 +68,22 @@ class DetailPhotoPageViewController: UIViewController, UIImagePickerControllerDe
             imageView.image = UIImage(data: page?.value(forKeyPath: "image") as! Data)
             imageData = page?.value(forKeyPath: "image") as! Data as NSData?
         } else if(page?.value(forKeyPath: "videoID") != nil) {
-            setVideoThumbnail()
+            let paths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
+            let documentsDirectory = paths[0]
+            let videoURL = URL(fileURLWithPath: documentsDirectory + "/" + (page?.value(forKeyPath: "videoID") as! String))
+            MemoryBookVideoHelper.setVideoThumbnail(videoURL: videoURL, imageView: imageView)
+
             videoID = page?.value(forKeyPath: "videoID") as! String
         }
     }
 
-    func setStockPhoto() {
-        imageView.layer.borderWidth = 2
-        imageView.layer.borderColor = UIColor.black.cgColor
-        if(imageView.image == nil) {
-            imageView.image = UIImage.fontAwesomeIcon(name: .camera, textColor: UIColor.black, size: CGSize(width: 128, height: 128))
-        }
-    }
+//    func setStockPhoto() {
+//        imageView.layer.borderWidth = 2
+//        imageView.layer.borderColor = UIColor.black.cgColor
+//        if(imageView.image == nil) {
+//            imageView.image = UIImage.fontAwesomeIcon(name: .camera, textColor: UIColor.black, size: CGSize(width: 128, height: 128))
+//        }
+//    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -120,43 +124,47 @@ class DetailPhotoPageViewController: UIViewController, UIImagePickerControllerDe
             
             // thanks http://stackoverflow.com/questions/36536044/swift-video-to-document-directory
             // Media is a video
-            let uniqueID = NSUUID().uuidString
             
             let videoURL = info[UIImagePickerControllerMediaURL] as? URL as NSURL?
-            let myVideoVarData = try! Data(contentsOf: videoURL! as URL)
+            videoID = MemoryBookVideoHelper.writeVideoToDocument(videoURL: videoURL, videoID: videoID)
             
-            //Now writing the data to the temp diroctory.
-            let tempPath = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory, FileManager.SearchPathDomainMask.userDomainMask, true)
-            let tempDocumentsDirectory: AnyObject = tempPath[0] as AnyObject
-            videoID = uniqueID  + "TEMPVIDEO.MOV"
-            let tempDataPath = tempDocumentsDirectory.appendingPathComponent(videoID) as String
-            try? myVideoVarData.write(to: URL(fileURLWithPath: tempDataPath), options: [])
+            MemoryBookVideoHelper.setVideoThumbnail(videoURL: videoURL as! URL, imageView: imageView)
+            
+//            let myVideoVarData = try! Data(contentsOf: videoURL! as URL)
+//            
+//            //Now writing the data to the temp diroctory.
+//            let tempPath = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory, FileManager.SearchPathDomainMask.userDomainMask, true)
+//            let tempDocumentsDirectory: AnyObject = tempPath[0] as AnyObject
+//            videoID = uniqueID  + "TEMPVIDEO.MOV"
+//            let tempDataPath = tempDocumentsDirectory.appendingPathComponent(videoID) as String
+//            try? myVideoVarData.write(to: URL(fileURLWithPath: tempDataPath), options: [])
+//
+//            //Now we remove the data from the temp Document Diroctory.
+//            do{
+//                let fileManager = FileManager.default
+//                try fileManager.removeItem(atPath: tempDataPath)
+//            } catch {
+//                //Do nothing
+//            }
+//            
+//            //Here we are writing the data to the Document Directory for use later on.
+//            let docPaths = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory, FileManager.SearchPathDomainMask.userDomainMask, true)
+//            let documentsDirectory: AnyObject = docPaths[0] as AnyObject
+//            videoID = uniqueID  + "VIDEO.MOV"
+//            let docDataPath = documentsDirectory.appendingPathComponent(videoID) as String
+//            try? myVideoVarData.write(to: URL(fileURLWithPath: docDataPath), options: [])
 
-            //Now we remove the data from the temp Document Diroctory.
-            do{
-                let fileManager = FileManager.default
-                try fileManager.removeItem(atPath: tempDataPath)
-            } catch {
-                //Do nothing
-            }
             
-            //Here we are writing the data to the Document Directory for use later on.
-            let docPaths = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory, FileManager.SearchPathDomainMask.userDomainMask, true)
-            let documentsDirectory: AnyObject = docPaths[0] as AnyObject
-            videoID = uniqueID  + "VIDEO.MOV"
-            let docDataPath = documentsDirectory.appendingPathComponent(videoID) as String
-            try? myVideoVarData.write(to: URL(fileURLWithPath: docDataPath), options: [])
-
-            //makes thumbnail
-            let asset = AVURLAsset(url: videoURL! as URL, options: nil)
-            let imgGenerator = AVAssetImageGenerator(asset: asset)
-            
-            do {
-                let cgImage = try imgGenerator.copyCGImage(at: CMTimeMake(0, 1), actualTime: nil)
-                imageView.image = UIImage(cgImage: cgImage)
-            } catch {
-                print(error)
-            }
+            //make the thumbnail
+//            let asset = AVURLAsset(url: videoURL! as URL, options: nil)
+//            let imgGenerator = AVAssetImageGenerator(asset: asset)
+//            
+//            do {
+//                let cgImage = try imgGenerator.copyCGImage(at: CMTimeMake(0, 1), actualTime: nil)
+//                imageView.image = UIImage(cgImage: cgImage)
+//            } catch {
+//                print(error)
+//            }
         }
         
         dismiss(animated: true, completion: nil)

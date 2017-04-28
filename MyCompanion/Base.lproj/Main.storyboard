@@ -1387,7 +1387,7 @@
                     <navigationItem key="navigationItem" id="0wg-iI-sUy">
                         <barButtonItem key="leftBarButtonItem" title="Back" id="p9S-DK-mMT">
                             <connections>
-                                <segue destination="msu-2S-72a" kind="showDetail" id="kQ8-xZ-Q3L"/>
+                                <segue destination="L7f-gs-OJl" kind="showDetail" id="ABB-fR-PZT"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -1453,15 +1453,15 @@
             <objects>
                 <tableViewController id="msu-2S-72a" customClass="CaregiverTipsTableViewController" customModule="MyCompanion" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" sectionIndexMinimumDisplayRowCount="5" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="QhM-Hy-esc">
-                        <rect key="frame" x="0.0" y="0.0" width="703" height="768"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="caregiverTipsCell" id="kib-6m-DUc">
-                                <rect key="frame" x="0.0" y="56" width="703" height="44"/>
+                                <rect key="frame" x="0.0" y="56" width="1024" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="kib-6m-DUc" id="uGt-cf-2jo">
-                                    <rect key="frame" x="0.0" y="0.0" width="703" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="1024" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
@@ -2247,7 +2247,7 @@
         <segue reference="mJU-au-Agg"/>
         <segue reference="IFS-fi-JYG"/>
         <segue reference="AVQ-iG-M23"/>
-        <segue reference="T8N-bo-CUt"/>
+        <segue reference="ABB-fR-PZT"/>
         <segue reference="iJw-PE-NhJ"/>
         <segue reference="RXJ-12-X15"/>
         <segue reference="xOr-P6-iNA"/>

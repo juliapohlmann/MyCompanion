@@ -26,9 +26,9 @@ class RemindersTableViewController: UITableViewController {
         - Parameter sender = button clicked
      
      */
-    @IBAction func homeClicked(_ sender: Any) {
-        performSegue(withIdentifier: "remindersToHomeSegue", sender: sender)
-    }
+//    @IBAction func homeClicked(_ sender: Any) {
+//        performSegue(withIdentifier: "remindersToHomeSegue", sender: sender)
+//    }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1

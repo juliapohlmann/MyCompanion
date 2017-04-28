@@ -297,6 +297,7 @@
 		DA3045671E8C1BCE003CEC9B /* Caregiver side */ = {
 			isa = PBXGroup;
 			children = (
+				1CCEA7771E88A78E00252E2A /* LandscapeImagePickerController.swift */,
 				1C4E12051E7CAF4F0001DD3F /* AddPageTableViewController.swift */,
 				DAF705191EB2B9DF008F5506 /* AddPageTableViewCell.swift */,
 				1C4E120B1E7CCE030001DD3F /* DetailLabelPhotoPageViewController.swift */,
@@ -435,7 +436,6 @@
 				DA8581051E4134570055134E /* LaunchScreen.storyboard */,
 				DA8581081E4134570055134E /* Info.plist */,
 				DA8581001E4134570055134E /* MyCompanion.xcdatamodeld */,
-				1CCEA7771E88A78E00252E2A /* LandscapeImagePickerController.swift */,
 				DA30B3771EADB6E500FA8B69 /* Caregiver Portal */,
 				DA369C821EA84E070041CDD7 /* Caregiver Tips */,
 				1C4E12141E7F56430001DD3F /* Memory Book */,

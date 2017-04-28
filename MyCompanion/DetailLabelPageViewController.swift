@@ -17,8 +17,9 @@ class DetailLabelPageViewController: UIViewController, UITextFieldDelegate {
 
     var templateType: String = ""
     var videoID: String = ""
-    @IBOutlet var titleTextField: JiroTextField!
-    @IBOutlet var textTextField: JiroTextField!
+    @IBOutlet var titleTextField: HoshiTextField!
+    @IBOutlet var textTextField: HoshiTextField!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,7 +47,7 @@ class DetailLabelPageViewController: UIViewController, UITextFieldDelegate {
     }
     
     // MARK: Core Data
-    @IBAction func storePage() {
+    @IBAction func storePage(_ sender: Any) {
         if vcType == "Add Page" {
             let didStorePage = MemoryBookDataManager.storePage(title: titleTextField.text, text: textTextField.text, templateType: self.templateType, imageData: nil, videoID: self.videoID)
             if didStorePage {

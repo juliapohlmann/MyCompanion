@@ -46,14 +46,6 @@ class WalkthroughViewController: UIViewController, CLLocationManagerDelegate {
         if (UserDefaults.standard.object(forKey: "userPassword") as? String) == nil {
             UserDefaults.standard.set("", forKey: "userPassword")
         }
-        
-//        UserDefaults.standard.set(true, forKey: "canCall")
-//        UserDefaults.standard.set(true, forKey: "canEmail")
-//        UserDefaults.standard.set(true, forKey: "showPhoneNumbers")
-//        UserDefaults.standard.set(true, forKey: "showEmails")
-//        UserDefaults.standard.set(true, forKey: "resetRemindersDaily")
-//        UserDefaults.standard.set(Date(),forKey: "lastOpened")
-//        UserDefaults.standard.set(true, forKey: "passwordEnabled")
 
     }
     

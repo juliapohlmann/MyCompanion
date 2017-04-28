@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1C1615981E5A6E14009A3137 /* PasscodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C1615971E5A6E14009A3137 /* PasscodeViewController.swift */; };
-		1C16159A1E5A7E0B009A3137 /* CheckPasscodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C1615991E5A7E0B009A3137 /* CheckPasscodeViewController.swift */; };
 		1C4E12041E7CAF350001DD3F /* EditMemoryBookTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C4E12031E7CAF350001DD3F /* EditMemoryBookTableViewController.swift */; };
 		1C4E12061E7CAF4F0001DD3F /* AddPageTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C4E12051E7CAF4F0001DD3F /* AddPageTableViewController.swift */; };
 		1C4E120C1E7CCE030001DD3F /* DetailLabelPhotoPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C4E120B1E7CCE030001DD3F /* DetailLabelPhotoPageViewController.swift */; };
@@ -102,8 +100,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1C1615971E5A6E14009A3137 /* PasscodeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasscodeViewController.swift; sourceTree = "<group>"; };
-		1C1615991E5A7E0B009A3137 /* CheckPasscodeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckPasscodeViewController.swift; sourceTree = "<group>"; };
 		1C4E12031E7CAF350001DD3F /* EditMemoryBookTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditMemoryBookTableViewController.swift; sourceTree = "<group>"; };
 		1C4E12051E7CAF4F0001DD3F /* AddPageTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPageTableViewController.swift; sourceTree = "<group>"; };
 		1C4E120B1E7CCE030001DD3F /* DetailLabelPhotoPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailLabelPhotoPageViewController.swift; sourceTree = "<group>"; };
@@ -443,7 +439,6 @@
 				DA30B3771EADB6E500FA8B69 /* Caregiver Portal */,
 				DA369C821EA84E070041CDD7 /* Caregiver Tips */,
 				1C4E12141E7F56430001DD3F /* Memory Book */,
-				DAE3BB7F1E6CA382009BB9E6 /* Security View Controllers */,
 				DAE3BB7A1E6C93BA009BB9E6 /* Tile View Controllers */,
 				DAE3BB871E6CA58F009BB9E6 /* Contact */,
 				DAE3BB861E6CA585009BB9E6 /* Reminder */,
@@ -483,15 +478,6 @@
 				DAE3BB7D1E6C9636009BB9E6 /* MemoryBookTileViewController.swift */,
 			);
 			name = "Tile View Controllers";
-			sourceTree = "<group>";
-		};
-		DAE3BB7F1E6CA382009BB9E6 /* Security View Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				1C1615971E5A6E14009A3137 /* PasscodeViewController.swift */,
-				1C1615991E5A7E0B009A3137 /* CheckPasscodeViewController.swift */,
-			);
-			name = "Security View Controllers";
 			sourceTree = "<group>";
 		};
 		DAE3BB861E6CA585009BB9E6 /* Reminder */ = {
@@ -846,7 +832,6 @@
 				1CCEA77E1E89E61B00252E2A /* LabelPageViewController.swift in Sources */,
 				DAE3BB7C1E6C93D7009BB9E6 /* ReminderTileViewController.swift in Sources */,
 				DA8580FC1E4134570055134E /* DashboardViewController.swift in Sources */,
-				1C1615981E5A6E14009A3137 /* PasscodeViewController.swift in Sources */,
 				DA8581021E4134570055134E /* MyCompanion.xcdatamodeld in Sources */,
 				DAE3BB851E6CA57F009BB9E6 /* RemindersTableViewCell.swift in Sources */,
 				DA54D7851E86F05D00BE345C /* ReminderDataManager.swift in Sources */,
@@ -855,7 +840,6 @@
 				DAFA46B41E524AB000285267 /* ContactTileViewController.swift in Sources */,
 				1C4E12111E7F50A00001DD3F /* DetailLabelPageViewController.swift in Sources */,
 				1CCEA7801E89E62800252E2A /* PhotoPageViewController.swift in Sources */,
-				1C16159A1E5A7E0B009A3137 /* CheckPasscodeViewController.swift in Sources */,
 				DA369C801EA8414D0041CDD7 /* WeatherFetchManager.swift in Sources */,
 				DA63DC241E81BED500E1C5A8 /* EditContactTableViewController.swift in Sources */,
 				1CC61A3E1E6FC2E800C92584 /* ContactDetailViewController.swift in Sources */,

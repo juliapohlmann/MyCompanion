@@ -64,7 +64,6 @@
 		DA8581021E4134570055134E /* MyCompanion.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DA8581001E4134570055134E /* MyCompanion.xcdatamodeld */; };
 		DA8581041E4134570055134E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA8581031E4134570055134E /* Assets.xcassets */; };
 		DA8581071E4134570055134E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA8581051E4134570055134E /* LaunchScreen.storyboard */; };
-		DA85811D1E4134570055134E /* MyCompanionUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA85811C1E4134570055134E /* MyCompanionUITests.swift */; };
 		DA85812B1E41357B0055134E /* TodayTileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA85812A1E41357B0055134E /* TodayTileViewController.swift */; };
 		DA8A8F0A1EA931C300BB2939 /* WeatherLocationDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8A8F091EA931C300BB2939 /* WeatherLocationDataManager.swift */; };
 		DA8FDA761EB24B460037880F /* MemoryBook_Walkthrough.png in Resources */ = {isa = PBXBuildFile; fileRef = DA8FDA711EB24B460037880F /* MemoryBook_Walkthrough.png */; };
@@ -168,8 +167,6 @@
 		DA85810D1E4134570055134E /* MyCompanionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyCompanionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA8581131E4134570055134E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DA8581181E4134570055134E /* MyCompanionUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyCompanionUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		DA85811C1E4134570055134E /* MyCompanionUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCompanionUITests.swift; sourceTree = "<group>"; };
-		DA85811E1E4134570055134E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DA85812A1E41357B0055134E /* TodayTileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodayTileViewController.swift; sourceTree = "<group>"; };
 		DA8A8F091EA931C300BB2939 /* WeatherLocationDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherLocationDataManager.swift; sourceTree = "<group>"; };
 		DA8FDA711EB24B460037880F /* MemoryBook_Walkthrough.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MemoryBook_Walkthrough.png; sourceTree = "<group>"; };
@@ -407,7 +404,6 @@
 			children = (
 				DA8580F81E4134570055134E /* MyCompanion */,
 				DA8581101E4134570055134E /* MyCompanionTests */,
-				DA85811B1E4134570055134E /* MyCompanionUITests */,
 				DA8580F71E4134570055134E /* Products */,
 				20C332A64E5E9C90DC1180CE /* Pods */,
 				0F9A800E50FFC6CA7504FCBB /* Frameworks */,
@@ -457,15 +453,6 @@
 				DA8581131E4134570055134E /* Info.plist */,
 			);
 			path = MyCompanionTests;
-			sourceTree = "<group>";
-		};
-		DA85811B1E4134570055134E /* MyCompanionUITests */ = {
-			isa = PBXGroup;
-			children = (
-				DA85811C1E4134570055134E /* MyCompanionUITests.swift */,
-				DA85811E1E4134570055134E /* Info.plist */,
-			);
-			path = MyCompanionUITests;
 			sourceTree = "<group>";
 		};
 		DAE3BB7A1E6C93BA009BB9E6 /* Tile View Controllers */ = {
@@ -869,7 +856,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DA85811D1E4134570055134E /* MyCompanionUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

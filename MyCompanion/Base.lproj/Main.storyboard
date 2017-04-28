@@ -2173,7 +2173,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Upb-ta-1ow" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="8Os-Zm-e4w">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="8Os-Zm-e4w">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -2188,14 +2188,14 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="iJw-PE-NhJ"/>
-        <segue reference="877-sf-rr6"/>
-        <segue reference="Hk7-8P-7I1"/>
-        <segue reference="T8N-bo-CUt"/>
-        <segue reference="IFS-fi-JYG"/>
-        <segue reference="xOr-P6-iNA"/>
-        <segue reference="RXJ-12-X15"/>
         <segue reference="mJU-au-Agg"/>
         <segue reference="IAW-LV-fko"/>
+        <segue reference="Hk7-8P-7I1"/>
+        <segue reference="iJw-PE-NhJ"/>
+        <segue reference="877-sf-rr6"/>
+        <segue reference="IFS-fi-JYG"/>
+        <segue reference="T8N-bo-CUt"/>
+        <segue reference="RXJ-12-X15"/>
+        <segue reference="xOr-P6-iNA"/>
     </inferredMetricsTieBreakers>
 </document>

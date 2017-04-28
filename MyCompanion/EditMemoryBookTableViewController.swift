@@ -17,8 +17,6 @@ class EditMemoryBookTableViewController: UITableViewController {
         super.viewDidLoad()
         pages = MemoryBookDataManager.fetchPages()
         
-//        let back : UIBarButtonItem = UIBarButtonItem(title: "Back", style: .plain, target: self, action: #selector(dismiss(sender:)))
-        
         self.navigationItem.setLeftBarButtonItems([self.editButtonItem], animated: false)
     }
     
@@ -63,64 +61,30 @@ class EditMemoryBookTableViewController: UITableViewController {
         }
     }
     
-    var types = ["11LP", "11RP", "11TP", "11DP", "11LV", "11RV", "11TV", "11DV", "1T", "1P", "1V"]
-
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        let cellClicked:Int = convertIndexPathToRow(indexPath: indexPath)
+        let indexPath = self.tableView.indexPathForSelectedRow!
+        let page : NSManagedObject = pages[indexPath.row]
+        let pageType = page.value(forKeyPath: "templateType") as? String
         
-        if(indexPath.section == 0 || indexPath.section == 1) {
-            
+        if(pageType?.hasPrefix("11"))! {
             let myVC = storyboard?.instantiateViewController(withIdentifier: "DetailLabelPhotoPageViewController") as! DetailLabelPhotoPageViewController
-            myVC.templateType = types[cellClicked]
+            myVC.templateType = pageType!
             myVC.vcType = "Edit Page"
             myVC.page = pages[indexPath.row]
             navigationController?.pushViewController(myVC, animated: true)
-            
-        } else if (indexPath.section == 2) {
-            
+        } else if (pageType!.hasSuffix("T")) {
             let myVC = storyboard?.instantiateViewController(withIdentifier: "DetailLabelPageViewController") as! DetailLabelPageViewController
-            myVC.templateType = types[cellClicked]
+            myVC.templateType = pageType!
             myVC.vcType = "Edit Page"
             myVC.page = pages[indexPath.row]
             navigationController?.pushViewController(myVC, animated: true)
-            
         } else {
-            
             let myVC = storyboard?.instantiateViewController(withIdentifier: "DetailPhotoPageViewController") as! DetailPhotoPageViewController
-            myVC.templateType = types[cellClicked]
+            myVC.templateType = pageType!
             myVC.vcType = "Edit Page"
             myVC.page = pages[indexPath.row]
             navigationController?.pushViewController(myVC, animated: true)
-            
-        }
-        
-    }
-    
-    func convertIndexPathToRow(indexPath: IndexPath) -> Int {
-        if(indexPath.section == 0) {
-            return indexPath.row
-        } else if(indexPath.section == 1) {
-            return indexPath.row + 4
-        } else  {
-            return indexPath.section + 6
         }
     }
-    
-//    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-//        
-//        let context = getContext()
-//        
-//        do {
-//            try context.save()
-//        } catch let error as NSError {
-//            let errorDialog = UIAlertController(title: "Error!", message: "Failed to save! \(error): \(error.userInfo)", preferredStyle: .alert)
-//            errorDialog.addAction(UIAlertAction(title: "Cancel", style: .cancel))
-//            present(errorDialog, animated: true)
-//        }
-//        
-//    }
-    
-
-
 }

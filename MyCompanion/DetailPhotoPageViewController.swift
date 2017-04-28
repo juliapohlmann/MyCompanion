@@ -64,10 +64,12 @@ class DetailPhotoPageViewController: UIViewController, UIImagePickerControllerDe
     func setPageFields() {
         titleTextField.text = page?.value(forKeyPath: "title") as? String
         if(page?.value(forKeyPath: "image") != nil) {
+            print()
             imageView.image = UIImage(data: page?.value(forKeyPath: "image") as! Data)
             imageData = page?.value(forKeyPath: "image") as! Data as NSData?
         } else if(page?.value(forKeyPath: "videoID") != nil) {
             setVideoThumbnail()
+            videoID = page?.value(forKeyPath: "videoID") as! String
         }
     }
 

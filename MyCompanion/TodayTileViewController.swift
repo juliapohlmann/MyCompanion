@@ -61,11 +61,9 @@ class TodayTileViewController: UIViewController, CLLocationManagerDelegate {
         
         if let city = self.currentData!.value(forKeyPath: "city") as? String, let state = self.currentData!.value(forKeyPath: "state") as? String, let temperature = self.currentData!.value(forKeyPath: "temperature") as? Int, let weatherSummary = self.currentData!.value(forKeyPath: "weatherSummary") as? String {
             
-            print("HERE1")
             setLocationText(city: city, state: state, error: false)
             setWeatherText(city: city, temperature: temperature, weatherSummary: weatherSummary, error: false)
         } else {
-            print("HERE2")
             manager.requestLocation()
         }
     }

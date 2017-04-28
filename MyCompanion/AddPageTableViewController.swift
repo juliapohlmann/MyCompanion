@@ -74,6 +74,7 @@ class AddPageTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         let cellClicked:Int = convertIndexPathToRow(indexPath: indexPath)
+        print("CELL CLICKED \(cellClicked)")
         
         if(indexPath.section == 0 || indexPath.section == 1) {
             let myVC = storyboard?.instantiateViewController(withIdentifier: "DetailLabelPhotoPageViewController") as! DetailLabelPhotoPageViewController

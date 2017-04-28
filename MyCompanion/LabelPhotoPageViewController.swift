@@ -56,6 +56,8 @@ class LabelPhotoPageViewController: UIViewController {
         var label : UILabel
         
         var imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 0, height: 0))
+        print("TEMPLATE TYPE \(templateType)")
+        
         //photo
         if(templateType.hasSuffix("P")) {
             let image = UIImage(data: imageData! as Data)

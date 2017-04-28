@@ -82,6 +82,7 @@ class DetailLabelPhotoPageViewController: UIViewController, UIImagePickerControl
             imageData = page?.value(forKeyPath: "image") as! Data as NSData?
         } else if(page?.value(forKeyPath: "videoID") != nil) {
             setVideoThumbnail()
+            videoID = page?.value(forKeyPath: "videoID") as! String
         }
     }
     

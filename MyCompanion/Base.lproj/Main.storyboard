@@ -733,14 +733,14 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="pagesCell" textLabel="WDN-M6-Y5e" style="IBUITableViewCellStyleDefault" id="f1F-O8-WLb">
-                                <rect key="frame" x="0.0" y="28" width="703" height="44"/>
+                                <rect key="frame" x="0.0" y="28" width="703.5" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="f1F-O8-WLb" id="TQj-AD-ehf">
-                                    <rect key="frame" x="0.0" y="0.0" width="703" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="703" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="WDN-M6-Y5e">
-                                            <rect key="frame" x="15.5" y="0.0" width="672" height="43.5"/>
+                                            <rect key="frame" x="15" y="0.0" width="673" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="20"/>
                                             <nil key="textColor"/>
@@ -823,25 +823,28 @@
         <scene sceneID="W6v-eL-iGE">
             <objects>
                 <tableViewController id="J4D-xn-rDj" customClass="AddPageTableViewController" customModule="MyCompanion" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" delaysContentTouches="NO" canCancelContentTouches="NO" dataMode="prototypes" style="grouped" separatorStyle="default" sectionIndexMinimumDisplayRowCount="6" rowHeight="211" sectionHeaderHeight="18" sectionFooterHeight="18" id="aGM-aT-dMy">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" delaysContentTouches="NO" canCancelContentTouches="NO" dataMode="prototypes" style="grouped" separatorStyle="default" sectionIndexMinimumDisplayRowCount="6" rowHeight="231" sectionHeaderHeight="18" sectionFooterHeight="18" id="aGM-aT-dMy">
                         <rect key="frame" x="0.0" y="0.0" width="703" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <color key="sectionIndexColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="templateType" rowHeight="275" id="PbG-Mt-2Jv">
-                                <rect key="frame" x="0.0" y="55.5" width="703" height="275"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="templateType" rowHeight="231" id="PbG-Mt-2Jv" customClass="AddPageTableViewCell" customModule="MyCompanion" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="56" width="703" height="231"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="PbG-Mt-2Jv" id="tOI-8H-AjX">
-                                    <rect key="frame" x="0.0" y="0.0" width="703" height="274.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="703" height="230"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="62h-JL-ydw">
-                                            <rect key="frame" x="229" y="39" width="244" height="195"/>
+                                            <rect key="frame" x="229" y="17" width="244" height="195"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
                                         </imageView>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="templateImage" destination="62h-JL-ydw" id="dqx-Sq-hU2"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <sections/>
@@ -981,11 +984,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="703" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dZo-L6-Aoa">
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dZo-L6-Aoa">
                                 <rect key="frame" x="78" y="72" width="546" height="565"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6da-mI-4aW" customClass="HoshiTextField" customModule="TextFieldEffects">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6da-mI-4aW" customClass="HoshiTextField" customModule="TextFieldEffects">
                                         <rect key="frame" x="82" y="100" width="416" height="66"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="textColor" red="0.3411764706" green="0.39607843139999999" blue="0.46274509800000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1003,11 +1006,11 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </textField>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dSg-AT-U5G">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dSg-AT-U5G">
                                         <rect key="frame" x="82" y="181" width="150" height="150"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aVA-vz-Vvq">
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aVA-vz-Vvq">
                                         <rect key="frame" x="82" y="342" width="416" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="30"/>
@@ -1020,7 +1023,7 @@
                                             <action selector="storePage" destination="TfM-Ik-16O" eventType="touchUpInside" id="JTU-dL-weq"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fzM-b4-PdD">
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fzM-b4-PdD">
                                         <rect key="frame" x="289" y="181" width="209" height="150"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="24"/>
@@ -1463,7 +1466,7 @@
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="caregiverTipsCell" id="kib-6m-DUc">
-                                <rect key="frame" x="0.0" y="55.5" width="703" height="44"/>
+                                <rect key="frame" x="0.0" y="56" width="703" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="kib-6m-DUc" id="uGt-cf-2jo">
                                     <rect key="frame" x="0.0" y="0.0" width="703" height="43.5"/>
@@ -2196,8 +2199,8 @@
         <segue reference="jkO-TI-eR3"/>
         <segue reference="eLC-S1-IWw"/>
         <segue reference="IlB-Sf-bGQ"/>
-        <segue reference="T8N-bo-CUt"/>
         <segue reference="8Mr-wE-qrS"/>
+        <segue reference="kQ8-xZ-Q3L"/>
         <segue reference="mJU-au-Agg"/>
         <segue reference="IAW-LV-fko"/>
         <segue reference="RXJ-12-X15"/>

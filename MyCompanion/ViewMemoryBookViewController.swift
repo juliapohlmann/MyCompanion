@@ -85,7 +85,6 @@ class ViewMemoryBookViewController: UIViewController {
             
             let controller = self.storyboard!.instantiateViewController(withIdentifier: "PhotoPageViewController") as! PhotoPageViewController
             controller.templateType = pageType!
-            print("PAGE TYPE: \(pageType)")
             controller.pageTitle = pages[pageNum].value(forKeyPath: "title") as! String
             if (pageType?.hasSuffix("P"))! {
                 controller.imageData = pages[pageNum].value(forKeyPath: "image") as? NSData

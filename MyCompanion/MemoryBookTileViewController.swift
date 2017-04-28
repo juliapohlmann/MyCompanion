@@ -20,7 +20,10 @@ class MemoryBookTileViewController: UIViewController {
     }
     
     @IBAction func memoryBookClick(_ sender: Any) {
-        performSegue(withIdentifier: "memoryBookTileToMemoryBookSegue", sender: sender)
+
+        let memoryBookVC = storyboard!.instantiateViewController(withIdentifier: "ViewMemoryBookViewController") as! ViewMemoryBookViewController
+
+        self.present(memoryBookVC, animated: true, completion: nil)
 
     }
 }

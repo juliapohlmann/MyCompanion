@@ -58,5 +58,10 @@ class DashboardViewController: UIViewController {
         return false
     }
     
+    func showMemoryBook() {
+        performSegue(withIdentifier: "segueToViewMemoryBook", sender: self)
+
+    }
+    
 }
 

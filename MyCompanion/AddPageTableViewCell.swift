@@ -12,5 +12,4 @@ import UIKit
 class AddPageTableViewCell: UITableViewCell {
 
     @IBOutlet var templateImage: UIImageView!
-
 }

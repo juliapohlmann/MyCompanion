@@ -23,13 +23,8 @@ class LabelPhotoPageViewController: UIViewController {
         
         setupView()
         
-        // Do any additional setup after loading the view.
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
     
     func getFilePathURL() -> URL{
         let paths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
@@ -63,31 +58,28 @@ class LabelPhotoPageViewController: UIViewController {
             imageView = UIImageView(image: image!)
         } else {
             //video
-            //makes thumbnail
-            let videoURL = getFilePathURL()
-            let asset = AVURLAsset(url: videoURL as URL, options: nil)
-            let imgGenerator = AVAssetImageGenerator(asset: asset)
-            
-            do {
-                let cgImage = try imgGenerator.copyCGImage(at: CMTimeMake(0, 1), actualTime: nil)
-                imageView.image = UIImage(cgImage: cgImage)
-                
-                let playImage = UIImage(named: "play-btn.png")
-                let playImageView = UIImageView(image:playImage)
-                playImageView.frame = CGRect(x: 75, y: 75, width: 100, height: 100)
-                imageView.addSubview(playImageView)
-                
-                let singleTap = UITapGestureRecognizer(target: self, action: #selector(PhotoPageViewController.tapDetected))
-                singleTap.numberOfTapsRequired = 1
-                imageView.isUserInteractionEnabled = true
-                imageView.addGestureRecognizer(singleTap)
-                
-            } catch {
-                print(error)
-            }
-            
+            loadVideo(imageView: imageView)
         }
         
+        label = formatImageLocation(imageView: imageView)
+        
+        formatLabel(label: label)
+        
+        self.view.addSubview(label)
+        view.addSubview(imageView)
+        
+        
+    }
+    
+    func formatLabel(label: UILabel) {
+        label.textAlignment = .left
+        label.font = UIFont(name: "AvenirNext-DemiBold", size: 30)
+        label.text = pageText
+        label.numberOfLines = 100
+    }
+    
+    func formatImageLocation(imageView: UIImageView) -> UILabel {
+        var label : UILabel
         //11T = photo/video top
         if(templateType.hasPrefix("11T")) {
             
@@ -112,15 +104,31 @@ class LabelPhotoPageViewController: UIViewController {
             
         }
         
-        label.textAlignment = .left
-        label.font = UIFont(name: "AvenirNext-DemiBold", size: 30)
-        label.text = pageText
-        label.numberOfLines = 100
-        self.view.addSubview(label)
+        return label
+    }
+    
+    func loadVideo(imageView: UIImageView) {
+        let videoURL = getFilePathURL()
+        let asset = AVURLAsset(url: videoURL as URL, options: nil)
+        let imgGenerator = AVAssetImageGenerator(asset: asset)
         
-        view.addSubview(imageView)
-        
-        
+        do {
+            let cgImage = try imgGenerator.copyCGImage(at: CMTimeMake(0, 1), actualTime: nil)
+            imageView.image = UIImage(cgImage: cgImage)
+            
+            let playImage = UIImage(named: "play-btn.png")
+            let playImageView = UIImageView(image:playImage)
+            playImageView.frame = CGRect(x: 75, y: 75, width: 100, height: 100)
+            imageView.addSubview(playImageView)
+            
+            let singleTap = UITapGestureRecognizer(target: self, action: #selector(PhotoPageViewController.tapDetected))
+            singleTap.numberOfTapsRequired = 1
+            imageView.isUserInteractionEnabled = true
+            imageView.addGestureRecognizer(singleTap)
+            
+        } catch {
+            print(error)
+        }
     }
 
 

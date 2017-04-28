@@ -23,13 +23,6 @@ class PhotoPageViewController: UIViewController {
         super.viewDidLoad()
         
         setupView()
-        
-        // Do any additional setup after loading the view.
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     func getFilePathURL() -> URL{
@@ -86,12 +79,7 @@ class PhotoPageViewController: UIViewController {
             } catch {
                 print(error)
             }
-            
-            
         }
-        
-        
     }
-    
 
 }

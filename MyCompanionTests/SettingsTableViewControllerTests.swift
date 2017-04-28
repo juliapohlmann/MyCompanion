@@ -29,8 +29,13 @@ class SettingsTableViewControllerTests: XCTestCase {
         XCTAssertEqual(expected, controller.tableView(UITableView(), titleForHeaderInSection: 0))
         expected = "Reminders Settings"
         XCTAssertEqual(expected, controller.tableView(UITableView(), titleForHeaderInSection: 1))
-        expected = "mistake"
+        expected = "Security Settings"
         XCTAssertEqual(expected, controller.tableView(UITableView(), titleForHeaderInSection: 2))
+        expected = ""
+        XCTAssertEqual(expected, controller.tableView(UITableView(), titleForHeaderInSection: 3))
+//        expected = "mistake"
+//        XCTAssertEqual(expected, controller.tableView(UITableView(), titleForHeaderInSection: 4))
+
     }
     
 }

@@ -41,18 +41,18 @@ class AddPageTableViewControllerTests: XCTestCase {
     func testTableViewStringReturned() {
         class AddPageTableViewControllerMock: AddPageTableViewController {}
         let controller = AddPageTableViewControllerMock()
-        var expected = "1 text, 1 pic"
-        XCTAssertEqual(expected, controller.tableView(UITableView(), titleForHeaderInSection: 0))
-        expected = "1 text, 1 vid"
-        XCTAssertEqual(expected, controller.tableView(UITableView(), titleForHeaderInSection: 1))
-        expected = "1 text"
-        XCTAssertEqual(expected, controller.tableView(UITableView(), titleForHeaderInSection: 2))
-        expected = "1 pic"
-        XCTAssertEqual(expected, controller.tableView(UITableView(), titleForHeaderInSection: 3))
-        expected = "1 vid"
-        XCTAssertEqual(expected, controller.tableView(UITableView(), titleForHeaderInSection: 4))
-        expected = "mistake"
-        XCTAssertEqual(expected, controller.tableView(UITableView(), titleForHeaderInSection: 5))
+        var expected = "1 Picture/Text"
+        XCTAssertEqual(expected, controller.tableView(UITableView(), titleForHeaderInSection: 0)!)
+        expected = "1 Video/Text"
+        XCTAssertEqual(expected, controller.tableView(UITableView(), titleForHeaderInSection: 1)!)
+        expected = "1 Text"
+        XCTAssertEqual(expected, controller.tableView(UITableView(), titleForHeaderInSection: 2)!)
+        expected = "1 Picture"
+        XCTAssertEqual(expected, controller.tableView(UITableView(), titleForHeaderInSection: 3)!)
+        expected = "1 Video"
+        XCTAssertEqual(expected, controller.tableView(UITableView(), titleForHeaderInSection: 4)!)
+        expected = "Error"
+        XCTAssertEqual(expected, controller.tableView(UITableView(), titleForHeaderInSection: 5)!)
     }
     
     func testConvertIndexPathToRow() {

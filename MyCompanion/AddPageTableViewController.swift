@@ -58,15 +58,11 @@ class AddPageTableViewController: UITableViewController {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "templateType", for: indexPath) as! AddPageTableViewCell
 
-        //cell.textLabel?.text = types[convertIndexPathToRow(indexPath: indexPath)]
         let fileName = types[convertIndexPathToRow(indexPath: indexPath)] + "_Fiverr.jpg"
         
         cell.templateImage!.image = UIImage(named: fileName)
         cell.templateImage!.layer.borderWidth = 1
         cell.templateImage!.layer.borderColor = UIColor.lightGray.cgColor
-        
-//        cell.imageView!.image = UIImage(named: fileName)
-//        cell.imageView!.center = cell.center
         
         return cell
     }

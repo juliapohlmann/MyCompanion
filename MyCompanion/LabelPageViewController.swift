@@ -17,9 +17,6 @@ class LabelPageViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        //titleLabel.text = pageTitle
-        //textLabel.text = pageText
         
         if let titleLabel = self.view.viewWithTag(1) as? UILabel {
             titleLabel.text = pageTitle
@@ -29,13 +26,5 @@ class LabelPageViewController: UIViewController {
             textLabel.text = pageText
         }
         
-        // Do any additional setup after loading the view.
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-
 }

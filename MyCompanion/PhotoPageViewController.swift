@@ -25,15 +25,8 @@ class PhotoPageViewController: UIViewController {
         setupView()
     }
     
-    func getFilePathURL() -> URL{
-        let paths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
-        let documentsDirectory = paths[0]
-        let videoDataPath = documentsDirectory + "/" + videoID
-        return URL(fileURLWithPath: videoDataPath)
-    }
-    
     func tapDetected() {
-        let player = AVPlayer(url: getFilePathURL())
+        let player = AVPlayer(url: MemoryBookPageHelper.getFilePathURL(videoID: videoID))
         let playerController = AVPlayerViewController()
         playerController.player = player
         self.present(playerController, animated: true) {
@@ -41,6 +34,10 @@ class PhotoPageViewController: UIViewController {
         }
     }
     
+    /**
+        Helper function to set up the picture and text label
+     
+     */
     func setupView() {
         
         if let titleLabel = self.view.viewWithTag(1) as? UILabel {
@@ -56,7 +53,7 @@ class PhotoPageViewController: UIViewController {
         } else {
             
             //makes thumbnail
-            let videoURL = getFilePathURL()
+            let videoURL = MemoryBookPageHelper.getFilePathURL(videoID: videoID)
             let asset = AVURLAsset(url: videoURL as URL, options: nil)
             let imgGenerator = AVAssetImageGenerator(asset: asset)
             
@@ -65,17 +62,10 @@ class PhotoPageViewController: UIViewController {
                 if let imageView = self.view.viewWithTag(10) as? UIImageView {
                     imageView.image = UIImage(cgImage: cgImage)
                     
-                    let playImage = UIImage(named: "play-btn.png")
-                    let playImageView = UIImageView(image:playImage)
-                    playImageView.frame = CGRect(x: 75, y: 75, width: 100, height: 100)
-                    imageView.addSubview(playImageView)
+                    MemoryBookPageHelper.addPlayButtonToView(imageView: imageView)
                     
-                    let singleTap = UITapGestureRecognizer(target: self, action: #selector(PhotoPageViewController.tapDetected))
-                    singleTap.numberOfTapsRequired = 1
-                    imageView.isUserInteractionEnabled = true
-                    imageView.addGestureRecognizer(singleTap)
+                    MemoryBookPageHelper.addTapRecognizer(sender: self, type: "PhotoPageViewController", imageView: imageView)
                 }
-                
             } catch {
                 print(error)
             }

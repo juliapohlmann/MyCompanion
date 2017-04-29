@@ -217,11 +217,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MyCompanionTests/SettingsTableViewControllerTests.swift"
-            timestampString = "512924648.327772"
+            timestampString = "515111048.97732"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "29"
-            endingLineNumber = "29"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
             landmarkName = "testTableViewHeaders()"
             landmarkType = "7">
          </BreakpointContent>
